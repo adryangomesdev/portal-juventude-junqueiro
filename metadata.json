@@ -1,0 +1,6 @@
+{
+  "name": "Portal Juventude Junqueiro",
+  "description": "Site institucional da Secretaria Municipal de Juventude de Junqueiro/AL, apresentando plataformas gratuitas de cursos e oportunidades para os jovens.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
