@@ -714,9 +714,9 @@ function renderHome() {
             <p class="text-sm text-slate-500">De segunda a sexta-feira, das 08h às 14h.</p>
             <hr class="border-slate-100">
             <p class="text-sm text-slate-600 leading-relaxed font-medium">
-              📍 Av. General Valdemar de Holanda, S/N - Centro, Junqueiro/AL, CEP: 57270-000<br>
-              📞 (82) 3541-1234<br>
-              ✉️ juventude@junqueiro.al.gov.br
+              📍 Rua João de Deus, 76, Junqueiro - AL, 57270-000<br>
+              📞 (82) 99130-1648<br>
+              ✉️ juventudejunqueiro@gmail.com
             </p>
           </div>
           <a href="#/contato" class="w-full text-center py-3 bg-[#092986] text-white rounded-xl font-bold hover:bg-blue-800 transition-colors block text-sm">
@@ -1055,7 +1055,7 @@ function renderSobre() {
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
             <div class="space-y-1">
               <strong class="text-white block font-bold text-sm">📍 Endereço Comercial:</strong>
-              <span class="text-xs text-blue-200">Av. General Valdemar de Holanda, S/N - Centro, Junqueiro/AL, CEP: 57270-000</span>
+              <span class="text-xs text-blue-200">Rua João de Deus, 76, Junqueiro - AL, 57270-000</span>
             </div>
             <div class="space-y-1">
               <strong class="text-white block font-bold text-sm">🕒 Horário de Funcionamento:</strong>
@@ -1063,11 +1063,11 @@ function renderSobre() {
             </div>
             <div class="space-y-1">
               <strong class="text-white block font-bold text-sm">📞 Telefone Oficial:</strong>
-              <span class="text-xs text-blue-200">(82) 3541-1234 (Atendimento no horário da sede)</span>
+              <span class="text-xs text-blue-200">(82) 99130-1648 (Atendimento no horário da sede)</span>
             </div>
             <div class="space-y-1">
               <strong class="text-white block font-bold text-sm">✉️ E-mail Institucional:</strong>
-              <span class="text-xs text-blue-200">juventude@junqueiro.al.gov.br</span>
+              <span class="text-xs text-blue-200">Juventudejunqueiro@gmail.com</span>
             </div>
           </div>
         </div>
@@ -1314,7 +1314,7 @@ function renderContato() {
                 <div>
                   <h4 class="font-bold text-sm text-slate-900">Sede Física da Secretaria</h4>
                   <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                    Av. General Valdemar de Holanda, S/N - Centro, Junqueiro/AL, CEP: 57270-000
+                    Rua João de Deus, 76, Junqueiro - AL, 57270-000
                   </p>
                 </div>
               </li>
@@ -1326,7 +1326,7 @@ function renderContato() {
                 <div>
                   <h4 class="font-bold text-sm text-slate-900">Telefone e WhatsApp</h4>
                   <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                    (82) 3541-1234
+                    (82) 99130-1648
                   </p>
                 </div>
               </li>
@@ -1338,7 +1338,7 @@ function renderContato() {
                 <div>
                   <h4 class="font-bold text-sm text-slate-900">E-mail de Suporte</h4>
                   <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                    juventude@junqueiro.al.gov.br
+                    Juventudejunqueiro@gmail.com
                   </p>
                 </div>
               </li>
@@ -1353,7 +1353,7 @@ function renderContato() {
               Fique sabendo de novos editais, eventos culturais na praça, competições de esporte e caravanas ID Jovem em tempo real nos seguindo nas redes sociais!
             </p>
             <div class="pt-2">
-              <a href="https://instagram.com" target="_blank" rel="noopener" class="px-5 py-2.5 bg-pink-600 hover:bg-pink-700 text-white font-extrabold text-xs rounded-xl inline-flex items-center gap-1.5 transition-colors">
+              <a href="https://www.instagram.com/sec.juventudejunqueiro/" target="_blank" rel="noopener" class="px-5 py-2.5 bg-pink-600 hover:bg-pink-700 text-white font-extrabold text-xs rounded-xl inline-flex items-center gap-1.5 transition-colors">
                 ${getSvgIcon("instagram", "h-4 w-4")}
                 <span>@JuventudeJunqueiro</span>
               </a>
@@ -1413,7 +1413,7 @@ function renderContato() {
       }
 
       // Generate Email mailto link
-      const emailTo = "juventude@junqueiro.al.gov.br";
+      const emailTo = "Juventudejunqueiro@gmail.com";
       const mailtoSubject = encodeURIComponent(
         `[Portal Juventude] ${subjectText}`,
       );
