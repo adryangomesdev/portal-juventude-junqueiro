@@ -504,12 +504,14 @@ function renderHome() {
   });
 
   appContainer.innerHTML = `
-    <!-- HERO SECTION WITH BLUE BANNER -->
-    <section class="bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-16 md:py-24 relative overflow-hidden">
-      <!-- Background overlay design grids -->
-      <div class="absolute inset-0 bg-grid-white/[0.04] bg-[size:32px_32px]"></div>
-      <div class="absolute -right-10 -bottom-10 w-80 h-80 rounded-full bg-[#e6af00] opacity-10 blur-3xl"></div>
-      <div class="absolute -left-10 -top-10 w-80 h-80 rounded-full bg-emerald-500 opacity-10 blur-3xl"></div>
+  <!-- HERO SECTION WITH BLUE BANNER -->
+      <section class="bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-16 md:py-24 relative overflow-hidden">
+        <!-- Imagem de Fundo Adicionada (Juventude) -->
+        <img src="/juventude_group.png" alt="Festival da Juventude" class="absolute inset-0 w-full h-full object-cover blur-[4px] opacity-40 mix-blend-overlay z-0" />
+      
+        <!-- Background overlay design grids -->
+        <div class="absolute inset-0 bg-grid-white/[0.04] bg-[size:32px_32px] z-10"></div>
+        <div class="absolute -right-10 -bottom-10 w-80 h-80 rounded-full bg-[#e6af00] opacity-10 blur-3xl z-10"></div>
       
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
