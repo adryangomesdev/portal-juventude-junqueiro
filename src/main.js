@@ -507,7 +507,7 @@ function renderHome() {
   <!-- HERO SECTION WITH BLUE BANNER -->
       <section class="bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-16 md:py-24 relative overflow-hidden">
         <!-- Imagem de Fundo Adicionada (Juventude) -->
-        <img src="/juventude_group.png" alt="Festival da Juventude" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
+        <img src="/juventude_group.png" alt="Festival da Juventude" class="absolute inset-0 w-full h-full object-cover blur-[1px] opacity-40 mix-blend-overlay z-0" />
       
         <!-- Background overlay design grids -->
         <div class="absolute inset-0 bg-grid-white/[0.04] bg-[size:32px_32px] z-10"></div>
