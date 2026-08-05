@@ -507,7 +507,7 @@ function renderHome() {
   <!-- HERO SECTION WITH BLUE BANNER -->
       <section class="bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-16 md:py-24 relative overflow-hidden">
         <!-- Imagem de Fundo Adicionada (Juventude) -->
-        <img src="/juventude_group.png" alt="Festival da Juventude" class="absolute inset-0 w-full h-full object-cover blur-[4px] opacity-40 mix-blend-overlay z-0" />
+        <img src="/juventude_group.png" alt="Festival da Juventude" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
       
         <!-- Background overlay design grids -->
         <div class="absolute inset-0 bg-grid-white/[0.04] bg-[size:32px_32px] z-10"></div>
@@ -516,7 +516,7 @@ function renderHome() {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <div class="lg:col-span-8 text-left space-y-6">
+          <div class="lg:col-span-8 text-lef  t space-y-6">
             <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#e6af00]/20 border border-[#e6af00]/30 text-[#e6af00] text-xs font-extrabold uppercase rounded-full tracking-wider animate-pulse">
               <span class="h-2 w-2 bg-[#e6af00] rounded-full"></span>
               Secretaria Municipal de Juventude
