@@ -93,13 +93,14 @@ const PLATFORMS = [
 const NEWS = [
   {
     id: "news-1",
-    title: "Inauguração do Espaço Juventude Tech em Junqueiro",
-    category: "Tecnologia",
-    date: "10 de Julho de 2026",
+    title:
+      "A SECRETARIA DA JUVENTUDE JUNTO COM A PREFEITURA REALIZOU O II FESTIVAL DA JUVENTUDE",
+    category: "EVENTO",
+    date: "10 de agosto de 2026",
     summary:
-      "A nova sala conta com computadores de alta performance, internet fibra óptica rápida e apoio para estudantes cursarem as trilhas OxeTech e Senac.",
+      "O II Festival da Juventude de Junqueiro movimenta o mês de agosto com um extenso cronograma de atividades culturais, esportivas e ações de capacitação, destacando a inclusão social e o protagonismo jovem.",
     content:
-      "A Prefeitura Municipal de Junqueiro, por meio da Secretaria Municipal de Juventude, inaugurou na manhã de hoje o novo <strong>Espaço Juventude Tech</strong>, situado em anexo ao prédio da Secretaria. Com 12 computadores de última geração, internet fibra óptica e monitores de plantão, o espaço funcionará de segunda a sexta-feira, das 08h às 14h, com agendamento livre para os jovens realizarem os cursos online gratuitos oferecidos pelas plataformas parceiras como OxeTech e Escola Virtual Gov.<br><br>Essa conquista representa uma grande vitória no combate à exclusão digital, garantindo que mesmo os jovens de povoados distantes tenham as ferramentas tecnológicas necessárias para decolar no mercado de trabalho.",
+      "O II Festival da Juventude de Junqueiro teve sua grande abertura no dia 31 de julho, marcada por um desfile pelas ruas da cidade que reuniu escolas e parceiros em torno do tema da <strong>juventude inclusiva</strong>, com destaque para a participação e valorização das Pessoas com Deficiência (PCD). A programação se estende por todo o mês de agosto e já contou com momentos marcantes como a Gincana Interescolar, realizada no Ginásio de Esportes, além de diversas atividades culturais, competições esportivas e homenagens a personalidades locais.<br><br>Mais do que celebração, o festival também foca no futuro dos jovens. O evento é palco para a entrega de certificados de cursos profissionalizantes promovidos em parceria com o Senac, reafirmando o compromisso do município em capacitar e abrir novas portas para a juventude junqueirense.",
     image: "tech",
   },
   {
