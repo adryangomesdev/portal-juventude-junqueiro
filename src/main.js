@@ -368,7 +368,6 @@ function triggerToast(message, type = "success") {
 }
 
 // Open News Details Modal Popup
-// Open News Details Modal Popup
 window.openNewsModal = function (id) {
   const newsItem = NEWS.find((item) => item.id === id);
   if (!newsItem) return;
