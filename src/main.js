@@ -368,6 +368,7 @@ function triggerToast(message, type = "success") {
 }
 
 // Open News Details Modal Popup
+// Open News Details Modal Popup
 window.openNewsModal = function (id) {
   const newsItem = NEWS.find((item) => item.id === id);
   if (!newsItem) return;
@@ -376,12 +377,14 @@ window.openNewsModal = function (id) {
   if (existingModal) existingModal.remove();
 
   const modalHtml = `
-      <!-- Modal Banner Illustration -->
-      <div class="h-48 md:h-64 w-full bg-gradient-to-r from-[#092986] to-indigo-800 text-white relative flex items-center justify-center overflow-hidden px-8">
+    <!-- DIV PRINCIPAL DO MODAL (Fundo escuro transparente flutuante) -->
+    <div id="news-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm animate-fade-in">
+      
+      <!-- CAIXA BRANCA DO CONTEÚDO -->
       <div class="bg-white rounded-2xl w-full max-w-3xl max-h-[85vh] overflow-y-auto shadow-2xl border border-slate-100 flex flex-col relative animate-scale-up">
         
-        <!-- Modal Banner Illustration -->
-        <div class="h-48 md:h-64 w-full bg-gradient-to-r from-[#092986] to-indigo-800 text-white relative flex items-center justify-center overflow-hidden px-8">
+        <!-- Modal Banner Illustration (Com o ajuste de altura e espaçamento) -->
+        <div class="min-h-[12rem] md:min-h-[16rem] pt-12 pb-24 w-full bg-gradient-to-r from-[#092986] to-indigo-800 text-white relative flex items-center justify-center overflow-hidden px-8">
           <div class="absolute inset-0 bg-slate-900/40 mix-blend-multiply"></div>
           <div class="relative z-10 max-w-2xl text-center">
             <span class="inline-block px-3 py-1 bg-[#e6af00] text-slate-950 text-xs font-extrabold uppercase rounded-full tracking-wider mb-2">${newsItem.category}</span>
