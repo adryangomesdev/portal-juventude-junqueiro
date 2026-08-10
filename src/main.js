@@ -373,8 +373,8 @@ window.openNewsModal = function (id) {
   if (existingModal) existingModal.remove();
 
   const modalHtml = `
-    <!-- Modal Banner Illustration -->
-    <div class="min-h-[12rem] md:min-h-[16rem] pt-12 pb-24 w-full bg-gradient-to-r from-[#092986] to-indigo-800 text-white relative flex items-center justify-center overflow-hidden px-8">
+      <!-- Modal Banner Illustration -->
+      <div class="h-48 md:h-64 w-full bg-gradient-to-r from-[#092986] to-indigo-800 text-white relative flex items-center justify-center overflow-hidden px-8">
       <div class="bg-white rounded-2xl w-full max-w-3xl max-h-[85vh] overflow-y-auto shadow-2xl border border-slate-100 flex flex-col relative animate-scale-up">
         
         <!-- Modal Banner Illustration -->
