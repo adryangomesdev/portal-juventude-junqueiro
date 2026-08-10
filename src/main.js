@@ -105,36 +105,39 @@ const NEWS = [
   },
   {
     id: "news-2",
-    title: "Caravana ID Jovem Visita Escolas de Junqueiro",
-    category: "Cidadania",
-    date: "05 de Julho de 2026",
+    title:
+      "MAIS UM CURSO ENTREGUE AOS JOVENS DE JUNQUEIRO PELA SECRETARIA DE JUVENTUDE",
+    category: "Cursos",
+    date: "31 de Julho de 2026",
     summary:
-      "Equipe da Secretaria percorrerá povoados rurais e escolas para emitir a Identidade Jovem presencialmente e tirar todas as dúvidas.",
+      "A parceria entre a Secretaria da Juventude de Junqueiro e o Senac formou novos profissionais através do curso de Técnicas de Maquiagem de 40 horas, cujos certificados foram entregues com destaque durante o II Festival da Juventude.",
     content:
-      "Para levar mais facilidade e cidadania, a Secretaria Municipal de Juventude lança na próxima segunda-feira a <strong>Caravana ID Jovem</strong>. O programa itinerante visitará as escolas estaduais localizadas no Centro e povoados de Junqueiro (incluindo Retiro e Chã do Pilar) para realizar o cadastro e a emissão do documento digital na hora.<br><br>O ID Jovem concede direito à meia-entrada cultural e passagens interestaduais gratuitas para jovens de 15 a 29 anos com renda familiar de até 2 salários mínimos inscritos no CadÚnico. Tenha em mãos seu NIS e documento oficial com foto quando a caravana chegar à sua escola!",
+      "O curso de Técnicas de Maquiagem, realizado através de uma sólida parceria entre a Secretaria Municipal de Juventude de Junqueiro e o Senac, ofereceu uma imersão prática com 40 horas de duração voltada para a qualificação profissional e geração de renda rápida. A iniciativa capacita os participantes com as tendências e habilidades práticas exigidas pelo mercado da beleza, incentivando o empreendedorismo e a autonomia financeira. O sucesso e o encerramento dessa jornada de aprendizado foram celebrados em grande estilo durante a programação do II Festival da Juventude, momento em que os alunos formandos participaram da entrega simbólica de seus certificados, marcando um novo e promissor capítulo em suas carreiras profissionais.",
     image: "caravan",
   },
   {
     id: "news-3",
-    title: "Abertas as inscrições para o Simulado Preparatório ENEM",
-    category: "Educação",
-    date: "28 de Junho de 2026",
+    title:
+      "PARCERIA COM O SENAC TRAZ CURSOS DE ASSISTENTE ADMINISTRATIO E DE MARKETING E VENDAS PARA A JUVENTUDE DE JUNQUEIRO",
+    category: "Cursos",
+    date: "01 de Julho de 2026",
     summary:
-      "Simulado Municipal 100% presencial premiará os primeiros colocados com kits completos de estudo e apostilas de redação nota 1000.",
+      "Com 160 horas de duração, as novas qualificações oferecidas pelo Senac chegam para preparar os jovens com habilidades essenciais para o mercado de trabalho local e regional.",
     content:
-      "Atenção, feras do ENEM de Junqueiro! Estão oficialmente abertas as inscrições gratuitas para o primeiro <strong>Simulado Geral Preparatório</strong> do município. A avaliação, que segue o padrão oficial do Exame Nacional do Ensino Médio, será aplicada na Escola Estadual local no próximo mês.<br><br>Além de testar seus conhecimentos e controlar o tempo de prova, os 5 estudantes com melhor desempenho receberão kits especiais de estudo contendo mochilas, livros preparatórios atualizados e vouchers para cursos de idiomas. Inscreva-se preenchendo o formulário em nossa aba de contato ou diretamente na Secretaria de Juventude.",
+      "A parceria de sucesso entre a Secretaria Municipal de Juventude e o Senac continua a gerar oportunidades transformadoras com a oferta dos cursos de <strong>Assistente Administrativo</strong> e <strong>Assistente de Marketing e Vendas</strong>. Com uma robusta carga horária de 160 horas, as formações foram estruturadas para oferecer um preparo completo, unindo teoria e prática para desenvolver as competências mais exigidas pelo atual mercado de trabalho. Para garantir o sucesso e a acessibilidade da iniciativa, a Secretaria organizou toda a articulação logística necessária para a permanência dos jovens no projeto e planejou as aulas para acontecerem nas instalações da Escola Estadual Padre Aurélio Góis. Essa união de esforços reafirma o compromisso contínuo do município em transformar a realidade dos nossos jovens através da educação e da qualificação profissional de excelência.",
     image: "exam",
   },
   {
     id: "news-4",
-    title: "Parceria com SENAC EAD Garante Computadores Dedicados no CRAS",
+    title:
+      "ARRAIÁ DA JUVENTUDE: TRADIÇÃO JUNINA E TORCIDA VERDE E AMARELA NO DIA DE SÃO JOÃO",
     category: "Educação",
-    date: "15 de Junho de 2026",
+    date: "24 de Junho de 2026",
     summary:
-      "Os computadores dos centros de assistência social ganham salas exclusivas para quem deseja realizar os cursos profissionalizantes do SENAC.",
+      "O Arraiá da Juventude do dia 24 de junho unirá as tradições do Dia de São João à transmissão do jogo do Brasil na Copa do Mundo, reunindo os jovens com comidas típicas, quadrilhas e muita torcida.",
     content:
-      "Uma excelente notícia para quem busca qualificação de qualidade de forma flexível! A Secretaria de Juventude firmou um acordo operacional para viabilizar polos de apoio nos CRAS do município. Agora, os computadores dos CRAS contam com reserva de horários exclusiva para jovens matriculados no <strong>Programa Senac de Gratuidade (PSG)</strong>.<br><br>As trilhas incluem cursos técnicos reconhecidos nacionalmente nas áreas de Comércio, TI, Atendimento ao Cliente e Marketing. Os interessados podem consultar o catálogo de cursos e receber auxílio de cadastro nas terças e quintas diretamente nos centros sociais.",
-    image: "senac",
+      "No dia 24 de junho, o Arraiá da Juventude promete movimentar a galera ao unir a magia do Dia de São João com a emoção contagiante do jogo da Seleção Brasileira na Copa do Mundo. Em uma celebração vibrante que mistura o verde e amarelo às clássicas bandeirinhas coloridas, o evento contará com transmissão ao vivo da partida em telão, comidas típicas, apresentações de quadrilhas e muita música para embalar a torcida. É a fusão perfeita entre a riqueza da nossa cultura popular e a paixão pelo futebol, reunindo os jovens em um ambiente de pura alegria, união e celebração.",
+    image: "arraiá",
   },
 ];
 
@@ -1108,7 +1111,7 @@ function renderNoticias() {
         </div>
 
         <div class="p-6 bg-slate-50 border-t border-slate-100/50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Autor: Assessoria de Imprensa SMJ</span>
+          <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Autor: Adryan Victor SMJ</span>
           <button type="button" onclick="openNewsModal('${news.id}')" class="px-5 py-2.5 bg-[#092986] hover:bg-blue-800 text-white font-extrabold rounded-xl text-sm transition-colors flex items-center justify-center gap-1 shrink-0">
             <span class="pointer-events-none">Ler notícia completa</span>
             <span class="pointer-events-none flex items-center">${getSvgIcon("arrow-right", "h-4 w-4")}</span>
