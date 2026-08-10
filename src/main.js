@@ -1109,9 +1109,9 @@ function renderNoticias() {
 
         <div class="p-6 bg-slate-50 border-t border-slate-100/50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Autor: Assessoria de Imprensa SMJ</span>
-          <button onclick="openNewsModal('${news.id}')" class="px-5 py-2.5 bg-[#092986] hover:bg-blue-800 text-white font-extrabold rounded-xl text-sm transition-colors flex items-center justify-center gap-1 shrink-0">
-            <span>Ler notícia completa</span>
-            ${getSvgIcon("arrow-right", "h-4 w-4")}
+          <button type="button" onclick="openNewsModal('${news.id}')" class="px-5 py-2.5 bg-[#092986] hover:bg-blue-800 text-white font-extrabold rounded-xl text-sm transition-colors flex items-center justify-center gap-1 shrink-0">
+            <span class="pointer-events-none">Ler notícia completa</span>
+            <span class="pointer-events-none flex items-center">${getSvgIcon("arrow-right", "h-4 w-4")}</span>
           </button>
         </div>
       </div>
