@@ -94,7 +94,7 @@ const NEWS = [
   {
     id: "news-1",
     title:
-      "A SECRETARIA DA JUVENTUDE JUNTO COM A PREFEITURA REALIZOU O II FESTIVAL DA JUVENTUDE",
+      "A SECRETARIA DA JUVENTUDE JUNTO COM A PREFEITURA MUNICIPAL DE JUNQUEIRO REALIZOU O II FESTIVAL DA JUVENTUDE",
     category: "EVENTO",
     date: "10 de agosto de 2026",
     summary:
@@ -106,7 +106,7 @@ const NEWS = [
   {
     id: "news-2",
     title:
-      "MAIS UM CURSO ENTREGUE AOS JOVENS DE JUNQUEIRO PELA SECRETARIA DE JUVENTUDE",
+      "MAIS UM CURSO ENTREGUE AOS JOVENS DE JUNQUEIRO PELA SECRETARIA DA JUVENTUDE",
     category: "Cursos",
     date: "31 de Julho de 2026",
     summary:
