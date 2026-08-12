@@ -140,16 +140,52 @@ const NEWS = [
     image: "arraiá",
   },
   {
-    id: "news-5",
+    id: "news-6",
     title:
-      "ARRAIÁ DA JUVENTUDE: TRADIÇÃO JUNINA E TORCIDA VERDE E AMARELA NO DIA DE SÃO JOÃO",
+      "AULÃO VEM QUE TEM ENEM LOTA TEATRO SÃO JOSÉ COM SUPER TIME DE PROFESSORES",
     category: "Educação",
-    date: "24 de Junho de 2026",
+    date: "13 de Junho de 2026",
     summary:
-      "O Arraiá da Juventude do dia 24 de junho unirá as tradições do Dia de São João à transmissão do jogo do Brasil na Copa do Mundo, reunindo os jovens com comidas típicas, quadrilhas e muita torcida.",
+      "Realizado na manhã do dia 13 de junho, a nova edição do Aulão reuniu especialistas das Ciências da Natureza e Humanas no Teatro São José, oferecendo preparação intensiva e suporte completo aos jovens.",
     content:
-      "No dia 24 de junho, o Arraiá da Juventude promete movimentar a galera ao unir a magia do Dia de São João com a emoção contagiante do jogo da Seleção Brasileira na Copa do Mundo. Em uma celebração vibrante que mistura o verde e amarelo às clássicas bandeirinhas coloridas, o evento contará com transmissão ao vivo da partida em telão, comidas típicas, apresentações de quadrilhas e muita música para embalar a torcida. É a fusão perfeita entre a riqueza da nossa cultura popular e a paixão pelo futebol, reunindo os jovens em um ambiente de pura alegria, união e celebração.",
-    image: "arraiá",
+      "A manhã do dia 13 de junho de 2026 foi superada por muito aprendizado no Teatro São José, que sediou mais uma edição de sucesso do Aulão Vem Que Tem ENEM. Promovido em forte parceria com a Secretaria da Juventude, o evento mobilizou toda a equipe para garantir um ambiente acolhedor, com controle de acesso organizado, distribuição de materiais didáticos e lanches para os estudantes. No palco, a preparação de excelência ficou por conta de um verdadeiro super time de professores: Jessica Moreira (Biologia), Tryciany (Química), Eudes (Sociologia), Nivaldo (Física), Clézia (Geografia), Davi Silva (História) e Wanderlan (Filosofia). Essa grande maratona de aulas integrou as áreas de Ciências da Natureza e Humanas, proporcionando aos jovens de Junqueiro uma imersão completa de conhecimentos, dicas valiosas e muita motivação para a reta final rumo ao ensino superior.",
+    image: "enem",
+  },
+  {
+    id: "news-7",
+    title:
+      "MAIO AMARELO: SECRETARIA DA JUVENTUDE E SEGURANÇA PROMOVEM BLITZ EDUCATIVA DE TRÂNSITO",
+    category: "Conscientização",
+    date: "11 de Maio de 2026",
+    summary:
+      "Ação realizada no dia 11 de maio uniu secretarias em uma mobilização com panfletagem e cartazes para conscientizar motoristas e pedestres sobre a prevenção de acidentes.",
+    content:
+      "Em prol de um trânsito mais seguro e responsável, a Secretaria Municipal da Juventude uniu forças com a Secretaria de Segurança para promover uma grande mobilização da campanha Maio Amarelo no dia 11 de maio de 2026. A ação contou com uma blitz educativa pelas ruas da cidade, na qual foram distribuídos panfletos informativos e exibidos cartazes de conscientização para alertar a população sobre os riscos e a prevenção de acidentes. Durante as abordagens, as equipes reforçaram dicas vitais para o dia a dia: respeitar rigorosamente a sinalização e os limites de velocidade, nunca utilizar o celular ao volante, garantir o uso do cinto de segurança por todos os passageiros e, no caso dos motociclistas, utilizar o capacete corretamente afivelado. A presença ativa da juventude na campanha reforçou a mensagem de que a empatia e as atitudes preventivas são os melhores caminhos para preservar vidas nas vias do nosso município.",
+    image: "blitz",
+  },
+  {
+    id: "news-8",
+    title:
+      "PROJETO 'TRILHA DA JUVENTUDE: JUVENTUDE CONECTADA' LEVA MAIS DE MIL ALUNOS À LAGOA DO RETIRO",
+    category: "Educação",
+    date: "22 de maio de 2026",
+    summary:
+      "Em uma grande imersão ecológica e cultural durante o mês de maio, o projeto mobilizou estudantes para valorizar a fauna, a flora e a tradição do artesanato de junco em Junqueiro.",
+    content:
+      "A Lagoa do Retiro foi palco de um momento histórico de educação socioambiental com a realização da <strong>Trilha da Juventude: Juventude Conectada</strong>. Durante os dias 13, 14, 15, 20, 21 e 22 de maio, a iniciativa da Secretaria Municipal de Juventude reuniu mais de mil estudantes em uma verdadeira expedição ecológica. O evento foi realizado em forte parceria com a Escola Estadual Padre Aurélio Góis, a Escola Estadual Maria Liege de Albuquerque Tavares e a Escola Municipal de Educação Básica Integral Agrícola São Francisco de Assis, proporcionando aos jovens um aprendizado prático e profundo sobre a rica fauna e flora do município. Indo além da conscientização e preservação ambiental, o projeto resgatou as raízes e a identidade da região ao promover uma vivência especial sobre a cultura do junco e a tradicional criação de balaios, ensinada por artesãos da própria comunidade, conectando o protagonismo da nova geração ao valioso patrimônio histórico da nossa terra.",
+    image: "trilha",
+  },
+  {
+    id: "news-9",
+    title:
+      "SUCESSO DE PÚBLICO: 2ª EDIÇÃO DO AULÃO VEM QUE TEM ENEM FORTALECE PREPARAÇÃO DOS JOVENS",
+    category: "Educação",
+    date: "25 de Abril de 2026",
+    summary:
+      "A 2ª edição do Aulão Vem Que Tem ENEM reuniu centenas de jovens no dia 25 de abril para um dia intenso de preparação gratuita com grandes especialistas em Matemática, Redação e História.",
+    content:
+      "A preparação para o acesso ao ensino superior ganhou um reforço de peso com a realização da 2ª edição do Aulão Vem Que Tem ENEM, ocorrida com grande sucesso no dia 25 de abril de 2026. Organizado com foco total na excelência acadêmica e apoio aos jovens do nosso município, o evento ofereceu aulas estratégicas e dinâmicas com um time de professores de destaque: Fabrício Lima desmistificando a Matemática, Isabel Guedes compartilhando as técnicas essenciais para uma Redação nota mil, e Davi Silva trazendo abordagens aprofundadas em História. Mais do que apenas repassar conteúdos, o aulão foi um momento fundamental de incentivo, troca de experiências e fortalecimento da confiança dos nossos estudantes na reta de preparação para o exame nacional.",
+    image: "enem",
   },
 ];
 
