@@ -101,8 +101,7 @@ const NEWS = [
       "O II Festival da Juventude de Junqueiro movimenta o mês de agosto com um extenso cronograma de atividades culturais, esportivas e ações de capacitação, destacando a inclusão social e o protagonismo jovem.",
     content:
       "O II Festival da Juventude de Junqueiro teve sua grande abertura no dia 31 de julho, marcada por um desfile pelas ruas da cidade que reuniu escolas e parceiros em torno do tema da <strong>juventude inclusiva</strong>, com destaque para a participação e valorização das Pessoas com Deficiência (PCD). A programação se estende por todo o mês de agosto e já contou com momentos marcantes como a Gincana Interescolar, realizada no Ginásio de Esportes, além de diversas atividades culturais, competições esportivas e homenagens a personalidades locais.<br><br>Mais do que celebração, o festival também foca no futuro dos jovens. O evento é palco para a entrega de certificados de cursos profissionalizantes promovidos em parceria com o Senac, reafirmando o compromisso do município em capacitar e abrir novas portas para a juventude junqueirense.",
-    image:
-      "C:\Users\adrya\Downloads\portal-juventude-junqueiro\public\juventude_group.png",
+    image: "/juventude_group.png",
   },
   {
     id: "news-2",
