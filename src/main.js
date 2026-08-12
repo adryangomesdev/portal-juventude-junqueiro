@@ -140,7 +140,7 @@ const NEWS = [
     image: "arraiá",
   },
   {
-    id: "news-4",
+    id: "news-5",
     title:
       "ARRAIÁ DA JUVENTUDE: TRADIÇÃO JUNINA E TORCIDA VERDE E AMARELA NO DIA DE SÃO JOÃO",
     category: "Educação",
