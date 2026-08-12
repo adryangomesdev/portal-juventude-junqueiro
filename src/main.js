@@ -1000,8 +1000,9 @@ function renderSobre() {
 
   appContainer.innerHTML = `
     <!-- Header Hero banner -->
-    <section class="bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+    <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12">
+      <img src="/juventude_group.png" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />  
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
         <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-none">A Secretaria de Juventude</h1>
         <p class="text-sm md:text-base text-blue-100 leading-relaxed max-w-2xl mx-auto">
           Saiba quem somos, nossa missão institucional e como atuamos diariamente para transformar o futuro dos jovens de Junqueiro/AL.
