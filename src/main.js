@@ -101,7 +101,8 @@ const NEWS = [
       "O II Festival da Juventude de Junqueiro movimenta o mês de agosto com um extenso cronograma de atividades culturais, esportivas e ações de capacitação, destacando a inclusão social e o protagonismo jovem.",
     content:
       "O II Festival da Juventude de Junqueiro teve sua grande abertura no dia 31 de julho, marcada por um desfile pelas ruas da cidade que reuniu escolas e parceiros em torno do tema da <strong>juventude inclusiva</strong>, com destaque para a participação e valorização das Pessoas com Deficiência (PCD). A programação se estende por todo o mês de agosto e já contou com momentos marcantes como a Gincana Interescolar, realizada no Ginásio de Esportes, além de diversas atividades culturais, competições esportivas e homenagens a personalidades locais.<br><br>Mais do que celebração, o festival também foca no futuro dos jovens. O evento é palco para a entrega de certificados de cursos profissionalizantes promovidos em parceria com o Senac, reafirmando o compromisso do município em capacitar e abrir novas portas para a juventude junqueirense.",
-    image: "tech",
+    image:
+      "C:\Users\adrya\Downloads\portal-juventude-junqueiro\public\juventude_group.png",
   },
   {
     id: "news-2",
@@ -1156,7 +1157,10 @@ function renderNoticias() {
   NEWS.forEach((news) => {
     cardsHtml += `
       <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-        <div class="p-6 md:p-8 space-y-4">
+        <div class="h-48 md:h-56 w-full overflow-hidden relative">
+          <img src="${news.image}" alt="${news.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/092986/FFFFFF/png?text=Sem+Imagem'" />
+        </div>        
+          <div class="p-6 md:p-8 space-y-4">
           <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-400">
             <span class="text-[#092986] font-extrabold bg-blue-50 px-2.5 py-1 rounded-md">${news.category}</span>
             <span class="flex items-center gap-1">
