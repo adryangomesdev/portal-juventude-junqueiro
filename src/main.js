@@ -155,7 +155,7 @@ const NEWS = [
     id: "news-7",
     title:
       "PROJETO 'TRILHA DA JUVENTUDE: JUVENTUDE CONECTADA' LEVA MAIS DE MIL ALUNOS À LAGOA DO RETIRO",
-    category: "Educação",
+    category: "Conscientização",
     date: "22 de maio de 2026",
     summary:
       "Em uma grande imersão ecológica e cultural durante o mês de maio, o projeto mobilizou estudantes para valorizar a fauna, a flora e a tradição do artesanato de junco em Junqueiro.",
@@ -191,7 +191,7 @@ const NEWS = [
     id: "news-10",
     title:
       "PROJETO 'MÃOS DADAS COM A JUVENTUDE' LEVA LIGA DE BASQUETE PARA RODADA OFICIAL NO SEST SENAT",
-    category: "Educação",
+    category: "esportes",
     date: "12 de Abril de 2026",
     summary:
       "No dia 12 de abril, uma parceria inédita garantiu que os jovens atletas junqueirenses vivenciassem a experiência de disputar o campeonato em uma quadra profissional de alto padrão.",
@@ -925,8 +925,9 @@ function renderOportunidades() {
   // Inject Initial Scaffold for Opportunities Page
   appContainer.innerHTML = `
     <!-- Header Banner -->
-    <section class="bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12 border-b border-blue-900/10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+    <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12 border-b border-blue-900/10">
+      <img src="/juventude_group.png" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
         <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-none">Plataformas Gratuitas</h1>
         <p class="text-sm md:text-base text-blue-100 leading-relaxed max-w-2xl mx-auto">
           Conecte-se com as principais centrais oficiais de formação e incentivos gratuitas do Governo Federal, Estadual e Serviços Parceiros do SENAC.
