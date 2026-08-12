@@ -154,18 +154,6 @@ const NEWS = [
   {
     id: "news-7",
     title:
-      "MAIO AMARELO: SECRETARIA DA JUVENTUDE E SEGURANÇA PROMOVEM BLITZ EDUCATIVA DE TRÂNSITO",
-    category: "Conscientização",
-    date: "11 de Maio de 2026",
-    summary:
-      "Ação realizada no dia 11 de maio uniu secretarias em uma mobilização com panfletagem e cartazes para conscientizar motoristas e pedestres sobre a prevenção de acidentes.",
-    content:
-      "Em prol de um trânsito mais seguro e responsável, a Secretaria Municipal da Juventude uniu forças com a Secretaria de Segurança para promover uma grande mobilização da campanha Maio Amarelo no dia 11 de maio de 2026. A ação contou com uma blitz educativa pelas ruas da cidade, na qual foram distribuídos panfletos informativos e exibidos cartazes de conscientização para alertar a população sobre os riscos e a prevenção de acidentes. Durante as abordagens, as equipes reforçaram dicas vitais para o dia a dia: respeitar rigorosamente a sinalização e os limites de velocidade, nunca utilizar o celular ao volante, garantir o uso do cinto de segurança por todos os passageiros e, no caso dos motociclistas, utilizar o capacete corretamente afivelado. A presença ativa da juventude na campanha reforçou a mensagem de que a empatia e as atitudes preventivas são os melhores caminhos para preservar vidas nas vias do nosso município.",
-    image: "blitz",
-  },
-  {
-    id: "news-8",
-    title:
       "PROJETO 'TRILHA DA JUVENTUDE: JUVENTUDE CONECTADA' LEVA MAIS DE MIL ALUNOS À LAGOA DO RETIRO",
     category: "Educação",
     date: "22 de maio de 2026",
@@ -174,6 +162,18 @@ const NEWS = [
     content:
       "A Lagoa do Retiro foi palco de um momento histórico de educação socioambiental com a realização da <strong>Trilha da Juventude: Juventude Conectada</strong>. Durante os dias 13, 14, 15, 20, 21 e 22 de maio, a iniciativa da Secretaria Municipal de Juventude reuniu mais de mil estudantes em uma verdadeira expedição ecológica. O evento foi realizado em forte parceria com a Escola Estadual Padre Aurélio Góis, a Escola Estadual Maria Liege de Albuquerque Tavares e a Escola Municipal de Educação Básica Integral Agrícola São Francisco de Assis, proporcionando aos jovens um aprendizado prático e profundo sobre a rica fauna e flora do município. Indo além da conscientização e preservação ambiental, o projeto resgatou as raízes e a identidade da região ao promover uma vivência especial sobre a cultura do junco e a tradicional criação de balaios, ensinada por artesãos da própria comunidade, conectando o protagonismo da nova geração ao valioso patrimônio histórico da nossa terra.",
     image: "trilha",
+  },
+  {
+    id: "news-8",
+    title:
+      "MAIO AMARELO: SECRETARIA DA JUVENTUDE E SEGURANÇA PROMOVEM BLITZ EDUCATIVA DE TRÂNSITO",
+    category: "Conscientização",
+    date: "11 de Maio de 2026",
+    summary:
+      "Ação realizada no dia 11 de maio uniu secretarias em uma mobilização com panfletagem e cartazes para conscientizar motoristas e pedestres sobre a prevenção de acidentes.",
+    content:
+      "Em prol de um trânsito mais seguro e responsável, a Secretaria Municipal da Juventude uniu forças com a Secretaria de Segurança para promover uma grande mobilização da campanha Maio Amarelo no dia 11 de maio de 2026. A ação contou com uma blitz educativa pelas ruas da cidade, na qual foram distribuídos panfletos informativos e exibidos cartazes de conscientização para alertar a população sobre os riscos e a prevenção de acidentes. Durante as abordagens, as equipes reforçaram dicas vitais para o dia a dia: respeitar rigorosamente a sinalização e os limites de velocidade, nunca utilizar o celular ao volante, garantir o uso do cinto de segurança por todos os passageiros e, no caso dos motociclistas, utilizar o capacete corretamente afivelado. A presença ativa da juventude na campanha reforçou a mensagem de que a empatia e as atitudes preventivas são os melhores caminhos para preservar vidas nas vias do nosso município.",
+    image: "blitz",
   },
   {
     id: "news-9",
@@ -186,6 +186,18 @@ const NEWS = [
     content:
       "A preparação para o acesso ao ensino superior ganhou um reforço de peso com a realização da 2ª edição do Aulão Vem Que Tem ENEM, ocorrida com grande sucesso no dia 25 de abril de 2026. Organizado com foco total na excelência acadêmica e apoio aos jovens do nosso município, o evento ofereceu aulas estratégicas e dinâmicas com um time de professores de destaque: Fabrício Lima desmistificando a Matemática, Isabel Guedes compartilhando as técnicas essenciais para uma Redação nota mil, e Davi Silva trazendo abordagens aprofundadas em História. Mais do que apenas repassar conteúdos, o aulão foi um momento fundamental de incentivo, troca de experiências e fortalecimento da confiança dos nossos estudantes na reta de preparação para o exame nacional.",
     image: "enem",
+  },
+  {
+    id: "news-10",
+    title:
+      "PROJETO 'MÃOS DADAS COM A JUVENTUDE' LEVA LIGA DE BASQUETE PARA RODADA OFICIAL NO SEST SENAT",
+    category: "Educação",
+    date: "12 de Abril de 2026",
+    summary:
+      "No dia 12 de abril, uma parceria inédita garantiu que os jovens atletas junqueirenses vivenciassem a experiência de disputar o campeonato em uma quadra profissional de alto padrão.",
+    content:
+      "O esporte local vivenciou um momento de grande valorização no dia 12 de abril de 2026, impulsionado pelas ações do projeto <strong>'Mãos Dadas com a Juventude'</strong>. Através de uma importante parceria firmada com o SEST SENAT, a Secretaria da Juventude proporcionou à Liga de Basquete junqueirense a oportunidade única de realizar uma rodada oficial do seu campeonato nas instalações esportivas profissionais da instituição, localizada no município vizinho de Teotônio Vilela. Essa iniciativa elevou o nível da competição e garantiu aos nossos atletas a experiência motivadora de atuar em uma quadra de excelência técnica. A ação reforça o compromisso da gestão em incentivar o esporte, apoiar os talentos locais e buscar parcerias regionais que ampliem os horizontes e as vivências da nossa juventude.",
+    image: "projeto",
   },
 ];
 
