@@ -125,7 +125,7 @@ const NEWS = [
       "Com 160 horas de duração, as novas qualificações oferecidas pelo Senac chegam para preparar os jovens com habilidades essenciais para o mercado de trabalho local e regional.",
     content:
       "A parceria de sucesso entre a Secretaria Municipal de Juventude e o Senac continua a gerar oportunidades transformadoras com a oferta dos cursos de <strong>Assistente Administrativo</strong> e <strong>Assistente de Marketing e Vendas</strong>. Com uma robusta carga horária de 160 horas, as formações foram estruturadas para oferecer um preparo completo, unindo teoria e prática para desenvolver as competências mais exigidas pelo atual mercado de trabalho. Para garantir o sucesso e a acessibilidade da iniciativa, a Secretaria organizou toda a articulação logística necessária para a permanência dos jovens no projeto e planejou as aulas para acontecerem nas instalações da Escola Estadual Padre Aurélio Góis. Essa união de esforços reafirma o compromisso contínuo do município em transformar a realidade dos nossos jovens através da educação e da qualificação profissional de excelência.",
-    image: "exam",
+    image: "/marketing_e_vendas.png",
   },
   {
     id: "news-4",
