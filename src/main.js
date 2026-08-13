@@ -149,7 +149,7 @@ const NEWS = [
       "Realizado na manhã do dia 13 de junho, a nova edição do Aulão reuniu especialistas das Ciências da Natureza e Humanas no Teatro São José, oferecendo preparação intensiva e suporte completo aos jovens.",
     content:
       "A manhã do dia 13 de junho de 2026 foi superada por muito aprendizado no Teatro São José, que sediou mais uma edição de sucesso do Aulão Vem Que Tem ENEM. Promovido em forte parceria com a Secretaria da Juventude, o evento mobilizou toda a equipe para garantir um ambiente acolhedor, com controle de acesso organizado, distribuição de materiais didáticos e lanches para os estudantes. No palco, a preparação de excelência ficou por conta de um verdadeiro super time de professores: Jessica Moreira (Biologia), Tryciany (Química), Eudes (Sociologia), Nivaldo (Física), Clézia (Geografia), Davi Silva (História) e Wanderlan (Filosofia). Essa grande maratona de aulas integrou as áreas de Ciências da Natureza e Humanas, proporcionando aos jovens de Junqueiro uma imersão completa de conhecimentos, dicas valiosas e muita motivação para a reta final rumo ao ensino superior.",
-    image: "enem",
+    image: "/aulao_2.png",
   },
   {
     id: "news-7",
