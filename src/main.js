@@ -185,7 +185,7 @@ const NEWS = [
       "A 2ª edição do Aulão Vem Que Tem ENEM reuniu centenas de jovens no dia 25 de abril para um dia intenso de preparação gratuita com grandes especialistas em Matemática, Redação e História.",
     content:
       "A preparação para o acesso ao ensino superior ganhou um reforço de peso com a realização da 2ª edição do Aulão Vem Que Tem ENEM, ocorrida com grande sucesso no dia 25 de abril de 2026. Organizado com foco total na excelência acadêmica e apoio aos jovens do nosso município, o evento ofereceu aulas estratégicas e dinâmicas com um time de professores de destaque: Fabrício Lima desmistificando a Matemática, Isabel Guedes compartilhando as técnicas essenciais para uma Redação nota mil, e Davi Silva trazendo abordagens aprofundadas em História. Mais do que apenas repassar conteúdos, o aulão foi um momento fundamental de incentivo, troca de experiências e fortalecimento da confiança dos nossos estudantes na reta de preparação para o exame nacional.",
-    image: "enem",
+    image: "/aulao_2.png",
   },
   {
     id: "news-10",
@@ -197,7 +197,7 @@ const NEWS = [
       "No dia 12 de abril, uma parceria inédita garantiu que os jovens atletas junqueirenses vivenciassem a experiência de disputar o campeonato em uma quadra profissional de alto padrão.",
     content:
       "O esporte local vivenciou um momento de grande valorização no dia 12 de abril de 2026, impulsionado pelas ações do projeto <strong>'Mãos Dadas com a Juventude'</strong>. Através de uma importante parceria firmada com o SEST SENAT, a Secretaria da Juventude proporcionou à Liga de Basquete junqueirense a oportunidade única de realizar uma rodada oficial do seu campeonato nas instalações esportivas profissionais da instituição, localizada no município vizinho de Teotônio Vilela. Essa iniciativa elevou o nível da competição e garantiu aos nossos atletas a experiência motivadora de atuar em uma quadra de excelência técnica. A ação reforça o compromisso da gestão em incentivar o esporte, apoiar os talentos locais e buscar parcerias regionais que ampliem os horizontes e as vivências da nossa juventude.",
-    image: "projeto",
+    image: "/maos_dadas.png",
   },
 ];
 
