@@ -161,7 +161,7 @@ const NEWS = [
       "Em uma grande imersão ecológica e cultural durante o mês de maio, o projeto mobilizou estudantes para valorizar a fauna, a flora e a tradição do artesanato de junco em Junqueiro.",
     content:
       "A Lagoa do Retiro foi palco de um momento histórico de educação socioambiental com a realização da <strong>Trilha da Juventude: Juventude Conectada</strong>. Durante os dias 13, 14, 15, 20, 21 e 22 de maio, a iniciativa da Secretaria Municipal de Juventude reuniu mais de mil estudantes em uma verdadeira expedição ecológica. O evento foi realizado em forte parceria com a Escola Estadual Padre Aurélio Góis, a Escola Estadual Maria Liege de Albuquerque Tavares e a Escola Municipal de Educação Básica Integral Agrícola São Francisco de Assis, proporcionando aos jovens um aprendizado prático e profundo sobre a rica fauna e flora do município. Indo além da conscientização e preservação ambiental, o projeto resgatou as raízes e a identidade da região ao promover uma vivência especial sobre a cultura do junco e a tradicional criação de balaios, ensinada por artesãos da própria comunidade, conectando o protagonismo da nova geração ao valioso patrimônio histórico da nossa terra.",
-    image: "trilha",
+    image: "/trilha.png",
   },
   {
     id: "news-8",
@@ -173,7 +173,7 @@ const NEWS = [
       "Ação realizada no dia 11 de maio uniu secretarias em uma mobilização com panfletagem e cartazes para conscientizar motoristas e pedestres sobre a prevenção de acidentes.",
     content:
       "Em prol de um trânsito mais seguro e responsável, a Secretaria Municipal da Juventude uniu forças com a Secretaria de Segurança para promover uma grande mobilização da campanha Maio Amarelo no dia 11 de maio de 2026. A ação contou com uma blitz educativa pelas ruas da cidade, na qual foram distribuídos panfletos informativos e exibidos cartazes de conscientização para alertar a população sobre os riscos e a prevenção de acidentes. Durante as abordagens, as equipes reforçaram dicas vitais para o dia a dia: respeitar rigorosamente a sinalização e os limites de velocidade, nunca utilizar o celular ao volante, garantir o uso do cinto de segurança por todos os passageiros e, no caso dos motociclistas, utilizar o capacete corretamente afivelado. A presença ativa da juventude na campanha reforçou a mensagem de que a empatia e as atitudes preventivas são os melhores caminhos para preservar vidas nas vias do nosso município.",
-    image: "blitz",
+    image: "/maio_amarelo.png",
   },
   {
     id: "news-9",
