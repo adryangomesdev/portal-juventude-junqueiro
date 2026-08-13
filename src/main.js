@@ -137,7 +137,7 @@ const NEWS = [
       "O Arraiá da Juventude do dia 24 de junho unirá as tradições do Dia de São João à transmissão do jogo do Brasil na Copa do Mundo, reunindo os jovens com comidas típicas, quadrilhas e muita torcida.",
     content:
       "No dia 24 de junho, o Arraiá da Juventude promete movimentar a galera ao unir a magia do Dia de São João com a emoção contagiante do jogo da Seleção Brasileira na Copa do Mundo. Em uma celebração vibrante que mistura o verde e amarelo às clássicas bandeirinhas coloridas, o evento contará com transmissão ao vivo da partida em telão, comidas típicas, apresentações de quadrilhas e muita música para embalar a torcida. É a fusão perfeita entre a riqueza da nossa cultura popular e a paixão pelo futebol, reunindo os jovens em um ambiente de pura alegria, união e celebração.",
-    image: "arraiá",
+    image: "/arraia.png",
   },
   {
     id: "news-6",
