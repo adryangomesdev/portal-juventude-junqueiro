@@ -677,15 +677,13 @@ function renderHome() {
     </section>
 
     <!-- AÇÕES DA JUVENTUDE SECTION -->
-    <!-- AÇÕES DA JUVENTUDE SECTION -->
-    <section class="max-w-7xl mx-auto py-16 relative z-20">
+    <section class="max-w-7xl mx-auto pt-16 pb-4 relative z-20">
       <div class="text-center mb-10 px-4 sm:px-6 lg:px-8">
         <span class="text-sm font-extrabold text-[#092986] uppercase tracking-wider">Iniciativas e Eventos</span>
         <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-1 leading-tight">Ações da Juventude</h2>
         <p class="text-slate-500 mt-2">Conheça os principais eventos e campanhas promovidos pela nossa Secretaria.</p>
       </div>
 
-      <!-- Estilo para ocultar a barra de rolagem nos navegadores -->
       <style>
         .hide-scrollbar::-webkit-scrollbar {
           display: none;
@@ -698,35 +696,35 @@ function renderHome() {
 
       <!-- Logos Flex Scroll Container -->
       <div class="hide-scrollbar flex overflow-x-auto items-center gap-12 md:gap-16 pb-8 px-4 sm:px-6 lg:px-8 snap-x snap-mandatory cursor-grab active:cursor-grabbing">
-        <div class="shrink-0 snap-center h-24 md:h-32 flex items-center justify-center">
+        <div class="shrink-0 snap-center h-32 md:h-48 flex items-center justify-center">
           <img src="VOLTA_AS_AULAS.png" alt="Volta às Aulas 2026" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
         </div>
         
-        <div class="shrink-0 snap-center h-24 md:h-32 flex items-center justify-center">
+        <div class="shrink-0 snap-center h-32 md:h-48 flex items-center justify-center">
           <img src="MAOS_DADAS_LOGO.png" alt="De Mãos Dadas com a Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
         </div>
         
-        <div class="shrink-0 snap-center h-24 md:h-32 flex items-center justify-center">
+        <div class="shrink-0 snap-center h-32 md:h-48 flex items-center justify-center">
           <img src="CONEXAO_MAES.png" alt="Conexão Mães" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
         </div>
         
-        <div class="shrink-0 snap-center h-24 md:h-32 flex items-center justify-center">
+        <div class="shrink-0 snap-center h-32 md:h-48 flex items-center justify-center">
           <img src="CINE_RURAL.png" alt="Cine Rural" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
         </div>
         
-        <div class="shrink-0 snap-center h-24 md:h-32 flex items-center justify-center">
+        <div class="shrink-0 snap-center h-32 md:h-48 flex items-center justify-center">
           <img src="AULAO_ENEM.png" alt="Aulão Vem Que Tem ENEM" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
         </div>
         
-        <div class="shrink-0 snap-center h-24 md:h-32 flex items-center justify-center">
+        <div class="shrink-0 snap-center h-32 md:h-48 flex items-center justify-center">
           <img src="MAIO_AMARELO_LOGO.png" alt="Maio Amarelo" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
         </div>
         
-        <div class="shrink-0 snap-center h-24 md:h-32 flex items-center justify-center">
+        <div class="shrink-0 snap-center h-32 md:h-48 flex items-center justify-center">
           <img src="TRILHA_DA_JUVENTUDE.png" alt="Trilha da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
         </div>
         
-        <div class="shrink-0 snap-center h-24 md:h-32 flex items-center justify-center">
+        <div class="shrink-0 snap-center h-32 md:h-48 flex items-center justify-center">
           <img src="ARRAIA_DA_JUVENTUDE_LOGO.png" alt="Arraiá da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
         </div>
 
