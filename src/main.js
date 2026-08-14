@@ -677,6 +677,7 @@ function renderHome() {
     </section>
 
     <!-- AÇÕES DA JUVENTUDE SECTION -->
+    <!-- AÇÕES DA JUVENTUDE SECTION -->
     <section class="max-w-7xl mx-auto py-16 relative z-20">
       <div class="text-center mb-10 px-4 sm:px-6 lg:px-8">
         <span class="text-sm font-extrabold text-[#092986] uppercase tracking-wider">Iniciativas e Eventos</span>
@@ -684,9 +685,19 @@ function renderHome() {
         <p class="text-slate-500 mt-2">Conheça os principais eventos e campanhas promovidos pela nossa Secretaria.</p>
       </div>
 
+      <!-- Estilo para ocultar a barra de rolagem nos navegadores -->
+      <style>
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      </style>
+
       <!-- Logos Flex Scroll Container -->
-      <div class="flex overflow-x-auto items-center gap-12 md:gap-16 pb-8 px-4 sm:px-6 lg:px-8 snap-x snap-mandatory">
-        
+      <div class="hide-scrollbar flex overflow-x-auto items-center gap-12 md:gap-16 pb-8 px-4 sm:px-6 lg:px-8 snap-x snap-mandatory cursor-grab active:cursor-grabbing">
         <div class="shrink-0 snap-center h-24 md:h-32 flex items-center justify-center">
           <img src="VOLTA_AS_AULAS.png" alt="Volta às Aulas 2026" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
         </div>
