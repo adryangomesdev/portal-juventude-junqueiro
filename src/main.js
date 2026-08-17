@@ -113,7 +113,7 @@ const NEWS = [
       "A parceria entre a Secretaria da Juventude de Junqueiro e o Senac formou novos profissionais através do curso de Técnicas de Maquiagem de 40 horas, cujos certificados foram entregues com destaque durante o II Festival da Juventude.",
     content:
       "O curso de Técnicas de Maquiagem, realizado através de uma sólida parceria entre a Secretaria Municipal de Juventude de Junqueiro e o Senac, ofereceu uma imersão prática com 40 horas de duração voltada para a qualificação profissional e geração de renda rápida. A iniciativa capacita os participantes com as tendências e habilidades práticas exigidas pelo mercado da beleza, incentivando o empreendedorismo e a autonomia financeira. O sucesso e o encerramento dessa jornada de aprendizado foram celebrados em grande estilo durante a programação do II Festival da Juventude, momento em que os alunos formandos participaram da entrega simbólica de seus certificados, marcando um novo e promissor capítulo em suas carreiras profissionais.",
-    image: "/IMG_5470.png",
+    image: "/assistente_adm_otm.png",
   },
   {
     id: "news-3",
@@ -677,7 +677,7 @@ function renderHome() {
     </section>
 
     <!-- AÇÕES DA JUVENTUDE SECTION -->
-    <section class="max-w-7xl mx-auto pt-16 pb-4 relative z-20">
+    <section class="max-w-7xl mx-auto pt-16 pb-1 relative z-20">
       <div class="text-center mb-10 px-4 sm:px-6 lg:px-8">
         <span class="text-sm font-extrabold text-[#092986] uppercase tracking-wider">Iniciativas e Eventos</span>
         <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-1 leading-tight">Ações da Juventude</h2>
