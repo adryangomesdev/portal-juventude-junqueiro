@@ -680,9 +680,12 @@ function renderHome() {
 
     <!-- AÇÕES DA JUVENTUDE SECTION  -->
     <section id="acoes-wrapper" class="relative z-20 h-[300vh] bg-slate-50">
-      <div class="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
-        
-        <div class="text-center mb-10 px-4 sm:px-6 lg:px-8">
+      
+      <!-- Substitua 'top-0 h-screen' por 'top-20 py-12' -->
+      <div class="sticky top-20 pt-12 pb-2 flex flex-col justify-center overflow-hidden">        
+      
+      <!-- Reduza a margem inferior do título de 'mb-10' para 'mb-6' -->
+        <div class="text-center mb-6 px-4 sm:px-6 lg:px-8">
           <span class="text-sm font-extrabold text-[#092986] uppercase tracking-wider">Iniciativas e Eventos</span>
           <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-1 leading-tight">Ações da Juventude</h2>
           <p class="text-slate-500 mt-2">Conheça os principais eventos e campanhas promovidos pela nossa Secretaria.</p>
@@ -1634,7 +1637,6 @@ function initHorizontalScroll() {
     track.style.transform = `translateX(-${progress * maxScroll}px)`;
   };
 
-  // Remove o listener anterior para evitar duplicações ao mudar de rota
   window.removeEventListener("scroll", handleScroll);
   window.addEventListener("scroll", handleScroll);
 }
