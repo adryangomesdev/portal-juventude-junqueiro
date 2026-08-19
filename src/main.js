@@ -1069,11 +1069,26 @@ function renderSobre() {
           </div>
           <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-none">Quem somos e o que fazemos</h2>
           <p class="text-slate-600 leading-relaxed text-base md:text-lg">
-            A <strong>Secretaria Municipal de Juventude de Junqueiro/AL</strong> é o órgão oficial da Prefeitura encarregado de propor, planejar, coordenar e executar políticas públicas destinadas aos cidadãos de 15 a 29 anos de idade.
+            A <strong>Secretaria Municipal de Juventude de Junqueiro/AL</strong> consolida-se como o órgão da administração pública dedicado exclusivamente ao desenvolvimento, representação e fomento de políticas públicas voltadas para os jovens do município. Atuando como uma via de comunicação direta entre a gestão municipal e a população jovem, a Secretaria funciona como um núcleo de planejamento e execução de projetos que visam garantir direitos, promover a cidadania e assegurar a participação ativa das novas gerações nas esferas de decisão e no cotidiano da comunidade.
           </p>
           <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-            Nosso foco principal é a articulação de programas governamentais de qualificação técnica e profissional gratuita, a promoção da inclusão digital, a garantia de direitos através de documentos como a Identidade Jovem (ID Jovem), e o suporte em eventos de lazer, esporte, formação acadêmica de acesso ao ensino superior (ENEM) e empreendedorismo local.
+            Nossa atuação fundamenta-se na criação, organização e implementação de oportunidades concretas que impactam a formação cidadã, cultural e socioambiental da juventude junqueirense. O trabalho realizado transcende a formulação teórica, materializando-se em ações de infraestrutura, logística e articulação intersetorial. Atuamos em rede, estabelecendo parcerias institucionais que viabilizam o acesso à educação complementar, à integração social e ao desenvolvimento de lideranças locais de forma estruturada e acessível.
           </p>
+            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+              Entre as realizações que ilustram nossa frente de atuação operacional, destaca-se a organização do Festival da Juventude. Em edições recentes, a Secretaria assumiu a coordenação integral deste evento de grande porte, gerenciando desde a logística de transporte para garantir a presença das escolas da região até a formulação dos roteiros cerimoniais oficiais. Este nível de organização assegura que os estudantes de diversas localidades tenham acesso a um espaço democrático, focado na troca de experiências, no debate produtivo e no acesso à cultura.
+            </p>
+
+            </p>
+            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+             Paralelamente às grandes mobilizações urbanas, a Secretaria atua no fortalecimento da identidade regional e da consciência ecológica, promovendo iniciativas como a Trilha da Juventude. Projetos dessa natureza, exemplificados pela expedição à Lagoa do Retiro, integram a vivência ambiental com o reconhecimento das tradições artesanais de Junqueiro. O gerenciamento dessas ações envolve o planejamento minucioso de cronogramas e parcerias, garantindo uma imersão segura e educativa que conecta os jovens ao patrimônio natural e histórico do município.
+            </p>
+
+            </p>
+            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+            Em síntese, a Secretaria Municipal da Juventude de Junqueiro é uma plataforma institucional de transformação e suporte. Nosso compromisso contínuo é formular e executar iniciativas que conectem a juventude a oportunidades reais de crescimento, seja por meio da integração escolar em festivais ou do resgate cultural em expedições formativas. Trabalhamos com o rigor logístico e administrativo necessário para entregar projetos que estruturem um caminho sólido para o desenvolvimento dos jovens em nosso município.
+            </p>
+
+            
           <div class="p-4 border-l-4 border-[#e6af00] bg-amber-50/50 rounded-r-xl">
             <p class="text-sm italic text-slate-600">
               "Trabalhamos incansavelmente para descentralizar e democratizar as melhores oportunidades nacionais para que nenhum jovem de Junqueiro fique para trás."
