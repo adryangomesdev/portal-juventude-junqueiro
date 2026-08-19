@@ -678,66 +678,67 @@ function renderHome() {
       </div>
     </section>
 
-    <!-- AÇÕES DA JUVENTUDE SECTION  -->
+    <!-- AÇÕES DA JUVENTUDE & CAMINHOS DIGITAIS (COMBINADOS) -->
     <section id="acoes-wrapper" class="relative z-20 h-[300vh] bg-slate-50">
-      
-      <!-- Substitua 'top-0 h-screen' por 'top-20 py-12' -->
-      <div class="sticky top-20 pt-12 pb-2 flex flex-col justify-center overflow-hidden">        
-      
-      <!-- Reduza a margem inferior do título de 'mb-10' para 'mb-6' -->
-        <div class="text-center mb-6 px-4 sm:px-6 lg:px-8">
-          <span class="text-sm font-extrabold text-[#092986] uppercase tracking-wider">Iniciativas e Eventos</span>
-          <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-1 leading-tight">Ações da Juventude</h2>
-          <p class="text-slate-500 mt-2">Conheça os principais eventos e campanhas promovidos pela nossa Secretaria.</p>
-        </div>
-
-        <div id="acoes-track" class="flex items-center gap-12 md:gap-16 px-4 sm:px-6 lg:px-8 w-max transition-transform duration-75 ease-out will-change-transform">
-          <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-            <img src="VOLTA_AS_AULAS.png" alt="Volta às Aulas 2026" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-          </div>
-          <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-            <img src="MAOS_DADAS_LOGO.png" alt="De Mãos Dadas com a Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-          </div>
-          <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-            <img src="CONEXAO_MAES.png" alt="Conexão Mães" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-          </div>
-          <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-            <img src="CINE_RURAL.png" alt="Cine Rural" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-          </div>
-          <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-            <img src="AULAO_ENEM.png" alt="Aulão Vem Que Tem ENEM" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-          </div>
-          <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-            <img src="MAIO_AMARELO_LOGO.png" alt="Maio Amarelo" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-          </div>
-          <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-            <img src="TRILHA_DA_JUVENTUDE.png" alt="Trilha da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-          </div>
-          <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-            <img src="ARRAIA_DA_JUVENTUDE_LOGO.png" alt="Arraiá da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PORTAL GRID OF OPPORTUNITIES PREVIEW -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-4">
+      <!-- O contêiner sticky agora agrupa as logos e a seção de plataformas -->
+      <div class="sticky top-20 pt-8 pb-4 flex flex-col justify-start overflow-hidden min-h-screen">
+        
+        <!-- PARTE 1: Ações da Juventude -->
         <div>
-          <span class="text-sm font-extrabold text-[#092986] uppercase tracking-wider">Caminhos Digitais</span>
-          <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-1 leading-tight">Principais Plataformas</h2>
-          <p class="text-slate-500 mt-2">Explore e inscreva-se nos programas parceiros nacionais e estaduais recomendados pela Secretaria.</p>
-        </div>
-        <a href="#/oportunidades" class="px-5 py-3 bg-blue-50 text-[#092986] hover:bg-[#092986] hover:text-white rounded-xl text-sm font-extrabold transition-all shrink-0 flex items-center gap-1.5">
-          <span>Ver todas as 8 oportunidades</span>
-          ${getSvgIcon("arrow-right", "h-4.5 w-4.5")}
-        </a>
-      </div>
+          <div class="text-center mb-6 px-4 sm:px-6 lg:px-8">
+            <span class="text-sm font-extrabold text-[#092986] uppercase tracking-wider">Iniciativas e Eventos</span>
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-1 leading-tight">Ações da Juventude</h2>
+            <p class="text-slate-500 mt-2">Conheça os principais eventos e campanhas promovidos pela nossa Secretaria.</p>
+          </div>
 
-      <!-- Grid Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        ${platformsGridHtml}
+          <div id="acoes-track" class="flex items-center gap-12 md:gap-16 px-4 sm:px-6 lg:px-8 w-max transition-transform duration-75 ease-out will-change-transform">
+            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
+              <img src="VOLTA_AS_AULAS.png" alt="Volta às Aulas 2026" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
+              <img src="MAOS_DADAS_LOGO.png" alt="De Mãos Dadas com a Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
+              <img src="CONEXAO_MAES.png" alt="Conexão Mães" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
+              <img src="CINE_RURAL.png" alt="Cine Rural" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
+              <img src="AULAO_ENEM.png" alt="Aulão Vem Que Tem ENEM" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
+              <img src="MAIO_AMARELO_LOGO.png" alt="Maio Amarelo" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
+              <img src="TRILHA_DA_JUVENTUDE.png" alt="Trilha da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
+              <img src="ARRAIA_DA_JUVENTUDE_LOGO.png" alt="Arraiá da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+            </div>
+          </div>
+        </div>
+
+        <!-- PARTE 2: Caminhos Digitais (Movida para dentro do sticky) -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 w-full">
+          <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-8 gap-4">
+            <div>
+              <span class="text-sm font-extrabold text-[#092986] uppercase tracking-wider">Caminhos Digitais</span>
+              <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-1 leading-tight">Principais Plataformas</h2>
+              <p class="text-slate-500 mt-2">Explore e inscreva-se nos programas parceiros nacionais e estaduais recomendados pela Secretaria.</p>
+            </div>
+            <a href="#/oportunidades" class="px-5 py-3 bg-blue-50 text-[#092986] hover:bg-[#092986] hover:text-white rounded-xl text-sm font-extrabold transition-all shrink-0 flex items-center gap-1.5">
+              <span>Ver todas as 8 oportunidades</span>
+              ${getSvgIcon("arrow-right", "h-4.5 w-4.5")}
+            </a>
+          </div>
+
+          <!-- Grid Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            ${platformsGridHtml}
+          </div>
+        </div>
+
       </div>
     </section>
 
