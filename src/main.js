@@ -678,10 +678,11 @@ function renderHome() {
       </div>
     </section>
 
-    <!-- AÇÕES DA JUVENTUDE & CAMINHOS DIGITAIS (COMBINADOS) -->
-    <section id="acoes-wrapper" class="relative z-20 h-[300vh] bg-slate-50">
-      <!-- O contêiner sticky agora agrupa as logos e a seção de plataformas -->
-      <div class="sticky top-20 pt-8 pb-4 flex flex-col justify-start overflow-hidden min-h-screen">
+    <!-- AÇÕES DA JUVENTUDE & CAMINHOS DIGITAIS -->
+    <section id="acoes-wrapper" class="relative z-20 h-auto md:h-[300vh] bg-slate-50">
+      
+      <!-- sticky ativado apenas no desktop -->
+      <div class="md:sticky md:top-20 pt-8 pb-4 flex flex-col justify-start overflow-hidden md:min-h-screen">
         
         <!-- PARTE 1: Ações da Juventude -->
         <div>
@@ -691,30 +692,33 @@ function renderHome() {
             <p class="text-slate-500 mt-2">Conheça os principais eventos e campanhas promovidos pela nossa Secretaria.</p>
           </div>
 
-          <div id="acoes-track" class="flex items-center gap-12 md:gap-16 px-4 sm:px-6 lg:px-8 w-max transition-transform duration-75 ease-out will-change-transform">
-            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-              <img src="VOLTA_AS_AULAS.png" alt="Volta às Aulas 2026" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-              <img src="MAOS_DADAS_LOGO.png" alt="De Mãos Dadas com a Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-              <img src="CONEXAO_MAES.png" alt="Conexão Mães" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-              <img src="CINE_RURAL.png" alt="Cine Rural" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-              <img src="AULAO_ENEM.png" alt="Aulão Vem Que Tem ENEM" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-              <img src="MAIO_AMARELO_LOGO.png" alt="Maio Amarelo" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-              <img src="TRILHA_DA_JUVENTUDE.png" alt="Trilha da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="shrink-0 h-32 md:h-48 flex items-center justify-center">
-              <img src="ARRAIA_DA_JUVENTUDE_LOGO.png" alt="Arraiá da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+          <!-- Scroll horizontal nativo para celular via overflow-x-auto e snap -->
+          <div class="w-full overflow-x-auto md:overflow-visible snap-x snap-mandatory" style="scrollbar-width: none;">
+            <div id="acoes-track" class="flex items-center gap-6 md:gap-16 px-4 sm:px-6 lg:px-8 w-max md:transition-transform md:duration-75 md:ease-out md:will-change-transform">
+              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
+                <img src="VOLTA_AS_AULAS.png" alt="Volta às Aulas 2026" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
+                <img src="MAOS_DADAS_LOGO.png" alt="De Mãos Dadas com a Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
+                <img src="CONEXAO_MAES.png" alt="Conexão Mães" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
+                <img src="CINE_RURAL.png" alt="Cine Rural" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
+                <img src="AULAO_ENEM.png" alt="Aulão Vem Que Tem ENEM" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
+                <img src="MAIO_AMARELO_LOGO.png" alt="Maio Amarelo" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
+                <img src="TRILHA_DA_JUVENTUDE.png" alt="Trilha da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
+                <img src="ARRAIA_DA_JUVENTUDE_LOGO.png" alt="Arraiá da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+              </div>
             </div>
           </div>
         </div>
@@ -1077,7 +1081,6 @@ function renderSobre() {
             <p class="text-slate-600 leading-relaxed text-sm md:text-base">
               Entre as realizações que ilustram nossa frente de atuação operacional, destaca-se a organização do Festival da Juventude. Em edições recentes, a Secretaria assumiu a coordenação integral deste evento de grande porte, gerenciando desde a logística de transporte para garantir a presença das escolas da região até a formulação dos roteiros cerimoniais oficiais. Este nível de organização assegura que os estudantes de diversas localidades tenham acesso a um espaço democrático, focado na troca de experiências, no debate produtivo e no acesso à cultura.
             </p>
-
             </p>
             <p class="text-slate-600 leading-relaxed text-sm md:text-base">
              Paralelamente às grandes mobilizações urbanas, a Secretaria atua no fortalecimento da identidade regional e da consciência ecológica, promovendo iniciativas como a Trilha da Juventude. Projetos dessa natureza, exemplificados pela expedição à Lagoa do Retiro, integram a vivência ambiental com o reconhecimento das tradições artesanais de Junqueiro. O gerenciamento dessas ações envolve o planejamento minucioso de cronogramas e parcerias, garantindo uma imersão segura e educativa que conecta os jovens ao patrimônio natural e histórico do município.
@@ -1643,6 +1646,12 @@ function initHorizontalScroll() {
   if (!wrapper || !track) return;
 
   const handleScroll = () => {
+    // Interrompe o scrolljacking em dispositivos móveis
+    if (window.innerWidth < 768) {
+      track.style.transform = "none";
+      return;
+    }
+
     const rect = wrapper.getBoundingClientRect();
     const scrollableDistance = rect.height - window.innerHeight;
 
@@ -1655,4 +1664,10 @@ function initHorizontalScroll() {
 
   window.removeEventListener("scroll", handleScroll);
   window.addEventListener("scroll", handleScroll);
+
+  // Trata redimensionamento de janela entre celular e desktop
+  window.removeEventListener("resize", handleScroll);
+  window.addEventListener("resize", handleScroll);
+
+  handleScroll();
 }
