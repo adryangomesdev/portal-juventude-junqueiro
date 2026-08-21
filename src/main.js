@@ -1340,6 +1340,8 @@ function renderDepoimentos() {
         </p>
       </div>
     </section>
+    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.png')] bg-repeat-x bg-contain bg-center"></div>
+
 
     <!-- Testimonials Grid -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
