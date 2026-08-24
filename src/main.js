@@ -1051,12 +1051,27 @@ function renderSobre() {
   updateNavigationActiveState("sobre");
 
   appContainer.innerHTML = `
+    <!-- Animações CSS Customizadas -->
+    <style>
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+      }
+      .delay-100 { animation-delay: 0.1s; }
+      .delay-200 { animation-delay: 0.2s; }
+      .delay-300 { animation-delay: 0.3s; }
+    </style>
+
     <!-- Header Hero banner -->
-    <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12">
-      <img src="/juventude_group.png" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />  
-      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-        <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-none">A Secretaria de Juventude</h1>
-        <p class="text-sm md:text-base text-blue-100 leading-relaxed max-w-2xl mx-auto">
+    <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-16 md:py-20">
+      <img src="juventude_group.png" alt="Fundo do Banner" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-30 mix-blend-overlay z-0 transition-transform duration-1000 hover:scale-105" />  
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 animate-fade-in-up">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">A Secretaria de Juventude</h1>
+        <p class="text-base md:text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto font-medium">
           Saiba quem somos, nossa missão institucional e como atuamos diariamente para transformar o futuro dos jovens de Junqueiro/AL.
         </p>
       </div>
@@ -1064,13 +1079,13 @@ function renderSobre() {
     <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.png')] bg-repeat-x bg-contain bg-center"></div>
 
     <!-- Institutional Sections -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
       
       <!-- Split visual description -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex px-3 py-1 bg-blue-50 text-[#092986] text-xs font-black uppercase rounded-full tracking-wider border border-blue-100">
+        <div class="lg:col-span-7 space-y-6 animate-fade-in-up delay-100">
+          <div class="inline-flex px-4 py-1.5 bg-blue-50 text-[#092986] text-xs font-black uppercase rounded-full tracking-wider border border-blue-100 shadow-sm">
             Nossa Atuação
           </div>
           <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-none">Quem somos e o que fazemos</h2>
@@ -1078,134 +1093,165 @@ function renderSobre() {
             A <strong>Secretaria Municipal de Juventude de Junqueiro/AL</strong> consolida-se como o órgão da administração pública dedicado exclusivamente ao desenvolvimento, representação e fomento de políticas públicas voltadas para os jovens do município. Atuando como uma via de comunicação direta entre a gestão municipal e a população jovem, a Secretaria funciona como um núcleo de planejamento e execução de projetos que visam garantir direitos, promover a cidadania e assegurar a participação ativa das novas gerações nas esferas de decisão e no cotidiano da comunidade.
           </p>
           <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-            Nossa atuação fundamenta-se na criação, organização e implementação de oportunidades concretas que impactam a formação cidadã, cultural e socioambiental da juventude junqueirense. O trabalho realizado transcende a formulação teórica, materializando-se em ações de infraestrutura, logística e articulação intersetorial. Atuamos em rede, estabelecendo parcerias institucionais que viabilizam o acesso à educação complementar, à integração social e ao desenvolvimento de lideranças locais de forma estruturada e acessível.
+            Nossa atuação fundamenta-se na criação, organização e implementação de opportunities concretas que impactam a formação cidadã, cultural e socioambiental da juventude junqueirense. O trabalho realizado transcende a formulação teórica, materializando-se em ações de infraestrutura, logística e articulação intersetorial. Atuamos em rede, estabelecendo parcerias institucionais que viabilizam o acesso à educação complementar, à integração social e ao desenvolvimento de lideranças locais de forma estruturada e acessível.
           </p>
-            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-              Entre as realizações que ilustram nossa frente de atuação operacional, destaca-se a organização do Festival da Juventude. Em edições recentes, a Secretaria assumiu a coordenação integral deste evento de grande porte, gerenciando desde a logística de transporte para garantir a presença das escolas da região até a formulação dos roteiros cerimoniais oficiais. Este nível de organização assegura que os estudantes de diversas localidades tenham acesso a um espaço democrático, focado na troca de experiências, no debate produtivo e no acesso à cultura.
-            </p>
-            </p>
-            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-             Paralelamente às grandes mobilizações urbanas, a Secretaria atua no fortalecimento da identidade regional e da consciência ecológica, promovendo iniciativas como a Trilha da Juventude. Projetos dessa natureza, exemplificados pela expedição à Lagoa do Retiro, integram a vivência ambiental com o reconhecimento das tradições artesanais de Junqueiro. O gerenciamento dessas ações envolve o planejamento minucioso de cronogramas e parcerias, garantindo uma imersão segura e educativa que conecta os jovens ao patrimônio natural e histórico do município.
-            </p>
 
-            </p>
-            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+          <!-- Imagem Otimizada Integrada no Texto -->
+          <div class="rounded-2xl overflow-hidden shadow-lg group relative my-8 border border-slate-100">
+             <img src="juventude_group.png" alt="Equipe da Juventude de Junqueiro" loading="lazy" decoding="async" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+             <div class="absolute inset-0 bg-gradient-to-t from-[#092986]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
+                 <span class="text-white font-bold text-sm md:text-base drop-shadow-md">Equipe da Secretaria Municipal de Juventude</span>
+             </div>
+          </div>
+
+          <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+            Entre as realizações que ilustram nossa frente de atuação operacional, destaca-se a organização do Festival da Juventude. Em edições recentes, a Secretaria assumiu a coordenação integral deste evento de grande porte, gerenciando desde a logística de transporte para garantir a presença das escolas da região até a formulação dos roteiros cerimoniais oficiais. Este nível de organização assegura que os estudantes de diversas localidades tenham acesso a um espaço democrático, focado na troca de experiências, no debate produtivo e no acesso à cultura.
+          </p>
+          <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+            Paralelamente às grandes mobilizações urbanas, a Secretaria atua no fortalecimento da identidade regional e da consciência ecológica, promovendo iniciativas como a Trilha da Juventude. Projetos dessa natureza, exemplificados pela expedição à Lagoa do Retiro, integram a vivência ambiental com o reconhecimento das tradições artesanais de Junqueiro. O gerenciamento dessas ações envolve o planejamento minucioso de cronogramas e parcerias, garantindo uma imersão segura e educativa que conecta os jovens ao patrimônio natural e histórico do município.
+          </p>
+          <p class="text-slate-600 leading-relaxed text-sm md:text-base">
             Em síntese, a Secretaria Municipal da Juventude de Junqueiro é uma plataforma institucional de transformação e suporte. Nosso compromisso contínuo é formular e executar iniciativas que conectem a juventude a oportunidades reais de crescimento, seja por meio da integração escolar em festivais ou do resgate cultural em expedições formativas. Trabalhamos com o rigor logístico e administrativo necessário para entregar projetos que estruturem um caminho sólido para o desenvolvimento dos jovens em nosso município.
-            </p>
-
+          </p>
             
-          <div class="p-4 border-l-4 border-[#e6af00] bg-amber-50/50 rounded-r-xl">
-            <p class="text-sm italic text-slate-600">
+          <div class="p-5 border-l-4 border-[#e6af00] bg-amber-50/80 rounded-r-2xl shadow-sm transform hover:-translate-y-1 transition-transform duration-300">
+            <p class="text-sm md:text-base italic text-slate-700 font-medium">
               "Trabalhamos incansavelmente para descentralizar e democratizar as melhores oportunidades nacionais para que nenhum jovem de Junqueiro fique para trás."
             </p>
           </div>
         </div>
 
-        <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-8 border border-slate-800 shadow-xl space-y-6 relative overflow-hidden">
-          <div class="absolute right-0 bottom-0 w-64 h-64 bg-[#092986] opacity-30 rounded-full blur-3xl"></div>
-          <h3 class="text-xl font-bold text-white tracking-tight border-b border-slate-700/50 pb-3">Frentes de Atuação</h3>
+        <!-- Barra Lateral Dinâmica -->
+        <div class="lg:col-span-5 space-y-8 animate-fade-in-up delay-200 lg:sticky lg:top-28">
           
-          <ul class="space-y-4 text-sm relative z-10 text-slate-300">
-            <li class="flex items-start gap-3">
-              <span class="p-1 bg-emerald-500/20 text-emerald-400 rounded-lg shrink-0 mt-0.5">
-                ${getSvgIcon("graduation-cap", "h-4 w-4")}
-              </span>
-              <div>
-                <strong class="text-white">Educação e Idiomas</strong>
-                <p class="text-xs text-slate-400 mt-0.5">Mediação de cursos oficiais gratuitos do Ministério da Educação.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="p-1 bg-blue-500/20 text-blue-400 rounded-lg shrink-0 mt-0.5">
-                ${getSvgIcon("code", "h-4 w-4")}
-              </span>
-              <div>
-                <strong class="text-white">Capacitação em Tecnologia</strong>
-                <p class="text-xs text-slate-400 mt-0.5">Articulação com OxeTech e polos para formação no setor digital.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="p-1 bg-rose-500/20 text-rose-400 rounded-lg shrink-0 mt-0.5">
-                ${getSvgIcon("palette", "h-4 w-4")}
-              </span>
-              <div>
-                <strong class="text-white">Cultura e Economia Criativa</strong>
-                <p class="text-xs text-slate-400 mt-0.5">Suporte para projetos culturais e profissionalização de jovens produtores.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="p-1 bg-amber-500/20 text-amber-400 rounded-lg shrink-0 mt-0.5">
-                ${getSvgIcon("id-card", "h-4 w-4")}
-              </span>
-              <div>
-                <strong class="text-white">Cidadania e Direitos</strong>
-                <p class="text-xs text-slate-400 mt-0.5">Emissão itinerante e auxílio do ID Jovem em todas as comunidades.</p>
-              </div>
-            </li>
-          </ul>
+          <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-8 border border-slate-800 shadow-2xl hover:shadow-blue-900/20 transition-shadow duration-500 relative overflow-hidden group">
+            <div class="absolute right-0 bottom-0 w-64 h-64 bg-[#092986] opacity-40 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700"></div>
+            <h3 class="text-2xl font-bold text-white tracking-tight border-b border-slate-700/50 pb-4 mb-6">Frentes de Atuação</h3>
+            
+            <ul class="space-y-6 text-sm relative z-10 text-slate-300">
+              <li class="flex items-start gap-4 group/item">
+                <span class="p-2.5 bg-emerald-500/20 text-emerald-400 rounded-xl shrink-0 mt-0.5 group-hover/item:bg-emerald-500 group-hover/item:text-white transition-colors duration-300">
+                  ${getSvgIcon("graduation-cap", "h-5 w-5")}
+                </span>
+                <div>
+                  <strong class="text-white text-base">Educação e Idiomas</strong>
+                  <p class="text-sm text-slate-400 mt-1">Mediação de cursos oficiais gratuitos do Ministério da Educação.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4 group/item">
+                <span class="p-2.5 bg-blue-500/20 text-blue-400 rounded-xl shrink-0 mt-0.5 group-hover/item:bg-blue-500 group-hover/item:text-white transition-colors duration-300">
+                  ${getSvgIcon("code", "h-5 w-5")}
+                </span>
+                <div>
+                  <strong class="text-white text-base">Capacitação em Tecnologia</strong>
+                  <p class="text-sm text-slate-400 mt-1">Articulação com OxeTech e polos para formação no setor digital.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4 group/item">
+                <span class="p-2.5 bg-rose-500/20 text-rose-400 rounded-xl shrink-0 mt-0.5 group-hover/item:bg-rose-500 group-hover/item:text-white transition-colors duration-300">
+                  ${getSvgIcon("palette", "h-5 w-5")}
+                </span>
+                <div>
+                  <strong class="text-white text-base">Cultura e Economia Criativa</strong>
+                  <p class="text-sm text-slate-400 mt-1">Suporte para projetos culturais e profissionalização de jovens produtores.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4 group/item">
+                <span class="p-2.5 bg-amber-500/20 text-amber-400 rounded-xl shrink-0 mt-0.5 group-hover/item:bg-amber-500 group-hover/item:text-white transition-colors duration-300">
+                  ${getSvgIcon("id-card", "h-5 w-5")}
+                </span>
+                <div>
+                  <strong class="text-white text-base">Cidadania e Direitos</strong>
+                  <p class="text-sm text-slate-400 mt-1">Emissão itinerante e auxílio do ID Jovem em todas as comunidades.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Video Section Otimizado -->
+          <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-white p-2">
+             <div class="p-4 border-b border-slate-100 mb-2">
+             </div>
+             <video 
+               controls 
+               preload="metadata" 
+               class="w-full h-auto rounded-2xl bg-slate-900"
+               aria-label="Vídeo institucional sobre a Secretaria da Juventude"
+             >
+               <source src="VIDEO_LOOP_JUVENTUDE_SITE.mp4" type="video/mp4">
+               Seu navegador não suporta a tag de vídeo.
+             </video>
+          </div>
+
         </div>
 
       </div>
 
       <!-- Mission, Vision, Values Tri-card layout -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-up delay-300">
         
-        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm space-y-4">
-          <div class="h-12 w-12 rounded-xl bg-blue-50 text-[#092986] flex items-center justify-center shadow-inner">
-            ${getSvgIcon("award", "h-6 w-6")}
+        <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 space-y-5">
+          <div class="h-14 w-14 rounded-2xl bg-blue-50 text-[#092986] flex items-center justify-center shadow-inner">
+            ${getSvgIcon("award", "h-7 w-7")}
           </div>
-          <h3 class="text-xl font-bold text-slate-950">Nossa Missão</h3>
-          <p class="text-sm text-slate-500 leading-relaxed">
+          <h3 class="text-2xl font-bold text-slate-950">Nossa Missão</h3>
+          <p class="text-sm lg:text-base text-slate-500 leading-relaxed">
             Garantir aos jovens de Junqueiro o acesso integrado e de qualidade a políticas públicas inovadoras de qualificação, profissionalização, cultura, lazer e inclusão socioeconômica ativa.
           </p>
         </div>
 
-        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm space-y-4">
-          <div class="h-12 w-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shadow-inner">
-            ${getSvgIcon("info", "h-6 w-6")}
+        <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 space-y-5">
+          <div class="h-14 w-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center shadow-inner">
+            ${getSvgIcon("info", "h-7 w-7")}
           </div>
-          <h3 class="text-xl font-bold text-slate-950">Nossa Visão</h3>
-          <p class="text-sm text-slate-500 leading-relaxed">
+          <h3 class="text-2xl font-bold text-slate-950">Nossa Visão</h3>
+          <p class="text-sm lg:text-base text-slate-500 leading-relaxed">
             Tornar o município de Junqueiro uma referência estadual na implementação de políticas públicas integradas e ágeis de empoderamento e emancipação sustentável da juventude periférica e rural.
           </p>
         </div>
 
-        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm space-y-4">
-          <div class="h-12 w-12 rounded-xl bg-amber-50 text-[#e6af00] flex items-center justify-center shadow-inner">
-            ${getSvgIcon("check-circle", "h-6 w-6")}
+        <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 space-y-5">
+          <div class="h-14 w-14 rounded-2xl bg-amber-50 text-[#e6af00] flex items-center justify-center shadow-inner">
+            ${getSvgIcon("check-circle", "h-7 w-7")}
           </div>
-          <h3 class="text-xl font-bold text-slate-950">Nossos Valores</h3>
-          <p class="text-sm text-slate-500 leading-relaxed">
-            Transparência absoluta, inclusão e respeito à diversidade, integridade pública, compromisso social contínuo, inovação digital contínua e foco nas vocações produtivas locais.
+          <h3 class="text-2xl font-bold text-slate-950">Nossos Valores</h3>
+          <p class="text-sm lg:text-base text-slate-500 leading-relaxed">
+            Transparência absoluta, inclusão e respeito à diversidade, integridade pública, compromisso social contínuo, inovação digital contínuo e foco nas vocações produtivas locais.
           </p>
         </div>
 
       </div>
 
       <!-- Physical Presence & Service Info -->
-      <div class="bg-[#092986] text-white rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-xl">
+      <div class="bg-[#092986] text-white rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl animate-fade-in-up delay-300">
         <div class="absolute inset-0 bg-grid-white/[0.04] bg-[size:32px_32px]"></div>
-        <div class="relative z-10 max-w-3xl space-y-6 text-left">
-          <h3 class="text-2xl md:text-3xl font-black">Informações Importantes de Atendimento</h3>
-          <p class="text-blue-100 leading-relaxed">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-[#e6af00] opacity-20 rounded-full blur-[80px]"></div>
+        
+        <div class="relative z-10 max-w-4xl space-y-6 text-left">
+          <h3 class="text-3xl md:text-4xl font-black tracking-tight">Informações Importantes de Atendimento</h3>
+          <p class="text-blue-100 leading-relaxed text-base lg:text-lg">
             Nossos serviços, computadores com internet e assistência na emissão de documentos estão disponíveis de forma totalmente gratuita e sem agendamento prévio.
           </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-            <div class="space-y-1">
-              <strong class="text-white block font-bold text-sm">📍 Endereço Comercial:</strong>
-              <span class="text-xs text-blue-200">Rua João de Deus, 76, Junqueiro - AL, 57270-000</span>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+            <div class="space-y-2 bg-black/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-black/20 transition-colors">
+              <strong class="text-white flex items-center gap-2 font-bold text-base">${getSvgIcon("map-pin", "h-5 w-5 text-[#e6af00]")} Endereço Comercial:</strong>
+              <span class="text-sm text-blue-200 block pl-7">Rua João de Deus, 76, Junqueiro - AL, 57270-000</span>
             </div>
-            <div class="space-y-1">
-              <strong class="text-white block font-bold text-sm">🕒 Horário de Funcionamento:</strong>
-              <span class="text-xs text-blue-200">De Segunda a Sexta-feira, das 08h às 14h.</span>
+            
+            <div class="space-y-2 bg-black/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-black/20 transition-colors">
+              <strong class="text-white flex items-center gap-2 font-bold text-base">${getSvgIcon("calendar", "h-5 w-5 text-[#e6af00]")} Horário de Funcionamento:</strong>
+              <span class="text-sm text-blue-200 block pl-7">De Segunda a Sexta-feira, das 08h às 14h.</span>
             </div>
-            <div class="space-y-1">
-              <strong class="text-white block font-bold text-sm">📞 Telefone Oficial:</strong>
-              <span class="text-xs text-blue-200">(82) 99130-1648 (Atendimento no horário da sede)</span>
+            
+            <div class="space-y-2 bg-black/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-black/20 transition-colors">
+              <strong class="text-white flex items-center gap-2 font-bold text-base">${getSvgIcon("phone", "h-5 w-5 text-[#e6af00]")} Telefone Oficial:</strong>
+              <span class="text-sm text-blue-200 block pl-7">(82) 99130-1648 (Atendimento na sede)</span>
             </div>
-            <div class="space-y-1">
-              <strong class="text-white block font-bold text-sm">✉️ E-mail Institucional:</strong>
-              <span class="text-xs text-blue-200">Juventudejunqueiro@gmail.com</span>
+            
+            <div class="space-y-2 bg-black/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-black/20 transition-colors">
+              <strong class="text-white flex items-center gap-2 font-bold text-base">${getSvgIcon("mail", "h-5 w-5 text-[#e6af00]")} E-mail Institucional:</strong>
+              <span class="text-sm text-blue-200 block pl-7">Juventudejunqueiro@gmail.com</span>
             </div>
           </div>
         </div>
