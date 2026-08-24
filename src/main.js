@@ -1085,9 +1085,6 @@ function renderSobre() {
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
         <div class="lg:col-span-7 space-y-6 animate-fade-in-up delay-100">
-          <div class="inline-flex px-4 py-1.5 bg-blue-50 text-[#092986] text-xs font-black uppercase rounded-full tracking-wider border border-blue-100 shadow-sm">
-            Nossa Atuação
-          </div>
           <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-none">Quem somos e o que fazemos</h2>
           <p class="text-slate-600 leading-relaxed text-base md:text-lg">
             A <strong>Secretaria Municipal de Juventude de Junqueiro/AL</strong> consolida-se como o órgão da administração pública dedicado exclusivamente ao desenvolvimento, representação e fomento de políticas públicas voltadas para os jovens do município. Atuando como uma via de comunicação direta entre a gestão municipal e a população jovem, a Secretaria funciona como um núcleo de planejamento e execução de projetos que visam garantir direitos, promover a cidadania e assegurar a participação ativa das novas gerações nas esferas de decisão e no cotidiano da comunidade.
