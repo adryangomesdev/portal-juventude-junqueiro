@@ -219,12 +219,12 @@ const TESTIMONIALS = [
     avatar: "C",
   },
   {
-    name: "Douglas Silva",
-    location: "Chã do Pilar",
-    program: "MEC ENEM & Livros",
+    name: "CineRural",
+    location: "Povoado Baixa Fria",
+    program: "Giro da Juventude",
     quote:
-      "Os simulados e as videoaulas oficiais me deram o ritmo que eu precisava para a prova. Consegui passar em Administração Pública e recomendo demais as plataformas gratuitas!",
-    avatar: "D",
+      "<strong> E ai secretário, está achando o que do CineRural?</strong> R: O CineRural está sendo um momento muito importante para a nossa região, para o município de Junqueiro, porque é levar a cultura para os povoados, onde o pessoal está mais distante a prefeitura está presente. Sem contar também com a inclusão porque também está dando acesso a acessibilidade maior as pessoas com deficiência, isso é importante porque é o papel da secretaria da juventude. é uma juventude inclusiva.",
+    avatar: "M",
   },
   {
     name: "Marciano Correia",
