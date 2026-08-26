@@ -1166,7 +1166,7 @@ function renderSobre() {
                class="w-full h-auto rounded-2xl bg-slate-900"
                aria-label="Vídeo institucional sobre a Secretaria da Juventude"
              >
-               <source src="VIDEO_LOOP_JUVENTUDE_SITE.mp4" type="video/mp4">
+               <source src="VIDEO_LOOP_JUVENTUDE_SITE.webm" type="video/mp4">
                Seu navegador não suporta a tag de vídeo.
              </video>
           </div>
