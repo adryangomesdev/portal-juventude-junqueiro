@@ -203,26 +203,23 @@ const NEWS = [
 
 const TESTIMONIALS = [
   {
-    name: "Mateus Santos",
-    age: "19 anos",
-    location: "Centro",
-    program: "OxeTech Alagoas",
+    name: "Trilha da Juventude",
+    location: "Lagoa do Retiro",
+    program: "Giro da Juventude",
     quote:
-      "Graças à trilha de programação do OxeTech e com o apoio dos computadores do Espaço Juventude Tech, consegui meu primeiro estágio remoto como programador júnior. Uma oportunidade incrível que mudou meu caminho!",
+      "<strong>Secretário, o que o senhor está achando nessa ação da lagoa?</strong> R: Acho uma ação muito importante, além da gente trazer os alunos a gente está conscientizando os alunos. De antemão,quero parabenizar também o secretário de meio ambiente, secretário arlysson do município, secretário também de recurso hídrico, Keyton Felix. Por essa ação, então a gente precisa fazer mais ações como essa, levar às escolas para que os próprios alunos tenham esse contato com a natureza e que tenham esse contato e esse cuidado com a natureza.",
     avatar: "M",
   },
   {
     name: "Camila Oliveira",
-    age: "21 anos",
     location: "Povoado Retiro",
-    program: "ID Jovem",
+    program: "giro da juventude",
     quote:
       "O ID Jovem transformou minha rotina. Agora viajo de graça para fazer as provas e seleções de emprego em Maceió e Arapiraca. Economizo uma grana pesada que ajuda muito em casa.",
     avatar: "C",
   },
   {
     name: "Douglas Silva",
-    age: "18 anos",
     location: "Chã do Pilar",
     program: "MEC ENEM & Livros",
     quote:
@@ -230,13 +227,12 @@ const TESTIMONIALS = [
     avatar: "D",
   },
   {
-    name: "Rafaela Cavalcante",
-    age: "23 anos",
-    location: "Usina Uruba",
-    program: "Escola Solano Trindade",
+    name: "Marciano Correia",
+    location: "Lagoa do Retiro",
+    program: "giro da juventude",
     quote:
-      "Fiz o curso gratuito de Economia Criativa na Escola Solano Trindade e hoje gerencio o marketing digital do artesanato de palha da minha comunidade. Abriu os meus olhos para o empreendedorismo.",
-    avatar: "R",
+      "<strong>Qual a importância da juventude da natureza?</strong> R: pra mim é importante ter a juventude na natureza é ajudar a gente se conectar e por sermos mais jovens ajudar entender mais a natureza e criar mais ação para ajudar o meio ambiente.",
+    avatar: "M",
   },
 ];
 
@@ -563,7 +559,7 @@ function renderHome() {
           </div>
           <div>
             <h5 class="text-sm font-bold text-white leading-none">${t.name}</h5>
-            <p class="text-xs text-slate-400 mt-1">${t.age} • ${t.location} (${t.program})</p>
+            <p class="text-xs text-slate-400 mt-1">$tion} (${t.program})</p>
           </div>
         </div>
       </div>
@@ -1360,8 +1356,7 @@ function renderDepoimentos() {
         </div>
 
         <div class="pt-6 border-t border-slate-50 mt-6 flex items-center justify-between text-xs font-bold text-slate-400 uppercase tracking-wider">
-          <span>Idade: ${t.age}</span>
-          <span>Bairro: ${t.location}</span>
+          <span>Local: ${t.location}</span>
         </div>
       </div>
     `;
