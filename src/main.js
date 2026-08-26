@@ -1461,8 +1461,8 @@ function renderContato() {
               <label for="subject" class="block text-sm font-bold text-slate-700">Assunto Principal *</label>
               <select id="subject" class="block w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#092986] focus:border-transparent transition-all">
                 <option value="duvidas">Tirar dúvidas sobre as plataformas</option>
-                <option value="idjovem">Cadastro / Orientação ID Jovem</option>
-                <option value="tech">Agendamento no Espaço Juventude Tech</option>
+                <option value="idjovem">Cadastro / Orientação para os Cursos</option>
+                <option value="tech">Agendamento de reunião com o Secretario da Juventude</option>
                 <option value="depoimento">Enviar história de sucesso / depoimento</option>
                 <option value="outros">Outras solicitações institucionais</option>
               </select>
