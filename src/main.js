@@ -101,7 +101,7 @@ const NEWS = [
       "O II Festival da Juventude de Junqueiro movimenta o mês de agosto com um extenso cronograma de atividades culturais, esportivas e ações de capacitação, destacando a inclusão social e o protagonismo jovem.",
     content:
       "O II Festival da Juventude de Junqueiro teve sua grande abertura no dia 31 de julho, marcada por um desfile pelas ruas da cidade que reuniu escolas e parceiros em torno do tema da <strong>juventude inclusiva</strong>, com destaque para a participação e valorização das Pessoas com Deficiência (PCD). A programação se estende por todo o mês de agosto e já contou com momentos marcantes como a Gincana Interescolar, realizada no Ginásio de Esportes, além de diversas atividades culturais, competições esportivas e homenagens a personalidades locais.<br><br>Mais do que celebração, o festival também foca no futuro dos jovens. O evento é palco para a entrega de certificados de cursos profissionalizantes promovidos em parceria com o Senac, reafirmando o compromisso do município em capacitar e abrir novas portas para a juventude junqueirense.",
-    image: "/juventude_group.png",
+    image: "/juventude_group.webp",
   },
   {
     id: "news-2",
@@ -113,7 +113,7 @@ const NEWS = [
       "A parceria entre a Secretaria da Juventude de Junqueiro e o Senac formou novos profissionais através do curso de Técnicas de Maquiagem de 40 horas, cujos certificados foram entregues com destaque durante o II Festival da Juventude.",
     content:
       "O curso de Técnicas de Maquiagem, realizado através de uma sólida parceria entre a Secretaria Municipal de Juventude de Junqueiro e o Senac, ofereceu uma imersão prática com 40 horas de duração voltada para a qualificação profissional e geração de renda rápida. A iniciativa capacita os participantes com as tendências e habilidades práticas exigidas pelo mercado da beleza, incentivando o empreendedorismo e a autonomia financeira. O sucesso e o encerramento dessa jornada de aprendizado foram celebrados em grande estilo durante a programação do II Festival da Juventude, momento em que os alunos formandos participaram da entrega simbólica de seus certificados, marcando um novo e promissor capítulo em suas carreiras profissionais.",
-    image: "/assistente_adm_otm.png",
+    image: "/assistente_adm_otm.webp",
   },
   {
     id: "news-3",
@@ -125,7 +125,7 @@ const NEWS = [
       "Com 160 horas de duração, as novas qualificações oferecidas pelo Senac chegam para preparar os jovens com habilidades essenciais para o mercado de trabalho local e regional.",
     content:
       "A parceria de sucesso entre a Secretaria Municipal de Juventude e o Senac continua a gerar oportunidades transformadoras com a oferta dos cursos de <strong>Assistente Administrativo</strong> e <strong>Assistente de Marketing e Vendas</strong>. Com uma robusta carga horária de 160 horas, as formações foram estruturadas para oferecer um preparo completo, unindo teoria e prática para desenvolver as competências mais exigidas pelo atual mercado de trabalho. Para garantir o sucesso e a acessibilidade da iniciativa, a Secretaria organizou toda a articulação logística necessária para a permanência dos jovens no projeto e planejou as aulas para acontecerem nas instalações da Escola Estadual Padre Aurélio Góis. Essa união de esforços reafirma o compromisso contínuo do município em transformar a realidade dos nossos jovens através da educação e da qualificação profissional de excelência.",
-    image: "/marketing_e_vendas.png",
+    image: "/marketing_e_vendas.webp",
   },
   {
     id: "news-4",
@@ -137,7 +137,7 @@ const NEWS = [
       "O Arraiá da Juventude do dia 24 de junho unirá as tradições do Dia de São João à transmissão do jogo do Brasil na Copa do Mundo, reunindo os jovens com comidas típicas, quadrilhas e muita torcida.",
     content:
       "No dia 24 de junho, o Arraiá da Juventude promete movimentar a galera ao unir a magia do Dia de São João com a emoção contagiante do jogo da Seleção Brasileira na Copa do Mundo. Em uma celebração vibrante que mistura o verde e amarelo às clássicas bandeirinhas coloridas, o evento contará com transmissão ao vivo da partida em telão, comidas típicas, apresentações de quadrilhas e muita música para embalar a torcida. É a fusão perfeita entre a riqueza da nossa cultura popular e a paixão pelo futebol, reunindo os jovens em um ambiente de pura alegria, união e celebração.",
-    image: "/arraia.png",
+    image: "/arraia.webp",
   },
   {
     id: "news-6",
@@ -149,7 +149,7 @@ const NEWS = [
       "Realizado na manhã do dia 13 de junho, a nova edição do Aulão reuniu especialistas das Ciências da Natureza e Humanas no Teatro São José, oferecendo preparação intensiva e suporte completo aos jovens.",
     content:
       "A manhã do dia 13 de junho de 2026 foi superada por muito aprendizado no Teatro São José, que sediou mais uma edição de sucesso do Aulão Vem Que Tem ENEM. Promovido em forte parceria com a Secretaria da Juventude, o evento mobilizou toda a equipe para garantir um ambiente acolhedor, com controle de acesso organizado, distribuição de materiais didáticos e lanches para os estudantes. No palco, a preparação de excelência ficou por conta de um verdadeiro super time de professores: Jessica Moreira (Biologia), Tryciany (Química), Eudes (Sociologia), Nivaldo (Física), Clézia (Geografia), Davi Silva (História) e Wanderlan (Filosofia). Essa grande maratona de aulas integrou as áreas de Ciências da Natureza e Humanas, proporcionando aos jovens de Junqueiro uma imersão completa de conhecimentos, dicas valiosas e muita motivação para a reta final rumo ao ensino superior.",
-    image: "/aulao_1.png",
+    image: "/aulao_1.webp",
   },
   {
     id: "news-7",
@@ -161,7 +161,7 @@ const NEWS = [
       "Em uma grande imersão ecológica e cultural durante o mês de maio, o projeto mobilizou estudantes para valorizar a fauna, a flora e a tradição do artesanato de junco em Junqueiro.",
     content:
       "A Lagoa do Retiro foi palco de um momento histórico de educação socioambiental com a realização da <strong>Trilha da Juventude: Juventude Conectada</strong>. Durante os dias 13, 14, 15, 20, 21 e 22 de maio, a iniciativa da Secretaria Municipal de Juventude reuniu mais de mil estudantes em uma verdadeira expedição ecológica. O evento foi realizado em forte parceria com a Escola Estadual Padre Aurélio Góis, a Escola Estadual Maria Liege de Albuquerque Tavares e a Escola Municipal de Educação Básica Integral Agrícola São Francisco de Assis, proporcionando aos jovens um aprendizado prático e profundo sobre a rica fauna e flora do município. Indo além da conscientização e preservação ambiental, o projeto resgatou as raízes e a identidade da região ao promover uma vivência especial sobre a cultura do junco e a tradicional criação de balaios, ensinada por artesãos da própria comunidade, conectando o protagonismo da nova geração ao valioso patrimônio histórico da nossa terra.",
-    image: "/trilha.png",
+    image: "/trilha.webp",
   },
   {
     id: "news-8",
@@ -173,7 +173,7 @@ const NEWS = [
       "Ação realizada no dia 11 de maio uniu secretarias em uma mobilização com panfletagem e cartazes para conscientizar motoristas e pedestres sobre a prevenção de acidentes.",
     content:
       "Em prol de um trânsito mais seguro e responsável, a Secretaria Municipal da Juventude uniu forças com a Secretaria de Segurança para promover uma grande mobilização da campanha Maio Amarelo no dia 11 de maio de 2026. A ação contou com uma blitz educativa pelas ruas da cidade, na qual foram distribuídos panfletos informativos e exibidos cartazes de conscientização para alertar a população sobre os riscos e a prevenção de acidentes. Durante as abordagens, as equipes reforçaram dicas vitais para o dia a dia: respeitar rigorosamente a sinalização e os limites de velocidade, nunca utilizar o celular ao volante, garantir o uso do cinto de segurança por todos os passageiros e, no caso dos motociclistas, utilizar o capacete corretamente afivelado. A presença ativa da juventude na campanha reforçou a mensagem de que a empatia e as atitudes preventivas são os melhores caminhos para preservar vidas nas vias do nosso município.",
-    image: "/maio_amarelo.png",
+    image: "/maio_amarelo.webp",
   },
   {
     id: "news-9",
@@ -185,7 +185,7 @@ const NEWS = [
       "A 2ª edição do Aulão Vem Que Tem ENEM reuniu centenas de jovens no dia 25 de abril para um dia intenso de preparação gratuita com grandes especialistas em Matemática, Redação e História.",
     content:
       "A preparação para o acesso ao ensino superior ganhou um reforço de peso com a realização da 2ª edição do Aulão Vem Que Tem ENEM, ocorrida com grande sucesso no dia 25 de abril de 2026. Organizado com foco total na excelência acadêmica e apoio aos jovens do nosso município, o evento ofereceu aulas estratégicas e dinâmicas com um time de professores de destaque: Fabrício Lima desmistificando a Matemática, Isabel Guedes compartilhando as técnicas essenciais para uma Redação nota mil, e Davi Silva trazendo abordagens aprofundadas em História. Mais do que apenas repassar conteúdos, o aulão foi um momento fundamental de incentivo, troca de experiências e fortalecimento da confiança dos nossos estudantes na reta de preparação para o exame nacional.",
-    image: "/aulao_2.png",
+    image: "/aulao_2.webp",
   },
   {
     id: "news-10",
@@ -197,7 +197,7 @@ const NEWS = [
       "No dia 12 de abril, uma parceria inédita garantiu que os jovens atletas junqueirenses vivenciassem a experiência de disputar o campeonato em uma quadra profissional de alto padrão.",
     content:
       "O esporte local vivenciou um momento de grande valorização no dia 12 de abril de 2026, impulsionado pelas ações do projeto <strong>'Mãos Dadas com a Juventude'</strong>. Através de uma importante parceria firmada com o SEST SENAT, a Secretaria da Juventude proporcionou à Liga de Basquete junqueirense a oportunidade única de realizar uma rodada oficial do seu campeonato nas instalações esportivas profissionais da instituição, localizada no município vizinho de Teotônio Vilela. Essa iniciativa elevou o nível da competição e garantiu aos nossos atletas a experiência motivadora de atuar em uma quadra de excelência técnica. A ação reforça o compromisso da gestão em incentivar o esporte, apoiar os talentos locais e buscar parcerias regionais que ampliem os horizontes e as vivências da nossa juventude.",
-    image: "/maos_dadas.png",
+    image: "/maos_dadas.webp",
   },
 ];
 
@@ -569,7 +569,7 @@ function renderHome() {
   appContainer.innerHTML = `
   <!-- HERO SECTION WITH BLUE BANNER -->
       <section class="bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-16 md:py-24 relative overflow-hidden">
-        <img src="/juventude_group.png" alt="Festival da Juventude" class="absolute inset-0 w-full h-full object-cover blur-[1px] opacity-40 mix-blend-overlay z-0" />
+        <img src="/juventude_group.webp" alt="Festival da Juventude" class="absolute inset-0 w-full h-full object-cover blur-[1px] opacity-40 mix-blend-overlay z-0" />
       
         <!-- Background overlay design grids -->
         <div class="absolute inset-0 bg-grid-white/[0.04] bg-[size:32px_32px] z-10"></div>
@@ -633,7 +633,7 @@ function renderHome() {
       </div>
     </section>
     
-    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.png')] bg-repeat-x bg-contain bg-center"></div>
+    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.webp')] bg-repeat-x bg-contain bg-center"></div>
 
     <!-- PILARS/QUICK HIGHLIGHTS FASTRACK -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
@@ -687,28 +687,28 @@ function renderHome() {
           <div class="w-full overflow-x-auto md:overflow-visible snap-x snap-mandatory" style="scrollbar-width: none;">
             <div id="acoes-track" class="flex items-center gap-6 md:gap-16 px-4 sm:px-6 lg:px-8 w-max md:transition-transform md:duration-75 md:ease-out md:will-change-transform">
               <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="VOLTA_AS_AULAS.png" alt="Volta às Aulas 2026" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+                <img src="VOLTA_AS_AULAS.webp" alt="Volta às Aulas 2026" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
               </div>
               <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="MAOS_DADAS_LOGO.png" alt="De Mãos Dadas com a Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+                <img src="MAOS_DADAS_LOGO.webp" alt="De Mãos Dadas com a Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
               </div>
               <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="CONEXAO_MAES.png" alt="Conexão Mães" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+                <img src="CONEXAO_MAES.webp" alt="Conexão Mães" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
               </div>
               <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="CINE_RURAL.png" alt="Cine Rural" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+                <img src="CINE_RURAL.webp" alt="Cine Rural" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
               </div>
               <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="AULAO_ENEM.png" alt="Aulão Vem Que Tem ENEM" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+                <img src="AULAO_ENEM.webp" alt="Aulão Vem Que Tem ENEM" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
               </div>
               <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="MAIO_AMARELO_LOGO.png" alt="Maio Amarelo" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+                <img src="MAIO_AMARELO_LOGO.webp" alt="Maio Amarelo" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
               </div>
               <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="TRILHA_DA_JUVENTUDE.png" alt="Trilha da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+                <img src="TRILHA_DA_JUVENTUDE.webp" alt="Trilha da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
               </div>
               <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="ARRAIA_DA_JUVENTUDE_LOGO.png" alt="Arraiá da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
+                <img src="ARRAIA_DA_JUVENTUDE_LOGO.webp" alt="Arraiá da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
               </div>
             </div>
           </div>
@@ -968,7 +968,7 @@ function renderOportunidades() {
   appContainer.innerHTML = `
     <!-- Header Banner -->
     <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12 border-b border-blue-900/10">
-      <img src="/juventude_group.png" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
+      <img src="/juventude_group.webp" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
         <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-none">Plataformas Gratuitas</h1>
         <p class="text-sm md:text-base text-blue-100 leading-relaxed max-w-2xl mx-auto">
@@ -976,7 +976,7 @@ function renderOportunidades() {
         </p>
       </div>
     </section>
-    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.png')] bg-repeat-x bg-contain bg-center"></div>
+    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.webp')] bg-repeat-x bg-contain bg-center"></div>
 
     <!-- Filters & Search Toolbar -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
@@ -1059,7 +1059,7 @@ function renderSobre() {
 
     <!-- Header Hero banner -->
     <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-16 md:py-20">
-      <img src="juventude_group.png" alt="Fundo do Banner" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-30 mix-blend-overlay z-0 transition-transform duration-1000 hover:scale-105" />  
+      <img src="juventude_group.webp" alt="Fundo do Banner" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-30 mix-blend-overlay z-0 transition-transform duration-1000 hover:scale-105" />  
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 animate-fade-in-up">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">A Secretaria de Juventude</h1>
         <p class="text-base md:text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto font-medium">
@@ -1067,7 +1067,7 @@ function renderSobre() {
         </p>
       </div>
     </section>
-    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.png')] bg-repeat-x bg-contain bg-center"></div>
+    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.webp')] bg-repeat-x bg-contain bg-center"></div>
 
     <!-- Institutional Sections -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
@@ -1086,7 +1086,7 @@ function renderSobre() {
 
           <!-- Imagem Otimizada Integrada no Texto -->
           <div class="rounded-2xl overflow-hidden shadow-lg group relative my-8 border border-slate-100">
-             <img src="juventude_group.png" alt="Equipe da Juventude de Junqueiro" loading="lazy" decoding="async" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+             <img src="juventude_group.webp" alt="Equipe da Juventude de Junqueiro" loading="lazy" decoding="async" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
              <div class="absolute inset-0 bg-gradient-to-t from-[#092986]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
                  <span class="text-white font-bold text-sm md:text-base drop-shadow-md">Equipe da Secretaria Municipal de Juventude</span>
              </div>
@@ -1258,7 +1258,7 @@ function renderNoticias() {
     cardsHtml += `
       <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
         <div class="h-48 md:h-56 w-full overflow-hidden relative">
-          <img src="${news.image}" alt="${news.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/092986/FFFFFF/png?text=Sem+Imagem'" />
+          <img src="${news.image}" alt="${news.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/092986/FFFFFF/webp?text=Sem+Imagem'" />
         </div>        
           <div class="p-6 md:p-8 space-y-4">
           <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-400">
@@ -1292,7 +1292,7 @@ function renderNoticias() {
   appContainer.innerHTML = `
     <!-- Header Hero Banner -->
     <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12">
-      <img src="/juventude_group.png" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
+      <img src="/juventude_group.webp" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
         <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-none">Notícias e Comunicados</h1>
         <p class="text-sm md:text-base text-blue-100 leading-relaxed max-w-2xl mx-auto">
@@ -1300,7 +1300,7 @@ function renderNoticias() {
         </p>
       </div>
     </section>
-    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.png')] bg-repeat-x bg-contain bg-center"></div>
+    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.webp')] bg-repeat-x bg-contain bg-center"></div>
 
     <!-- News Cards Grid -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -1365,7 +1365,7 @@ function renderDepoimentos() {
   appContainer.innerHTML = `
     <!-- Header Hero banner -->
     <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12">
-      <img src="/juventude_group.png" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
+      <img src="/juventude_group.webp" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
         <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-none">Depoimentos</h1>
         <p class="text-sm md:text-base text-blue-100 leading-relaxed max-w-2xl mx-auto">
@@ -1373,7 +1373,7 @@ function renderDepoimentos() {
         </p>
       </div>
     </section>
-    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.png')] bg-repeat-x bg-contain bg-center"></div>
+    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.webp')] bg-repeat-x bg-contain bg-center"></div>
 
 
     <!-- Testimonials Grid -->
@@ -1412,7 +1412,7 @@ function renderContato() {
   appContainer.innerHTML = `
     <!-- Header Hero Banner -->
     <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12">
-      <img src="/juventude_group.png" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
+      <img src="/juventude_group.webp" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
         <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-none">Fale Conosco</h1>
         <p class="text-sm md:text-base text-blue-100 leading-relaxed max-w-2xl mx-auto">
@@ -1421,7 +1421,7 @@ function renderContato() {
       </div>
     </section>
 
-    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.png')] bg-repeat-x bg-contain bg-center"></div>
+    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.webp')] bg-repeat-x bg-contain bg-center"></div>
 
 
     <!-- Split forms and contact parameters -->
