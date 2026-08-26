@@ -211,12 +211,12 @@ const TESTIMONIALS = [
     avatar: "M",
   },
   {
-    name: "Camila Oliveira",
-    location: "Povoado Retiro",
+    name: "CineRural",
+    location: "Povoado Baixa Fria",
     program: "giro da juventude",
     quote:
-      "O ID Jovem transformou minha rotina. Agora viajo de graça para fazer as provas e seleções de emprego em Maceió e Arapiraca. Economizo uma grana pesada que ajuda muito em casa.",
-    avatar: "C",
+      "<strong> O que você está achando do primeiro CineRural aqui na baixa fria?</strong> R: Estou achando muito legal e muito importante promover esse tipo de atividade para a juventude, promovendo o entrosamento da comunidade junto com a juventude. Uma ideia muito boa em trazer o cinema, porque eu tenho certeza que tem muitas pessoas aqui que nunca tiveram a oportunidade de ir para um cinema e hoje está tendo essa chance.",
+    avatar: "M",
   },
   {
     name: "CineRural",
@@ -227,7 +227,7 @@ const TESTIMONIALS = [
     avatar: "M",
   },
   {
-    name: "Marciano Correia",
+    name: "Trilha da Juventude",
     location: "Lagoa do Retiro",
     program: "giro da juventude",
     quote:
