@@ -1,20 +1,3 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+Portal da Juventude de Junqueiro
 
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/6207c557-443d-41e0-b720-e34d8572edfd
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+O Portal da Juventude de Junqueiro é uma aplicação web desenvolvida para centralizar e democratizar o acesso a políticas públicas, cursos de capacitação, eventos culturais e oportunidades para os jovens do município de Junqueiro, Alagoas. O sistema atua como o canal digital de comunicação oficial da Secretaria Municipal de Juventude, facilitando o acesso a programas de educação, tecnologia e cidadania.
