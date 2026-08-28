@@ -1239,7 +1239,7 @@ function renderSobre() {
             
             <div class="space-y-2 bg-black/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-black/20 transition-colors">
               <strong class="text-white flex items-center gap-2 font-bold text-base">${getSvgIcon("mail", "h-5 w-5 text-[#e6af00]")} E-mail Institucional:</strong>
-              <span class="text-sm text-blue-200 block pl-7">Juventudejunqueiro@gmail.com</span>
+              <span class="text-sm text-blue-200 block pl-7">juventudejunqueiro@gmail.com</span>
             </div>
           </div>
         </div>
@@ -1521,7 +1521,7 @@ function renderContato() {
                 <div>
                   <h4 class="font-bold text-sm text-slate-900">E-mail de Suporte</h4>
                   <p class="text-xs text-slate-500 mt-1 leading-relaxed">
-                    Juventudejunqueiro@gmail.com
+                    juventudejunqueiro@gmail.com
                   </p>
                 </div>
               </li>
@@ -1576,7 +1576,7 @@ function renderContato() {
   // Handle Form Submission with Client Mailto Client Opener
   const form = document.getElementById("contact-form");
   if (form) {
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const name = document.getElementById("name").value.trim();
@@ -1595,31 +1595,43 @@ function renderContato() {
         return;
       }
 
-      // Generate Email mailto link
-      const emailTo = "Juventudejunqueiro@gmail.com";
-      const mailtoSubject = encodeURIComponent(
-        `[Portal Juventude] ${subjectText}`,
-      );
-      const mailtoBody = encodeURIComponent(
-        `Olá, equipe da Secretaria Municipal de Juventude de Junqueiro/AL,\n\n` +
-          `Gostaria de enviar uma solicitação com as seguintes informações:\n\n` +
-          `- Nome Completo: ${name}\n` +
-          `- E-mail: ${email}\n` +
-          `- Telefone/WhatsApp: ${phone}\n` +
-          `- Categoria/Assunto: ${subjectText}\n\n` +
-          `Mensagem:\n${message}\n\n` +
-          `Atenciosamente,\n${name}`,
-      );
+      // Desativa o botão temporariamente para evitar duplo clique
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = "Enviando...";
+      submitBtn.disabled = true;
 
-      const mailtoUrl = `mailto:${emailTo}?subject=${mailtoSubject}&body=${mailtoBody}`;
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/contato`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              nome: name,
+              email: email,
+              telefone: phone,
+              assunto: subjectText,
+              mensagem: message,
+            }),
+          },
+        );
 
-      // Open Email Client
-      window.location.href = mailtoUrl;
-
-      triggerToast(
-        "Mensagem processada! Seu aplicativo de e-mail foi aberto para envio oficial à Secretaria.",
-      );
-      form.reset();
+        if (response.ok) {
+          triggerToast("Mensagem enviada com sucesso para a Secretaria!");
+          form.reset();
+        } else {
+          triggerToast("Erro ao processar o envio. Tente novamente.", "error");
+        }
+      } catch (error) {
+        triggerToast("Falha na comunicação com o servidor.", "error");
+      } finally {
+        // Restaura o botão
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
     });
   }
 }
