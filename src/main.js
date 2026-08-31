@@ -1573,7 +1573,7 @@ function renderContato() {
     });
   }
 
-  // Handle Form Submission with Client Mailto Client Opener
+
   const form = document.getElementById("contact-form");
   if (form) {
     form.addEventListener("submit", async (e) => {
