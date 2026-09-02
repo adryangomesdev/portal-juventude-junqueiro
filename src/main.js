@@ -424,6 +424,7 @@ function triggerToast(message, type = "success") {
 }
 
 // Open News Details Modal Popup
+// Open News Details Modal Popup
 window.openNewsModal = function (id) {
   const newsItem = NEWS.find((item) => item.id === id);
   if (!newsItem) return;
@@ -432,55 +433,58 @@ window.openNewsModal = function (id) {
   if (existingModal) existingModal.remove();
 
   const modalHtml = `
-    <!-- DIV PRINCIPAL DO MODAL (Fundo escuro transparente flutuante) -->
-    <div id="news-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm animate-fade-in">
+    <!-- DIV PRINCIPAL DO MODAL -->
+    <div id="news-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/70 backdrop-blur-sm animate-fade-in transition-opacity">
       
       <!-- CAIXA BRANCA DO CONTEÚDO -->
-      <div class="bg-white rounded-2xl w-full max-w-3xl max-h-[85vh] overflow-y-auto shadow-2xl border border-slate-100 flex flex-col relative animate-scale-up">
+      <div class="bg-white rounded-3xl w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col relative animate-scale-up border border-slate-800/10">
         
-        <!-- Modal Banner Illustration (Com o ajuste de altura e espaçamento) -->
-        <div class="min-h-[12rem] md:min-h-[16rem] pt-12 pb-24 w-full bg-gradient-to-r from-[#092986] to-indigo-800 text-white relative flex items-center justify-center overflow-hidden px-8">
-          <div class="absolute inset-0 bg-slate-900/40 mix-blend-multiply"></div>
-          <div class="relative z-10 max-w-2xl text-center">
-            <span class="inline-block px-3 py-1 bg-[#e6af00] text-slate-950 text-xs font-extrabold uppercase rounded-full tracking-wider mb-2">${newsItem.category}</span>
-            <h3 class="text-xl md:text-3xl font-black leading-tight tracking-tight">${newsItem.title}</h3>
-          </div>
-          <!-- Decorative SVGs -->
-          <svg class="absolute bottom-0 left-0 right-0 w-full text-white" viewBox="0 0 1440 120" fill="currentColor"><path d="M0,64L80,80C160,96,320,128,480,128C640,128,800,96,960,74.7C1120,53,1280,43,1360,37.3L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path></svg>
-        </div>
-
-        <!-- Sticky close button -->
-        <button onclick="document.getElementById('news-modal').remove()" class="absolute top-4 right-4 z-20 bg-slate-900/60 hover:bg-slate-950/80 text-white rounded-full p-2.5 transition-colors shadow focus:outline-none" aria-label="Fechar Modal">
+        <!-- Botão de Fechar Flutuante -->
+        <button onclick="document.getElementById('news-modal').remove()" class="absolute top-4 right-4 z-30 bg-black/30 hover:bg-black/50 text-white rounded-full p-2.5 backdrop-blur-md transition-colors shadow-lg focus:outline-none" aria-label="Fechar Modal">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
 
-        <!-- Modal Body Content -->
+        <!-- Capa da Notícia (Substitui o topo azul antigo) -->
+        <div class="relative w-full h-64 sm:h-80 bg-slate-100 shrink-0">
+           <img src="${newsItem.image}" alt="${newsItem.title}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x600/092986/FFFFFF/webp?text=Notícia'" />
+           
+           <!-- Degradê para leitura do texto -->
+           <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent"></div>
+           
+           <!-- Título sobreposto na imagem -->
+           <div class="absolute bottom-0 left-0 w-full p-6 md:p-8">
+             <span class="inline-block px-3.5 py-1.5 bg-[#e6af00] text-slate-950 text-xs font-black uppercase rounded-lg tracking-wider mb-3 shadow-md">${newsItem.category}</span>
+             <h3 class="text-2xl md:text-3xl font-black text-white leading-tight tracking-tight drop-shadow-lg">${newsItem.title}</h3>
+           </div>
+        </div>
+
+        <!-- Corpo do Texto -->
         <div class="p-6 md:p-8 space-y-6">
-          <div class="flex items-center gap-2 text-slate-400 text-xs font-bold uppercase tracking-wider">
-            ${getSvgIcon("calendar", "h-4 w-4")}
+          <div class="flex items-center gap-2 text-[#092986] text-sm font-extrabold uppercase tracking-wider">
+            ${getSvgIcon("calendar", "h-5 w-5")}
             <span>Publicado em: ${newsItem.date}</span>
           </div>
 
-          <div class="text-slate-700 text-base md:text-lg leading-relaxed space-y-4">
+          <div class="text-slate-700 text-base md:text-lg leading-relaxed space-y-5">
             ${newsItem.content}
           </div>
 
-          <hr class="border-slate-100 my-4">
-
-          <div class="flex items-center justify-between flex-wrap gap-4 pt-2">
-            <span class="text-xs text-slate-400 font-semibold">Fonte Oficial: Secretaria de Juventude de Junqueiro</span>
-            <button onclick="document.getElementById('news-modal').remove()" class="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg text-sm font-bold transition-colors">
-              Fechar Notícia
+          <!-- Rodapé do Modal -->
+          <div class="flex items-center justify-between flex-wrap gap-4 pt-6 border-t border-slate-100 mt-8">
+            <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Fonte Oficial: Sec. de Juventude</span>
+            <button onclick="document.getElementById('news-modal').remove()" class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-xl text-sm font-extrabold transition-colors">
+              Fechar Comunicado
             </button>
           </div>
         </div>
+
       </div>
     </div>
   `;
 
   document.body.insertAdjacentHTML("beforeend", modalHtml);
 
-  // Close on backdrop click
+  // Fecha o modal ao clicar fora da caixa branca
   document.getElementById("news-modal").addEventListener("click", (e) => {
     if (e.target === e.currentTarget) {
       e.currentTarget.remove();
@@ -1572,7 +1576,6 @@ function renderContato() {
       e.target.value = v;
     });
   }
-
 
   const form = document.getElementById("contact-form");
   if (form) {
