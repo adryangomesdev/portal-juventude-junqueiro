@@ -1422,24 +1422,7 @@ function renderDepoimentos() {
       </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-      <div class="bg-gradient-to-br from-slate-900 to-slate-850 text-white rounded-3xl p-8 md:p-12 border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
-        <div class="absolute inset-0 bg-grid-white/[0.04] bg-[size:32px_32px]"></div>
-        <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-[#e6af00]/10 rounded-full blur-3xl"></div>
-        
-        <div class="space-y-3 text-left relative z-10">
-          <span class="px-3 py-1 bg-emerald-500 text-slate-950 text-xs font-black uppercase rounded-full tracking-wider inline-block">Sua vez!</span>
-          <h3 class="text-2xl md:text-3xl font-black tracking-tight text-white leading-tight">Você também participou de alguma plataforma?</h3>
-          <p class="text-slate-400 text-sm max-w-xl leading-relaxed">
-            Conte-nos como os cursos de idiomas, tecnologia do OxeTech, ID Jovem ou materiais do ENEM fizeram a diferença no seu dia a dia! Sua história pode inspirar outros jovens de Junqueiro.
-          </p>
-        </div>
 
-        <a href="#/contato" class="px-6 py-3.5 bg-[#e6af00] hover:bg-[#ffc400] text-slate-900 font-extrabold text-sm rounded-xl shrink-0 shadow-lg transition-all relative z-10 transform hover:-translate-y-0.5">
-          Enviar Meu Relato
-        </a>
-      </div>
-    </section>
   `;
 }
 
