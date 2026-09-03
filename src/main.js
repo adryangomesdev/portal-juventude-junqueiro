@@ -203,12 +203,14 @@ const NEWS = [
 
 const TESTIMONIALS = [
   {
-    name: "Trilha da Juventude",
+    name: "Semana da Água",
     location: "Lagoa do Retiro",
     program: "Giro da Juventude",
     quote:
       "<strong>Secretário, o que o senhor está achando nessa ação da lagoa?</strong> R: Acho uma ação muito importante, além da gente trazer os alunos a gente está conscientizando os alunos. De antemão,quero parabenizar também o secretário de meio ambiente, secretário arlysson do município, secretário também de recurso hídrico, Keyton Felix. Por essa ação, então a gente precisa fazer mais ações como essa, levar às escolas para que os próprios alunos tenham esse contato com a natureza e que tenham esse contato e esse cuidado com a natureza.",
     avatar: "M",
+    videoEmbed:
+      "https://www.instagram.com/reel/DWbh2ShhCz0/?igsi=MWh3NTY0cWQzNjF1eA==",
   },
   {
     name: "CineRural",
@@ -422,10 +424,39 @@ function triggerToast(message, type = "success") {
     }
   }, 4500);
 }
-
-// Open News Details Modal Popup
 // Open News Details Modal Popup
 window.openNewsModal = function (id) {
+  // Open Instagram Video Modal
+  window.openVideoModal = function (embedUrl) {
+    const existingModal = document.getElementById("video-modal");
+    if (existingModal) existingModal.remove();
+
+    const modalHtml = `
+    <div id="video-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm animate-fade-in transition-opacity">
+      <div class="bg-white rounded-3xl w-full max-w-sm sm:max-w-md overflow-hidden shadow-2xl relative flex flex-col animate-scale-up border border-slate-800/10">
+        
+        <!-- Botão de Fechar -->
+        <button onclick="document.getElementById('video-modal').remove()" class="absolute top-3 right-3 z-30 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 backdrop-blur-md transition-colors shadow-lg focus:outline-none" aria-label="Fechar Modal">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+
+        <!-- Container do Iframe do Instagram -->
+        <div class="w-full bg-slate-50 flex items-center justify-center min-h-[500px]">
+          <iframe src="${embedUrl}" class="w-full h-[600px] border-0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+      </div>
+    </div>
+  `;
+
+    document.body.insertAdjacentHTML("beforeend", modalHtml);
+
+    // Fecha o modal ao clicar fora da caixa branca
+    document.getElementById("video-modal").addEventListener("click", (e) => {
+      if (e.target === e.currentTarget) {
+        e.currentTarget.remove();
+      }
+    });
+  };
   const newsItem = NEWS.find((item) => item.id === id);
   if (!newsItem) return;
 
@@ -1333,6 +1364,7 @@ function renderNoticias() {
 }
 
 // 5. DEPOIMENTOS PAGE RENDERER
+// 5. DEPOIMENTOS PAGE RENDERER
 function renderDepoimentos() {
   updateNavigationActiveState("depoimentos");
 
@@ -1343,7 +1375,7 @@ function renderDepoimentos() {
         <!-- Huge quotes marks in background -->
         <div class="absolute -right-2 -top-4 text-slate-100 text-8xl font-black select-none pointer-events-none group-hover:text-blue-50 transition-colors">“</div>
         
-        <div class="relative z-10 space-y-6">
+        <div class="relative z-10 space-y-5">
           <div class="flex items-center gap-3">
             <div class="h-12 w-12 rounded-full bg-[#092986] text-white flex items-center justify-center font-black text-lg shrink-0 border border-blue-100 shadow-sm">
               ${t.avatar}
@@ -1357,6 +1389,20 @@ function renderDepoimentos() {
           <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
             "${t.quote}"
           </p>
+
+          <!-- Botão Dinâmico do Instagram -->
+          ${
+            t.videoEmbed
+              ? `
+          <div class="pt-2">
+            <button onclick="openVideoModal('${t.videoEmbed}')" class="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-pink-500 to-orange-400 hover:from-pink-600 hover:to-orange-500 text-white rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+              ${getSvgIcon("instagram", "h-4 w-4")}
+              Assistir Vídeo da Entrevista
+            </button>
+          </div>
+          `
+              : ""
+          }
         </div>
 
         <div class="pt-6 border-t border-slate-50 mt-6 flex items-center justify-between text-xs font-bold text-slate-400 uppercase tracking-wider">
@@ -1369,7 +1415,7 @@ function renderDepoimentos() {
   appContainer.innerHTML = `
     <!-- Header Hero banner -->
     <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12">
-      <img src="/juventude_group.webp" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
+      <img src="juventude_group.webp" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
         <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-none">Depoimentos</h1>
         <p class="text-sm md:text-base text-blue-100 leading-relaxed max-w-2xl mx-auto">
@@ -1378,7 +1424,6 @@ function renderDepoimentos() {
       </div>
     </section>
     <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.webp')] bg-repeat-x bg-contain bg-center"></div>
-
 
     <!-- Testimonials Grid -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
