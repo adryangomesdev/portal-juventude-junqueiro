@@ -423,17 +423,19 @@ function triggerToast(message, type = "success") {
     }
   }, 4500);
 }
-// Open Instagram Video Modal
-window.openVideoModal = function (embedUrl) {
-  const existingModal = document.getElementById("video-modal");
-  if (existingModal) existingModal.remove();
+// Open News Details Modal Popup
+window.openNewsModal = function (id) {
+  // Open Instagram Video Modal
+  window.openVideoModal = function (embedUrl) {
+    const existingModal = document.getElementById("video-modal");
+    if (existingModal) existingModal.remove();
 
-  const modalHtml = `
+    const modalHtml = `
     <div id="video-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm animate-fade-in transition-opacity">
-      <div class="bg-white rounded-xl w-full max-w-sm sm:max-w-md overflow-hidden shadow-2xl relative flex flex-col animate-scale-up border border-slate-800/10">
+      <div class="bg-white rounded-3xl w-full max-w-sm sm:max-w-md overflow-hidden shadow-2xl relative flex flex-col animate-scale-up border border-slate-800/10">
         
         <!-- Botão de Fechar -->
-        <button onclick="document.getElementById('video-modal').remove()" class="absolute top-3 right-3 z-30 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 backdrop-blur-md transition-colors shadow-md focus:outline-none" aria-label="Fechar Modal">
+        <button onclick="document.getElementById('video-modal').remove()" class="absolute top-3 right-3 z-30 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 backdrop-blur-md transition-colors shadow-lg focus:outline-none" aria-label="Fechar Modal">
           <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
 
@@ -445,18 +447,15 @@ window.openVideoModal = function (embedUrl) {
     </div>
   `;
 
-  document.body.insertAdjacentHTML("beforeend", modalHtml);
+    document.body.insertAdjacentHTML("beforeend", modalHtml);
 
-  // Fecha o modal ao clicar fora da caixa branca
-  document.getElementById("video-modal").addEventListener("click", (e) => {
-    if (e.target === e.currentTarget) {
-      e.currentTarget.remove();
-    }
-  });
-};
-
-// Open News Details Modal Popup
-window.openNewsModal = function (id) {
+    // Fecha o modal ao clicar fora da caixa branca
+    document.getElementById("video-modal").addEventListener("click", (e) => {
+      if (e.target === e.currentTarget) {
+        e.currentTarget.remove();
+      }
+    });
+  };
   const newsItem = NEWS.find((item) => item.id === id);
   if (!newsItem) return;
 
@@ -1395,10 +1394,10 @@ function renderDepoimentos() {
             t.videoEmbed
               ? `
           <div class="pt-2">
-            <button onclick="openVideoModal('${t.videoEmbed}')" class="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-pink-500 to-orange-400 hover:from-pink-600 hover:to-orange-500 text-white rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
-              ${getSvgIcon("instagram", "h-4 w-4")}
-              Assistir Vídeo da Entrevista
-            </button>
+<button onclick="window.openVideoModal('${t.videoEmbed}')" class="inline-flex items-center gap-2 px-4 py-2 bg-transparent text-slate-600 hover:text-[#092986] hover:border-[#092986] hover:bg-blue-50 border border-slate-300 rounded-md text-sm font-bold transition-all">
+  ${getSvgIcon("instagram", "h-4.5 w-4.5")}
+  Assistir Vídeo da Entrevista
+</button>
           </div>
           `
               : ""
