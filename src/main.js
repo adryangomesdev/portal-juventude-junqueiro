@@ -218,6 +218,7 @@ const TESTIMONIALS = [
     quote:
       "<strong> O que você está achando do primeiro CineRural aqui na baixa fria?</strong> R: Estou achando muito legal e muito importante promover esse tipo de atividade para a juventude, promovendo o entrosamento da comunidade junto com a juventude. Uma ideia muito boa em trazer o cinema, porque eu tenho certeza que tem muitas pessoas aqui que nunca tiveram a oportunidade de ir para um cinema e hoje está tendo essa chance.",
     avatar: "M",
+    videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
   },
   {
     name: "CineRural",
@@ -426,36 +427,6 @@ function triggerToast(message, type = "success") {
 // Open News Details Modal Popup
 window.openNewsModal = function (id) {
   // Open Instagram Video Modal
-  window.openVideoModal = function (embedUrl) {
-    const existingModal = document.getElementById("video-modal");
-    if (existingModal) existingModal.remove();
-
-    const modalHtml = `
-    <div id="video-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm animate-fade-in transition-opacity">
-      <div class="bg-white rounded-3xl w-full max-w-sm sm:max-w-md overflow-hidden shadow-2xl relative flex flex-col animate-scale-up border border-slate-800/10">
-        
-        <!-- Botão de Fechar -->
-        <button onclick="document.getElementById('video-modal').remove()" class="absolute top-3 right-3 z-30 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 backdrop-blur-md transition-colors shadow-lg focus:outline-none" aria-label="Fechar Modal">
-          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-
-        <!-- Container do Iframe do Instagram -->
-        <div class="w-full bg-slate-50 flex items-center justify-center min-h-[500px]">
-          <iframe src="${embedUrl}" class="w-full h-[600px] border-0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
-        </div>
-      </div>
-    </div>
-  `;
-
-    document.body.insertAdjacentHTML("beforeend", modalHtml);
-
-    // Fecha o modal ao clicar fora da caixa branca
-    document.getElementById("video-modal").addEventListener("click", (e) => {
-      if (e.target === e.currentTarget) {
-        e.currentTarget.remove();
-      }
-    });
-  };
   const newsItem = NEWS.find((item) => item.id === id);
   if (!newsItem) return;
 
@@ -521,8 +492,33 @@ window.openNewsModal = function (id) {
     }
   });
 };
+window.openVideoModal = function (embedUrl) {
+  const existingModal = document.getElementById("video-modal");
+  if (existingModal) existingModal.remove();
 
-// --- PAGES RENDERERS ---
+  const modalHtml = `
+    <div id="video-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm animate-fade-in transition-opacity">
+      <div class="bg-white rounded-xl w-full max-w-sm sm:max-w-md overflow-hidden shadow-2xl relative flex flex-col animate-scale-up border border-slate-800/10">
+        
+        <button onclick="document.getElementById('video-modal').remove()" class="absolute top-3 right-3 z-30 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 backdrop-blur-md transition-colors shadow-md focus:outline-none" aria-label="Fechar Modal">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+
+        <div class="w-full bg-slate-50 flex items-center justify-center min-h-[500px]">
+          <iframe src="${embedUrl}" class="w-full h-[600px] border-0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML("beforeend", modalHtml);
+
+  document.getElementById("video-modal").addEventListener("click", (e) => {
+    if (e.target === e.currentTarget) {
+      e.currentTarget.remove();
+    }
+  });
+};
 
 // 1. HOME PAGE RENDERER
 function renderHome() {
@@ -1363,7 +1359,6 @@ function renderNoticias() {
 }
 
 // 5. DEPOIMENTOS PAGE RENDERER
-// 5. DEPOIMENTOS PAGE RENDERER
 function renderDepoimentos() {
   updateNavigationActiveState("depoimentos");
 
@@ -1371,10 +1366,9 @@ function renderDepoimentos() {
   TESTIMONIALS.forEach((t) => {
     testimonialsHtml += `
       <div class="bg-white rounded-2xl p-6 md:p-8 border border-slate-100 shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-xl transition-all duration-300">
-        <!-- Huge quotes marks in background -->
         <div class="absolute -right-2 -top-4 text-slate-100 text-8xl font-black select-none pointer-events-none group-hover:text-blue-50 transition-colors">“</div>
         
-        <div class="relative z-10 space-y-5">
+        <div class="relative z-10 flex flex-col flex-grow">
           <div class="flex items-center gap-3">
             <div class="h-12 w-12 rounded-full bg-[#092986] text-white flex items-center justify-center font-black text-lg shrink-0 border border-blue-100 shadow-sm">
               ${t.avatar}
@@ -1389,15 +1383,14 @@ function renderDepoimentos() {
             "${t.quote}"
           </p>
 
-          <!-- Botão Dinâmico do Instagram -->
           ${
             t.videoEmbed
               ? `
-          <div class="pt-2">
-<button onclick="window.openVideoModal('${t.videoEmbed}')" class="inline-flex items-center gap-2 px-4 py-2 bg-transparent text-slate-600 hover:text-[#092986] hover:border-[#092986] hover:bg-blue-50 border border-slate-300 rounded-md text-sm font-bold transition-all">
-  ${getSvgIcon("instagram", "h-4.5 w-4.5")}
-  Assistir Vídeo da Entrevista
-</button>
+          <div class="mt-auto pt-2">
+            <button onclick="window.openVideoModal('${t.videoEmbed}')" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 rounded-lg text-sm font-bold transition-all">
+              ${getSvgIcon("instagram", "h-4.5 w-4.5 text-pink-600")}
+              Assistir Vídeo da Entrevista
+            </button>
           </div>
           `
               : ""
@@ -1412,7 +1405,6 @@ function renderDepoimentos() {
   });
 
   appContainer.innerHTML = `
-    <!-- Header Hero banner -->
     <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12">
       <img src="juventude_group.webp" alt="Fundo do Banner" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-40 mix-blend-overlay z-0" />
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
@@ -1424,14 +1416,12 @@ function renderDepoimentos() {
     </section>
     <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.webp')] bg-repeat-x bg-contain bg-center"></div>
 
-    <!-- Testimonials Grid -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         ${testimonialsHtml}
       </div>
     </section>
 
-    <!-- Interactive CTA to share user history -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
       <div class="bg-gradient-to-br from-slate-900 to-slate-850 text-white rounded-3xl p-8 md:p-12 border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
         <div class="absolute inset-0 bg-grid-white/[0.04] bg-[size:32px_32px]"></div>
