@@ -1139,53 +1139,6 @@ function renderSobre() {
           </div>
         </div>
 
-        <!-- Barra Lateral Dinâmica -->
-        <div class="lg:col-span-5 space-y-8 animate-fade-in-up delay-200 lg:sticky lg:top-28">
-          
-          <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-8 border border-slate-800 shadow-2xl hover:shadow-blue-900/20 transition-shadow duration-500 relative overflow-hidden group">
-            <div class="absolute right-0 bottom-0 w-64 h-64 bg-[#092986] opacity-40 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700"></div>
-            <h3 class="text-2xl font-bold text-white tracking-tight border-b border-slate-700/50 pb-4 mb-6">Frentes de Atuação</h3>
-            
-            <ul class="space-y-6 text-sm relative z-10 text-slate-300">
-              <li class="flex items-start gap-4 group/item">
-                <span class="p-2.5 bg-emerald-500/20 text-emerald-400 rounded-xl shrink-0 mt-0.5 group-hover/item:bg-emerald-500 group-hover/item:text-white transition-colors duration-300">
-                  ${getSvgIcon("graduation-cap", "h-5 w-5")}
-                </span>
-                <div>
-                  <strong class="text-white text-base">Educação e Idiomas</strong>
-                  <p class="text-sm text-slate-400 mt-1">Mediação de cursos oficiais gratuitos do Ministério da Educação.</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-4 group/item">
-                <span class="p-2.5 bg-blue-500/20 text-blue-400 rounded-xl shrink-0 mt-0.5 group-hover/item:bg-blue-500 group-hover/item:text-white transition-colors duration-300">
-                  ${getSvgIcon("code", "h-5 w-5")}
-                </span>
-                <div>
-                  <strong class="text-white text-base">Capacitação em Tecnologia</strong>
-                  <p class="text-sm text-slate-400 mt-1">Articulação com OxeTech e polos para formação no setor digital.</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-4 group/item">
-                <span class="p-2.5 bg-rose-500/20 text-rose-400 rounded-xl shrink-0 mt-0.5 group-hover/item:bg-rose-500 group-hover/item:text-white transition-colors duration-300">
-                  ${getSvgIcon("palette", "h-5 w-5")}
-                </span>
-                <div>
-                  <strong class="text-white text-base">Cultura e Economia Criativa</strong>
-                  <p class="text-sm text-slate-400 mt-1">Suporte para projetos culturais e profissionalização de jovens produtores.</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-4 group/item">
-                <span class="p-2.5 bg-amber-500/20 text-amber-400 rounded-xl shrink-0 mt-0.5 group-hover/item:bg-amber-500 group-hover/item:text-white transition-colors duration-300">
-                  ${getSvgIcon("id-card", "h-5 w-5")}
-                </span>
-                <div>
-                  <strong class="text-white text-base">Cidadania e Direitos</strong>
-                  <p class="text-sm text-slate-400 mt-1">Emissão itinerante e auxílio do ID Jovem em todas as comunidades.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
           <!-- Video Section Otimizado -->
           <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-white p-2">
              <div class="p-4 border-b border-slate-100 mb-2">
@@ -1421,7 +1374,6 @@ function renderDepoimentos() {
         ${testimonialsHtml}
       </div>
     </section>
-
 
   `;
 }
