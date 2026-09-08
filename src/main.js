@@ -227,6 +227,7 @@ const TESTIMONIALS = [
     quote:
       "<strong> E ai secretário, está achando o que do CineRural?</strong> R: O CineRural está sendo um momento muito importante para a nossa região, para o município de Junqueiro, porque é levar a cultura para os povoados, onde o pessoal está mais distante a prefeitura está presente. Sem contar também com a inclusão porque também está dando acesso a acessibilidade maior as pessoas com deficiência, isso é importante porque é o papel da secretaria da juventude. é uma juventude inclusiva.",
     avatar: "M",
+    videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
   },
   {
     name: "Trilha da Juventude",
@@ -235,6 +236,7 @@ const TESTIMONIALS = [
     quote:
       "<strong>Qual a importância da juventude da natureza?</strong> R: pra mim é importante ter a juventude na natureza é ajudar a gente se conectar e por sermos mais jovens ajudar entender mais a natureza e criar mais ação para ajudar o meio ambiente.",
     avatar: "M",
+    videoEmbed: "https://www.instagram.com/reel/DYU1flnKEhf/embed",
   },
 ];
 
@@ -1332,7 +1334,7 @@ function renderDepoimentos() {
             </div>
           </div>
 
-          <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+          <p class="mt-5 text-slate-600 text-sm md:text-base leading-relaxed italic">
             "${t.quote}"
           </p>
 
