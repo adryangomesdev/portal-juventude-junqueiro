@@ -1140,7 +1140,7 @@ function renderSobre() {
         </div>
 
           <!-- Video Section Otimizado -->
-          <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-white p-2">
+          <div class="lg:col-span-5 animate-fade-in-up delay-200 rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-white p-2">
              <div class="p-4 border-b border-slate-100 mb-2">
              </div>
              <video 
