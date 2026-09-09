@@ -833,11 +833,11 @@ function renderHome() {
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-600">
             <div class="flex items-start gap-2.5">
               <span class="h-5 w-5 text-[#092986] shrink-0 mt-0.5">${getSvgIcon("check-circle", "h-5 w-5")}</span>
-              <span>Estrutura com computadores de livre acesso.</span>
+              <span>Discussão acerca de oportunidades para juventude de junqueiro.</span>
             </div>
             <div class="flex items-start gap-2.5">
               <span class="h-5 w-5 text-[#092986] shrink-0 mt-0.5">${getSvgIcon("check-circle", "h-5 w-5")}</span>
-              <span>Assistência na emissão do NIS e CadÚnico.</span>
+              <span>Cadastro para futuros cursos que a secretaria disponibilizar </span>
             </div>
             <div class="flex items-start gap-2.5">
               <span class="h-5 w-5 text-[#092986] shrink-0 mt-0.5">${getSvgIcon("check-circle", "h-5 w-5")}</span>
