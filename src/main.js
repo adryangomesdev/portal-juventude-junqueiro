@@ -349,6 +349,34 @@ if (mobileMenuBtn && mobileMenu && hamburgerIcon && closeIcon) {
   });
 }
 
+// --- THEME TOGGLE LOGIC ---
+const themeToggleBtn = document.getElementById("theme-toggle");
+const darkIcon = document.getElementById("theme-toggle-dark-icon");
+const lightIcon = document.getElementById("theme-toggle-light-icon");
+
+if (themeToggleBtn && darkIcon && lightIcon) {
+  // Define o ícone inicial correto com base na classe 'dark' no documento
+  if (document.documentElement.classList.contains("dark")) {
+    lightIcon.classList.remove("hidden");
+  } else {
+    darkIcon.classList.remove("hidden");
+  }
+
+  themeToggleBtn.addEventListener("click", function () {
+    // Alterna a exibição dos ícones
+    darkIcon.classList.toggle("hidden");
+    lightIcon.classList.toggle("hidden");
+
+    // Alterna o tema e salva a preferência
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  });
+}
 // Highlight Current Active Navigation Link
 function updateNavigationActiveState(route) {
   // Desktop Header Links

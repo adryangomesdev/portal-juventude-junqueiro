@@ -10,6 +10,17 @@
     <title>
       Portal Juventude Junqueiro | Secretaria Municipal de Juventude
     </title>
+    <script>
+      if (
+        localStorage.getItem("theme") === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,9 +41,7 @@
       }
     </style>
   </head>
-  <body
-    class="flex flex-col min-h-screen bg-slate-50 text-slate-800 antialiased overflow-x-hidden"
-  >
+  <body class="flex flex-col min-h-screen bg-slate-50 text-slate-800 antialiased overflow-x-hidden transition-colors duration-300"></body>
     <!-- Header Fixo -->
     <header
       class="sticky top-0 z-40 bg-white border-b border-slate-100 shadow-sm"
@@ -40,17 +49,19 @@
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between"
       >
-        <a
+      <a
           href="#/"
-          class="flex items-center gap-3 md:gap-4 transition-transform hover:scale-[1.01]"
+          class="flex items-center transition-transform hover:scale-[1.01]"
         >
-          <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Adicionamos bg-[#ffffff] para forçar o branco ignorando o dark mode, com padding e bordas arredondadas -->
+          <div class="flex items-center gap-2 sm:gap-3 bg-[#ffffff] px-3 py-1.5 rounded-2xl shadow-sm border border-slate-100 dark:border-none">
             <img
               id="juventude-logo-img"
               src="juventude_logo.webp"
               alt="Secretaria Municipal de Juventude"
               class="h-10 sm:h-12 w-auto max-w-[150px] sm:max-w-[180px] md:max-w-xs object-contain"
             />
+            
             <div class="h-8 w-[1px] bg-slate-200 self-center"></div>
 
             <!-- Logo Prefeitura -->
@@ -62,7 +73,7 @@
             />
           </div>
         </a>
-        <!-- Desktop Navigation -->
+      <!-- Desktop Navigation -->
         <nav class="hidden lg:flex items-center gap-1">
           <a
             href="#/"
@@ -117,6 +128,38 @@
             </svg>
           </a>
         </nav>
+        <!-- Botão Dark Mode -->
+        <button
+          id="theme-toggle"
+          type="button"
+          class="ml-4 p-2.5 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800 transition-colors focus:outline-none"
+          aria-label="Alternar modo escuro"
+        >
+          <!-- Ícone de Sol (Aparece no modo escuro) -->
+          <svg
+            id="theme-toggle-light-icon"
+            class="hidden w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <!-- Ícone de Lua (Aparece no modo claro) -->
+          <svg
+            id="theme-toggle-dark-icon"
+            class="hidden w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+            ></path>
+          </svg>
+        </button>
 
         <!-- Mobile Navigation Menu Button -->
         <button
