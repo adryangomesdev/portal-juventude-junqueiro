@@ -27,6 +27,11 @@
   }
 
   /* --- MÁGICA DO MODO ESCURO AUTOMÁTICO --- */
+
+  html.dark #juventude-logo-img,
+  html.dark #prefeitura-logo-img {
+    filter: brightness(0) invert(1);
+  }
   html.dark body {
     @apply !bg-slate-900 !text-slate-100;
   }

@@ -377,6 +377,7 @@ if (themeToggleBtn && darkIcon && lightIcon) {
     }
   });
 }
+
 // Highlight Current Active Navigation Link
 function updateNavigationActiveState(route) {
   // Desktop Header Links
@@ -1026,23 +1027,6 @@ function renderOportunidades() {
       </div>
     </section>
 
-    <!-- Quick info card for support -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-      <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-4 text-left">
-        <div class="h-12 w-12 rounded-xl bg-[#092986] flex items-center justify-center text-white shrink-0 shadow">
-          ${getSvgIcon("info", "h-6 w-6")}
-        </div>
-        <div>
-          <h4 class="font-bold text-slate-900 text-lg leading-snug">Não consegue realizar sua inscrição ou está sem internet?</h4>
-          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
-            Visite nossa Sede Física! Oferecemos orientação presencial, material didático de apoio e computadores com internet rápida para que você se inscreva em qualquer uma das plataformas acima sem estresse.
-          </p>
-        </div>
-        <a href="#/contato" class="px-5 py-3 bg-[#092986] text-white font-extrabold text-sm rounded-xl shrink-0 whitespace-nowrap hover:bg-blue-800 transition-colors ml-auto">
-          Falar com Assessor
-        </a>
-      </div>
-    </section>
   `;
 
   // Attach search listener
