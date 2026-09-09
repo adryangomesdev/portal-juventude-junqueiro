@@ -1233,22 +1233,6 @@ function renderNoticias() {
       </div>
     </section>
 
-    <!-- Quick subscription banner (Simulated) -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-      <div class="bg-slate-900 text-white rounded-3xl p-8 border border-slate-800 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6 relative overflow-hidden">
-        <div class="absolute right-0 top-0 w-80 h-80 bg-[#e6af00]/10 rounded-full blur-3xl"></div>
-        <div class="relative z-10 space-y-2 text-left">
-          <h3 class="text-2xl font-black tracking-tight text-[#e6af00]">Deseja receber avisos urgentes no WhatsApp?</h3>
-          <p class="text-slate-400 text-sm max-w-xl leading-relaxed">
-            Envie sua mensagem por nosso formulário de contato pedindo inclusão na lista oficial de alertas rápidos da Secretaria Municipal da Juventude.
-          </p>
-        </div>
-        <a href="#/contato" class="px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm rounded-xl shrink-0 shadow-lg transition-colors relative z-10 flex items-center gap-1">
-          <span>Quero Participar</span>
-          ${getSvgIcon("arrow-right", "h-4 w-4")}
-        </a>
-      </div>
-    </section>
   `;
 }
 
