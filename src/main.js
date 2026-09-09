@@ -577,21 +577,28 @@ function renderHome() {
     `;
   });
 
+  // Lógica atualizada para cartões limpos e estruturados baseados na imagem
   let testimonialHtml = "";
   TESTIMONIALS.slice(0, 2).forEach((t) => {
+    // Mantém o strong branco para destacar partes do texto no fundo escuro
+    const cleanQuote = t.quote.replace(
+      /<strong>(.*?)<\/strong>/g,
+      '<span class="font-bold text-white">$1</span>',
+    );
+
     testimonialHtml += `
-      <div class="bg-slate-900 text-slate-100 p-6 rounded-2xl border border-slate-800 shadow-lg flex flex-col justify-between relative overflow-hidden">
-        <div class="absolute -right-3 -top-3 text-slate-800 text-7xl font-black opacity-30 select-none">“</div>
-        <p class="text-sm italic leading-relaxed mb-6 text-slate-300 relative z-10">
-          "${t.quote}"
+      <div class="bg-[#15233E] border border-[#2A3B5C] p-6 md:p-8 rounded-2xl flex flex-col justify-between transition-colors hover:border-[#3B4D73]">
+        <p class="text-sm leading-relaxed mb-8 text-slate-300 font-light italic">
+          "${cleanQuote}"
         </p>
-        <div class="flex items-center gap-3">
-          <div class="h-10 w-10 rounded-full bg-[#e6af00] text-slate-900 flex items-center justify-center font-black text-base uppercase shrink-0">
+        
+        <div class="flex items-center gap-4 mt-auto border-t border-[#2A3B5C] pt-5">
+          <div class="h-10 w-10 rounded-full bg-[#e6af00] text-slate-900 flex items-center justify-center font-black text-sm shrink-0">
             ${t.avatar}
           </div>
           <div>
-            <h5 class="text-sm font-bold text-white leading-none">${t.name}</h5>
-            <p class="text-xs text-slate-400 mt-1">$tion} (${t.program})</p>
+            <h5 class="text-sm font-bold text-white">${t.name}</h5>
+            <p class="text-[11px] text-slate-400 font-medium mt-0.5">${t.program}</p>
           </div>
         </div>
       </div>
@@ -790,85 +797,41 @@ function renderHome() {
       </div>
     </section>
 
-    <!-- TESTIMONIALS CALL & CALLOUT -->
+<!-- TESTIMONIALS CALL & CALLOUT - DESIGN FLAT E SÓLIDO -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-slate-900 rounded-3xl overflow-hidden p-8 md:p-12 border border-slate-800 shadow-2xl relative">
-        <div class="absolute right-0 top-0 w-96 h-96 bg-[#092986] opacity-30 rounded-full blur-3xl"></div>
-        <div class="absolute left-0 bottom-0 w-96 h-96 bg-emerald-500 opacity-10 rounded-full blur-3xl"></div>
-
-        <div class="lg:col-span-5 space-y-6 relative z-10 text-white">
-          <span class="px-3 py-1 bg-[#e6af00] text-slate-900 text-xs font-black uppercase rounded-full tracking-wider">Histórias Reais</span>
-          <h2 class="text-3xl md:text-4xl font-black leading-tight text-white">Quem faz parte, aprova as oportunidades!</h2>
-          <p class="text-slate-400 leading-relaxed">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#0B1528] rounded-3xl p-8 md:p-14 shadow-sm">
+        
+        <!-- Conteúdo Textual Esquerdo -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="inline-block px-3 py-1.5 bg-[#e6af00] text-slate-900 text-[11px] font-black uppercase rounded-full tracking-wider">
+            Histórias Reais
+          </span>
+          
+          <h2 class="text-3xl md:text-4xl lg:text-[2.75rem] font-black leading-tight text-white tracking-tight">
+            Quem faz parte, aprova as oportunidades!
+          </h2>
+          
+          <p class="text-slate-400 leading-relaxed text-base font-light">
             Diversos jovens do município já mudaram suas carreiras profissionais e de estudos aproveitando as trilhas gratuitas e serviços ofertados. Veja as histórias!
           </p>
-          <div class="pt-2">
-            <a href="#/depoimentos" class="px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-lg hover:shadow-emerald-950/20 text-sm inline-flex items-center gap-1.5 transition-all">
+          
+          <div class="pt-4">
+            <a href="#/depoimentos" class="inline-flex items-center gap-2 px-6 py-3 bg-[#00A859] hover:bg-[#008C4A] text-white font-bold rounded-lg text-sm transition-colors">
               <span>Ler mais depoimentos</span>
-              ${getSvgIcon("arrow-right", "h-4 w-4")}
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
           </div>
         </div>
 
-        <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+        <!-- Cartões de Depoimento -->
+        <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
           ${testimonialHtml}
         </div>
       </div>
     </section>
-
-    <!-- MAP/LOCAL CALLOUT ATENDIMENTO -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-      <div class="bg-white rounded-3xl p-6 md:p-10 border border-slate-100 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        
-        <div class="lg:col-span-7 space-y-6">
-          <div class="flex items-center gap-2 text-[#092986] font-bold text-sm uppercase tracking-wide">
-            ${getSvgIcon("map-pin", "h-5.5 w-5.5")}
-            <span>Sede Física da Secretaria</span>
-          </div>
-          <h3 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight leading-tight">Quer fazer sua inscrição presencialmente ou tirar dúvidas?</h3>
-          <p class="text-slate-500 leading-relaxed">
-            Se você não tem acesso estável à internet ou precisa de orientação sobre como se cadastrar no ID Jovem, OxeTech ou qualquer plataforma, venha até a Secretaria Municipal de Juventude. Nossa equipe está totalmente à disposição para auxiliar você no passo a passo gratuitamente!
-          </p>
-          
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-600">
-            <div class="flex items-start gap-2.5">
-              <span class="h-5 w-5 text-[#092986] shrink-0 mt-0.5">${getSvgIcon("check-circle", "h-5 w-5")}</span>
-              <span>Discussão acerca de oportunidades para juventude de junqueiro.</span>
-            </div>
-            <div class="flex items-start gap-2.5">
-              <span class="h-5 w-5 text-[#092986] shrink-0 mt-0.5">${getSvgIcon("check-circle", "h-5 w-5")}</span>
-              <span>Cadastro para futuros cursos que a secretaria disponibilizar. </span>
-            </div>
-            <div class="flex items-start gap-2.5">
-              <span class="h-5 w-5 text-[#092986] shrink-0 mt-0.5">${getSvgIcon("check-circle", "h-5 w-5")}</span>
-              <span>Orientação vocacional e trilhas de estudo.</span>
-            </div>
-            <div class="flex items-start gap-2.5">
-              <span class="h-5 w-5 text-[#092986] shrink-0 mt-0.5">${getSvgIcon("check-circle", "h-5 w-5")}</span>
-              <span> Debate aberto aos jovens de junqueiro.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="lg:col-span-5 bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between space-y-4">
-          <div class="space-y-3">
-            <h4 class="font-extrabold text-slate-900 text-lg">Informações de Atendimento</h4>
-            <p class="text-sm text-slate-500">De segunda a sexta-feira, das 08h às 14h.</p>
-            <hr class="border-slate-100">
-            <p class="text-sm text-slate-600 leading-relaxed font-medium">
-              📍 Rua João de Deus, 76, Junqueiro - AL, 57270-000<br>
-              📞 (82) 99130-1648<br>
-              ✉️ juventudejunqueiro@gmail.com
-            </p>
-          </div>
-          <a href="#/contato" class="w-full text-center py-3 bg-[#092986] text-white rounded-xl font-bold hover:bg-blue-800 transition-colors block text-sm">
-            Enviar Mensagem Online
-          </a>
-        </div>
-
-      </div>
-    </section>
+    
   `;
+
   initHorizontalScroll();
 }
 
@@ -1194,42 +1157,6 @@ function renderSobre() {
         </div>
 
       </div>
-
-      <!-- Physical Presence & Service Info -->
-      <div class="bg-[#092986] text-white rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl animate-fade-in-up delay-300">
-        <div class="absolute inset-0 bg-grid-white/[0.04] bg-[size:32px_32px]"></div>
-        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-[#e6af00] opacity-20 rounded-full blur-[80px]"></div>
-        
-        <div class="relative z-10 max-w-4xl space-y-6 text-left">
-          <h3 class="text-3xl md:text-4xl font-black tracking-tight">Informações Importantes de Atendimento</h3>
-          <p class="text-blue-100 leading-relaxed text-base lg:text-lg">
-            Nossos serviços, computadores com internet e assistência na emissão de documentos estão disponíveis de forma totalmente gratuita e sem agendamento prévio.
-          </p>
-          
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-            <div class="space-y-2 bg-black/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-black/20 transition-colors">
-              <strong class="text-white flex items-center gap-2 font-bold text-base">${getSvgIcon("map-pin", "h-5 w-5 text-[#e6af00]")} Endereço Comercial:</strong>
-              <span class="text-sm text-blue-200 block pl-7">Rua João de Deus, 76, Junqueiro - AL, 57270-000</span>
-            </div>
-            
-            <div class="space-y-2 bg-black/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-black/20 transition-colors">
-              <strong class="text-white flex items-center gap-2 font-bold text-base">${getSvgIcon("calendar", "h-5 w-5 text-[#e6af00]")} Horário de Funcionamento:</strong>
-              <span class="text-sm text-blue-200 block pl-7">De Segunda a Sexta-feira, das 08h às 14h.</span>
-            </div>
-            
-            <div class="space-y-2 bg-black/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-black/20 transition-colors">
-              <strong class="text-white flex items-center gap-2 font-bold text-base">${getSvgIcon("phone", "h-5 w-5 text-[#e6af00]")} Telefone Oficial:</strong>
-              <span class="text-sm text-blue-200 block pl-7">(82) 99130-1648 (Atendimento na sede)</span>
-            </div>
-            
-            <div class="space-y-2 bg-black/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10 hover:bg-black/20 transition-colors">
-              <strong class="text-white flex items-center gap-2 font-bold text-base">${getSvgIcon("mail", "h-5 w-5 text-[#e6af00]")} E-mail Institucional:</strong>
-              <span class="text-sm text-blue-200 block pl-7">juventudejunqueiro@gmail.com</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </section>
   `;
 }
