@@ -1080,10 +1080,12 @@ function renderSobre() {
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
       
       <!-- Split visual description -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Descrição visual centralizada -->
+      <div class="max-w-5xl mx-auto space-y-12">
         
-        <div class="lg:col-span-7 space-y-6 animate-fade-in-up delay-100">
-          <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-none">Quem somos e o que fazemos</h2>
+        <div class="space-y-6 animate-fade-in-up delay-100">
+          <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-none text-center mb-10">Quem somos e o que fazemos</h2>
+          
           <p class="text-slate-600 leading-relaxed text-base md:text-lg">
             A <strong>Secretaria Municipal de Juventude de Junqueiro/AL</strong> consolida-se como o órgão da administração pública dedicado exclusivamente ao desenvolvimento, representação e fomento de políticas públicas voltadas para os jovens do município. Atuando como uma via de comunicação direta entre a gestão municipal e a população jovem, a Secretaria funciona como um núcleo de planejamento e execução de projetos que visam garantir direitos, promover a cidadania e assegurar a participação ativa das novas gerações nas esferas de decisão e no cotidiano da comunidade.
           </p>
@@ -1092,7 +1094,7 @@ function renderSobre() {
           </p>
 
           <!-- Imagem Otimizada Integrada no Texto -->
-          <div class="rounded-2xl overflow-hidden shadow-lg group relative my-8 border border-slate-100">
+          <div class="rounded-2xl overflow-hidden shadow-lg group relative my-8 border border-slate-100 max-w-4xl mx-auto">
              <img src="juventude_group.webp" alt="Equipe da Juventude de Junqueiro" loading="lazy" decoding="async" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
              <div class="absolute inset-0 bg-gradient-to-t from-[#092986]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
                  <span class="text-white font-bold text-sm md:text-base drop-shadow-md">Equipe da Secretaria Municipal de Juventude</span>
@@ -1109,32 +1111,27 @@ function renderSobre() {
             Em síntese, a Secretaria Municipal da Juventude de Junqueiro é uma plataforma institucional de transformação e suporte. Nosso compromisso contínuo é formular e executar iniciativas que conectem a juventude a oportunidades reais de crescimento, seja por meio da integração escolar em festivais ou do resgate cultural em expedições formativas. Trabalhamos com o rigor logístico e administrativo necessário para entregar projetos que estruturem um caminho sólido para o desenvolvimento dos jovens em nosso município.
           </p>
             
-          <div class="p-5 border-l-4 border-[#e6af00] bg-amber-50/80 rounded-r-2xl shadow-sm transform hover:-translate-y-1 transition-transform duration-300">
+          <div class="p-5 border-l-4 border-[#e6af00] bg-amber-50/80 rounded-r-2xl shadow-sm transform hover:-translate-y-1 transition-transform duration-300 max-w-4xl mx-auto">
             <p class="text-sm md:text-base italic text-slate-700 font-medium">
               "Trabalhamos incansavelmente para descentralizar e democratizar as melhores oportunidades nacionais para que nenhum jovem de Junqueiro fique para trás."
             </p>
           </div>
         </div>
 
-          <!-- Video Section Otimizado -->
-          <div class="lg:col-span-5 animate-fade-in-up delay-200 rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-white p-2">
-             <div class="p-4 border-b border-slate-100 mb-2">
-             </div>
-             <video 
-               controls 
-               preload="metadata" 
-               class="w-full h-auto rounded-2xl bg-slate-900"
-               aria-label="Vídeo institucional sobre a Secretaria da Juventude"
-             >
-               <source src="VIDEO_LOOP_JUVENTUDE_SITE.webm" type="video/mp4">
-               Seu navegador não suporta a tag de vídeo.
-             </video>
-          </div>
-
+        <!-- Video Section Otimizado e Centralizado -->
+        <div class="animate-fade-in-up delay-200 rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-white p-2 max-w-3xl mx-auto">
+           <video 
+             controls 
+             preload="metadata" 
+             class="w-full h-auto rounded-2xl bg-slate-900"
+             aria-label="Vídeo institucional sobre a Secretaria da Juventude"
+           >
+             <source src="VIDEO_LOOP_JUVENTUDE_SITE.webm" type="video/mp4">
+             Seu navegador não suporta a tag de vídeo.
+           </video>
         </div>
 
       </div>
-
       <!-- Mission, Vision, Values Tri-card layout -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-up delay-300">
         
