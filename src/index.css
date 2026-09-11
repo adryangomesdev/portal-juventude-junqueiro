@@ -46,6 +46,18 @@
   html.dark .bg-slate-100 {
     @apply !bg-slate-800;
   }
+  html.dark .bg-white {
+    @apply !bg-slate-800;
+  }
+  html.dark .bg-slate-50 {
+    @apply !bg-slate-900;
+  }
+  html.dark .bg-slate-100 {
+    @apply !bg-slate-800;
+  }
+  html.dark .bg-amber-50 {
+    @apply !bg-slate-800;
+  }
 
   /* Inversão automática de textos */
   html.dark .text-slate-950,

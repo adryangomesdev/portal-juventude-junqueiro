@@ -1111,7 +1111,7 @@ function renderSobre() {
             Em síntese, a Secretaria Municipal da Juventude de Junqueiro é uma plataforma institucional de transformação e suporte. Nosso compromisso contínuo é formular e executar iniciativas que conectem a juventude a oportunidades reais de crescimento, seja por meio da integração escolar em festivais ou do resgate cultural em expedições formativas. Trabalhamos com o rigor logístico e administrativo necessário para entregar projetos que estruturem um caminho sólido para o desenvolvimento dos jovens em nosso município.
           </p>
             
-          <div class="p-5 border-l-4 border-[#e6af00] bg-amber-50/80 rounded-r-2xl shadow-sm transform hover:-translate-y-1 transition-transform duration-300 max-w-4xl mx-auto">
+          <div class="p-5 border-l-4 border-[#e6af00] bg-amber-50 rounded-r-2xl shadow-sm transform hover:-translate-y-1 transition-transform duration-300 max-w-4xl mx-auto">
             <p class="text-sm md:text-base italic text-slate-700 font-medium">
               "Trabalhamos incansavelmente para descentralizar e democratizar as melhores oportunidades nacionais para que nenhum jovem de Junqueiro fique para trás."
             </p>
