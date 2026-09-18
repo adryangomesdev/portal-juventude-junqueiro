@@ -94,6 +94,18 @@ const NEWS = [
   {
     id: "news-1",
     title:
+      "A SECRETARIA DA JUVENTUDE JUNTO COM A SECRETARIA DE SAÚDE DO MUNICÍPIO DE JUNQUEIRO PROMEVERAM NESSA QUINTA-FEIRA UM MOMENTO DE REFLEXÃO E CUIDADO EM RELAÇÃO AO SETEMBRO AMARELO",
+    category: "EVENTO",
+    date: "17 de setembro de 2026",
+    summary:
+      "A Secretaria da Juventude e a Secretaria de Saúde de Junqueiro realizaram, nesta quinta-feira, uma palestra de conscientização sobre o Setembro Amarelo na Escola Estadual Maria Liege de Albuquerque Tavares, promovendo um momento essencial de reflexão e cuidado com a saúde mental dos estudante.",
+    content:
+      "Como parte das mobilizações da campanha Setembro Amarelo, a Secretaria da Juventude, em parceria com a Secretaria de Saúde do Município de Junqueiro, promoveu nesta quinta-feira um importante momento de reflexão e cuidado com a vida. A ação foi realizada às 8:30h na <strong>Escola Estadual Maria Liege de Albuquerque Tavares</strong>.<br><br>O encontro contou com uma palestra voltada para a conscientização sobre a importância da saúde mental, o diálogo aberto e a prevenção ao suicídio. Durante a atividade, os estudantes puderam participar ativamente, receber orientações fundamentais sobre a valorização da vida e conhecer canais de apoio, reforçando o compromisso da gestão municipal com o bem-estar e o acolhimento da comunidade escolar.",
+  },
+
+  {
+    id: "news-11",
+    title:
       "A SECRETARIA DA JUVENTUDE JUNTO COM A PREFEITURA MUNICIPAL DE JUNQUEIRO REALIZOU O II FESTIVAL DA JUVENTUDE",
     category: "EVENTO",
     date: "10 de agosto de 2026",
