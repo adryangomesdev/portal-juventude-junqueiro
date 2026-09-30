@@ -854,7 +854,7 @@ function renderHome() {
           </h2>
           
           <p class="text-slate-400 leading-relaxed text-base font-light">
-            Diversos jovens do município já mudaram suas carreiras profissionais e de estudos aproveitando as trilhas gratuitas e serviços ofertados. Veja as histórias!
+            Diversos jovens do município já deram sua opinião sobre as ações realizadas pela juventude, vem deixar a sua também e fazer parte dessa história!
           </p>
           
           <div class="pt-4">
