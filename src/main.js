@@ -230,7 +230,7 @@ const TESTIMONIALS = [
     program: "giro da juventude",
     quote:
       "<strong> O que você está achando do primeiro CineRural aqui na baixa fria?</strong> R: Estou achando muito legal e muito importante promover esse tipo de atividade para a juventude, promovendo o entrosamento da comunidade junto com a juventude. Uma ideia muito boa em trazer o cinema, porque eu tenho certeza que tem muitas pessoas aqui que nunca tiveram a oportunidade de ir para um cinema e hoje está tendo essa chance.",
-    avatar: "M",
+    avatar: "/CINE_RURAL.webp",
     videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
   },
   {
@@ -636,7 +636,11 @@ function renderHome() {
         
         <div class="flex items-center gap-4 mt-auto border-t border-[#2A3B5C] pt-5">
           <div class="h-10 w-10 rounded-full bg-[#e6af00] text-slate-900 flex items-center justify-center font-black text-sm shrink-0">
-            ${t.avatar}
+            ${
+              t.avatar.includes(".")
+                ? `<img src="${t.avatar}" alt="${t.name}" class="w-full h-full object-cover" />`
+                : t.avatar
+            }
           </div>
           <div>
             <h5 class="text-sm font-bold text-white">${t.name}</h5>
@@ -1259,7 +1263,11 @@ function renderDepoimentos() {
         <div class="relative z-10 flex flex-col flex-grow">
           <div class="flex items-center gap-3">
             <div class="h-12 w-12 rounded-full bg-[#092986] text-white flex items-center justify-center font-black text-lg shrink-0 border border-blue-100 shadow-sm">
-              ${t.avatar}
+            ${
+              t.avatar.includes(".")
+                ? `<img src="${t.avatar}" alt="${t.name}" class="w-full h-full object-cover" />`
+                : t.avatar
+            }
             </div>
             <div>
               <h4 class="text-base font-bold text-slate-900 leading-none">${t.name}</h4>
