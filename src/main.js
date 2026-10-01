@@ -253,6 +253,81 @@ const TESTIMONIALS = [
   },
 ];
 
+const ACOES_JUVENTUDE = [
+  {
+    id: "volta-as-aulas",
+    title: "Volta às Aulas 2026",
+    logo: "VOLTA_AS_AULAS.webp",
+    details:
+      "Uma grande ação de receção e incentivo aos estudantes da rede de ensino no início do ano letivo.",
+    objectives:
+      "Garantir um regresso acolhedor, distribuir kits informativos sobre os programas da Secretaria e motivar os jovens para o novo ciclo escolar com palestras e dinâmicas.",
+  },
+  {
+    id: "maos-dadas",
+    title: "De Mãos Dadas com a Juventude",
+    logo: "MAOS_DADAS_LOGO.webp",
+    details:
+      "Projeto de apoio social, desportivo e integração contínua diretamente com a comunidade.",
+    objectives:
+      "Levar serviços, orientações, desporto e suporte aos jovens nos bairros e povoados, fortalecendo a rede de proteção e promovendo o talento local.",
+  },
+  {
+    id: "conexao-maes",
+    title: "Conexão Mães",
+    logo: "CONEXAO_MAES.webp",
+    details:
+      "Iniciativa dedicada ao acolhimento, apoio e capacitação de jovens mães do município.",
+    objectives:
+      "Oferecer rodas de conversa, suporte psicológico e oficinas profissionalizantes para jovens mães, promovendo autonomia financeira e bem-estar familiar.",
+  },
+  {
+    id: "cine-rural",
+    title: "Cine Rural",
+    logo: "CINE_RURAL.webp",
+    details:
+      "Projeto de cinema itinerante focado em levar a magia da sétima arte a comunidades rurais e povoados.",
+    objectives:
+      "Democratizar o acesso à cultura e ao entretenimento, proporcionando sessões de cinema gratuitas e promovendo o convívio social para jovens mais distantes do centro.",
+  },
+  {
+    id: "aulao-enem",
+    title: "Aulão Vem Que Tem ENEM",
+    logo: "AULAO_ENEM.webp",
+    details:
+      "Maratona intensiva de aulas preparatórias focadas no Exame Nacional do Ensino Médio.",
+    objectives:
+      "Oferecer revisão gratuita com professores especialistas para fortalecer o nível de aprendizagem e aumentar as oportunidades de aprovação nas universidades para os jovens do município.",
+  },
+  {
+    id: "maio-amarelo",
+    title: "Maio Amarelo",
+    logo: "MAIO_AMARELO_LOGO.webp",
+    details:
+      "Campanha de mobilização e sensibilização para a segurança rodoviária e prevenção de acidentes.",
+    objectives:
+      "Consciencializar jovens condutores e peões sobre a importância do respeito às regras de trânsito, através de ações educativas nas escolas e nas ruas.",
+  },
+  {
+    id: "trilha-juventude",
+    title: "Trilha da Juventude",
+    logo: "TRILHA_DA_JUVENTUDE.webp",
+    details:
+      "Expedição ecológica e cultural pelos patrimónios naturais e históricos de Junqueiro.",
+    objectives:
+      "Conectar os jovens à natureza, promover a educação ambiental na prática e valorizar as tradições locais, como o artesanato da comunidade.",
+  },
+  {
+    id: "arraia-juventude",
+    title: "Arraiá da Juventude",
+    logo: "ARRAIA_DA_JUVENTUDE_LOGO.webp",
+    details:
+      "Celebração cultural que une as tradições das festas populares ao convívio da juventude.",
+    objectives:
+      "Resgatar e manter vivas as tradições juninas, proporcionando um ambiente seguro de festa, com música, dança e integração entre os jovens de várias escolas.",
+  },
+];
+
 // --- SVG ICON PROVIDER ---
 
 function getSvgIcon(name, customClass = "h-5 w-5") {
