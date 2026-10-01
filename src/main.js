@@ -221,7 +221,7 @@ const TESTIMONIALS = [
     program: "Giro da Juventude",
     quote:
       "<strong>Secretário, o que o senhor está achando nessa ação da lagoa?</strong> R: Acho uma ação muito importante, além da gente trazer os alunos a gente está conscientizando os alunos. De antemão,quero parabenizar também o secretário de meio ambiente, secretário arlysson do município, secretário também de recurso hídrico, Keyton Felix. Por essa ação, então a gente precisa fazer mais ações como essa, levar às escolas para que os próprios alunos tenham esse contato com a natureza e que tenham esse contato e esse cuidado com a natureza.",
-    avatar: "M",
+    avatar: "/SEMANA_DA_AGUA.webp",
     videoEmbed: "https://www.instagram.com/reel/DWbh2ShhCz0/embed",
   },
   {
