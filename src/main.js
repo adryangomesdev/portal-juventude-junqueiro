@@ -239,7 +239,7 @@ const TESTIMONIALS = [
     program: "Giro da Juventude",
     quote:
       "<strong> E ai secretário, está achando o que do CineRural?</strong> R: O CineRural está sendo um momento muito importante para a nossa região, para o município de Junqueiro, porque é levar a cultura para os povoados, onde o pessoal está mais distante a prefeitura está presente. Sem contar também com a inclusão porque também está dando acesso a acessibilidade maior as pessoas com deficiência, isso é importante porque é o papel da secretaria da juventude. é uma juventude inclusiva.",
-    avatar: "M",
+    avatar: "/CINE_RURAL.webp",
     videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
   },
   {
@@ -1267,7 +1267,7 @@ function renderDepoimentos() {
               t.avatar.includes(".")
                 ? `<img src="${t.avatar}" alt="${t.name}" class="w-full h-full object-cover" />`
                 : t.avatar
-            }
+            } 
             </div>
             <div>
               <h4 class="text-base font-bold text-slate-900 leading-none">${t.name}</h4>
