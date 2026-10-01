@@ -1537,16 +1537,101 @@ function renderContato() {
       </div>
     </section>
   `;
+}
 
-  // 7. AÇÃO DETAILS PAGE RENDERER
-  function renderAcaoDetails(id) {
-    updateNavigationActiveState("");
-    window.scrollTo({ top: 0, behavior: "smooth" });
+// Attach Phone Auto Mask
+const phoneInput = document.getElementById("phone");
+if (phoneInput) {
+  phoneInput.addEventListener("input", (e) => {
+    let v = e.target.value.replace(/\D/g, "");
+    if (v.length > 11) v = v.slice(0, 11);
 
-    const acao = ACOES_JUVENTUDE.find((item) => item.id === id);
+    if (v.length > 10) {
+      // (XX) XXXXX-XXXX
+      v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
+    } else if (v.length > 6) {
+      // (XX) XXXX-XXXX
+      v = v.replace(/^(\d{2})(\d{4})(\d{0,4})$/, "($1) $2-$3");
+    } else if (v.length > 2) {
+      // (XX) XXX
+      v = v.replace(/^(\d{2})(\d{0,5})$/, "($1) $2");
+    } else if (v.length > 0) {
+      // (XX
+      v = v.replace(/^(\d*)$/, "($1");
+    }
+    e.target.value = v;
+  });
+}
 
-    if (!acao) {
-      appContainer.innerHTML = `
+const form = document.getElementById("contact-form");
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const subjectSelect = document.getElementById("subject");
+    const subjectText = subjectSelect.options[subjectSelect.selectedIndex].text;
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !phone || !message) {
+      triggerToast(
+        "Por favor, preencha todos os campos obrigatórios marcados com *",
+        "error",
+      );
+      return;
+    }
+
+    // Desativa o botão temporariamente para evitar duplo clique
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = "Enviando...";
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/contato`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            nome: name,
+            email: email,
+            telefone: phone,
+            assunto: subjectText,
+            mensagem: message,
+          }),
+        },
+      );
+
+      if (response.ok) {
+        triggerToast("Mensagem enviada com sucesso para a Secretaria!");
+        form.reset();
+      } else {
+        triggerToast("Erro ao processar o envio. Tente novamente.", "error");
+      }
+    } catch (error) {
+      triggerToast("Falha na comunicação com o servidor.", "error");
+    } finally {
+      // Restaura o botão
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+}
+
+// 7. AÇÃO DETAILS PAGE RENDERER
+function renderAcaoDetails(id) {
+  updateNavigationActiveState("");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  const acao = ACOES_JUVENTUDE.find((item) => item.id === id);
+
+  if (!acao) {
+    appContainer.innerHTML = `
       <div class="max-w-md mx-auto py-24 px-4 text-center space-y-6">
         <h2 class="text-3xl font-black text-slate-900 tracking-tight">Evento não encontrado</h2>
         <a href="#/" class="px-6 py-3 bg-[#092986] text-white font-extrabold rounded-xl text-sm hover:bg-blue-800 transition-colors inline-block">
@@ -1554,10 +1639,10 @@ function renderContato() {
         </a>
       </div>
     `;
-      return;
-    }
+    return;
+  }
 
-    appContainer.innerHTML = `
+  appContainer.innerHTML = `
     <!-- Header Banner com Voltar -->
     <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12 md:py-16">
       <img src="juventude_group.webp" alt="Fundo" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-20 mix-blend-overlay z-0" />
@@ -1622,92 +1707,6 @@ function renderContato() {
       </div>
     </section>
   `;
-  }
-
-  // Attach Phone Auto Mask
-  const phoneInput = document.getElementById("phone");
-  if (phoneInput) {
-    phoneInput.addEventListener("input", (e) => {
-      let v = e.target.value.replace(/\D/g, "");
-      if (v.length > 11) v = v.slice(0, 11);
-
-      if (v.length > 10) {
-        // (XX) XXXXX-XXXX
-        v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
-      } else if (v.length > 6) {
-        // (XX) XXXX-XXXX
-        v = v.replace(/^(\d{2})(\d{4})(\d{0,4})$/, "($1) $2-$3");
-      } else if (v.length > 2) {
-        // (XX) XXX
-        v = v.replace(/^(\d{2})(\d{0,5})$/, "($1) $2");
-      } else if (v.length > 0) {
-        // (XX
-        v = v.replace(/^(\d*)$/, "($1");
-      }
-      e.target.value = v;
-    });
-  }
-
-  const form = document.getElementById("contact-form");
-  if (form) {
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const subjectSelect = document.getElementById("subject");
-      const subjectText =
-        subjectSelect.options[subjectSelect.selectedIndex].text;
-      const message = document.getElementById("message").value.trim();
-
-      if (!name || !email || !phone || !message) {
-        triggerToast(
-          "Por favor, preencha todos os campos obrigatórios marcados com *",
-          "error",
-        );
-        return;
-      }
-
-      // Desativa o botão temporariamente para evitar duplo clique
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = "Enviando...";
-      submitBtn.disabled = true;
-
-      try {
-        const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/contato`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              nome: name,
-              email: email,
-              telefone: phone,
-              assunto: subjectText,
-              mensagem: message,
-            }),
-          },
-        );
-
-        if (response.ok) {
-          triggerToast("Mensagem enviada com sucesso para a Secretaria!");
-          form.reset();
-        } else {
-          triggerToast("Erro ao processar o envio. Tente novamente.", "error");
-        }
-      } catch (error) {
-        triggerToast("Falha na comunicação com o servidor.", "error");
-      } finally {
-        // Restaura o botão
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-      }
-    });
-  }
 }
 
 // --- GLOBAL ROUTER SWITCHER ---
