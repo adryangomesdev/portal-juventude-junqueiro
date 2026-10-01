@@ -844,35 +844,33 @@ function renderHome() {
           </div>
 
           <!-- Scroll horizontal nativo para celular via overflow-x-auto e snap -->
-          <div class="w-full overflow-x-auto md:overflow-visible snap-x snap-mandatory" style="scrollbar-width: none;">
-            <div id="acoes-track" class="flex items-center gap-6 md:gap-16 px-4 sm:px-6 lg:px-8 w-max md:transition-transform md:duration-75 md:ease-out md:will-change-transform">
-              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="VOLTA_AS_AULAS.webp" alt="Volta às Aulas 2026" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-              </div>
-              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="MAOS_DADAS_LOGO.webp" alt="De Mãos Dadas com a Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-              </div>
-              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="CONEXAO_MAES.webp" alt="Conexão Mães" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-              </div>
-              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="CINE_RURAL.webp" alt="Cine Rural" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-              </div>
-              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="AULAO_ENEM.webp" alt="Aulão Vem Que Tem ENEM" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-              </div>
-              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="MAIO_AMARELO_LOGO.webp" alt="Maio Amarelo" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-              </div>
-              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="TRILHA_DA_JUVENTUDE.webp" alt="Trilha da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-              </div>
-              <div class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center">
-                <img src="ARRAIA_DA_JUVENTUDE_LOGO.webp" alt="Arraiá da Juventude" class="max-h-full w-auto object-contain hover:scale-105 transition-transform duration-300" />
-              </div>
-            </div>
-          </div>
+          <div id="acoes-track" class="flex items-center gap-6 md:gap-16 px-4 sm:px-6 lg:px-8 w-max md:transition-transform md:duration-75 md:ease-out md:will-change-transform pb-4">
+            <a href="#/acao/volta-as-aulas" class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center focus:outline-none focus:ring-4 focus:ring-blue-500/30 rounded-2xl">
+              <img src="VOLTA_AS_AULAS.webp" alt="Volta às Aulas 2026" class="max-h-full w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-md" />
+            </a>
+            <a href="#/acao/maos-dadas" class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center focus:outline-none focus:ring-4 focus:ring-blue-500/30 rounded-2xl">
+              <img src="MAOS_DADAS_LOGO.webp" alt="De Mãos Dadas com a Juventude" class="max-h-full w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-md" />
+            </a>
+            <a href="#/acao/conexao-maes" class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center focus:outline-none focus:ring-4 focus:ring-blue-500/30 rounded-2xl">
+              <img src="CONEXAO_MAES.webp" alt="Conexão Mães" class="max-h-full w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-md" />
+            </a>
+            <a href="#/acao/cine-rural" class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center focus:outline-none focus:ring-4 focus:ring-blue-500/30 rounded-2xl">
+            <img src="CINE_RURAL.webp" alt="Cine Rural" class="max-h-full w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-md" />
+          </a>
+          <a href="#/acao/aulao-enem" class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center focus:outline-none focus:ring-4 focus:ring-blue-500/30 rounded-2xl">
+            <img src="AULAO_ENEM.webp" alt="Aulão Vem Que Tem ENEM" class="max-h-full w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-md" />
+          </a>
+          <a href="#/acao/maio-amarelo" class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center focus:outline-none focus:ring-4 focus:ring-blue-500/30 rounded-2xl">
+            <img src="MAIO_AMARELO_LOGO.webp" alt="Maio Amarelo" class="max-h-full w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-md" />
+          </a>
+          <a href="#/acao/trilha-juventude" class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center focus:outline-none focus:ring-4 focus:ring-blue-500/30 rounded-2xl">
+            <img src="TRILHA_DA_JUVENTUDE.webp" alt="Trilha da Juventude" class="max-h-full w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-md" />
+          </a>
+          <a href="#/acao/arraia-juventude" class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center focus:outline-none focus:ring-4 focus:ring-blue-500/30 rounded-2xl">
+            <img src="ARRAIA_DA_JUVENTUDE_LOGO.webp" alt="Arraiá da Juventude" class="max-h-full w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-md" />
+          </a>
         </div>
+      </div>
 
         <!-- PARTE 2: Caminhos Digitais (Movida para dentro do sticky) -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 w-full">
