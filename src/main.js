@@ -248,7 +248,7 @@ const TESTIMONIALS = [
     program: "giro da juventude",
     quote:
       "<strong>Qual a importância da juventude da natureza?</strong> R: pra mim é importante ter a juventude na natureza é ajudar a gente se conectar e por sermos mais jovens ajudar entender mais a natureza e criar mais ação para ajudar o meio ambiente.",
-    avatar: "M",
+    avatar: "/TRILHA_DA_JUVENTUDE.webp",
     videoEmbed: "https://www.instagram.com/reel/DYU1flnKEhf/embed",
   },
 ];
