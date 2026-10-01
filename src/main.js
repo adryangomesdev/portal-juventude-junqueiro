@@ -1732,6 +1732,9 @@ function resolveRoute() {
     renderDepoimentos();
   } else if (hash.startsWith("#/contato")) {
     renderContato();
+  } else if (hash.startsWith("#/acao/")) {
+    const acaoId = hash.split("#/acao/")[1];
+    renderAcaoDetails(acaoId);
   } else {
     // Fallback 404
     appContainer.innerHTML = `
