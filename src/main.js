@@ -1540,6 +1540,92 @@ function renderContato() {
     </section>
   `;
 
+  // 7. AÇÃO DETAILS PAGE RENDERER
+  function renderAcaoDetails(id) {
+    updateNavigationActiveState("");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const acao = ACOES_JUVENTUDE.find((item) => item.id === id);
+
+    if (!acao) {
+      appContainer.innerHTML = `
+      <div class="max-w-md mx-auto py-24 px-4 text-center space-y-6">
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Evento não encontrado</h2>
+        <a href="#/" class="px-6 py-3 bg-[#092986] text-white font-extrabold rounded-xl text-sm hover:bg-blue-800 transition-colors inline-block">
+          Voltar para o Início
+        </a>
+      </div>
+    `;
+      return;
+    }
+
+    appContainer.innerHTML = `
+    <!-- Header Banner com Voltar -->
+    <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12 md:py-16">
+      <img src="juventude_group.webp" alt="Fundo" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-20 mix-blend-overlay z-0" />
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <a href="#/" class="inline-flex items-center gap-2 text-blue-200 hover:text-white font-bold text-sm mb-6 transition-colors">
+          <svg class="h-4 w-4 transform rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          Voltar à página inicial
+        </a>
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          <div class="bg-white/10 p-6 rounded-3xl backdrop-blur-md border border-white/20 shadow-2xl shrink-0">
+            <img src="${acao.logo}" alt="${acao.title}" class="h-32 md:h-48 w-auto object-contain drop-shadow-xl" onerror="this.src='https://placehold.co/400x200/092986/FFFFFF/webp?text=Ação'" />
+          </div>
+          <div class="text-center md:text-left space-y-3">
+            <span class="inline-block px-3 py-1 bg-[#e6af00] text-slate-900 text-xs font-black uppercase rounded-lg tracking-wider">Ações da Juventude</span>
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-none">${acao.title}</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.webp')] bg-repeat-x bg-contain bg-center"></div>
+
+    <!-- Main Content Details -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+      <div class="bg-white rounded-3xl p-8 md:p-12 border border-slate-100 shadow-sm space-y-10 relative">
+        
+        <!-- Detalhes -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="h-10 w-10 bg-blue-50 text-[#092986] rounded-xl flex items-center justify-center">
+              ${getSvgIcon("info", "h-6 w-6")}
+            </div>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Sobre a Iniciativa</h2>
+          </div>
+          <p class="text-slate-600 text-lg leading-relaxed pl-13">
+            ${acao.details}
+          </p>
+        </div>
+
+        <hr class="border-slate-100" />
+
+        <!-- Objetivos -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="h-10 w-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center">
+              ${getSvgIcon("award", "h-6 w-6")}
+            </div>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Objetivos e Impacto</h2>
+          </div>
+          <p class="text-slate-600 text-lg leading-relaxed pl-13">
+            ${acao.objectives}
+          </p>
+        </div>
+
+        <!-- Botão de Compartilhar/Apoio -->
+        <div class="mt-8 pt-8 border-t border-slate-50 flex justify-center">
+           <a href="#/noticias" class="px-8 py-4 bg-[#092986] hover:bg-blue-800 text-white rounded-xl text-base font-extrabold shadow-lg transition-all flex items-center gap-2">
+             Veja as últimas notícias desta ação
+             ${getSvgIcon("arrow-right", "h-5 w-5")}
+           </a>
+        </div>
+
+      </div>
+    </section>
+  `;
+  }
+
   // Attach Phone Auto Mask
   const phoneInput = document.getElementById("phone");
   if (phoneInput) {
