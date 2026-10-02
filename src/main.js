@@ -216,6 +216,15 @@ const NEWS = [
 
 const TESTIMONIALS = [
   {
+    name: "Trilha da Juventude",
+    location: "Lagoa do Retiro",
+    program: "Giro da Juventude",
+    quote:
+      "<strong> Para você, qual foi o melhor momento até agora? </strong> R: Eu acho que todos os momentos estão sendo muito importantes. Porque foi um momento  diferente onde os alunos saíram da sala de aula e foi um momento onde foi um momento coletivo a gente fez novas amizades e fez a gente dialogar com as pessoas e conhecer um lugar diferente.",
+    avatar: "/TRILHA_DA_JUVENTUDE.webp",
+    videoEmbed: "https://www.instagram.com/reel/DYU1flnKEhf/embed",
+  },
+  {
     name: "Aulão Vem Que tem ENEM",
     location: "Teatro São José",
     program: "Giro da Juventude",
