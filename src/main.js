@@ -220,6 +220,15 @@ const TESTIMONIALS = [
     location: "Teatro São José",
     program: "Giro da Juventude",
     quote:
+      "<strong> O que foi que te motivou esta aqui hoje?</strong> R:  A presença de profissionais qualificados, como também e ter uma preparação ainda maior para o enem",
+    avatar: "/AULAO_ENEM.webp",
+    videoEmbed: "https://www.instagram.com/reel/DXpLXE9ivJT/embed",
+  },
+  {
+    name: "Aulão Vem Que tem ENEM",
+    location: "Teatro São José",
+    program: "Giro da Juventude",
+    quote:
       "<strong> O que te motivou esta nesse aulão hoje?</strong> R: Eu sei que o aulão pode mudar a minha vida e eu não poderia perder essa oportunidade de me preparar melhor",
     avatar: "/AULAO_ENEM.webp",
     videoEmbed: "https://www.instagram.com/reel/DXpLXE9ivJT/embed",
