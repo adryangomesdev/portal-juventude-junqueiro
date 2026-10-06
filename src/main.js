@@ -215,6 +215,24 @@ const NEWS = [
 ];
 
 const TESTIMONIALS = [
+  ///  {
+  ///    name: "Semana da Água",
+  ///    location: "Lagoa do Retiro",
+  ///    program: "Giro da Juventude",
+  ///    quote:
+  ///      "<strong> Se você pudesse dar um recado para os jovens sobre o meio ambiente, qual seria? </strong> R: Acho que preservar o meio ambiente e cuidar mais da natureza.",
+  ///    avatar: "/SEMANA_DA_AGUA.webp",
+  ///    videoEmbed: "https://www.instagram.com/reel/DWbh2ShhCz0/embed",
+  //  },
+  {
+    name: "Semana da Água",
+    location: "Lagoa do Retiro",
+    program: "Giro da Juventude",
+    quote:
+      "<strong> Se você pudesse dar um conselho para os jovens em relação ao meio ambiente, qual seria? </strong> R: Cuide do meio ambiente e preserve o nosso futuro.",
+    avatar: "/SEMANA_DA_AGUA.webp",
+    videoEmbed: "https://www.instagram.com/reel/DWbh2ShhCz0/embed",
+  },
   {
     name: "Trilha da Juventude",
     location: "Lagoa do Retiro",
