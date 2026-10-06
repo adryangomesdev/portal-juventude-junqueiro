@@ -216,6 +216,15 @@ const NEWS = [
 
 const TESTIMONIALS = [
   {
+    name: "Aulão Vem Que tem ENEM",
+    location: "Teatro São José",
+    program: "Giro da Juventude",
+    quote:
+      "<strong> Já deu para aprender algo que você acha que vai cair na prova?</strong> R: Com certeza, eu aprendi coisas que não sabia, que vão mudar muito na hora de responder às questões.",
+    avatar: "/AULAO_ENEM.webp",
+    videoEmbed: "https://www.instagram.com/reel/DXpLXE9ivJT/embed",
+  },
+  {
     name: "Trilha da Juventude",
     location: "Lagoa do Retiro",
     program: "Giro da Juventude",
