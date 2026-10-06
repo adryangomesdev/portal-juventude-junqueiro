@@ -274,7 +274,7 @@ const TESTIMONIALS = [
     location: "Teatro São José",
     program: "Giro da Juventude",
     quote:
-      "<strong>Depois de hoje, você se sente mais preparado para fazer o enem?</strong> R: Com certeza, agora estou mais confiante e mais forte para continuar estudando.",
+      "<strong>Depois de hoje, você se sente mais preparado para fazer o ENEM?</strong> R: Com certeza, agora estou mais confiante e mais forte para continuar estudando.",
     avatar: "/AULAO_ENEM.webp",
     videoEmbed: "https://www.instagram.com/reel/DXpLXE9ivJT/embed",
   },
@@ -301,7 +301,7 @@ const TESTIMONIALS = [
     location: "Povoado Baixa Fria",
     program: "Giro da Juventude",
     quote:
-      "<strong> De uma taxa de 0 a 10, o que você está achando desse evento?</strong> R: Um evento muito incrível é uma iniciativa muito importante, nota mil (1000) para  o evento, para a organização do evento também. CineRural é uma iniciativa muito importante para a comunidade, ter toda essa integração. Não só com a comunidade, mas com todos os nossos alunos e eu acredito que foi algo muito maravilhoso para todos que estiveram aqui presente.",
+      "<strong> De uma taxa de 0 a 10, o que você está achando desse evento?</strong> R: Um evento muito incrível é uma iniciativa muito importante, nota mil (1000) para  o evento, para a organização do evento também. CineRural é uma iniciativa muito importante para a comunidade ter toda essa integração. Não só com a comunidade, mas com todos os nossos alunos e eu acredito que foi algo muito maravilhoso para todos que estiveram aqui presente.",
     avatar: "/CINE_RURAL.webp",
     videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
   },
@@ -328,7 +328,7 @@ const TESTIMONIALS = [
     location: "Lagoa do Retiro",
     program: "Giro da Juventude",
     quote:
-      "<strong> Para você, qual foi o melhor momento até agora? </strong> R: Eu acho que todos os momentos estão sendo muito importantes. Porque foi um momento  diferente onde os alunos saíram da sala de aula e foi um momento onde foi um momento coletivo a gente fez novas amizades e fez a gente dialogar com as pessoas e conhecer um lugar diferente.",
+      "<strong> Para você, qual foi o melhor momento até agora? </strong> R: Eu acho que todos os momentos estão sendo muito importantes. Porque foi um momento diferente onde os alunos saíram da sala de aula e foi um momento coletivo, a gente fez novas amizades e fez a gente dialogar com as pessoas, e conhecer um lugar diferente.",
     avatar: "/TRILHA_DA_JUVENTUDE.webp",
     videoEmbed: "https://www.instagram.com/reel/DYU1flnKEhf/embed",
   },
@@ -337,7 +337,7 @@ const TESTIMONIALS = [
     location: "Teatro São José",
     program: "Giro da Juventude",
     quote:
-      "<strong> O que é que você está achando do aulão vem que tem enem? </strong> R: É muito bom, os professores estão explicando de um jeito que dá para entender muito bem e fica muito mais fácil para gente ficar atendo para o enem, desse ano 2026 e é mais fácil de aprender com esse aulão que está tendo.",
+      "<strong> O que é que você está achando do aulão vem que tem enem? </strong> R: É muito bom, os professores estão explicando de um jeito que dá para entender muito bem e fica muito mais fácil para gente ficar atento para o ENEM desse ano de 2026 e é mais fácil de aprender com esse aulão que está tendo.",
     avatar: "/AULAO_ENEM.webp",
     videoEmbed: "https://www.instagram.com/reel/DXpLXE9ivJT/embed",
   },
@@ -346,7 +346,7 @@ const TESTIMONIALS = [
     location: "Teatro São José",
     program: "Giro da Juventude",
     quote:
-      "<strong> Antes de vir para cá, qual era a sua maior dificuldade? </strong> R: Acho que era vencer eu mesma, e uma das materias que esta falando aqui é matemática que também  sempre foi uma das minhas maiores dificuldade e que hoje está sendo mostrada de uma forma que não é tão difícil assim",
+      "<strong> Antes de vir para cá, qual era a sua maior dificuldade? </strong> R: Acho que era vencer eu mesma, e uma das matérias que está sendo falada aqui é matemática, que também  sempre foi uma das minhas maiores dificuldades e que hoje está sendo mostrada de uma forma que não é tão difícil assim",
     avatar: "/AULAO_ENEM.webp",
     videoEmbed: "https://www.instagram.com/reel/DXpLXE9ivJT/embed",
   },
@@ -355,7 +355,7 @@ const TESTIMONIALS = [
     location: "Lagoa do Retiro",
     program: "Giro da Juventude",
     quote:
-      "<strong>Secretário, o que o senhor está achando nessa ação da lagoa?</strong> R: Acho uma ação muito importante, além da gente trazer os alunos a gente está conscientizando os alunos. De antemão,quero parabenizar também o secretário de meio ambiente, secretário arlysson do município, secretário também de recurso hídrico, Keyton Felix. Por essa ação, então a gente precisa fazer mais ações como essa, levar às escolas para que os próprios alunos tenham esse contato com a natureza e que tenham esse contato e esse cuidado com a natureza.",
+      "<strong>Secretário, o que o senhor está achando nessa ação da lagoa?</strong> R: Acho uma ação muito importante, além da gente trazer os alunos a gente está conscientizando os alunos. De antemão, quero parabenizar também o secretário de meio ambiente, secretário Arlysson do município, secretário também de recurso hídrico, Keyton Felix. Por essa ação, então a gente precisa fazer mais ações como essa, levar às escolas para que os próprios alunos tenham esse contato com a natureza e que tenham esse contato e esse cuidado com a natureza.",
     avatar: "/SEMANA_DA_AGUA.webp",
     videoEmbed: "https://www.instagram.com/reel/DWbh2ShhCz0/embed",
   },
@@ -373,7 +373,7 @@ const TESTIMONIALS = [
     location: "Povoado Baixa Fria",
     program: "Giro da Juventude",
     quote:
-      "<strong> E ai secretário, está achando o que do CineRural?</strong> R: O CineRural está sendo um momento muito importante para a nossa região, para o município de Junqueiro, porque é levar a cultura para os povoados, onde o pessoal está mais distante a prefeitura está presente. Sem contar também com a inclusão porque também está dando acesso a acessibilidade maior as pessoas com deficiência, isso é importante porque é o papel da secretaria da juventude. é uma juventude inclusiva.",
+      "<strong> E aí secretário, está achando o que do CineRural?</strong> R: O CineRural está sendo um momento muito importante para a nossa região e para o município de Junqueiro, porque é levar a cultura para os povoados, onde o pessoal está mais distante, porém a prefeitura está presente. Sem contar também com a inclusão porque também está dando acesso a acessibilidade maior as pessoas com deficiência, isso é importante porque é o papel da secretaria da juventude. é uma juventude inclusiva.",
     avatar: "/CINE_RURAL.webp",
     videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
   },
@@ -382,7 +382,7 @@ const TESTIMONIALS = [
     location: "Lagoa do Retiro",
     program: "giro da juventude",
     quote:
-      "<strong>Qual a importância da juventude na natureza?</strong> R: pra mim é importante ter a juventude na natureza é ajudar a gente se conectar e por sermos mais jovens ajudar entender mais a natureza e criar mais ação para ajudar o meio ambiente.",
+      "<strong>Qual a importância da juventude na natureza?</strong> R: Para mim é importante ter a juventude na natureza, para ajudar a gente se conectar e por sermos mais jovens ajudar entender mais a natureza e criar mais ações para ajudar o meio ambiente.",
     avatar: "/SEMANA_DA_AGUA.webp",
     videoEmbed: "https://www.instagram.com/reel/DWbh2ShhCz0/embed",
   },
