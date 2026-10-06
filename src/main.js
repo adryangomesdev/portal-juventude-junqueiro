@@ -220,6 +220,15 @@ const TESTIMONIALS = [
     location: "Povoado Baixa Fria",
     program: "Giro da Juventude",
     quote:
+      "<strong> O que não pode faltar em um evento como esse, secretária? </strong> R: Muita cultura e juventude e um movimento muito importante no audiovisual para a nossa juventude. ",
+    avatar: "/CINE_RURAL.webp",
+    videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
+  },
+  {
+    name: "Cine Rural",
+    location: "Povoado Baixa Fria",
+    program: "Giro da Juventude",
+    quote:
       "<strong> De uma taxa de 0 a 10, o que você está achando desse evento?</strong> R: Um evento muito incrível é uma iniciativa muito importante, nota mil (1000) para  o evento, para a organização do evento também. CineRural é uma iniciativa muito importante para a comunidade, ter toda essa integração. Não só com a comunidade, mas com todos os nossos alunos e eu acredito que foi algo muito maravilhoso para todos que estiveram aqui presente.",
     avatar: "/CINE_RURAL.webp",
     videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
