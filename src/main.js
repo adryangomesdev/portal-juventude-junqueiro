@@ -216,6 +216,15 @@ const NEWS = [
 
 const TESTIMONIALS = [
   {
+    name: "Aulão Vem Que tem ENEM",
+    location: "Teatro São José",
+    program: "Giro da Juventude",
+    quote:
+      "<strong> Antes de vir para cá, qual era a sua maior dificuldade? </strong> R: Eu estava meio perdido na redação, mas agora, depois daqui, eu estou entendendo melhor. ",
+    avatar: "/AULAO_ENEM.webp",
+    videoEmbed: "https://www.instagram.com/reel/DXpLXE9ivJT/embed",
+  },
+  {
     name: "Cine Rural",
     location: "Povoado Baixa Fria",
     program: "Giro da Juventude",
