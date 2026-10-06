@@ -220,6 +220,15 @@ const TESTIMONIALS = [
     location: "Lagoa do Retiro",
     program: "Giro da Juventude",
     quote:
+      "<strong> Você participaria novamente da trilha?</strong> R: Com certeza. E esse evento uniu a juventude com a natureza e o meio ambiente e vai ficar marcado para sempre nas escolas daqui de junqueiro. ",
+    avatar: "/TRILHA_DA_JUVENTUDE.webp",
+    videoEmbed: "https://www.instagram.com/reel/DYU1flnKEhf/embed",
+  },
+  {
+    name: "Trilha da Juventude",
+    location: "Lagoa do Retiro",
+    program: "Giro da Juventude",
+    quote:
       "<strong> O que você acha das ações voltada à juventude? </strong> R: Eu acho que está sendo bastante legal, principalmente a trilha que está tendo. E isso só aproxima mais a juventude da natureza. Dar para ver que o pessoal está tendo muita voz na juventude, principalmente com a secretaria da juventude e isso está sendo bem legal.",
     avatar: "/TRILHA_DA_JUVENTUDE.webp",
     videoEmbed: "https://www.instagram.com/reel/DYU1flnKEhf/embed",
