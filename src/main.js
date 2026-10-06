@@ -220,6 +220,15 @@ const TESTIMONIALS = [
     location: "Lagoa do Retiro",
     program: "Giro da Juventude",
     quote:
+      "<strong> O que você acha das ações voltada à juventude? </strong> R: Eu acho que está sendo bastante legal, principalmente a trilha que está tendo. E isso só aproxima mais a juventude da natureza. Dar para ver que o pessoal está tendo muita voz na juventude, principalmente com a secretaria da juventude e isso está sendo bem legal.",
+    avatar: "/TRILHA_DA_JUVENTUDE.webp",
+    videoEmbed: "https://www.instagram.com/reel/DYU1flnKEhf/embed",
+  },
+  {
+    name: "Trilha da Juventude",
+    location: "Lagoa do Retiro",
+    program: "Giro da Juventude",
+    quote:
       "<strong> Com esta sendo para você essa essa participação da trilha?</strong> R: Está sendo um momento descontraído, diferente com uma energia positiva aqui. o pessoal bem astral coisa boa ",
     avatar: "/TRILHA_DA_JUVENTUDE.webp",
     videoEmbed: "https://www.instagram.com/reel/DYU1flnKEhf/embed",
