@@ -342,13 +342,13 @@ const TESTIMONIALS = [
     videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
   },
   {
-    name: "Trilha da Juventude",
+    name: "Semana da Água",
     location: "Lagoa do Retiro",
     program: "giro da juventude",
     quote:
       "<strong>Qual a importância da juventude da natureza?</strong> R: pra mim é importante ter a juventude na natureza é ajudar a gente se conectar e por sermos mais jovens ajudar entender mais a natureza e criar mais ação para ajudar o meio ambiente.",
-    avatar: "/TRILHA_DA_JUVENTUDE.webp",
-    videoEmbed: "https://www.instagram.com/reel/DYU1flnKEhf/embed",
+    avatar: "/SEMANA_DA_AGUA.webp",
+    videoEmbed: "https://www.instagram.com/reel/DWbh2ShhCz0/embed",
   },
 ];
 
