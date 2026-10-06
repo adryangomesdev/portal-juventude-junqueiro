@@ -216,6 +216,15 @@ const NEWS = [
 
 const TESTIMONIALS = [
   {
+    name: "Trilha da Juventude",
+    location: "Lagoa do Retiro",
+    program: "Giro da Juventude",
+    quote:
+      "<strong> Com esta sendo para você essa essa participação da trilha?</strong> R: Está sendo um momento descontraído, diferente com uma energia positiva aqui. o pessoal bem astral coisa boa ",
+    avatar: "/TRILHA_DA_JUVENTUDE.webp",
+    videoEmbed: "https://www.instagram.com/reel/DYU1flnKEhf/embed",
+  },
+  {
     name: "Aulão Vem Que tem ENEM",
     location: "Teatro São José",
     program: "Giro da Juventude",
@@ -346,7 +355,7 @@ const TESTIMONIALS = [
     location: "Lagoa do Retiro",
     program: "giro da juventude",
     quote:
-      "<strong>Qual a importância da juventude da natureza?</strong> R: pra mim é importante ter a juventude na natureza é ajudar a gente se conectar e por sermos mais jovens ajudar entender mais a natureza e criar mais ação para ajudar o meio ambiente.",
+      "<strong>Qual a importância da juventude na natureza?</strong> R: pra mim é importante ter a juventude na natureza é ajudar a gente se conectar e por sermos mais jovens ajudar entender mais a natureza e criar mais ação para ajudar o meio ambiente.",
     avatar: "/SEMANA_DA_AGUA.webp",
     videoEmbed: "https://www.instagram.com/reel/DWbh2ShhCz0/embed",
   },
