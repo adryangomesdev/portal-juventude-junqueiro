@@ -1347,11 +1347,11 @@ function renderSobre() {
         <div class="animate-fade-in-up delay-200 rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-white p-2 max-w-3xl mx-auto">
            <video 
              controls 
-             preload="metadata" 
+             preload="auto" 
              class="w-full h-auto rounded-2xl bg-slate-900"
              aria-label="Vídeo institucional sobre a Secretaria da Juventude"
            >
-             <source src="VIDEO_LOOP_JUVENTUDE_SITE.webm" type="video/mp4">
+             <source src="VIDEO_LOOP_JUVENTUDE_SITE.webm" type="video/webm">
              Seu navegador não suporta a tag de vídeo.
            </video>
         </div>
