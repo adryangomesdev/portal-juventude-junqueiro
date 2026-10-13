@@ -1015,6 +1015,9 @@ function renderHome() {
           <a href="#/acao/festival-juventude" class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center focus:outline-none focus:ring-4 focus:ring-blue-500/30 rounded-2xl">
             <img src="logo-do-festival.webp" alt="II Festival da Juventude" class="max-h-full w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-md" />
           </a>
+          <a href="#/acao/mais-sangue-mais-vida" class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center focus:outline-none focus:ring-4 focus:ring-blue-500/30 rounded-2xl">
+            <img src="mais_sangue_mais_vida.webp" alt="Mais Sangue Mais Vida" class="max-h-full w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-md" />
+          </a>
         </div>
       </div>
 
