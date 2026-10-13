@@ -461,6 +461,15 @@ const ACOES_JUVENTUDE = [
     objectives:
       "Resgatar e manter vivas as tradições juninas, proporcionando um ambiente seguro de festa, com música, dança e integração entre os jovens de várias escolas.",
   },
+  {
+    id: "festival-juventude",
+    title: "II Festival da Juventude",
+    logo: "logo-do-festival.webp",
+    details:
+      "Grande celebração que movimenta o município com um extenso cronograma de atividades culturais, esportivas, inclusão social e ações de capacitação.",
+    objectives:
+      "Promover a integração social, valorizar o protagonismo jovem e a inclusão das Pessoas com Deficiência (PCD), além de realizar capacitações e celebrar o futuro dos jovens de Junqueiro.",
+  },
 ];
 
 // --- SVG ICON PROVIDER ---
