@@ -997,7 +997,7 @@ function renderHome() {
           </div>
 
           <!-- Scroll horizontal nativo para celular via overflow-x-auto e snap -->
-          <div id="acoes-track" class="flex items-center gap-6 md:gap-16 px-4 sm:px-6 lg:px-8 w-max md:transition-transform md:duration-75 md:ease-out md:will-change-transform pb-4">
+          <div id="acoes-track" class="flex items-center gap-6 md:gap-10 px-4 sm:px-6 lg:px-8 w-max md:transition-transform md:duration-75 md:ease-out md:will-change-transform pb-4">
             <a href="#/acao/volta-as-aulas" class="shrink-0 h-32 md:h-48 flex items-center justify-center snap-center focus:outline-none focus:ring-4 focus:ring-blue-500/30 rounded-2xl">
               <img src="VOLTA_AS_AULAS.webp" alt="Volta às Aulas 2026" class="max-h-full w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-md" />
             </a>
