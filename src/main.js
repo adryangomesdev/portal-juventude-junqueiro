@@ -1778,72 +1778,112 @@ function renderAcaoDetails(id) {
   }
 
   appContainer.innerHTML = `
-    <!-- Header Banner com Voltar -->
-    <section class="relative overflow-hidden bg-gradient-to-r from-[#092986] to-[#0d3ba3] text-white py-12 md:py-16">
-      <img src="juventude_group.webp" alt="Fundo" class="absolute inset-0 w-full h-full object-cover blur-[2px] opacity-20 mix-blend-overlay z-0" />
-      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <a href="#/" class="inline-flex items-center gap-2 text-blue-200 hover:text-white font-bold text-sm mb-6 transition-colors">
+    <!-- Hero Section de Alto Impacto -->
+    <section class="relative pt-20 pb-28 lg:pt-28 lg:pb-36 overflow-hidden bg-slate-950">
+      <!-- Imagem de fundo com overlay em gradiente forte -->
+      <div class="absolute inset-0 z-0">
+         <img src="juventude_group.webp" alt="Fundo" class="w-full h-full object-cover opacity-25" />
+         <div class="absolute inset-0 bg-gradient-to-t from-[#092986] via-[#092986]/90 to-transparent"></div>
+      </div>
+      
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+        <!-- Botão Voltar Glassmorphism -->
+        <a href="#/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-white font-bold text-sm mb-10 transition-all border border-white/10 shadow-lg hover:scale-105">
           <svg class="h-4 w-4 transform rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           Voltar à página inicial
         </a>
-        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <div class="bg-white/10 p-6 rounded-3xl backdrop-blur-md border border-white/20 shadow-2xl shrink-0">
-            <img src="${acao.logo}" alt="${acao.title}" class="h-32 md:h-48 w-auto object-contain drop-shadow-xl" onerror="this.src='https://placehold.co/400x200/092986/FFFFFF/webp?text=Ação'" />
-          </div>
-          <div class="text-center md:text-left space-y-3">
-            <span class="inline-block px-3 py-1 bg-[#e6af00] text-slate-900 text-xs font-black uppercase rounded-lg tracking-wider">Ações da Juventude</span>
-            <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-none">${acao.title}</h1>
+        
+        <!-- Logo Flutuante com Efeito Glow -->
+        <div class="relative mb-8 group">
+          <div class="absolute -inset-4 bg-[#e6af00] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
+          <div class="bg-white p-5 rounded-[2rem] shadow-2xl relative transform group-hover:-translate-y-2 transition-transform duration-500 border border-slate-100/50">
+            <img src="${acao.logo}" alt="${acao.title}" class="h-32 md:h-44 w-auto object-contain drop-shadow-sm" onerror="this.src='https://placehold.co/400x200/092986/FFFFFF/webp?text=Ação'" />
           </div>
         </div>
+        
+        <!-- Títulos -->
+        <span class="inline-block px-4 py-1.5 bg-[#e6af00] text-slate-900 text-[11px] font-black uppercase rounded-full tracking-widest shadow-md mb-4">
+          Ação da Juventude
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-lg leading-tight max-w-4xl">
+          ${acao.title}
+        </h1>
       </div>
     </section>
-    <div class="w-full h-4 md:h-6 relative z-10 bg-[url('/barra_prefeitura.webp')] bg-repeat-x bg-contain bg-center"></div>
+    
+    <!-- Divisor Oficial -->
+    <div class="w-full h-4 md:h-6 relative z-20 -mt-2 bg-[url('/barra_prefeitura.webp')] bg-repeat-x bg-contain bg-center"></div>
 
-    <!-- Main Content Details -->
-    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
-      <div class="bg-white rounded-3xl p-8 md:p-12 border border-slate-100 shadow-sm space-y-10 relative">
+    <!-- Main Content Layout em Grid Editorial -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 -mt-10 relative z-20 space-y-6">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
-        <!-- Detalhes -->
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="h-10 w-10 bg-blue-50 text-[#092986] rounded-xl flex items-center justify-center">
-              ${getSvgIcon("info", "h-6 w-6")}
-            </div>
-            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Sobre a Iniciativa</h2>
+        <!-- Card 1: Sobre a Iniciativa -->
+        <div class="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 shadow-xl shadow-slate-200/40 relative overflow-hidden group hover:border-blue-200 transition-colors">
+          <!-- Ícone Marca d'água -->
+          <div class="absolute -top-10 -right-10 text-blue-50/60 opacity-50 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-700 pointer-events-none">
+            ${getSvgIcon("info", "h-56 w-56")}
           </div>
-          <p class="text-slate-600 text-lg leading-relaxed pl-13">
-            ${acao.details}
-          </p>
-        </div>
-
-        <hr class="border-slate-100" />
-
-        <!-- Objetivos -->
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="h-10 w-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center">
-              ${getSvgIcon("award", "h-6 w-6")}
+          
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="h-14 w-14 bg-blue-50 text-[#092986] rounded-2xl flex items-center justify-center shadow-inner">
+                ${getSvgIcon("info", "h-7 w-7")}
+              </div>
+              <h2 class="text-2xl md:text-3xl font-black text-slate-900">A Iniciativa</h2>
             </div>
-            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Objetivos e Impacto</h2>
+            <p class="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
+              ${acao.details}
+            </p>
           </div>
-          <p class="text-slate-600 text-lg leading-relaxed pl-13">
-            ${acao.objectives}
-          </p>
         </div>
 
-        <!-- Botão de Compartilhar/Apoio -->
-        <div class="mt-8 pt-8 border-t border-slate-50 flex justify-center">
-           <a href="#/noticias" class="px-8 py-4 bg-[#092986] hover:bg-blue-800 text-white rounded-xl text-base font-extrabold shadow-lg transition-all flex items-center gap-2">
-             Veja as últimas notícias desta ação
-             ${getSvgIcon("arrow-right", "h-5 w-5")}
-           </a>
+        <!-- Card 2: Objetivos e Impacto -->
+        <div class="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 shadow-xl shadow-slate-200/40 relative overflow-hidden group hover:border-emerald-200 transition-colors">
+          <!-- Ícone Marca d'água -->
+          <div class="absolute -top-10 -right-10 text-emerald-50/60 opacity-50 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none">
+            ${getSvgIcon("award", "h-56 w-56")}
+          </div>
+          
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="h-14 w-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center shadow-inner">
+                ${getSvgIcon("award", "h-7 w-7")}
+              </div>
+              <h2 class="text-2xl md:text-3xl font-black text-slate-900">Metas e Impacto</h2>
+            </div>
+            <p class="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
+              ${acao.objectives}
+            </p>
+          </div>
         </div>
-
       </div>
+
+      <!-- Call to Action (Banner Integrado) -->
+      <div class="w-full bg-gradient-to-br from-[#092986] to-[#0d3ba3] rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden border border-blue-800">
+        <!-- Brilhos de fundo -->
+        <div class="absolute -right-20 -top-20 w-80 h-80 bg-white opacity-5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-[#e6af00] opacity-10 rounded-full blur-2xl pointer-events-none"></div>
+        
+        <div class="relative z-10 text-center md:text-left space-y-3">
+          <h3 class="text-2xl md:text-3xl font-black text-white">Fique por dentro das novidades!</h3>
+          <p class="text-blue-100 text-sm md:text-base max-w-xl leading-relaxed">
+            Acompanhe as datas, locais, galerias de fotos e os próximos passos desta ação no nosso mural oficial de comunicados.
+          </p>
+        </div>
+        
+        <a href="#/noticias" class="relative z-10 px-8 py-4 bg-[#e6af00] hover:bg-[#ffc400] text-slate-900 rounded-xl text-base font-extrabold shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center gap-2 whitespace-nowrap shrink-0 group">
+          Ver notícias da ação
+          <span class="group-hover:translate-x-1 transition-transform">
+            ${getSvgIcon("arrow-right", "h-5 w-5")}
+          </span>
+        </a>
+      </div>
+
     </section>
   `;
 }
-
 // --- GLOBAL ROUTER SWITCHER ---
 
 function resolveRoute() {
