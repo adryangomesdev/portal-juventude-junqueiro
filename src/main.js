@@ -470,6 +470,15 @@ const ACOES_JUVENTUDE = [
     objectives:
       "Promover a integração social, valorizar o protagonismo jovem e a inclusão das Pessoas com Deficiência (PCD), além de realizar capacitações e celebrar o futuro dos jovens de Junqueiro.",
   },
+  {
+    id: "mais-sangue-mais-vida",
+    title: "Mais Sangue, Mais Vida",
+    logo: "mais_sangue_mais_vida.webp",
+    details:
+      "Campanha de conscientização e mobilização da juventude junqueirense para o incentivo à doação de sangue.",
+    objectives:
+      "Engajar os jovens na causa da doação de sangue, promovendo a solidariedade, salvando vidas e ajudando a manter os estoques dos bancos de sangue da região sempre abastecidos.",
+  },
 ];
 
 // --- SVG ICON PROVIDER ---
