@@ -475,9 +475,9 @@ const ACOES_JUVENTUDE = [
     title: "Mais Sangue, Mais Vida",
     logo: "mais_sangue_mais_vida.webp",
     details:
-      "Campanha de conscientização e mobilização da juventude junqueirense para o incentivo à doação de sangue.",
+      "A continuação da ação Mais Sangue Mais Vida foi realizada no mês de agosto como parte da programação do Festival da Juventude. Nela, trouxemos os profissionais do HEMOAL para o Hospital Municipal Teófilo Pereira, no dia 18 de agosto, para realizar a doação de sangue, ao final da ação conseguimos atingir nossa meta esperada.",
     objectives:
-      "Engajar os jovens na causa da doação de sangue, promovendo a solidariedade, salvando vidas e ajudando a manter os estoques dos bancos de sangue da região sempre abastecidos.",
+      "Campanha de conscientização e mobilização da juventude junqueirense para o incentivo à doação de sangue.Engajar os jovens na causa da doação de sangue, promovendo a solidariedade, salvando vidas e ajudando a manter os estoques dos bancos de sangue da região sempre abastecidos.",
   },
 ];
 
