@@ -466,9 +466,9 @@ const ACOES_JUVENTUDE = [
     title: "II Festival da Juventude",
     logo: "logo-do-festival.webp",
     details:
-      "Grande celebração que movimenta o município com um extenso cronograma de atividades culturais, esportivas, inclusão social e ações de capacitação.",
+      "O Festival da Juventude foi realizado do período de 31 de julho à 29 de agosto, e contou com ações de integração entre os jovens do município de Junqueiro, fortalecendo a comunidade local e desenvolvendo o espírito desportivo e de conexão com diversas áreas. Realizamos o Desfile da Juventude com todas as escolas de ensino fundamental 2 da Rede Municipal, escolas de ensino médio da Rede Estadual, escolas privadas, serviços sociais, secretarias e outros membros da comunidade, tivemos como temática a Juventude inclusiva, homenageando os jovens com deficiências mentais e motoras do nosso município.",
     objectives:
-      "Promover a integração social, valorizar o protagonismo jovem e a inclusão das Pessoas com Deficiência (PCD), além de realizar capacitações e celebrar o futuro dos jovens de Junqueiro.",
+      "Grande celebração que movimenta o município com um extenso cronograma de atividades culturais, esportivas, inclusão social e ações de capacitação. Promovendo a integração social, valorizar o protagonismo jovem e a inclusão das Pessoas com Deficiência (PCD), além de realizar capacitações e celebrar o futuro dos jovens de Junqueiro.",
   },
   {
     id: "mais-sangue-mais-vida",
