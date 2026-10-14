@@ -457,9 +457,9 @@ const ACOES_JUVENTUDE = [
     title: "Arraiá da Juventude",
     logo: "ARRAIA_DA_JUVENTUDE_LOGO.webp",
     details:
-      "Celebração cultural que une as tradições das festas populares ao convívio da juventude.",
+      "O Arraiá da Juventude conseguiu superar as expectativas esperadas por nós, atingindo um público acima do esperado. Foi transmitido o jogo da Copa do Mundo entre Brasil e Escócia em um telão no Ginásio Hidemburgo Pereira, enquanto eram vendidas comidas típicas do período junino pelos alunos da Escola Padre Aurélio Góis. Logo após o jogo, tivemos apresentação de quadrilha junina, de artistas da terra e  artistas de fora do município.",
     objectives:
-      "Resgatar e manter vivas as tradições juninas, proporcionando um ambiente seguro de festa, com música, dança e integração entre os jovens de várias escolas.",
+      "Celebração cultural que une as tradições das festas populares ao convívio da juventude.Resgatar e manter vivas as tradições juninas, proporcionando um ambiente seguro de festa, com música, dança e integração entre os jovens de várias escolas.",
   },
   {
     id: "festival-juventude",
