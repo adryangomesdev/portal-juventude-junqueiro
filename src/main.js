@@ -448,9 +448,9 @@ const ACOES_JUVENTUDE = [
     title: "Trilha da Juventude",
     logo: "TRILHA_DA_JUVENTUDE.webp",
     details:
-      "Expedição ecológica e cultural pelos patrimónios naturais e históricos de Junqueiro.",
+      "A Trilha da Juventude foi um projeto comunitário realizado na Lagoa do Retiro, em Junqueiro, focado em promover o protagonismo e a integração dos jovens locais. A iniciativa, coordenada e produzida por você entre março e agosto de 2026, exigiu forte articulação com escolas e departamentos municipais, englobando a elaboração de planos oficiais, cronogramas de atividades, roteiros e comunicações institucionais para garantir o sucesso do evento.",
     objectives:
-      "Conectar os jovens à natureza, promover a educação ambiental na prática e valorizar as tradições locais, como o artesanato da comunidade.",
+      "Conectar os jovens à natureza, promover a educação ambiental na prática e valorizar as tradições locais, como o artesanato da comunidade. Através da Trilha da Juventude cumprimos com o objetivo de levar os alunos a conhecerem a riqueza local e a importância histórica da nossa lagoa para aqueles que não tinham conheciam.",
   },
   {
     id: "arraia-juventude",
