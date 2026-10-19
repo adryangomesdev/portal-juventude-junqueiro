@@ -394,9 +394,9 @@ const ACOES_JUVENTUDE = [
     title: "Volta às Aulas 2026",
     logo: "VOLTA_AS_AULAS.webp",
     details:
-      "Uma grande ação de receção e incentivo aos estudantes da rede de ensino no início do ano letivo.",
+      "A ação Volta às aulas 2026 consistiu em um circuito de visitas presenciais a todas as escolas das redes municipal e estadual de Junqueiro, marcando o início do ano letivo com uma mensagem de acolhimento. Durante a mobilização, as equipes percorreram as instituições de ensino para dar as boas-vindas aos estudantes, entregando mais de 1.000 canetas personalizadas que traziam citações inspiradoras de grandes pensadores da educação nacional",
     objectives:
-      "Garantir um regresso acolhedor, distribuir kits informativos sobre os programas da Secretaria e motivar os jovens para o novo ciclo escolar com palestras e dinâmicas.",
+      "O objetivo principal foi incentivar e motivar os alunos para o retorno à rotina escolar, combatendo a evasão e valorizando o ambiente de ensino. A entrega dos materiais simbólicos gerou um impacto positivo direto na autoestima dos jovens, criando um momento de proximidade entre a gestão municipal e os estudantes, e reforçando a mensagem de que a educação é a base para o desenvolvimento do município.",
   },
   {
     id: "maos-dadas",
