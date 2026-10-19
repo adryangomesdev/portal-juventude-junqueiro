@@ -412,9 +412,9 @@ const ACOES_JUVENTUDE = [
     title: "Conexão Mães",
     logo: "CONEXAO_MAES.webp",
     details:
-      "Iniciativa dedicada ao acolhimento, apoio e capacitação de jovens mães do município.",
+      "Idealizada para celebrar o Dia das Mães, a ação promoveu uma blitz interativa e afetiva nas ruas de Junqueiro. A dinâmica envolveu a participação direta dos filhos, que abordaram as mães em espaços públicos para entregar uma flor simbólica, acompanhada de uma mensagem impressa de carinho e reconhecimento.",
     objectives:
-      "Oferecer rodas de conversa, suporte psicológico e oficinas profissionalizantes para jovens mães, promovendo autonomia financeira e bem-estar familiar.",
+      "A meta da ação foi fortalecer os laços familiares e homenagear as mães junqueirenses, valorizando seu papel fundamental na estruturação da juventude. O impacto foi uma mobilização comunitária emocionante, que levou acolhimento para as ruas da cidade e ressaltou a importância do respeito e da afetividade dentro do núcleo familiar.",
   },
   {
     id: "cine-rural",
