@@ -439,9 +439,9 @@ const ACOES_JUVENTUDE = [
     title: "Maio Amarelo",
     logo: "MAIO_AMARELO_LOGO.webp",
     details:
-      "Campanha de mobilização e sensibilização para a segurança rodoviária e prevenção de acidentes.",
+      "Inserida na campanha nacional de conscientização, a blitz do Maio Amarelo mobilizou os jovens para uma ação educativa no trânsito de Junqueiro. As equipes distribuíram panfletos informativos focados em prevenção, atitudes corretas ao volante e comportamentos de risco a serem evitados. O projeto contou com a participação ativa dos adolescentes do NUCA, que confeccionaram cartazes de conscientização exibidos durante as abordagens.",
     objectives:
-      "Consciencializar jovens condutores e peões sobre a importância do respeito às regras de trânsito, através de ações educativas nas escolas e nas ruas.",
+      "A meta primordial foi atuar na educação para o trânsito visando a redução de acidentes, feridos e mortes no município. O envolvimento do NUCA garantiu um impacto ampliado, pois transformou os próprios jovens em agentes de conscientização, educando os motoristas locais e promovendo uma cultura de responsabilidade e respeito à vida nas vias públicas.",
   },
   {
     id: "trilha-juventude",
