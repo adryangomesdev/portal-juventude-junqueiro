@@ -421,9 +421,9 @@ const ACOES_JUVENTUDE = [
     title: "Cine Rural",
     logo: "CINE_RURAL.webp",
     details:
-      "Projeto de cinema itinerante focado em levar a magia da sétima arte a comunidades rurais e povoados.",
+      "Realizado em uma parceria estratégica com a Secretaria Municipal de Cultura, o CineRural levou a experiência da sétima arte para fora do centro urbano, oferecendo sessões de cinema ao ar livre para as comunidades do campo. A estreia ocorreu no povoado Baixa Fria com a exibição do filme (Mussum, o Filmis), contando com a distribuição gratuita de cachorro-quente, refrigerante e pipoca para garantir uma experiência completa.",
     objectives:
-      "Democratizar o acesso à cultura e ao entretenimento, proporcionando sessões de cinema gratuitas e promovendo o convívio social para jovens mais distantes do centro.",
+      "O objetivo do projeto foi democratizar o acesso ao lazer e à cultura, descentralizando os serviços municipais e integrando a população das áreas rurais. O sucesso e a forte adesão da comunidade na edição inaugural geraram um sentimento de pertencimento e inclusão social, consolidando a viabilidade do projeto para a sua futura expansão a outros povoados do município.",
   },
   {
     id: "aulao-enem",
