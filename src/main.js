@@ -403,9 +403,9 @@ const ACOES_JUVENTUDE = [
     title: "De Mãos Dadas com a Juventude",
     logo: "MAOS_DADAS_LOGO.webp",
     details:
-      "Projeto de apoio social, desportivo e integração contínua diretamente com a comunidade.",
+      "O projeto representou um esforço robusto de investimento financeiro na capacitação profissional e no bem-estar dos jovens junqueirenses. A ação articulou uma parceria com o Senac para a oferta de cursos profissionalizantes gratuitos, incluindo Assistente em Marketing e Vendas, Assistente Administrativo e Técnicas de Maquiagem. Paralelamente, o projeto fomentou o esporte ao viabilizar o uso do espaço do Sest Senat, na cidade de Teotônio Vilela, para a realização de uma rodada de um torneio de basquetebol em conjunto com a Secretaria de Esporte.",
     objectives:
-      "Levar serviços, orientações, desporto e suporte aos jovens nos bairros e povoados, fortalecendo a rede de proteção e promovendo o talento local.",
+      "A meta central foi inserir a juventude no mercado de trabalho com qualificação prática de excelência, ao mesmo tempo em que se incentivou a saúde e o desenvolvimento humano através do esporte. Essa abordagem dupla impactou as perspectivas locais, impulsionando a geração de renda por meio da profissionalização e fortalecendo a disciplina e o trabalho em equipe proporcionados pelas práticas esportivas.",
   },
   {
     id: "conexao-maes",
