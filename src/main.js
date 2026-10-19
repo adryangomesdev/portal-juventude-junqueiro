@@ -430,9 +430,9 @@ const ACOES_JUVENTUDE = [
     title: "Aulão Vem Que Tem ENEM",
     logo: "AULAO_ENEM.webp",
     details:
-      "Maratona intensiva de aulas preparatórias focadas no Exame Nacional do Ensino Médio.",
+      "A segunda edição do projeto estruturou uma série de aulas preparatórias focadas em democratizar o acesso aos conteúdos cobrados no Exame Nacional do Ensino Médio (ENEM). Realizada a partir de uma articulação conjunta entre a Secretaria Municipal de Educação, o NUCA e as Escolas Estaduais Padre Aurélio Góis e Maria Liege de Albuquerque Tavares, a ação revisou de forma acessível todas as áreas de conhecimento e disciplinas da prova.",
     objectives:
-      "Oferecer revisão gratuita com professores especialistas para fortalecer o nível de aprendizagem e aumentar as oportunidades de aprovação nas universidades para os jovens do município.",
+      "O objetivo do programa foi nivelar as oportunidades e oferecer suporte pedagógico de qualidade para que os estudantes da rede pública ingressem no ensino superior. O impacto direto da iniciativa foi a elevação da confiança e do preparo acadêmico dos alunos, estabelecendo um ambiente de apoio mútuo que incentiva os jovens de Junqueiro a buscarem ativamente o acesso às universidades.",
   },
   {
     id: "maio-amarelo",
