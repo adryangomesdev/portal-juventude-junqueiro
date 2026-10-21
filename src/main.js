@@ -393,11 +393,33 @@ const ACOES_JUVENTUDE = [
     id: "volta-as-aulas",
     title: "Volta às Aulas 2026",
     logo: "VOLTA_AS_AULAS.webp",
+    date: "Fevereiro de 2026",
+    location: "Rede Municipal e Estadual",
+    stats: "+1.000 Estudantes Impactados",
+    videoUrl: "", // Se tiver link embed de Reel/YouTube, coloque aqui
+    testimonialKey: "Volta às Aulas", // Nome correspondente no array TESTIMONIALS
     details:
       "A ação Volta às aulas 2026 consistiu em um circuito de visitas presenciais a todas as escolas das redes municipal e estadual de Junqueiro, marcando o início do ano letivo com uma mensagem de acolhimento. Durante a mobilização, as equipes percorreram as instituições de ensino para dar as boas-vindas aos estudantes, entregando mais de 1.000 canetas personalizadas que traziam citações inspiradoras de grandes pensadores da educação nacional",
     objectives:
       "O objetivo principal foi incentivar e motivar os alunos para o retorno à rotina escolar, combatendo a evasão e valorizando o ambiente de ensino. A entrega dos materiais simbólicos gerou um impacto positivo direto na autoestima dos jovens, criando um momento de proximidade entre a gestão municipal e os estudantes, e reforçando a mensagem de que a educação é a base para o desenvolvimento do município.",
+    // PADRÃO DE EVIDÊNCIAS: Adicione quantas fotos ou vídeos quiser aqui!
+    evidences: [
+      {
+        title: "Mobilização Escolar Presencial",
+        image: "/juventude_group.webp", // Troque pelas fotos reais da ação
+        tag1: "Rede Pública",
+        tag2: "+1.000 Kits",
+        videoEmbed: "", // Opcional: link embed se este card for um vídeo
+      },
+      {
+        title: "Entrega de Materiais Inspiradores",
+        image: "/VOLTA_AS_AULAS.webp",
+        tag1: "Fevereiro 2026",
+        tag2: "Acolhimento",
+      },
+    ],
   },
+  // ... Mantenha os outros itens e vá adicionando o array `evidences: [...]` neles conforme tiver as fotos!
   {
     id: "maos-dadas",
     title: "De Mãos Dadas com a Juventude",
@@ -1783,18 +1805,46 @@ if (form) {
   });
 }
 
-// 7. AÇÃO DETAILS PAGE RENDERER
+// Modal Lightbox para ampliar fotos de evidência
+window.openImageLightbox = function (imgSrc, caption) {
+  const existing = document.getElementById("image-lightbox");
+  if (existing) existing.remove();
+
+  const html = `
+    <div id="image-lightbox" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md animate-fade-in">
+      <div class="relative max-w-5xl w-full flex flex-col items-center">
+        <button onclick="document.getElementById('image-lightbox').remove()" class="self-end mb-3 px-4 py-2 bg-white text-slate-950 font-mono text-xs font-bold uppercase tracking-widest hover:bg-[#e6af00] transition-colors cursor-pointer">
+          [ Fechar ESC ]
+        </button>
+        <div class="w-full max-h-[80vh] overflow-hidden border-2 border-white/20 bg-slate-900">
+          <img src="${imgSrc}" alt="${caption}" class="w-full h-full max-h-[78vh] object-contain mx-auto" />
+        </div>
+        <div class="w-full bg-slate-900 border-x-2 border-b-2 border-white/20 p-4 flex items-center justify-between text-white">
+          <span class="font-display font-bold text-sm uppercase tracking-wider">${caption}</span>
+          <span class="font-mono text-xs text-[#e6af00]">EVIDÊNCIA OFICIAL // SMJ</span>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.insertAdjacentHTML("beforeend", html);
+  document.getElementById("image-lightbox").addEventListener("click", (e) => {
+    if (e.target === e.currentTarget) e.currentTarget.remove();
+  });
+};
+
+// 7. AÇÃO DETAILS PAGE RENDERER (DESIGN EDITORIAL & PORTFÓLIO DE EVIDÊNCIAS)
 function renderAcaoDetails(id) {
   updateNavigationActiveState("");
   window.scrollTo({ top: 0, behavior: "smooth" });
 
-  const acao = ACOES_JUVENTUDE.find((item) => item.id === id);
+  const acaoIndex = ACOES_JUVENTUDE.findIndex((item) => item.id === id);
+  const acao = ACOES_JUVENTUDE[acaoIndex];
 
   if (!acao) {
     appContainer.innerHTML = `
       <div class="max-w-md mx-auto py-24 px-4 text-center space-y-6">
-        <h2 class="text-3xl font-black text-slate-900 tracking-tight">Evento não encontrado</h2>
-        <a href="#/" class="px-6 py-3 bg-[#092986] text-white font-extrabold rounded-xl text-sm hover:bg-blue-800 transition-colors inline-block">
+        <h2 class="text-3xl font-black text-slate-900 tracking-tight uppercase">Ação não encontrada</h2>
+        <a href="#/" class="px-6 py-3 bg-[#092986] text-white font-extrabold rounded-none text-sm hover:bg-blue-800 transition-colors inline-block uppercase tracking-wider">
           Voltar para o Início
         </a>
       </div>
@@ -1802,113 +1852,422 @@ function renderAcaoDetails(id) {
     return;
   }
 
-  appContainer.innerHTML = `
-    <!-- Hero Section de Alto Impacto -->
-    <section class="relative pt-20 pb-28 lg:pt-28 lg:pb-36 overflow-hidden bg-slate-950">
-      <!-- Imagem de fundo com overlay em gradiente forte -->
-      <div class="absolute inset-0 z-0">
-         <img src="juventude_group.webp" alt="Fundo" class="w-full h-full object-cover opacity-25" />
-         <div class="absolute inset-0 bg-gradient-to-t from-[#092986] via-[#092986]/90 to-transparent"></div>
-      </div>
-      
-      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-        <!-- Botão Voltar Glassmorphism -->
-        <a href="#/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-white font-bold text-sm mb-10 transition-all border border-white/10 shadow-lg hover:scale-105">
-          <svg class="h-4 w-4 transform rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          Voltar à página inicial
-        </a>
-        
-        <!-- Logo Flutuante com Efeito Glow -->
-        <div class="relative mb-8 group">
-          <div class="absolute -inset-4 bg-[#e6af00] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
-          <div class="bg-white p-5 rounded-[2rem] shadow-2xl relative transform group-hover:-translate-y-2 transition-transform duration-500 border border-slate-100/50">
-            <img src="${acao.logo}" alt="${acao.title}" class="h-32 md:h-44 w-auto object-contain drop-shadow-sm" onerror="this.src='https://placehold.co/400x200/092986/FFFFFF/webp?text=Ação'" />
-          </div>
-        </div>
-        
-        <!-- Títulos -->
-        <span class="inline-block px-4 py-1.5 bg-[#e6af00] text-slate-900 text-[11px] font-black uppercase rounded-full tracking-widest shadow-md mb-4">
-          Ação da Juventude
-        </span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-lg leading-tight max-w-4xl">
-          ${acao.title}
-        </h1>
-      </div>
-    </section>
-    
-    <!-- Divisor Oficial -->
-    <div class="w-full h-4 md:h-6 relative z-20 -mt-2 bg-[url('/barra_prefeitura.webp')] bg-repeat-x bg-contain bg-center"></div>
+  // Navegação Minimalista: Próxima Ação e Anterior
+  const prevAcao =
+    ACOES_JUVENTUDE[
+      (acaoIndex - 1 + ACOES_JUVENTUDE.length) % ACOES_JUVENTUDE.length
+    ];
+  const nextAcao = ACOES_JUVENTUDE[(acaoIndex + 1) % ACOES_JUVENTUDE.length];
 
-    <!-- Main Content Layout em Grid Editorial -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 -mt-10 relative z-20 space-y-6">
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
-        <!-- Card 1: Sobre a Iniciativa -->
-        <div class="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 shadow-xl shadow-slate-200/40 relative overflow-hidden group hover:border-blue-200 transition-colors">
-          <!-- Ícone Marca d'água -->
-          <div class="absolute -top-10 -right-10 text-blue-50/60 opacity-50 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-700 pointer-events-none">
-            ${getSvgIcon("info", "h-56 w-56")}
+  // Mapeamento Inteligente de Depoimentos
+  const keywordMap = {
+    "aulao-enem": "Aulão",
+    "trilha-juventude": "Trilha",
+    "cine-rural": "Cine",
+  };
+  const searchKey = acao.testimonialKey || keywordMap[acao.id] || acao.title;
+
+  let relatedTestimonials = TESTIMONIALS.filter(
+    (t) =>
+      t.name.toLowerCase().includes(searchKey.toLowerCase()) ||
+      acao.title.toLowerCase().includes(t.name.toLowerCase()),
+  );
+
+  const hasDirectTestimonials = relatedTestimonials.length > 0;
+  if (!hasDirectTestimonials) {
+    relatedTestimonials = TESTIMONIALS.slice(0, 2);
+  }
+
+  // Lista padrão de evidências caso a ação ainda não tenha fotos específicas cadastradas
+  const defaultEvidences = [
+    {
+      title: "Registro Oficial — " + acao.title,
+      image: acao.logo,
+      tag1: acao.date || "Execução 2026",
+      tag2: "Identidade Visual",
+      videoEmbed: acao.videoUrl || "",
+    },
+    {
+      title: "Mobilização da Equipe e Jovens",
+      image: "/juventude_group.webp",
+      tag1: acao.location || "Junqueiro / AL",
+      tag2: "Campo & Prática",
+      videoEmbed: relatedTestimonials[0]?.videoEmbed || "",
+    },
+    {
+      title: "Impacto Direto na Comunidade",
+      image: "/setembro_amarelo.webp",
+      tag1: "Política Pública",
+      tag2: "Evidência Documentada",
+      videoEmbed: "",
+    },
+    {
+      title: "Capacitação e Protagonismo",
+      image: "/marketing_e_vendas.webp",
+      tag1: "Juventude Ativa",
+      tag2: "Resultado Real",
+      videoEmbed: "",
+    },
+  ];
+
+  const evidencesList =
+    acao.evidences && acao.evidences.length > 0
+      ? acao.evidences
+      : defaultEvidences;
+
+  // Variáveis auxiliares pré-processadas (Evita crases aninhadas dentro do innerHTML)
+  const mainVideoEmbed =
+    acao.videoUrl ||
+    (hasDirectTestimonials && relatedTestimonials[0]?.videoEmbed) ||
+    "";
+
+  const bannerCoverImg = evidencesList[0]?.image || "/juventude_group.webp";
+  const acaoLocation = acao.location || "Junqueiro - AL";
+  const acaoStats = acao.stats || "Comunidade Escolar";
+
+  const titleWords = acao.title.split(" ");
+  const titleFirstPart = titleWords.slice(0, -1).join(" ");
+  const titleLastWord = titleWords.slice(-1).join("");
+
+  const vitrineActionBtnHtml = mainVideoEmbed
+    ? `<button type="button" onclick="window.openVideoModal('${mainVideoEmbed}')" class="w-full py-3 bg-[#092986] hover:bg-blue-800 text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer">
+         <span>▶ Assistir Vídeo da Ação</span>
+       </button>`
+    : `<a href="#evidencias" class="w-full py-3 bg-[#092986] hover:bg-blue-800 text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center gap-2">
+         <span>Explorar Evidências ↓</span>
+       </a>`;
+
+  const testimonialsHeadingText = hasDirectTestimonials
+    ? "Relatos sobre " + acao.title
+    : "O que os jovens dizem das nossas ações";
+
+  // Renderização dos Cards da Galeria "Proof in Work"
+  let evidencesHtml = "";
+  evidencesList.forEach((ev, idx) => {
+    const safeTitle = ev.title.replace(/'/g, "");
+    const actionClick = ev.videoEmbed
+      ? `window.openVideoModal('${ev.videoEmbed}')`
+      : `window.openImageLightbox('${ev.image}', '${safeTitle}')`;
+
+    const videoBadgeHtml = ev.videoEmbed
+      ? `<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+           <div class="px-4 py-2 bg-[#e6af00] text-slate-950 font-mono text-xs font-black uppercase tracking-widest shadow-xl transform group-hover:scale-110 transition-transform flex items-center gap-2 clip-tag">
+             <span>▶ Assistir Reel</span>
+           </div>
+         </div>`
+      : "";
+
+    evidencesHtml += `
+      <article onclick="${actionClick}" class="group relative h-[420px] sm:h-[460px] w-[290px] sm:w-[340px] shrink-0 bg-slate-900 overflow-hidden cursor-pointer select-none border border-slate-200 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+        <img src="${ev.image}" alt="${safeTitle}" class="w-full h-full object-cover opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700" onerror="this.src='/juventude_group.webp'" />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-slate-950/60 group-hover:via-slate-950/10 transition-all duration-500"></div>
+
+        <div class="absolute top-5 left-5 right-5 flex items-start justify-between gap-2">
+          <div class="space-y-1">
+            <span class="font-mono text-[10px] text-[#e6af00] uppercase tracking-widest block">REGISTRO // 0${idx + 1}</span>
+            <h4 class="text-white font-display font-bold text-lg leading-snug drop-shadow-sm">${ev.title}</h4>
           </div>
-          
-          <div class="relative z-10">
-            <div class="flex items-center gap-4 mb-6">
-              <div class="h-14 w-14 bg-blue-50 text-[#092986] rounded-2xl flex items-center justify-center shadow-inner">
-                ${getSvgIcon("info", "h-7 w-7")}
+          <span class="p-2 bg-white/10 backdrop-blur-md text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-white/20">
+            ${getSvgIcon("arrow-right", "h-4 w-4 -rotate-45")}
+          </span>
+        </div>
+
+        ${videoBadgeHtml}
+
+        <div class="absolute bottom-5 left-5 right-5 flex flex-wrap items-center gap-2">
+          <span class="px-3 py-1.5 bg-slate-950/80 backdrop-blur-md text-white font-mono text-[11px] font-semibold tracking-wider uppercase border border-white/15">
+            ${ev.tag1}
+          </span>
+          <span class="px-3 py-1.5 bg-white/15 backdrop-blur-md text-slate-100 font-mono text-[11px] tracking-wider uppercase border border-white/10">
+            ${ev.tag2}
+          </span>
+        </div>
+      </article>
+    `;
+  });
+
+  // Renderização dos Depoimentos Reais Integrados
+  let testimonialsCardsHtml = "";
+  relatedTestimonials.forEach((t, i) => {
+    const avatarInnerHtml = t.avatar.includes(".")
+      ? `<img src="${t.avatar}" alt="${t.name}" class="w-full h-full object-cover" />`
+      : t.avatar;
+
+    const videoBtnHtml = t.videoEmbed
+      ? `<button type="button" onclick="window.openVideoModal('${t.videoEmbed}')" class="px-4 py-2 bg-slate-900 hover:bg-[#092986] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer">
+           ${getSvgIcon("instagram", "h-3.5 w-3.5 text-[#e6af00]")}
+           <span>Ver Vídeo Prova</span>
+         </button>`
+      : "";
+
+    testimonialsCardsHtml += `
+      <div class="bg-white border-2 border-slate-900 p-6 md:p-8 flex flex-col justify-between relative group hover:shadow-[8px_8px_0px_0px_#092986] transition-all duration-300 clip-chamfer">
+        <div>
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+            <div class="flex items-center gap-3">
+              <div class="h-12 w-12 bg-[#092986] text-white font-black flex items-center justify-center shrink-0 overflow-hidden border border-slate-900">
+                ${avatarInnerHtml}
               </div>
-              <h2 class="text-2xl md:text-3xl font-black text-slate-900">A Iniciativa</h2>
-            </div>
-            <p class="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
-              ${acao.details}
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 2: Objetivos e Impacto -->
-        <div class="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 shadow-xl shadow-slate-200/40 relative overflow-hidden group hover:border-emerald-200 transition-colors">
-          <!-- Ícone Marca d'água -->
-          <div class="absolute -top-10 -right-10 text-emerald-50/60 opacity-50 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none">
-            ${getSvgIcon("award", "h-56 w-56")}
-          </div>
-          
-          <div class="relative z-10">
-            <div class="flex items-center gap-4 mb-6">
-              <div class="h-14 w-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center shadow-inner">
-                ${getSvgIcon("award", "h-7 w-7")}
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-widest text-[#092986] font-bold block">${t.program}</span>
+                <h4 class="font-display font-black text-slate-900 text-base uppercase">${t.name}</h4>
               </div>
-              <h2 class="text-2xl md:text-3xl font-black text-slate-900">Metas e Impacto</h2>
             </div>
-            <p class="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
-              ${acao.objectives}
-            </p>
+            <span class="font-mono text-xs text-slate-400 font-bold">#0${i + 1}</span>
           </div>
-        </div>
-      </div>
 
-      <!-- Call to Action (Banner Integrado) -->
-      <div class="w-full bg-gradient-to-br from-[#092986] to-[#0d3ba3] rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden border border-blue-800">
-        <!-- Brilhos de fundo -->
-        <div class="absolute -right-20 -top-20 w-80 h-80 bg-white opacity-5 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-[#e6af00] opacity-10 rounded-full blur-2xl pointer-events-none"></div>
-        
-        <div class="relative z-10 text-center md:text-left space-y-3">
-          <h3 class="text-2xl md:text-3xl font-black text-white">Fique por dentro das novidades!</h3>
-          <p class="text-blue-100 text-sm md:text-base max-w-xl leading-relaxed">
-            Acompanhe as datas, locais, galerias de fotos e os próximos passos desta ação no nosso mural oficial de comunicados.
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+            "${t.quote}"
           </p>
         </div>
-        
-        <a href="#/noticias" class="relative z-10 px-8 py-4 bg-[#e6af00] hover:bg-[#ffc400] text-slate-900 rounded-xl text-base font-extrabold shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center gap-2 whitespace-nowrap shrink-0 group">
-          Ver notícias da ação
-          <span class="group-hover:translate-x-1 transition-transform">
-            ${getSvgIcon("arrow-right", "h-5 w-5")}
-          </span>
-        </a>
-      </div>
 
+        <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-4 flex-wrap">
+          <span class="font-mono text-[11px] text-slate-500 uppercase tracking-wider flex items-center gap-1">
+            ${getSvgIcon("map-pin", "h-3.5 w-3.5 text-[#092986]")} ${t.location}
+          </span>
+          ${videoBtnHtml}
+        </div>
+      </div>
+    `;
+  });
+
+  // Template Principal (Zero expressões ternárias ou crases aninhadas)
+  appContainer.innerHTML = `
+    <!-- 1. TOP SUB-NAVIGATION BAR MINIMALISTA -->
+    <div class="border-b border-slate-200 bg-white sticky top-[57px] sm:top-[65px] z-30 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between text-xs font-mono uppercase tracking-wider">
+        <a href="#/" class="inline-flex items-center gap-2 text-slate-600 hover:text-[#092986] font-bold group transition-colors">
+          <span class="transform group-hover:-translate-x-1 transition-transform">←</span>
+          <span>Voltar ao Portal</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-6 text-slate-400">
+          <button type="button" onclick="document.getElementById('contexto').scrollIntoView({behavior: 'smooth'})" class="hover:text-slate-900 transition-colors cursor-pointer">01. Contexto</button>
+          <button type="button" onclick="document.getElementById('manifesto').scrollIntoView({behavior: 'smooth'})" class="hover:text-slate-900 transition-colors cursor-pointer">02. Síntese</button>
+          <button type="button" onclick="document.getElementById('evidencias').scrollIntoView({behavior: 'smooth'})" class="hover:text-slate-900 transition-colors cursor-pointer">03. Evidências</button>
+          <button type="button" onclick="document.getElementById('depoimentos-acao').scrollIntoView({behavior: 'smooth'})" class="hover:text-slate-900 transition-colors cursor-pointer">04. Relatos</button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <a href="#/acao/${prevAcao.id}" title="Anterior: ${prevAcao.title}" class="px-2.5 py-1 border border-slate-200 hover:border-slate-900 text-slate-700 hover:bg-slate-900 hover:text-white transition-all">
+            ‹ Ant
+          </a>
+          <span class="text-slate-400 font-bold">${acaoIndex + 1}/${ACOES_JUVENTUDE.length}</span>
+          <a href="#/acao/${nextAcao.id}" title="Próxima: ${nextAcao.title}" class="px-2.5 py-1 border border-slate-200 hover:border-slate-900 text-slate-700 hover:bg-slate-900 hover:text-white transition-all">
+            Próx ›
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 2. EDITORIAL SPLIT HEADER & PROBLEMA/SOLUÇÃO -->
+    <section id="contexto" class="bg-white pt-12 pb-16 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <div class="lg:col-span-5 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#092986] text-white font-mono text-[11px] font-bold uppercase tracking-widest clip-tag">
+              <span>Dossiê de Ação Oficial</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.03] uppercase">
+              ${titleFirstPart} 
+              <span class="underline decoration-[#e6af00] decoration-4 underline-offset-8">${titleLastWord}</span>
+            </h1>
+          </div>
+
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 pt-2">
+            <div class="space-y-3 border-t-2 border-slate-900 pt-4">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#092986]">01 // A Iniciativa</span>
+                <span class="h-2 w-2 bg-[#092986]"></span>
+              </div>
+              <h3 class="text-lg font-extrabold text-slate-900">Execução e Mobilização</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                ${acao.details}
+              </p>
+            </div>
+
+            <div class="space-y-3 border-t-2 border-[#e6af00] pt-4">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#e6af00]">02 // O Impacto Real</span>
+                <span class="h-2 w-2 bg-[#e6af00]"></span>
+              </div>
+              <h3 class="text-lg font-extrabold text-slate-900">Resultados para o Município</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                ${acao.objectives}
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 3. VITRINE PANORÂMICA COM CARD ASSIMÉTRICO FLUTUANTE -->
+        <div class="mt-12 relative w-full h-[380px] sm:h-[460px] lg:h-[520px] bg-slate-900 overflow-hidden border-2 border-slate-200 group">
+          <img src="${bannerCoverImg}" alt="${acao.title}" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000" onerror="this.src='/juventude_group.webp'" />
+          <div class="absolute inset-0 bg-gradient-to-r from-[#092986]/90 via-slate-950/50 to-transparent"></div>
+
+          <div class="absolute top-6 left-6 sm:top-10 sm:left-10 z-10 flex items-center gap-4">
+            <div class="bg-white p-4 border-2 border-slate-900 shadow-2xl clip-chamfer">
+              <img src="${acao.logo}" alt="${acao.title}" class="h-20 sm:h-28 w-auto object-contain" onerror="this.src='https://placehold.co/300x150/092986/FFFFFF/webp?text=SMJ'" />
+            </div>
+          </div>
+
+          <div class="absolute bottom-6 right-6 left-6 sm:left-auto sm:top-1/2 sm:-translate-y-1/2 sm:right-10 z-20 sm:w-80 bg-white text-slate-900 p-6 sm:p-8 shadow-2xl border-2 border-slate-900 clip-chamfer">
+            <span class="font-mono text-[10px] font-bold uppercase tracking-widest text-[#092986] block mb-1">
+              Ficha Técnica // Evidência
+            </span>
+            <h4 class="font-display font-black text-xl text-slate-900 leading-tight mb-3">
+              Transparência em cada entrega.
+            </h4>
+            <p class="text-xs text-slate-600 leading-relaxed mb-5">
+              Documentamos nossas ações com fotos, vídeos e relatos reais dos jovens participantes em Junqueiro/AL.
+            </p>
+            
+            <div class="space-y-2 border-y border-slate-100 py-3 mb-5 font-mono text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500">STATUS:</span>
+                <span class="font-bold text-emerald-600">CONCLUÍDO ✓</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">LOCAL:</span>
+                <span class="font-bold text-slate-800">${acaoLocation}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">ALCANCE:</span>
+                <span class="font-bold text-[#092986]">${acaoStats}</span>
+              </div>
+            </div>
+
+            ${vitrineActionBtnHtml}
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. TIPOGRAFIA EXPRESSIVA COM IMAGENS INTERCALADAS -->
+    <section id="manifesto" class="py-20 md:py-28 bg-white border-b border-slate-200 overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <p class="font-mono text-xs uppercase tracking-[0.25em] text-slate-500 mb-3">
+          Padrão de Qualidade da Secretaria
+        </p>
+        <p class="text-base md:text-lg text-slate-700 font-medium mb-10">
+          Por isso documentamos a ação <strong class="text-[#092986] font-black">${acao.title}</strong> em detalhes.
+        </p>
+
+        <div class="font-display font-black text-2xl sm:text-4xl md:text-5xl leading-[1.18] tracking-tight uppercase text-slate-900 select-none">
+          <span class="inline-block align-middle h-9 w-16 sm:h-12 sm:w-20 overflow-hidden border-2 border-slate-300 mx-1 bg-white shadow-md transform hover:scale-125 hover:-rotate-3 transition-all duration-300">
+            <img src="${acao.logo}" alt="" class="w-full h-full object-contain p-1" />
+          </span>
+          UMA FORMA DE TRABALHAR ONDE PLANEJAMENTO E 
+          <span class="inline-block align-middle h-9 w-16 sm:h-12 sm:w-20 overflow-hidden border-2 border-slate-300 mx-1 shadow-md transform hover:scale-125 hover:rotate-3 transition-all duration-300">
+            <img src="/juventude_group.webp" alt="" class="w-full h-full object-cover" />
+          </span>
+          IMPACTO SOCIAL RECEBEM O MESMO CUIDADO — PARA QUE A JUVENTUDE SINTA A 
+          <span class="inline-block align-middle h-9 w-16 sm:h-12 sm:w-20 overflow-hidden border-2 border-slate-300 mx-1 bg-[#e6af00] shadow-md transform hover:scale-125 transition-all duration-300">
+            <img src="${bannerCoverImg}" alt="" class="w-full h-full object-cover" />
+          </span>
+          TRANSFORMAÇÃO 
+          <span class="text-slate-500">NÃO APENAS HOJE, MAS NO SEU FUTURO.</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. GALERIA DE EVIDÊNCIAS "PROOF IN WORK" -->
+    <section id="evidencias" class="py-20 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <span class="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
+            O QUE PERMANECE NA COMUNIDADE
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight">
+            Evidências — na prática.
+          </h2>
+          <p class="text-sm sm:text-base text-slate-500">
+            Avaliado pela participação real, engajamento estudantil e transformação gerada em Junqueiro.
+          </p>
+        </div>
+
+        <div class="flex items-center justify-between mb-6">
+          <span class="font-mono text-xs font-bold uppercase tracking-wider text-slate-900 underline decoration-[#e6af00] decoration-2 underline-offset-4">
+            Clique nos cartões para ampliar foto ou abrir vídeo (${evidencesList.length} registros)
+          </span>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="document.getElementById('proof-carousel').scrollBy({left: -360, behavior: 'smooth'})" class="h-10 w-10 border border-slate-300 hover:border-slate-900 hover:bg-slate-900 hover:text-white flex items-center justify-center transition-colors cursor-pointer" aria-label="Anterior">
+              ←
+            </button>
+            <button type="button" onclick="document.getElementById('proof-carousel').scrollBy({left: 360, behavior: 'smooth'})" class="h-10 w-10 border border-slate-300 hover:border-slate-900 hover:bg-slate-900 hover:text-white flex items-center justify-center transition-colors cursor-pointer" aria-label="Próximo">
+              →
+            </button>
+          </div>
+        </div>
+
+        <div id="proof-carousel" class="flex items-stretch gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4">
+          ${evidencesHtml}
+        </div>
+
+        <div class="mt-14 text-center max-w-xl mx-auto">
+          <p class="font-display text-xl sm:text-2xl font-bold text-slate-800 leading-snug">
+            É aqui que o planejamento público se torna visível e comprovado para toda a população.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. DEPOIMENTOS E VOZES DA JUVENTUDE -->
+    <section id="depoimentos-acao" class="py-20 bg-slate-100 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <span class="inline-block px-3 py-1 bg-[#e6af00] text-slate-950 font-mono text-[11px] font-black uppercase tracking-widest mb-2 clip-tag">
+              Prova Social // Giro da Juventude
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight uppercase">
+              ${testimonialsHeadingText}
+            </h2>
+          </div>
+          <a href="#/depoimentos" class="font-mono text-xs font-bold uppercase tracking-wider text-[#092986] hover:underline flex items-center gap-1.5">
+            <span>Ver todos os ${TESTIMONIALS.length} depoimentos do portal</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          ${testimonialsCardsHtml}
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. RODAPÉ DE NAVEGAÇÃO ENTRE AÇÕES -->
+    <section class="bg-slate-950 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8 border border-white/15 p-8 md:p-12 bg-slate-900/60 clip-chamfer-lg">
+          <div class="space-y-2 text-center md:text-left">
+            <span class="font-mono text-xs text-[#e6af00] uppercase tracking-widest block">Continue Explorando o Portfólio da Secretaria</span>
+            <h3 class="text-2xl sm:text-4xl font-black tracking-tight uppercase">Próxima Ação: ${nextAcao.title}</h3>
+          </div>
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#/noticias" class="px-6 py-4 border border-white/30 hover:bg-white/10 text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors">
+              Mural de Notícias
+            </a>
+            <a href="#/acao/${nextAcao.id}" class="px-8 py-4 bg-[#e6af00] hover:bg-amber-400 text-slate-950 font-mono text-xs font-black uppercase tracking-widest transition-all transform hover:-translate-y-0.5 flex items-center gap-2 clip-tag">
+              <span>Acessar Dossiê</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   `;
 }
+
 // --- GLOBAL ROUTER SWITCHER ---
 
 function resolveRoute() {
