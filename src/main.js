@@ -396,30 +396,52 @@ const ACOES_JUVENTUDE = [
     date: "Fevereiro de 2026",
     location: "Rede Municipal e Estadual",
     stats: "+1.000 Estudantes Impactados",
-    videoUrl: "", // Se tiver link embed de Reel/YouTube, coloque aqui
-    testimonialKey: "Volta às Aulas", // Nome correspondente no array TESTIMONIALS
+    videoUrl: "",
+    testimonialKey: "Volta às Aulas",
     details:
       "A ação Volta às aulas 2026 consistiu em um circuito de visitas presenciais a todas as escolas das redes municipal e estadual de Junqueiro, marcando o início do ano letivo com uma mensagem de acolhimento. Durante a mobilização, as equipes percorreram as instituições de ensino para dar as boas-vindas aos estudantes, entregando mais de 1.000 canetas personalizadas que traziam citações inspiradoras de grandes pensadores da educação nacional",
     objectives:
       "O objetivo principal foi incentivar e motivar os alunos para o retorno à rotina escolar, combatendo a evasão e valorizando o ambiente de ensino. A entrega dos materiais simbólicos gerou um impacto positivo direto na autoestima dos jovens, criando um momento de proximidade entre a gestão municipal e os estudantes, e reforçando a mensagem de que a educação é a base para o desenvolvimento do município.",
-    // PADRÃO DE EVIDÊNCIAS: Adicione quantas fotos ou vídeos quiser aqui!
+
     evidences: [
       {
         title: "Mobilização Escolar Presencial",
-        image: "/juventude_group.webp", // Troque pelas fotos reais da ação
+        image: "/volta_as_aulas_1.webp",
         tag1: "Rede Pública",
         tag2: "+1.000 Kits",
-        videoEmbed: "", // Opcional: link embed se este card for um vídeo
+        videoEmbed: "",
       },
+
       {
         title: "Entrega de Materiais Inspiradores",
-        image: "/VOLTA_AS_AULAS.webp",
+        image: "/volta_as_aulas_5.webp",
         tag1: "Fevereiro 2026",
         tag2: "Acolhimento",
       },
+
+      {
+        title: "Recepção e Boas-Vindas aos Alunos",
+        image: "/volta_as_aulas_3.webp",
+        tag1: "Escolas Municipais",
+        tag2: "Integração",
+      },
+
+      {
+        title: "Entrega de Canetas Personalizadas",
+        image: "/volta_as_aulas_4.webp",
+        tag1: "Mensagens Inspiradoras",
+        tag2: "Educação Cidadã",
+      },
+
+      {
+        title: "Circuito de Visitas nas Escolas Estaduais",
+        image: "/volta_as_aulas_2.webp",
+        tag1: "Articulação de Rede",
+        tag2: "Início do Ano Letivo",
+      },
     ],
   },
-  // ... Mantenha os outros itens e vá adicionando o array `evidences: [...]` neles conforme tiver as fotos!
+
   {
     id: "maos-dadas",
     title: "De Mãos Dadas com a Juventude",
