@@ -590,7 +590,7 @@ const ACOES_JUVENTUDE = [
     title: "Conexão Mães",
     logo: "CONEXAO_MAES.webp",
     date: "Maio de 2026",
-    location: "Centro & Praças de Junqueiro",
+    location: "Feira livre de Junqueiro",
     stats: "Mobilização Comunitária",
     videoUrl: "",
     testimonialKey: "Conexão Mães",
@@ -601,9 +601,10 @@ const ACOES_JUVENTUDE = [
     evidences: [
       {
         title: "Ação Afetiva nas Ruas de Junqueiro",
-        image: "/juventude_group.webp",
+        image: "/conexao_maes/conexao_maes_1.webp",
         tag1: "Maio 2026",
         tag2: "Homenagem",
+        videoEmbed: "https://www.instagram.com/reel/DYKFaNpqE3T/embed",
       },
     ],
   },
