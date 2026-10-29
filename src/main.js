@@ -443,7 +443,6 @@ const ACOES_JUVENTUDE = [
       },
     ],
   },
-
   {
     id: "maos-dadas",
     title: "De Mãos Dadas com a Juventude",
@@ -458,22 +457,63 @@ const ACOES_JUVENTUDE = [
     objectives:
       "A meta central foi inserir a juventude no mercado de trabalho com qualificação prática de excelência, ao mesmo tempo em que se incentivou a saúde e o desenvolvimento humano através do esporte. Essa abordagem dupla impactou as perspectivas locais, impulsionando a geração de renda por meio da profissionalização e fortalecendo a disciplina e o trabalho em equipe proporcionados pelas práticas esportivas.",
 
-    // DOIS BLOCOS SEPARADOS: UM PARA O BASQUETE E OUTRO PARA OS CURSOS SENAC
     galerias: [
       {
         tituloSecao: "Torneio de Basquete — SEST SENAT",
         evidences: [
           {
             title: "Registro Oficial — De Mãos Dadas com a Juventude",
-            image: "/maos_dadas.webp",
+            image: "/maos_dadas_basquete/maos_dadas_basquete_2.webp",
             tag1: "Abril 2026",
             tag2: "SEST SENAT",
           },
           {
             title: "Mobilização da Equipe Junqueiro Basquetebol",
-            image: "/juventude_group.webp",
+            image: "/maos_dadas_basquete/maos_dadas_basquete_1.webp",
             tag1: "Teotônio Vilela/AL",
             tag2: "Esporte",
+          },
+        ],
+      },
+      {
+        tituloSecao:
+          "Cursos Profissionalizantes SENAC - Assistente em Marketing e Vendas / Assistente Administrativo",
+        evidences: [
+          {
+            title: "Capacitação em Marketing e Vendas",
+            image: "/maos_dadas_assistente/maos_dadas_assistente_6.webp",
+            tag1: "Senac / 160h",
+            tag2: "Qualificação",
+          },
+          {
+            title: "Capacitação em Marketing e Vendas",
+            image: "/maos_dadas_assistente/maos_dadas_assistente_5.webp",
+            tag1: "Senac / 160h",
+            tag2: "junho 2026",
+          },
+          {
+            title: "Capacitação em Marketing e Vendas",
+            image: "/maos_dadas_assistente/maos_dadas_assistente_4.webp",
+            tag1: "Senac / 160h",
+            tag2: "Qualificação",
+          },
+          {
+            title: "Formação de Assistente Administrativo",
+            image: "/maos_dadas_assistente/maos_dadas_assistente_3.webp",
+            tag1: "Certificação",
+            tag2: "Primeiro Emprego",
+          },
+          {
+            title: "Formação de Assistente Administrativo",
+            image: "/maos_dadas_assistente/maos_dadas_assistente_1.webp",
+            tag1: "Certificação",
+            tag2: "junho 2026",
+          },
+          {
+            title: "Formação de Assistente Administrativo",
+            image: "/maos_dadas_assistente/maos_dadas_assistente_2.webp",
+            tag1: "Certificação",
+            tag2: "Primeiro Emprego",
           },
         ],
       },
