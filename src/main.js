@@ -399,45 +399,47 @@ const ACOES_JUVENTUDE = [
     videoUrl: "",
     testimonialKey: "Volta às Aulas",
     details:
-      "A ação Volta às aulas 2026 consistiu em um circuito de visitas presenciais a todas as escolas das redes municipal e estadual de Junqueiro, marcando o início do ano letivo com uma mensagem de acolhimento. Durante a mobilização, as equipes percorreram as instituições de ensino para dar as boas-vindas aos estudantes, entregando mais de 1.000 canetas personalizadas que traziam citações inspiradoras de grandes pensadores da educação nacional",
+      "A ação Volta às aulas 2026 consistiu em um circuito de visitas presenciais a todas as escolas das redes municipal e estadual de Junqueiro, marcando o início do ano letivo com uma mensagem de acolhimento. Durante a mobilização, as equipes percorreram as instituições de ensino para dar as boas-vindas aos estudantes, entregando mais de 1.000 canetas personalizadas que traziam citações inspiradoras de grandes pensadores da educação nacional.",
     objectives:
       "O objetivo principal foi incentivar e motivar os alunos para o retorno à rotina escolar, combatendo a evasão e valorizando o ambiente de ensino. A entrega dos materiais simbólicos gerou um impacto positivo direto na autoestima dos jovens, criando um momento de proximidade entre a gestão municipal e os estudantes, e reforçando a mensagem de que a educação é a base para o desenvolvimento do município.",
 
-    evidences: [
+    // MÚLTIPLOS BLOCOS DE GALERIA PARA ESTA AÇÃO:
+    galerias: [
       {
-        title: "Mobilização Escolar Presencial",
-        image: "/volta_as_aulas_1.webp",
-        tag1: "Rede Pública",
-        tag2: "+1.000 Kits",
-        videoEmbed: "",
-      },
-
-      {
-        title: "Entrega de Materiais Inspiradores",
-        image: "/volta_as_aulas_5.webp",
-        tag1: "Fevereiro 2026",
-        tag2: "Acolhimento",
-      },
-
-      {
-        title: "Recepção e Boas-Vindas aos Alunos",
-        image: "/volta_as_aulas_3.webp",
-        tag1: "Escolas Municipais",
-        tag2: "Integração",
-      },
-
-      {
-        title: "Entrega de Canetas Personalizadas",
-        image: "/volta_as_aulas_4.webp",
-        tag1: "Mensagens Inspiradoras",
-        tag2: "Educação Cidadã",
-      },
-
-      {
-        title: "Circuito de Visitas nas Escolas Estaduais",
-        image: "/volta_as_aulas_2.webp",
-        tag1: "Articulação de Rede",
-        tag2: "Início do Ano Letivo",
+        tituloSecao: "Visitas e Acolhimento Escolar",
+        evidences: [
+          {
+            title: "Mobilização Escolar Presencial",
+            image: "/volta_as_aulas_1.webp",
+            tag1: "Rede Pública",
+            tag2: "+1.000 Kits",
+            videoEmbed: "",
+          },
+          {
+            title: "Entrega de Materiais Inspiradores",
+            image: "/volta_as_aulas_5.webp",
+            tag1: "Fevereiro 2026",
+            tag2: "Acolhimento",
+          },
+          {
+            title: "Recepção e Boas-Vindas aos Alunos",
+            image: "/volta_as_aulas_3.webp",
+            tag1: "Escolas Municipais",
+            tag2: "Integração",
+          },
+          {
+            title: "Entrega de Canetas Personalizadas",
+            image: "/volta_as_aulas_4.webp",
+            tag1: "Mensagens Inspiradoras",
+            tag2: "Educação Cidadã",
+          },
+          {
+            title: "Circuito de Visitas nas Escolas Estaduais",
+            image: "/volta_as_aulas_2.webp",
+            tag1: "Articulação de Rede",
+            tag2: "Início do Ano Letivo",
+          },
+        ],
       },
     ],
   },
@@ -446,82 +448,246 @@ const ACOES_JUVENTUDE = [
     id: "maos-dadas",
     title: "De Mãos Dadas com a Juventude",
     logo: "MAOS_DADAS_LOGO.webp",
+    date: "Abril de 2026",
+    location: "Junqueiro / Teotônio Vilela",
+    stats: "Profissionalização & Esporte",
+    videoUrl: "",
+    testimonialKey: "Mãos Dadas",
     details:
       "O projeto representou um esforço robusto de investimento financeiro na capacitação profissional e no bem-estar dos jovens junqueirenses. A ação articulou uma parceria com o Senac para a oferta de cursos profissionalizantes gratuitos, incluindo Assistente em Marketing e Vendas, Assistente Administrativo e Técnicas de Maquiagem. Paralelamente, o projeto fomentou o esporte ao viabilizar o uso do espaço do Sest Senat, na cidade de Teotônio Vilela, para a realização de uma rodada de um torneio de basquetebol em conjunto com a Secretaria de Esporte.",
     objectives:
       "A meta central foi inserir a juventude no mercado de trabalho com qualificação prática de excelência, ao mesmo tempo em que se incentivou a saúde e o desenvolvimento humano através do esporte. Essa abordagem dupla impactou as perspectivas locais, impulsionando a geração de renda por meio da profissionalização e fortalecendo a disciplina e o trabalho em equipe proporcionados pelas práticas esportivas.",
+
+    // DOIS BLOCOS SEPARADOS: UM PARA O BASQUETE E OUTRO PARA OS CURSOS SENAC
+    galerias: [
+      {
+        tituloSecao: "Torneio de Basquete — SEST SENAT",
+        evidences: [
+          {
+            title: "Registro Oficial — De Mãos Dadas com a Juventude",
+            image: "/maos_dadas.webp",
+            tag1: "Abril 2026",
+            tag2: "SEST SENAT",
+          },
+          {
+            title: "Mobilização da Equipe Junqueiro Basquetebol",
+            image: "/juventude_group.webp",
+            tag1: "Teotônio Vilela/AL",
+            tag2: "Esporte",
+          },
+        ],
+      },
+      {
+        tituloSecao: "Cursos Profissionalizantes SENAC",
+        evidences: [
+          {
+            title: "Capacitação em Marketing e Vendas",
+            image: "/marketing_e_vendas.webp",
+            tag1: "Senac / 160h",
+            tag2: "Qualificação",
+          },
+          {
+            title: "Formação de Assistente Administrativo",
+            image: "/assistente_adm_otm.webp",
+            tag1: "Certificação",
+            tag2: "Primeiro Emprego",
+          },
+        ],
+      },
+    ],
   },
+
   {
     id: "conexao-maes",
     title: "Conexão Mães",
     logo: "CONEXAO_MAES.webp",
+    date: "Maio de 2026",
+    location: "Centro & Praças de Junqueiro",
+    stats: "Mobilização Comunitária",
+    videoUrl: "",
+    testimonialKey: "Conexão Mães",
     details:
       "Idealizada para celebrar o Dia das Mães, a ação promoveu uma blitz interativa e afetiva nas ruas de Junqueiro. A dinâmica envolveu a participação direta dos filhos, que abordaram as mães em espaços públicos para entregar uma flor simbólica, acompanhada de uma mensagem impressa de carinho e reconhecimento.",
     objectives:
       "A meta da ação foi fortalecer os laços familiares e homenagear as mães junqueirenses, valorizando seu papel fundamental na estruturação da juventude. O impacto foi uma mobilização comunitária emocionante, que levou acolhimento para as ruas da cidade e ressaltou a importância do respeito e da afetividade dentro do núcleo familiar.",
+    evidences: [
+      {
+        title: "Ação Afetiva nas Ruas de Junqueiro",
+        image: "/juventude_group.webp",
+        tag1: "Maio 2026",
+        tag2: "Homenagem",
+      },
+    ],
   },
+
   {
     id: "cine-rural",
     title: "Cine Rural",
     logo: "CINE_RURAL.webp",
+    date: "Junho de 2026",
+    location: "Povoado Baixa Fria",
+    stats: "Cultura no Campo",
+    videoUrl: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
+    testimonialKey: "Cine Rural",
     details:
       "Realizado em uma parceria estratégica com a Secretaria Municipal de Cultura, o CineRural levou a experiência da sétima arte para fora do centro urbano, oferecendo sessões de cinema ao ar livre para as comunidades do campo. A estreia ocorreu no povoado Baixa Fria com a exibição do filme (Mussum, o Filmis), contando com a distribuição gratuita de cachorro-quente, refrigerante e pipoca para garantir uma experiência completa.",
     objectives:
       "O objetivo do projeto foi democratizar o acesso ao lazer e à cultura, descentralizando os serviços municipais e integrando a população das áreas rurais. O sucesso e a forte adesão da comunidade na edição inaugural geraram um sentimento de pertencimento e inclusão social, consolidando a viabilidade do projeto para a sua futura expansão a outros povoados do município.",
+    evidences: [
+      {
+        title: "Sessão de Cinema ao Ar Livre",
+        image: "/CINE_RURAL.webp",
+        tag1: "Baixa Fria",
+        tag2: "Cultura & Pipoca",
+        videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
+      },
+    ],
   },
+
   {
     id: "aulao-enem",
     title: "Aulão Vem Que Tem ENEM",
     logo: "AULAO_ENEM.webp",
+    date: "Junho de 2026",
+    location: "Teatro São José",
+    stats: "Teatro Lotado",
+    videoUrl: "https://www.instagram.com/reel/DXpLXE9ivJT/embed",
+    testimonialKey: "Aulão",
     details:
       "A segunda edição do projeto estruturou uma série de aulas preparatórias focadas em democratizar o acesso aos conteúdos cobrados no Exame Nacional do Ensino Médio (ENEM). Realizada a partir de uma articulação conjunta entre a Secretaria Municipal de Educação, o NUCA e as Escolas Estaduais Padre Aurélio Góis e Maria Liege de Albuquerque Tavares, a ação revisou de forma acessível todas as áreas de conhecimento e disciplinas da prova.",
     objectives:
       "O objetivo do programa foi nivelar as oportunidades e oferecer suporte pedagógico de qualidade para que os estudantes da rede pública ingressem no ensino superior. O impacto direto da iniciativa foi a elevação da confiança e do preparo acadêmico dos alunos, estabelecendo um ambiente de apoio mútuo que incentiva os jovens de Junqueiro a buscarem ativamente o acesso às universidades.",
+    evidences: [
+      {
+        title: "Imersão Preparatória no Teatro São José",
+        image: "/aulao_1.webp",
+        tag1: "ENEM 2026",
+        tag2: "Super Time",
+        videoEmbed: "https://www.instagram.com/reel/DXpLXE9ivJT/embed",
+      },
+      {
+        title: "Revisão Intensiva com Professores",
+        image: "/aulao_2.webp",
+        tag1: "Preparação",
+        tag2: "Ensino Superior",
+      },
+    ],
   },
+
   {
     id: "maio-amarelo",
     title: "Maio Amarelo",
     logo: "MAIO_AMARELO_LOGO.webp",
+    date: "Maio de 2026",
+    location: "Vias Públicas de Junqueiro",
+    stats: "Blitz Educativa",
+    videoUrl: "",
+    testimonialKey: "Maio Amarelo",
     details:
       "Inserida na campanha nacional de conscientização, a blitz do Maio Amarelo mobilizou os jovens para uma ação educativa no trânsito de Junqueiro. As equipes distribuíram panfletos informativos focados em prevenção, atitudes corretas ao volante e comportamentos de risco a serem evitados. O projeto contou com a participação ativa dos adolescentes do NUCA, que confeccionaram cartazes de conscientização exibidos durante as abordagens.",
     objectives:
       "A meta primordial foi atuar na educação para o trânsito visando a redução de acidentes, feridos e mortes no município. O envolvimento do NUCA garantiu um impacto ampliado, pois transformou os próprios jovens em agentes de conscientização, educando os motoristas locais e promovendo uma cultura de responsabilidade e respeito à vida nas vias públicas.",
+    evidences: [
+      {
+        title: "Conscientização no Trânsito com o NUCA",
+        image: "/maio_amarelo.webp",
+        tag1: "Maio Amarelo",
+        tag2: "Prevenção",
+      },
+    ],
   },
+
   {
     id: "trilha-juventude",
     title: "Trilha da Juventude",
     logo: "TRILHA_DA_JUVENTUDE.webp",
+    date: "Maio a Agosto de 2026",
+    location: "Lagoa do Retiro",
+    stats: "+1.000 Alunos na Expedição",
+    videoUrl: "https://www.instagram.com/reel/DYU1flnKEhf/embed",
+    testimonialKey: "Trilha",
     details:
-      "A Trilha da Juventude foi um projeto comunitário realizado na Lagoa do Retiro, em Junqueiro, focado em promover o protagonismo e a integração dos jovens locais. A iniciativa, coordenada e produzida por você entre março e agosto de 2026, exigiu forte articulação com escolas e departamentos municipais, englobando a elaboração de planos oficiais, cronogramas de atividades, roteiros e comunicações institucionais para garantir o sucesso do evento.",
+      "A Trilha da Juventude foi um projeto comunitário realizado na Lagoa do Retiro, em Junqueiro, focado em promover o protagonismo e a integração dos jovens locais. A iniciativa exigiu forte articulação com escolas e departamentos municipais, englobando a elaboração de planos oficiais, cronogramas de atividades, roteiros e comunicações institucionais para garantir o sucesso do evento.",
     objectives:
-      "Conectar os jovens à natureza, promover a educação ambiental na prática e valorizar as tradições locais, como o artesanato da comunidade. Através da Trilha da Juventude cumprimos com o objetivo de levar os alunos a conhecerem a riqueza local e a importância histórica da nossa lagoa para aqueles que não tinham conheciam.",
+      "Conectar os jovens à natureza, promover a educação ambiental na prática e valorizar as tradições locais, como o artesanato da comunidade. Através da Trilha da Juventude cumprimos com o objetivo de levar os alunos a conhecerem a riqueza local e a importância histórica da nossa lagoa.",
+    evidences: [
+      {
+        title: "Expedição Ecológica na Lagoa do Retiro",
+        image: "/trilha.webp",
+        tag1: "Educação Ambiental",
+        tag2: "Cultura do Junco",
+        videoEmbed: "https://www.instagram.com/reel/DYU1flnKEhf/embed",
+      },
+    ],
   },
+
   {
     id: "arraia-juventude",
     title: "Arraiá da Juventude",
     logo: "ARRAIA_DA_JUVENTUDE_LOGO.webp",
+    date: "Junho de 2026",
+    location: "Ginásio Hidemburgo Pereira",
+    stats: "Copa & Quadrilhas",
+    videoUrl: "",
+    testimonialKey: "Arraiá",
     details:
-      "O Arraiá da Juventude conseguiu superar as expectativas esperadas por nós, atingindo um público acima do esperado. Foi transmitido o jogo da Copa do Mundo entre Brasil e Escócia em um telão no Ginásio Hidemburgo Pereira, enquanto eram vendidas comidas típicas do período junino pelos alunos da Escola Padre Aurélio Góis. Logo após o jogo, tivemos apresentação de quadrilha junina, de artistas da terra e  artistas de fora do município.",
+      "O Arraiá da Juventude conseguiu superar as expectativas esperadas por nós, atingindo um público acima do esperado. Foi transmitido o jogo da Copa do Mundo entre Brasil e Escócia em um telão no Ginásio Hidemburgo Pereira, enquanto eram vendidas comidas típicas do período junino pelos alunos da Escola Padre Aurélio Góis. Logo após o jogo, tivemos apresentação de quadrilha junina e atrações musicais.",
     objectives:
-      "Celebração cultural que une as tradições das festas populares ao convívio da juventude.Resgatar e manter vivas as tradições juninas, proporcionando um ambiente seguro de festa, com música, dança e integração entre os jovens de várias escolas.",
+      "Celebração cultural que une as tradições das festas populares ao convívio da juventude. Resgatar e manter vivas as tradições juninas, proporcionando um ambiente seguro de festa, com música, dança e integração entre os jovens de várias escolas.",
+    evidences: [
+      {
+        title: "Torcida Verde e Amarela e Cultura Junina",
+        image: "/arraia.webp",
+        tag1: "São João 2026",
+        tag2: "Integração",
+      },
+    ],
   },
+
   {
     id: "festival-juventude",
     title: "II Festival da Juventude",
     logo: "logo-do-festival.webp",
+    date: "Agosto de 2026",
+    location: "Ruas & Ginásio de Junqueiro",
+    stats: "Juventude Inclusiva",
+    videoUrl: "",
+    testimonialKey: "Festival",
     details:
-      "O Festival da Juventude foi realizado do período de 31 de julho à 29 de agosto, e contou com ações de integração entre os jovens do município de Junqueiro, fortalecendo a comunidade local e desenvolvendo o espírito desportivo e de conexão com diversas áreas. Realizamos o Desfile da Juventude com todas as escolas de ensino fundamental 2 da Rede Municipal, escolas de ensino médio da Rede Estadual, escolas privadas, serviços sociais, secretarias e outros membros da comunidade, tivemos como temática a Juventude inclusiva, homenageando os jovens com deficiências mentais e motoras do nosso município.",
+      "O Festival da Juventude foi realizado do período de 31 de julho à 29 de agosto, e contou com ações de integração entre os jovens do município de Junqueiro, fortalecendo a comunidade local e desenvolvendo o espírito desportivo e de conexão com diversas áreas. Realizamos o Desfile da Juventude com a temática da Juventude inclusiva, homenageando os jovens com deficiências do nosso município.",
     objectives:
-      "Grande celebração que movimenta o município com um extenso cronograma de atividades culturais, esportivas, inclusão social e ações de capacitação. Promovendo a integração social, valorizar o protagonismo jovem e a inclusão das Pessoas com Deficiência (PCD), além de realizar capacitações e celebrar o futuro dos jovens de Junqueiro.",
+      "Grande celebração que movimenta o município com um extenso cronograma de atividades culturais, esportivas, inclusão social e ações de capacitação. Promovendo a integração social, valorizar o protagonismo jovem e a inclusão das Pessoas com Deficiência (PCD).",
+    evidences: [
+      {
+        title: "Abertura Oficial e Desfile Temático",
+        image: "/juventude_group.webp",
+        tag1: "Agosto 2026",
+        tag2: "Inclusão PCD",
+      },
+    ],
   },
+
   {
     id: "mais-sangue-mais-vida",
     title: "Mais Sangue, Mais Vida",
     logo: "mais_sangue_mais_vida.webp",
+    date: "Agosto de 2026",
+    location: "Hospital Municipal Teófilo Pereira",
+    stats: "Parceria com HEMOAL",
+    videoUrl: "",
+    testimonialKey: "Sangue",
     details:
-      "A continuação da ação Mais Sangue Mais Vida foi realizada no mês de agosto como parte da programação do Festival da Juventude. Nela, trouxemos os profissionais do HEMOAL para o Hospital Municipal Teófilo Pereira, no dia 18 de agosto, para realizar a doação de sangue, ao final da ação conseguimos atingir nossa meta esperada.",
+      "A continuação da ação Mais Sangue Mais Vida foi realizada no mês de agosto como parte da programação do Festival da Juventude. Nela, trouxemos os profissionais do HEMOAL para o Hospital Municipal Teófilo Pereira, no dia 18 de agosto, para realizar a doação de sangue, atingindo a meta esperada ao final do dia.",
     objectives:
-      "Campanha de conscientização e mobilização da juventude junqueirense para o incentivo à doação de sangue.Engajar os jovens na causa da doação de sangue, promovendo a solidariedade, salvando vidas e ajudando a manter os estoques dos bancos de sangue da região sempre abastecidos.",
+      "Campanha de conscientização e mobilização da juventude junqueirense para o incentivo à doação de sangue. Engajar os jovens na causa da doação de sangue, promovendo a solidariedade, salvando vidas e ajudando a manter os estoques dos bancos de sangue da região sempre abastecidos.",
+    evidences: [
+      {
+        title: "Mobilização para Doação de Sangue",
+        image: "/setembro_amarelo.webp",
+        tag1: "Solidariedade",
+        tag2: "HEMOAL",
+      },
+    ],
   },
 ];
 
@@ -1854,7 +2020,7 @@ window.openImageLightbox = function (imgSrc, caption) {
   });
 };
 
-// 7. AÇÃO DETAILS PAGE RENDERER (DESIGN EDITORIAL & PORTFÓLIO DE EVIDÊNCIAS)
+// 7. AÇÃO DETAILS PAGE RENDERER (DINÂMICO PARA N BLOCOS DE GALERIA)
 function renderAcaoDetails(id) {
   updateNavigationActiveState("");
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1874,14 +2040,12 @@ function renderAcaoDetails(id) {
     return;
   }
 
-  // Navegação Minimalista: Próxima Ação e Anterior
   const prevAcao =
     ACOES_JUVENTUDE[
       (acaoIndex - 1 + ACOES_JUVENTUDE.length) % ACOES_JUVENTUDE.length
     ];
   const nextAcao = ACOES_JUVENTUDE[(acaoIndex + 1) % ACOES_JUVENTUDE.length];
 
-  // Mapeamento Inteligente de Depoimentos
   const keywordMap = {
     "aulao-enem": "Aulão",
     "trilha-juventude": "Trilha",
@@ -1894,13 +2058,9 @@ function renderAcaoDetails(id) {
       t.name.toLowerCase().includes(searchKey.toLowerCase()) ||
       acao.title.toLowerCase().includes(t.name.toLowerCase()),
   );
-
-  const hasDirectTestimonials = relatedTestimonials.length > 0;
-  if (!hasDirectTestimonials) {
+  if (relatedTestimonials.length === 0)
     relatedTestimonials = TESTIMONIALS.slice(0, 2);
-  }
 
-  // Lista padrão de evidências caso a ação ainda não tenha fotos específicas cadastradas
   const defaultEvidences = [
     {
       title: "Registro Oficial — " + acao.title,
@@ -1916,110 +2076,98 @@ function renderAcaoDetails(id) {
       tag2: "Campo & Prática",
       videoEmbed: relatedTestimonials[0]?.videoEmbed || "",
     },
-    {
-      title: "Impacto Direto na Comunidade",
-      image: "/setembro_amarelo.webp",
-      tag1: "Política Pública",
-      tag2: "Evidência Documentada",
-      videoEmbed: "",
-    },
-    {
-      title: "Capacitação e Protagonismo",
-      image: "/marketing_e_vendas.webp",
-      tag1: "Juventude Ativa",
-      tag2: "Resultado Real",
-      videoEmbed: "",
-    },
   ];
 
-  const evidencesList =
-    acao.evidences && acao.evidences.length > 0
-      ? acao.evidences
-      : defaultEvidences;
+  // Sistema Inteligente de Galerias Múltiplas Dinâmicas
+  const listaGalerias =
+    acao.galerias && acao.galerias.length > 0
+      ? acao.galerias
+      : [
+          {
+            tituloSecao: "Evidências — na prática.",
+            evidences: acao.evidences || defaultEvidences,
+          },
+        ];
 
-  // Variáveis auxiliares pré-processadas (Evita crases aninhadas dentro do innerHTML)
-  const mainVideoEmbed =
-    acao.videoUrl ||
-    (hasDirectTestimonials && relatedTestimonials[0]?.videoEmbed) ||
-    "";
+  let galeriasHtml = "";
+  listaGalerias.forEach((galeria, gIndex) => {
+    const carouselId = `proof-carousel-${gIndex + 1}`;
+    const tituloGaleria = galeria.tituloSecao || "Evidências — na prática.";
+    const itensEvidencias = galeria.evidences || [];
 
-  const bannerCoverImg = evidencesList[0]?.image || "/juventude_group.webp";
-  const acaoLocation = acao.location || "Junqueiro - AL";
-  const acaoStats = acao.stats || "Comunidade Escolar";
+    let cardsHtml = "";
+    itensEvidencias.forEach((ev, idx) => {
+      const safeTitle = ev.title.replace(/'/g, "");
+      const actionClick = ev.videoEmbed
+        ? `window.openVideoModal('${ev.videoEmbed}')`
+        : `window.openImageLightbox('${ev.image}', '${safeTitle}')`;
+      const videoBadgeHtml = ev.videoEmbed
+        ? `<div class="absolute inset-0 flex items-center justify-center pointer-events-none"><div class="px-4 py-2 bg-[#e6af00] text-slate-950 font-mono text-xs font-black uppercase tracking-widest shadow-xl transform group-hover:scale-110 transition-transform flex items-center gap-2 clip-tag"><span>▶ Assistir Reel</span></div></div>`
+        : "";
 
-  const titleWords = acao.title.split(" ");
-  const titleFirstPart = titleWords.slice(0, -1).join(" ");
-  const titleLastWord = titleWords.slice(-1).join("");
-
-  const vitrineActionBtnHtml = mainVideoEmbed
-    ? `<button type="button" onclick="window.openVideoModal('${mainVideoEmbed}')" class="w-full py-3 bg-[#092986] hover:bg-blue-800 text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer">
-         <span>▶ Assistir Vídeo da Ação</span>
-       </button>`
-    : `<a href="#evidencias" class="w-full py-3 bg-[#092986] hover:bg-blue-800 text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center gap-2">
-         <span>Explorar Evidências ↓</span>
-       </a>`;
-
-  const testimonialsHeadingText = hasDirectTestimonials
-    ? "Relatos sobre " + acao.title
-    : "O que os jovens dizem das nossas ações";
-
-  // Renderização dos Cards da Galeria "Proof in Work"
-  let evidencesHtml = "";
-  evidencesList.forEach((ev, idx) => {
-    const safeTitle = ev.title.replace(/'/g, "");
-    const actionClick = ev.videoEmbed
-      ? `window.openVideoModal('${ev.videoEmbed}')`
-      : `window.openImageLightbox('${ev.image}', '${safeTitle}')`;
-
-    const videoBadgeHtml = ev.videoEmbed
-      ? `<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-           <div class="px-4 py-2 bg-[#e6af00] text-slate-950 font-mono text-xs font-black uppercase tracking-widest shadow-xl transform group-hover:scale-110 transition-transform flex items-center gap-2 clip-tag">
-             <span>▶ Assistir Reel</span>
-           </div>
-         </div>`
-      : "";
-
-    evidencesHtml += `
-      <article onclick="${actionClick}" class="group relative h-[420px] sm:h-[460px] w-[290px] sm:w-[340px] shrink-0 bg-slate-900 overflow-hidden cursor-pointer select-none border border-slate-200 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-        <img src="${ev.image}" alt="${safeTitle}" class="w-full h-full object-cover opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700" onerror="this.src='/juventude_group.webp'" />
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-slate-950/60 group-hover:via-slate-950/10 transition-all duration-500"></div>
-
-        <div class="absolute top-5 left-5 right-5 flex items-start justify-between gap-2">
-          <div class="space-y-1">
-            <span class="font-mono text-[10px] text-[#e6af00] uppercase tracking-widest block">REGISTRO // 0${idx + 1}</span>
-            <h4 class="text-white font-display font-bold text-lg leading-snug drop-shadow-sm">${ev.title}</h4>
+      cardsHtml += `
+        <article onclick="${actionClick}" class="group relative h-[420px] sm:h-[460px] w-[290px] sm:w-[340px] shrink-0 bg-slate-900 overflow-hidden cursor-pointer select-none border border-slate-200 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+          <img src="${ev.image}" alt="${safeTitle}" class="w-full h-full object-cover opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700" onerror="this.src='/juventude_group.webp'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-slate-950/60 group-hover:via-slate-950/10 transition-all duration-500"></div>
+          <div class="absolute top-5 left-5 right-5 flex items-start justify-between gap-2">
+            <div class="space-y-1">
+              <span class="font-mono text-[10px] text-[#e6af00] uppercase tracking-widest block">REGISTRO // 0${idx + 1}</span>
+              <h4 class="text-white font-display font-bold text-lg leading-snug drop-shadow-sm">${ev.title}</h4>
+            </div>
           </div>
-          <span class="p-2 bg-white/10 backdrop-blur-md text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-white/20">
-            ${getSvgIcon("arrow-right", "h-4 w-4 -rotate-45")}
-          </span>
-        </div>
+          ${videoBadgeHtml}
+          <div class="absolute bottom-5 left-5 right-5 flex flex-wrap items-center gap-2">
+            <span class="px-3 py-1.5 bg-slate-950/80 backdrop-blur-md text-white font-mono text-[11px] font-semibold tracking-wider uppercase border border-white/15">${ev.tag1}</span>
+            <span class="px-3 py-1.5 bg-white/15 backdrop-blur-md text-slate-100 font-mono text-[11px] tracking-wider uppercase border border-white/10">${ev.tag2}</span>
+          </div>
+        </article>
+      `;
+    });
 
-        ${videoBadgeHtml}
-
-        <div class="absolute bottom-5 left-5 right-5 flex flex-wrap items-center gap-2">
-          <span class="px-3 py-1.5 bg-slate-950/80 backdrop-blur-md text-white font-mono text-[11px] font-semibold tracking-wider uppercase border border-white/15">
-            ${ev.tag1}
-          </span>
-          <span class="px-3 py-1.5 bg-white/15 backdrop-blur-md text-slate-100 font-mono text-[11px] tracking-wider uppercase border border-white/10">
-            ${ev.tag2}
-          </span>
+    galeriasHtml += `
+      <section id="evidencias-${gIndex + 1}" class="py-16 ${gIndex % 2 === 1 ? "bg-slate-50" : "bg-white"} border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between mb-6">
+            <span class="font-mono text-xs font-bold uppercase tracking-wider text-slate-900 underline decoration-[#e6af00] decoration-2 underline-offset-4">
+              ${tituloGaleria} (${itensEvidencias.length} registros)
+            </span>
+            <div class="flex items-center gap-2">
+              <button type="button" onclick="document.getElementById('${carouselId}').scrollBy({left: -360, behavior: 'smooth'})" class="h-10 w-10 border border-slate-300 hover:border-slate-900 hover:bg-slate-900 hover:text-white flex items-center justify-center transition-colors cursor-pointer" aria-label="Anterior">←</button>
+              <button type="button" onclick="document.getElementById('${carouselId}').scrollBy({left: 360, behavior: 'smooth'})" class="h-10 w-10 border border-slate-300 hover:border-slate-900 hover:bg-slate-900 hover:text-white flex items-center justify-center transition-colors cursor-pointer" aria-label="Próximo">→</button>
+            </div>
+          </div>
+          <div id="${carouselId}" class="flex items-stretch gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4">
+            ${cardsHtml}
+          </div>
         </div>
-      </article>
+      </section>
     `;
   });
 
-  // Renderização dos Depoimentos Reais Integrados
+  const mainVideoEmbed =
+    acao.videoUrl ||
+    (relatedTestimonials.length > 0 && relatedTestimonials[0]?.videoEmbed) ||
+    "";
+  const bannerCoverImg =
+    listaGalerias[0].evidences[0]?.image || "/juventude_group.webp";
+  const acaoLocation = acao.location || "Junqueiro - AL";
+  const acaoStats = acao.stats || "Comunidade Escolar";
+  const titleWords = acao.title.split(" ");
+  const titleFirstPart = titleWords.slice(0, -1).join(" ");
+  const titleLastWord = titleWords.slice(-1).join("");
+  const testimonialsHeadingText = "O que dizem sobre esta ação"; // <--- VARIÁVEL DECLARADA AQUI
+
+  const vitrineActionBtnHtml = mainVideoEmbed
+    ? `<button type="button" onclick="window.openVideoModal('${mainVideoEmbed}')" class="w-full py-3 bg-[#092986] hover:bg-blue-800 text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer"><span>▶ Assistir Vídeo da Ação</span></button>`
+    : `<a href="#evidencias-1" class="w-full py-3 bg-[#092986] hover:bg-blue-800 text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center gap-2"><span>Explorar Evidências ↓</span></a>`;
+
   let testimonialsCardsHtml = "";
   relatedTestimonials.forEach((t, i) => {
     const avatarInnerHtml = t.avatar.includes(".")
       ? `<img src="${t.avatar}" alt="${t.name}" class="w-full h-full object-cover" />`
       : t.avatar;
-
     const videoBtnHtml = t.videoEmbed
-      ? `<button type="button" onclick="window.openVideoModal('${t.videoEmbed}')" class="px-4 py-2 bg-slate-900 hover:bg-[#092986] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer">
-           ${getSvgIcon("instagram", "h-3.5 w-3.5 text-[#e6af00]")}
-           <span>Ver Vídeo Prova</span>
-         </button>`
+      ? `<button type="button" onclick="window.openVideoModal('${t.videoEmbed}')" class="px-4 py-2 bg-slate-900 hover:bg-[#092986] text-white font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer">${getSvgIcon("instagram", "h-3.5 w-3.5 text-[#e6af00]")}<span>Ver Vídeo Prova</span></button>`
       : "";
 
     testimonialsCardsHtml += `
@@ -2027,9 +2175,7 @@ function renderAcaoDetails(id) {
         <div>
           <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
             <div class="flex items-center gap-3">
-              <div class="h-12 w-12 bg-[#092986] text-white font-black flex items-center justify-center shrink-0 overflow-hidden border border-slate-900">
-                ${avatarInnerHtml}
-              </div>
+              <div class="h-12 w-12 bg-[#092986] text-white font-black flex items-center justify-center shrink-0 overflow-hidden border border-slate-900">${avatarInnerHtml}</div>
               <div>
                 <span class="font-mono text-[10px] uppercase tracking-widest text-[#092986] font-bold block">${t.program}</span>
                 <h4 class="font-display font-black text-slate-900 text-base uppercase">${t.name}</h4>
@@ -2037,233 +2183,112 @@ function renderAcaoDetails(id) {
             </div>
             <span class="font-mono text-xs text-slate-400 font-bold">#0${i + 1}</span>
           </div>
-
-          <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
-            "${t.quote}"
-          </p>
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">"${t.quote}"</p>
         </div>
-
         <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-4 flex-wrap">
-          <span class="font-mono text-[11px] text-slate-500 uppercase tracking-wider flex items-center gap-1">
-            ${getSvgIcon("map-pin", "h-3.5 w-3.5 text-[#092986]")} ${t.location}
-          </span>
+          <span class="font-mono text-[11px] text-slate-500 uppercase tracking-wider flex items-center gap-1">${getSvgIcon("map-pin", "h-3.5 w-3.5 text-[#092986]")} ${t.location}</span>
           ${videoBtnHtml}
         </div>
       </div>
     `;
   });
 
-  // Template Principal (Zero expressões ternárias ou crases aninhadas)
   appContainer.innerHTML = `
-    <!-- 1. TOP SUB-NAVIGATION BAR MINIMALISTA -->
     <div class="border-b border-slate-200 bg-white sticky top-[57px] sm:top-[65px] z-30 transition-colors">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between text-xs font-mono uppercase tracking-wider">
         <a href="#/" class="inline-flex items-center gap-2 text-slate-600 hover:text-[#092986] font-bold group transition-colors">
           <span class="transform group-hover:-translate-x-1 transition-transform">←</span>
           <span>Voltar ao Portal</span>
         </a>
-
         <div class="hidden md:flex items-center gap-6 text-slate-400">
           <button type="button" onclick="document.getElementById('contexto').scrollIntoView({behavior: 'smooth'})" class="hover:text-slate-900 transition-colors cursor-pointer">01. Contexto</button>
           <button type="button" onclick="document.getElementById('manifesto').scrollIntoView({behavior: 'smooth'})" class="hover:text-slate-900 transition-colors cursor-pointer">02. Síntese</button>
-          <button type="button" onclick="document.getElementById('evidencias').scrollIntoView({behavior: 'smooth'})" class="hover:text-slate-900 transition-colors cursor-pointer">03. Evidências</button>
+          <button type="button" onclick="document.getElementById('evidencias-1').scrollIntoView({behavior: 'smooth'})" class="hover:text-slate-900 transition-colors cursor-pointer">03. Evidências</button>
           <button type="button" onclick="document.getElementById('depoimentos-acao').scrollIntoView({behavior: 'smooth'})" class="hover:text-slate-900 transition-colors cursor-pointer">04. Relatos</button>
         </div>
-
         <div class="flex items-center gap-2">
-          <a href="#/acao/${prevAcao.id}" title="Anterior: ${prevAcao.title}" class="px-2.5 py-1 border border-slate-200 hover:border-slate-900 text-slate-700 hover:bg-slate-900 hover:text-white transition-all">
-            ‹ Ant
-          </a>
+          <a href="#/acao/${prevAcao.id}" class="px-2.5 py-1 border border-slate-200 hover:border-slate-900 text-slate-700 hover:bg-slate-900 hover:text-white transition-all">‹ Ant</a>
           <span class="text-slate-400 font-bold">${acaoIndex + 1}/${ACOES_JUVENTUDE.length}</span>
-          <a href="#/acao/${nextAcao.id}" title="Próxima: ${nextAcao.title}" class="px-2.5 py-1 border border-slate-200 hover:border-slate-900 text-slate-700 hover:bg-slate-900 hover:text-white transition-all">
-            Próx ›
-          </a>
+          <a href="#/acao/${nextAcao.id}" class="px-2.5 py-1 border border-slate-200 hover:border-slate-900 text-slate-700 hover:bg-slate-900 hover:text-white transition-all">Próx ›</a>
         </div>
       </div>
     </div>
     
-    <!-- 2. EDITORIAL SPLIT HEADER & PROBLEMA/SOLUÇÃO -->
     <section id="contexto" class="bg-white pt-12 pb-16 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
           <div class="lg:col-span-5 space-y-4">
             <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#092986] text-white font-mono text-[11px] font-bold uppercase tracking-widest clip-tag">
               <span>Dossiê de Ação Oficial</span>
             </div>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.03] uppercase">
-              ${titleFirstPart} 
-              <span class="underline decoration-[#e6af00] decoration-4 underline-offset-8">${titleLastWord}</span>
+              ${titleFirstPart} <span class="underline decoration-[#e6af00] decoration-4 underline-offset-8">${titleLastWord}</span>
             </h1>
           </div>
-
           <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 pt-2">
             <div class="space-y-3 border-t-2 border-slate-900 pt-4">
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#092986]">01 // A Iniciativa</span>
-                <span class="h-2 w-2 bg-[#092986]"></span>
-              </div>
+              <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#092986]">01 // A Iniciativa</span>
               <h3 class="text-lg font-extrabold text-slate-900">Execução e Mobilização</h3>
-              <p class="text-sm text-slate-600 leading-relaxed">
-                ${acao.details}
-              </p>
+              <p class="text-sm text-slate-600 leading-relaxed">${acao.details}</p>
             </div>
-
             <div class="space-y-3 border-t-2 border-[#e6af00] pt-4">
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#e6af00]">02 // O Impacto Real</span>
-                <span class="h-2 w-2 bg-[#e6af00]"></span>
-              </div>
+              <span class="font-mono text-xs font-bold uppercase tracking-widest text-[#e6af00]">02 // O Impacto Real</span>
               <h3 class="text-lg font-extrabold text-slate-900">Resultados para o Município</h3>
-              <p class="text-sm text-slate-600 leading-relaxed">
-                ${acao.objectives}
-              </p>
+              <p class="text-sm text-slate-600 leading-relaxed">${acao.objectives}</p>
             </div>
           </div>
-
         </div>
 
-        <!-- 3. VITRINE PANORÂMICA COM CARD ASSIMÉTRICO FLUTUANTE -->
         <div class="mt-12 relative w-full h-[380px] sm:h-[460px] lg:h-[520px] bg-slate-900 overflow-hidden border-2 border-slate-200 group">
           <img src="${bannerCoverImg}" alt="${acao.title}" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000" onerror="this.src='/juventude_group.webp'" />
           <div class="absolute inset-0 bg-gradient-to-r from-[#092986]/90 via-slate-950/50 to-transparent"></div>
-
           <div class="absolute top-6 left-6 sm:top-10 sm:left-10 z-10 flex items-center gap-4">
             <div class="bg-white p-4 border-2 border-slate-900 shadow-2xl clip-chamfer">
               <img src="${acao.logo}" alt="${acao.title}" class="h-20 sm:h-28 w-auto object-contain" onerror="this.src='https://placehold.co/300x150/092986/FFFFFF/webp?text=SMJ'" />
             </div>
           </div>
-
           <div class="absolute bottom-6 right-6 left-6 sm:left-auto sm:top-1/2 sm:-translate-y-1/2 sm:right-10 z-20 sm:w-80 bg-white text-slate-900 p-6 sm:p-8 shadow-2xl border-2 border-slate-900 clip-chamfer">
-            <span class="font-mono text-[10px] font-bold uppercase tracking-widest text-[#092986] block mb-1">
-              Ficha Técnica // Evidência
-            </span>
-            <h4 class="font-display font-black text-xl text-slate-900 leading-tight mb-3">
-              Transparência em cada entrega.
-            </h4>
-            <p class="text-xs text-slate-600 leading-relaxed mb-5">
-              Documentamos nossas ações com fotos, vídeos e relatos reais dos jovens participantes em Junqueiro/AL.
-            </p>
-            
+            <span class="font-mono text-[10px] font-bold uppercase tracking-widest text-[#092986] block mb-1">Ficha Técnica // Evidência</span>
+            <h4 class="font-display font-black text-xl text-slate-900 leading-tight mb-3">Transparência em cada entrega.</h4>
+            <p class="text-xs text-slate-600 leading-relaxed mb-5">Documentamos nossas ações com fotos, vídeos e relatos reais dos jovens participantes em Junqueiro/AL.</p>
             <div class="space-y-2 border-y border-slate-100 py-3 mb-5 font-mono text-xs">
-              <div class="flex justify-between">
-                <span class="text-slate-500">STATUS:</span>
-                <span class="font-bold text-emerald-600">CONCLUÍDO ✓</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-slate-500">LOCAL:</span>
-                <span class="font-bold text-slate-800">${acaoLocation}</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-slate-500">ALCANCE:</span>
-                <span class="font-bold text-[#092986]">${acaoStats}</span>
-              </div>
+              <div class="flex justify-between"><span class="text-slate-500">STATUS:</span><span class="font-bold text-emerald-600">CONCLUÍDO ✓</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">LOCAL:</span><span class="font-bold text-slate-800">${acaoLocation}</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">ALCANCE:</span><span class="font-bold text-[#092986]">${acaoStats}</span></div>
             </div>
-
             ${vitrineActionBtnHtml}
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- 4. TIPOGRAFIA EXPRESSIVA COM IMAGENS INTERCALADAS -->
+    <!-- 4. TIPOGRAFIA EXPRESSIVA -->
     <section id="manifesto" class="py-20 md:py-28 bg-white border-b border-slate-200 overflow-hidden">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        
-        <p class="font-mono text-xs uppercase tracking-[0.25em] text-slate-500 mb-3">
-          Padrão de Qualidade da Secretaria
-        </p>
-        <p class="text-base md:text-lg text-slate-700 font-medium mb-10">
-          Por isso documentamos a ação <strong class="text-[#092986] font-black">${acao.title}</strong> em detalhes.
-        </p>
-
+        <p class="font-mono text-xs uppercase tracking-[0.25em] text-slate-500 mb-3">Padrão de Qualidade da Secretaria</p>
+        <p class="text-base md:text-lg text-slate-700 font-medium mb-10">Por isso documentamos a ação <strong class="text-[#092986] font-black">${acao.title}</strong> em detalhes.</p>
         <div class="font-display font-black text-2xl sm:text-4xl md:text-5xl leading-[1.18] tracking-tight uppercase text-slate-900 select-none">
-          <span class="inline-block align-middle h-9 w-16 sm:h-12 sm:w-20 overflow-hidden border-2 border-slate-300 mx-1 bg-white shadow-md transform hover:scale-125 hover:-rotate-3 transition-all duration-300">
-            <img src="${acao.logo}" alt="" class="w-full h-full object-contain p-1" />
-          </span>
-          UMA FORMA DE TRABALHAR ONDE PLANEJAMENTO E 
-          <span class="inline-block align-middle h-9 w-16 sm:h-12 sm:w-20 overflow-hidden border-2 border-slate-300 mx-1 shadow-md transform hover:scale-125 hover:rotate-3 transition-all duration-300">
-            <img src="/juventude_group.webp" alt="" class="w-full h-full object-cover" />
-          </span>
-          IMPACTO SOCIAL RECEBEM O MESMO CUIDADO — PARA QUE A JUVENTUDE SINTA A 
-          <span class="inline-block align-middle h-9 w-16 sm:h-12 sm:w-20 overflow-hidden border-2 border-slate-300 mx-1 bg-[#e6af00] shadow-md transform hover:scale-125 transition-all duration-300">
-            <img src="${bannerCoverImg}" alt="" class="w-full h-full object-cover" />
-          </span>
-          TRANSFORMAÇÃO 
-          <span class="text-slate-500">NÃO APENAS HOJE, MAS NO SEU FUTURO.</span>
+          UMA FORMA DE TRABALHAR ONDE PLANEJAMENTO E IMPACTO SOCIAL RECEBEM O MESMO CUIDADO — PARA QUE A JUVENTUDE SINTA A TRANSFORMAÇÃO.
         </div>
-
       </div>
     </section>
 
-    <!-- 5. GALERIA DE EVIDÊNCIAS "PROOF IN WORK" -->
-    <section id="evidencias" class="py-20 bg-white border-b border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-          <span class="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
-            O QUE PERMANECE NA COMUNIDADE
-          </span>
-          <h2 class="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight">
-            Evidências — na prática.
-          </h2>
-          <p class="text-sm sm:text-base text-slate-500">
-            Avaliado pela participação real, engajamento estudantil e transformação gerada em Junqueiro.
-          </p>
-        </div>
-
-        <div class="flex items-center justify-between mb-6">
-          <span class="font-mono text-xs font-bold uppercase tracking-wider text-slate-900 underline decoration-[#e6af00] decoration-2 underline-offset-4">
-            Clique nos cartões para ampliar foto ou abrir vídeo (${evidencesList.length} registros)
-          </span>
-          <div class="flex items-center gap-2">
-            <button type="button" onclick="document.getElementById('proof-carousel').scrollBy({left: -360, behavior: 'smooth'})" class="h-10 w-10 border border-slate-300 hover:border-slate-900 hover:bg-slate-900 hover:text-white flex items-center justify-center transition-colors cursor-pointer" aria-label="Anterior">
-              ←
-            </button>
-            <button type="button" onclick="document.getElementById('proof-carousel').scrollBy({left: 360, behavior: 'smooth'})" class="h-10 w-10 border border-slate-300 hover:border-slate-900 hover:bg-slate-900 hover:text-white flex items-center justify-center transition-colors cursor-pointer" aria-label="Próximo">
-              →
-            </button>
-          </div>
-        </div>
-
-        <div id="proof-carousel" class="flex items-stretch gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4">
-          ${evidencesHtml}
-        </div>
-
-        <div class="mt-14 text-center max-w-xl mx-auto">
-          <p class="font-display text-xl sm:text-2xl font-bold text-slate-800 leading-snug">
-            É aqui que o planejamento público se torna visível e comprovado para toda a população.
-          </p>
-        </div>
-
-      </div>
-    </section>
+    <!-- INSERÇÃO DINÂMICA DE TODOS OS BLOCOS DE GALERIAS CONFIGURADOS -->
+    ${galeriasHtml}
 
     <!-- 6. DEPOIMENTOS E VOZES DA JUVENTUDE -->
     <section id="depoimentos-acao" class="py-20 bg-slate-100 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <span class="inline-block px-3 py-1 bg-[#e6af00] text-slate-950 font-mono text-[11px] font-black uppercase tracking-widest mb-2 clip-tag">
-              Prova Social // Giro da Juventude
-            </span>
-            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight uppercase">
-              ${testimonialsHeadingText}
-            </h2>
+            <span class="inline-block px-3 py-1 bg-[#e6af00] text-slate-950 font-mono text-[11px] font-black uppercase tracking-widest mb-2 clip-tag">Prova Social // Giro da Juventude</span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight uppercase">${testimonialsHeadingText}</h2>
           </div>
           <a href="#/depoimentos" class="font-mono text-xs font-bold uppercase tracking-wider text-[#092986] hover:underline flex items-center gap-1.5">
-            <span>Ver todos os ${TESTIMONIALS.length} depoimentos do portal</span>
-            <span>→</span>
+            <span>Ver todos os ${TESTIMONIALS.length} depoimentos do portal</span><span>→</span>
           </a>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          ${testimonialsCardsHtml}
-        </div>
-
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">${testimonialsCardsHtml}</div>
       </div>
     </section>
 
@@ -2276,13 +2301,8 @@ function renderAcaoDetails(id) {
             <h3 class="text-2xl sm:text-4xl font-black tracking-tight uppercase">Próxima Ação: ${nextAcao.title}</h3>
           </div>
           <div class="flex flex-wrap items-center gap-4">
-            <a href="#/noticias" class="px-6 py-4 border border-white/30 hover:bg-white/10 text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors">
-              Mural de Notícias
-            </a>
-            <a href="#/acao/${nextAcao.id}" class="px-8 py-4 bg-[#e6af00] hover:bg-amber-400 text-slate-950 font-mono text-xs font-black uppercase tracking-widest transition-all transform hover:-translate-y-0.5 flex items-center gap-2 clip-tag">
-              <span>Acessar Dossiê</span>
-              <span>→</span>
-            </a>
+            <a href="#/noticias" class="px-6 py-4 border border-white/30 hover:bg-white/10 text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors">Mural de Notícias</a>
+            <a href="#/acao/${nextAcao.id}" class="px-8 py-4 bg-[#e6af00] hover:bg-amber-400 text-slate-950 font-mono text-xs font-black uppercase tracking-widest transition-all transform hover:-translate-y-0.5 flex items-center gap-2 clip-tag"><span>Acessar Dossiê</span><span>→</span></a>
           </div>
         </div>
       </div>
