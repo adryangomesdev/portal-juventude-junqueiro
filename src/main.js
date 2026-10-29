@@ -625,7 +625,7 @@ const ACOES_JUVENTUDE = [
     evidences: [
       {
         title: "Sessão de Cinema ao Ar Livre",
-        image: "/cine_rural/cine_rural (4).webp",
+        image: "/CINE_RURAL.webp",
         tag1: "Baixa Fria",
         tag2: "Cultura & Juventude",
         videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
@@ -656,7 +656,7 @@ const ACOES_JUVENTUDE = [
       },
       {
         title: "Sessão de Cinema ao Ar Livre",
-        image: "/cine_rural/cine_rural (8).webp",
+        image: "/cine_rural/cine_rural (5).webp",
         tag1: "Baixa Fria",
         tag2: "Mussum, o filmis ",
       },
@@ -676,19 +676,146 @@ const ACOES_JUVENTUDE = [
       "A segunda edição do projeto estruturou uma série de aulas preparatórias focadas em democratizar o acesso aos conteúdos cobrados no Exame Nacional do Ensino Médio (ENEM). Realizada a partir de uma articulação conjunta entre a Secretaria Municipal de Educação, o NUCA e as Escolas Estaduais Padre Aurélio Góis e Maria Liege de Albuquerque Tavares, a ação revisou de forma acessível todas as áreas de conhecimento e disciplinas da prova.",
     objectives:
       "O objetivo do programa foi nivelar as oportunidades e oferecer suporte pedagógico de qualidade para que os estudantes da rede pública ingressem no ensino superior. O impacto direto da iniciativa foi a elevação da confiança e do preparo acadêmico dos alunos, estabelecendo um ambiente de apoio mútuo que incentiva os jovens de Junqueiro a buscarem ativamente o acesso às universidades.",
-    evidences: [
+    galerias: [
       {
-        title: "Imersão Preparatória no Teatro São José",
-        image: "/aulao_1.webp",
-        tag1: "ENEM 2026",
-        tag2: "Super Time",
-        videoEmbed: "https://www.instagram.com/reel/DXpLXE9ivJT/embed",
+        tituloSecao:
+          "2ª Edição - Aulão Vem Que Tem ENEM 2026 - Matemática e Redação",
+        evidences: [
+          {
+            title: "Imersão Preparatória no Teatro São José",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (2).webp",
+            tag1: "ENEM 2026",
+            tag2: "Super Time",
+            videoEmbed: "",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (1).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (11).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (12).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (13).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (14).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (15).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (16).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (17).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (18).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (19).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (20).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+        ],
       },
       {
-        title: "Revisão Intensiva com Professores",
-        image: "/aulao_2.webp",
-        tag1: "Preparação",
-        tag2: "Ensino Superior",
+        tituloSecao:
+          "2ª Edição - Aulão Vem Que Tem ENEM 2026 - Biologia, Química, Filosofia, Sociologia, Geografia e História ",
+        evidences: [
+          {
+            title: "Imersão Preparatória no Teatro São José",
+            image: "/aulao_1.webp",
+            tag1: "ENEM 2026",
+            tag2: "Super Time",
+            videoEmbed: "https://www.instagram.com/reel/DXpLXE9ivJT/embed",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (3).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (4).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (5).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (6).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (7).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (8).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (9).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+          {
+            title: "Revisão Intensiva com Professores",
+            image: "/aulao_enem/aulao_vem_que_tem_enem (10).webp",
+            tag1: "Preparação",
+            tag2: "Ensino Superior",
+          },
+        ],
       },
     ],
   },
