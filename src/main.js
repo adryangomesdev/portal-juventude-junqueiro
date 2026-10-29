@@ -625,10 +625,40 @@ const ACOES_JUVENTUDE = [
     evidences: [
       {
         title: "Sessão de Cinema ao Ar Livre",
-        image: "/CINE_RURAL.webp",
+        image: "/cine_rural/cine_rural (4).webp",
+        tag1: "Baixa Fria",
+        tag2: "Cultura & Juventude",
+        videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
+      },
+      {
+        title: "Sessão de Cinema ao Ar Livre",
+        image: "/cine_rural/cine_rural (1).webp",
+        tag1: "Baixa Fria",
+        tag2: "secretários",
+      },
+      {
+        title: "Sessão de Cinema ao Ar Livre",
+        image: "/cine_rural/cine_rural (3).webp",
+        tag1: "Baixa Fria",
+        tag2: "Pipoca e diversão",
+      },
+      {
+        title: "Sessão de Cinema ao Ar Livre",
+        image: "/cine_rural/cine_rural (4).webp",
         tag1: "Baixa Fria",
         tag2: "Cultura & Pipoca",
-        videoEmbed: "https://www.instagram.com/reel/DXAHT2DChfH/embed",
+      },
+      {
+        title: "Sessão de Cinema ao Ar Livre",
+        image: "/cine_rural/cine_rural (5).webp",
+        tag1: "Baixa Fria",
+        tag2: "Mussum, o filmis ",
+      },
+      {
+        title: "Sessão de Cinema ao Ar Livre",
+        image: "/cine_rural/cine_rural (8).webp",
+        tag1: "Baixa Fria",
+        tag2: "Mussum, o filmis ",
       },
     ],
   },
