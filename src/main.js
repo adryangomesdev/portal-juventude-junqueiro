@@ -840,6 +840,30 @@ const ACOES_JUVENTUDE = [
         tag1: "Maio Amarelo",
         tag2: "Prevenção",
       },
+      {
+        title: "Conscientização no Trânsito com o NUCA",
+        image: "/maio_amarelo/maio_amarelo (1).webp",
+        tag1: "Maio Amarelo",
+        tag2: "Junqueiro/AL",
+      },
+      {
+        title: "Conscientização no Trânsito com o NUCA",
+        image: "/maio_amarelo/maio_amarelo (2).webp",
+        tag1: "Maio Amarelo",
+        tag2: "Mobilização",
+      },
+      {
+        title: "Conscientização no Trânsito com o NUCA",
+        image: "/maio_amarelo/maio_amarelo (3).webp",
+        tag1: "Maio Amarelo",
+        tag2: "Sec. Segurança",
+      },
+      {
+        title: "Conscientização no Trânsito com o NUCA",
+        image: "/maio_amarelo/maio_amarelo (4).webp",
+        tag1: "Maio Amarelo",
+        tag2: "NUCA",
+      },
     ],
   },
 
