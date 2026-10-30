@@ -1082,12 +1082,161 @@ const ACOES_JUVENTUDE = [
       "O Arraiá da Juventude conseguiu superar as expectativas esperadas por nós, atingindo um público acima do esperado. Foi transmitido o jogo da Copa do Mundo entre Brasil e Escócia em um telão no Ginásio Hidemburgo Pereira, enquanto eram vendidas comidas típicas do período junino pelos alunos da Escola Padre Aurélio Góis. Logo após o jogo, tivemos apresentação de quadrilha junina e atrações musicais.",
     objectives:
       "Celebração cultural que une as tradições das festas populares ao convívio da juventude. Resgatar e manter vivas as tradições juninas, proporcionando um ambiente seguro de festa, com música, dança e integração entre os jovens de várias escolas.",
-    evidences: [
+    galerias: [
       {
-        title: "Torcida Verde e Amarela e Cultura Junina",
-        image: "/arraia.webp",
-        tag1: "São João 2026",
-        tag2: "Integração",
+        tituloSecao: "Copa do Mundo 2026 - Brasil X Escócia, torcida animada!",
+        evidences: [
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (1).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (2).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (3).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (4).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (13).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (14).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (15).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (16).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (17).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (18).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (19).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (20).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (21).webp",
+            tag1: "Copa do Mundo 2026",
+            tag2: "Brasil",
+          },
+        ],
+      },
+      {
+        tituloSecao:
+          "Festival da cultura junina, com quadrinha, comidas típicas e muita dança",
+        evidences: [
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (6).webp",
+            tag1: "São João 2026",
+            tag2: "Cultura",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (7).webp",
+            tag1: "São João 2026",
+            tag2: "Cultura",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (8).webp",
+            tag1: "São João 2026",
+            tag2: "Cultura",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (9).webp",
+            tag1: "São João 2026",
+            tag2: "Cultura",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (10).webp",
+            tag1: "São João 2026",
+            tag2: "Cultura",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (11).webp",
+            tag1: "São João 2026",
+            tag2: "Cultura",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (12).webp",
+            tag1: "São João 2026",
+            tag2: "Cultura",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (5).webp",
+            tag1: "São João 2026",
+            tag2: "Cultura",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (22).webp",
+            tag1: "São João 2026",
+            tag2: "Cultura",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (23).webp",
+            tag1: "São João 2026",
+            tag2: "Cultura",
+          },
+          {
+            title: "Torcida Verde e Amarela e Cultura Junina",
+            image: "/arraia_da_juventude/arraia_da_juventude (24).webp",
+            tag1: "São João 2026",
+            tag2: "Cultura",
+          },
+        ],
       },
     ],
   },
