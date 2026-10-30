@@ -1277,12 +1277,101 @@ const ACOES_JUVENTUDE = [
       "A continuação da ação Mais Sangue Mais Vida foi realizada no mês de agosto como parte da programação do Festival da Juventude. Nela, trouxemos os profissionais do HEMOAL para o Hospital Municipal Teófilo Pereira, no dia 18 de agosto, para realizar a doação de sangue, atingindo a meta esperada ao final do dia.",
     objectives:
       "Campanha de conscientização e mobilização da juventude junqueirense para o incentivo à doação de sangue. Engajar os jovens na causa da doação de sangue, promovendo a solidariedade, salvando vidas e ajudando a manter os estoques dos bancos de sangue da região sempre abastecidos.",
-    evidences: [
+    galerias: [
       {
-        title: "Mobilização para Doação de Sangue",
-        image: "/setembro_amarelo.webp",
-        tag1: "Solidariedade",
-        tag2: "HEMOAL",
+        tituloSecao:
+          "Blitz de conscientização para importância de doação de sangue",
+        evidences: [
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (1).webp",
+            tag1: "Solidariedade",
+            tag2: "Blitz",
+          },
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (2).webp",
+            tag1: "Solidariedade",
+            tag2: "Blitz",
+          },
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (3).webp",
+            tag1: "Solidariedade",
+            tag2: "Blitz",
+          },
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (4).webp",
+            tag1: "Solidariedade",
+            tag2: "Blitz",
+          },
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (5).webp",
+            tag1: "Sec. Segurança",
+            tag2: "Blitz",
+          },
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (6).webp",
+            tag1: "Solidariedade",
+            tag2: "Blitz",
+          },
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (7).webp",
+            tag1: "Sec. Saúde",
+            tag2: "Blitz",
+          },
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (8).webp",
+            tag1: "Solidariedade",
+            tag2: "Blitz",
+          },
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (9).webp",
+            tag1: "Solidariedade",
+            tag2: "Blitz",
+          },
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (10).webp",
+            tag1: "Solidariedade",
+            tag2: "Blitz",
+          },
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (11).webp",
+            tag1: "Solidariedade",
+            tag2: "Blitz",
+          },
+        ],
+      },
+      {
+        tituloSecao: "Coleta de Sangue com equipe HEMOAL",
+        evidences: [
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (12).webp",
+            tag1: "Hospital Municipal",
+            tag2: "HEMOAL",
+          },
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (13).webp",
+            tag1: "Hospital Municipal",
+            tag2: "HEMOAL",
+          },
+          {
+            title: "Mobilização para Doação de Sangue",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (14).webp",
+            tag1: "Hospital Municipal",
+            tag2: "HEMOAL",
+          },
+        ],
       },
     ],
   },
