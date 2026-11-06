@@ -1168,7 +1168,7 @@ const ACOES_JUVENTUDE = [
       },
       {
         tituloSecao:
-          "Festival da cultura junina, com quadrinha, comidas típicas e muita dança",
+          "Festival da cultura junina, com quadrilha, comidas típicas e muita dança",
         evidences: [
           {
             title: "Torcida Verde e Amarela e Cultura Junina",
@@ -2841,7 +2841,7 @@ function renderAcaoDetails(id) {
   const titleWords = acao.title.split(" ");
   const titleFirstPart = titleWords.slice(0, -1).join(" ");
   const titleLastWord = titleWords.slice(-1).join("");
-  const testimonialsHeadingText = "O que dizem sobre esta ação"; // <--- VARIÁVEL DECLARADA AQUI
+  const testimonialsHeadingText = "O que dizem sobre esta ação";
 
   const vitrineActionBtnHtml = mainVideoEmbed
     ? `<button type="button" onclick="window.openVideoModal('${mainVideoEmbed}')" class="w-full py-3 bg-[#092986] hover:bg-blue-800 text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer"><span>▶ Assistir Vídeo da Ação</span></button>`
