@@ -1254,12 +1254,325 @@ const ACOES_JUVENTUDE = [
       "O Festival da Juventude foi realizado do período de 31 de julho à 29 de agosto, e contou com ações de integração entre os jovens do município de Junqueiro, fortalecendo a comunidade local e desenvolvendo o espírito desportivo e de conexão com diversas áreas. Realizamos o Desfile da Juventude com a temática da Juventude inclusiva, homenageando os jovens com deficiências do nosso município.",
     objectives:
       "Grande celebração que movimenta o município com um extenso cronograma de atividades culturais, esportivas, inclusão social e ações de capacitação. Promovendo a integração social, valorizar o protagonismo jovem e a inclusão das Pessoas com Deficiência (PCD).",
-    evidences: [
+    galerias: [
       {
-        title: "Abertura Oficial e Desfile Temático",
-        image: "/juventude_group.webp",
-        tag1: "Agosto 2026",
-        tag2: "Inclusão PCD",
+        tituloSecao:
+          "Abertura oficial do II Festival da Juventude de Junqueiro - Desfile da Juventude",
+        evidences: [
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (4).webp",
+            tag1: "Agosto 2026",
+            tag2: "Inclusão PCD",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (15).webp",
+            tag1: "Agosto 2026",
+            tag2: "Equipe de Apoio",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (1).webp",
+            tag1: "Agosto 2026",
+            tag2: "escola Francisco de Jesus",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (2).webp",
+            tag1: "Agosto 2026",
+            tag2: "banda fanfarra",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (3).webp",
+            tag1: "Agosto 2026",
+            tag2: "Sec. Educação",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (5).webp",
+            tag1: "Agosto 2026",
+            tag2: "Equipe EcoBem",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (6).webp",
+            tag1: "Agosto 2026",
+            tag2: "Escola Padre Aurélio Góis",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (7).webp",
+            tag1: "Agosto 2026",
+            tag2: "Escola Divina Pastora",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (8).webp",
+            tag1: "Agosto 2026",
+            tag2: "Escola Maria Liége",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (9).webp",
+            tag1: "Agosto 2026",
+            tag2: "Escola José Nunes",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (10).webp",
+            tag1: "Agosto 2026",
+            tag2: "sest senat",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (11).webp",
+            tag1: "Agosto 2026",
+            tag2: "nuca",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (12).webp",
+            tag1: "Agosto 2026",
+            tag2: "Serviço Social",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (13).webp",
+            tag1: "Agosto 2026",
+            tag2: "certificados",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (14).webp",
+            tag1: "Agosto 2026",
+            tag2: "jovem destaque",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (16).webp",
+            tag1: "Agosto 2026",
+            tag2: "Atlético Junqueirense",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (17).webp",
+            tag1: "Agosto 2026",
+            tag2: "Instituto Elos",
+          },
+          {
+            title: "Abertura Oficial e Desfile Temático",
+            image:
+              "/festival_juventude/desfile_festival/desfile_festival (18).webp",
+            tag1: "Agosto 2026",
+            tag2: "Escola Agrícola São Francisco de Assis",
+          },
+        ],
+      },
+      {
+        tituloSecao:
+          "II Festival da Juventude de Junqueiro - Torneio de Futsal ",
+        evidences: [
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (1).webp",
+            tag1: "Agosto 2026",
+            tag2: "Premiação",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (2).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (14).webp",
+            tag1: "Agosto 2026",
+            tag2: "torneio de Futsal",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (3).webp",
+            tag1: "Agosto 2026",
+            tag2: "lanche",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (4).webp",
+            tag1: "Agosto 2026",
+            tag2: "nova esperança",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (5).webp",
+            tag1: "Agosto 2026",
+            tag2: "nova esperança",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (6).webp",
+            tag1: "Agosto 2026",
+            tag2: "francisco de Jesus",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (7).webp",
+            tag1: "Agosto 2026",
+            tag2: "Atlético Junqueirense",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (8).webp",
+            tag1: "Agosto 2026",
+            tag2: "Nova Esperança",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (9).webp",
+            tag1: "Agosto 2026",
+            tag2: "União Brejo dos Bois",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (10).webp",
+            tag1: "Agosto 2026",
+            tag2: "Francisco de Jesus",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (11).webp",
+            tag1: "Agosto 2026",
+            tag2: "torneio de Futsal",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (12).webp",
+            tag1: "Agosto 2026",
+            tag2: "Sec. Juventude",
+          },
+          {
+            title: "Torneio de Futsal",
+            image:
+              "/festival_juventude/campeonato_futsal/campeonato_futsal (13).webp",
+            tag1: "Agosto 2026",
+            tag2: "Sec. Juventude",
+          },
+        ],
+      },
+      {
+        tituloSecao:
+          "II Festival da Juventude de Junqueiro - Torneio de Basquete 3x3 ",
+        evidences: [
+          {
+            title: "Torneio de Basquete 3x3",
+            image:
+              "/festival_juventude/basquete_festival/basquete_festival (6).webp",
+            tag1: "Agosto 2026",
+            tag2: "Premiação",
+          },
+          {
+            title: "Torneio de Basquete 3x3",
+            image:
+              "/festival_juventude/basquete_festival/basquete_festival (1).webp",
+            tag1: "Agosto 2026",
+            tag2: "Premiação",
+          },
+          {
+            title: "Torneio de Basquete 3x3",
+            image:
+              "/festival_juventude/basquete_festival/basquete_festival (2).webp",
+            tag1: "Agosto 2026",
+            tag2: "Premiação",
+          },
+          {
+            title: "Torneio de Basquete 3x3",
+            image:
+              "/festival_juventude/basquete_festival/basquete_festival (3).webp",
+            tag1: "Agosto 2026",
+            tag2: "Premiação",
+          },
+          {
+            title: "Torneio de Basquete 3x3",
+            image:
+              "/festival_juventude/basquete_festival/basquete_festival (4).webp",
+            tag1: "Agosto 2026",
+            tag2: "Premiação",
+          },
+          {
+            title: "Torneio de Basquete 3x3",
+            image:
+              "/festival_juventude/basquete_festival/basquete_festival (5).webp",
+            tag1: "Agosto 2026",
+            tag2: "Premiação",
+          },
+          {
+            title: "Torneio de Basquete 3x3",
+            image:
+              "/festival_juventude/basquete_festival/basquete_festival (7).webp",
+            tag1: "Agosto 2026",
+            tag2: "Premiação",
+          },
+          {
+            title: "Torneio de Basquete 3x3",
+            image:
+              "/festival_juventude/basquete_festival/basquete_festival (8).webp",
+            tag1: "Agosto 2026",
+            tag2: "Premiação",
+          },
+          {
+            title: "Torneio de Basquete 3x3",
+            image:
+              "/festival_juventude/basquete_festival/basquete_festival (9).webp",
+            tag1: "Agosto 2026",
+            tag2: "Premiação",
+          },
+          {
+            title: "Torneio de Basquete 3x3",
+            image:
+              "/festival_juventude/basquete_festival/basquete_festival (10).webp",
+            tag1: "Agosto 2026",
+            tag2: "Premiação",
+          },
+          {
+            title: "Torneio de Basquete 3x3",
+            image:
+              "/festival_juventude/basquete_festival/basquete_festival (11).webp",
+            tag1: "Agosto 2026",
+            tag2: "Premiação",
+          },
+        ],
       },
     ],
   },
