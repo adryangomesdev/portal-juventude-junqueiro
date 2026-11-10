@@ -1574,6 +1574,82 @@ const ACOES_JUVENTUDE = [
           },
         ],
       },
+      {
+        tituloSecao:
+          "II Festival da Juventude de Junqueiro - Gincana da Juventude com as Escolas",
+        evidences: [
+          {
+            title: "Gincana da Juventude",
+            image:
+              "/festival_juventude/gincana_festival/gincana_festival (3).webp",
+            tag1: "Agosto 2026",
+            tag2: "organização",
+          },
+          {
+            title: "Gincana da Juventude",
+            image:
+              "/festival_juventude/gincana_festival/gincana_festival (4).webp",
+            tag1: "Agosto 2026",
+            tag2: "NUCA",
+          },
+          {
+            title: "Gincana da Juventude",
+            image:
+              "/festival_juventude/gincana_festival/gincana_festival (5).webp",
+            tag1: "Agosto 2026",
+            tag2: "Escola Padre Aurélio Góis",
+          },
+          {
+            title: "Gincana da Juventude",
+            image:
+              "/festival_juventude/gincana_festival/gincana_festival (6).webp",
+            tag1: "Agosto 2026",
+            tag2: "Escola Agrícola São Francisco de Assis",
+          },
+          {
+            title: "Gincana da Juventude",
+            image:
+              "/festival_juventude/gincana_festival/gincana_festival (7).webp",
+            tag1: "Agosto 2026",
+            tag2: "Escola Maria das Mercês",
+          },
+          {
+            title: "Gincana da Juventude",
+            image:
+              "/festival_juventude/gincana_festival/gincana_festival (8).webp",
+            tag1: "Agosto 2026",
+            tag2: "Escola José Nunes",
+          },
+          {
+            title: "Gincana da Juventude",
+            image:
+              "/festival_juventude/gincana_festival/gincana_festival (9).webp",
+            tag1: "Agosto 2026",
+            tag2: "Escola Francisco de Jesus",
+          },
+          {
+            title: "Gincana da Juventude",
+            image:
+              "/festival_juventude/gincana_festival/gincana_festival (10).webp",
+            tag1: "Agosto 2026",
+            tag2: "Escola Mônica Rosa",
+          },
+          {
+            title: "Gincana da Juventude",
+            image:
+              "/festival_juventude/gincana_festival/gincana_festival (1).webp",
+            tag1: "Agosto 2026",
+            tag2: "2° Lugar",
+          },
+          {
+            title: "Gincana da Juventude",
+            image:
+              "/festival_juventude/gincana_festival/gincana_festival (2).webp",
+            tag1: "Agosto 2026",
+            tag2: "3° lugar",
+          },
+        ],
+      },
     ],
   },
 
