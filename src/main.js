@@ -1650,6 +1650,108 @@ const ACOES_JUVENTUDE = [
           },
         ],
       },
+      {
+        tituloSecao:
+          "II Festival da Juventude de Junqueiro - Campeonato de Judô em Junqueiro",
+        evidences: [
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (1).webp",
+            tag1: "Agosto 2026",
+            tag2: "Luta",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (2).webp",
+            tag1: "Agosto 2026",
+            tag2: "Luta",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (3).webp",
+            tag1: "Agosto 2026",
+            tag2: "Competição",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (4).webp",
+            tag1: "Agosto 2026",
+            tag2: "Luta",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (5).webp",
+            tag1: "Agosto 2026",
+            tag2: "Competição",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (6).webp",
+            tag1: "Agosto 2026",
+            tag2: "Luta",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (7).webp",
+            tag1: "Agosto 2026",
+            tag2: "Competição",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (8).webp",
+            tag1: "Agosto 2026",
+            tag2: "Luta",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (9).webp",
+            tag1: "Agosto 2026",
+            tag2: "Competição",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (10).webp",
+            tag1: "Agosto 2026",
+            tag2: "Luta",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (11).webp",
+            tag1: "Agosto 2026",
+            tag2: "Competição",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (12).webp",
+            tag1: "Agosto 2026",
+            tag2: "Luta",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (13).webp",
+            tag1: "Agosto 2026",
+            tag2: "Competição",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (14).webp",
+            tag1: "Agosto 2026",
+            tag2: "Luta",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (15).webp",
+            tag1: "Agosto 2026",
+            tag2: "Competição",
+          },
+          {
+            title: "Campeonato de Judô",
+            image: "/festival_juventude/judo_festival/judo_festival (16).webp",
+            tag1: "Agosto 2026",
+            tag2: "Luta",
+          },
+        ],
+      },
     ],
   },
 
