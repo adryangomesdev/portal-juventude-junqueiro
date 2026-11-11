@@ -1926,6 +1926,13 @@ const ACOES_JUVENTUDE = [
             tag1: "Agosto 2026",
             tag2: "Religião",
           },
+          {
+            title: "Juventude em Cristo",
+            image:
+              "/festival_juventude/juventude_em_cristo/2-juventude_em_cristo _2_.webp",
+            tag1: "Agosto 2026",
+            tag2: "Religião",
+          },
         ],
       },
     ],
