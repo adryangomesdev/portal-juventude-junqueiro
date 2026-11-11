@@ -1891,6 +1891,30 @@ const ACOES_JUVENTUDE = [
           },
         ],
       },
+      {
+        tituloSecao:
+          "II Festival da Juventude de Junqueiro - Mais Sangue, Mais Vida (coleta de sangue)",
+        evidences: [
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (1).webp",
+            tag1: "Agosto 2026",
+            tag2: "coleta",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (2).webp",
+            tag1: "Agosto 2026",
+            tag2: "coleta",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image: "/mais_sangue_mais_vida/mais_sangue_mais_vida (3).webp",
+            tag1: "Agosto 2026",
+            tag2: "coleta",
+          },
+        ],
+      },
     ],
   },
 
