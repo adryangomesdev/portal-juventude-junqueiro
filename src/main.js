@@ -1752,6 +1752,145 @@ const ACOES_JUVENTUDE = [
           },
         ],
       },
+      {
+        tituloSecao:
+          "II Festival da Juventude de Junqueiro - Campeonato de Jiu-jitsu em Junqueiro",
+        evidences: [
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (1).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (2).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (3).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (4).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (5).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (6).webp",
+            tag1: "Agosto 2026",
+            tag2: "arbitragem",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (7).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (8).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (9).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (10).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (11).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (12).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (13).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (14).webp",
+            tag1: "Agosto 2026",
+            tag2: "saúde",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (15).webp",
+            tag1: "Agosto 2026",
+            tag2: "competição",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (16).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (17).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (18).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+          {
+            title: "Campeonato de Jiu-Jitsu",
+            image:
+              "/festival_juventude/jiu_jitsu_festival/jiu_jitsu_festival (19).webp",
+            tag1: "Agosto 2026",
+            tag2: "premiação",
+          },
+        ],
+      },
     ],
   },
 
