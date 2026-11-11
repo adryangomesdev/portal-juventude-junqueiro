@@ -1915,6 +1915,19 @@ const ACOES_JUVENTUDE = [
           },
         ],
       },
+      {
+        tituloSecao:
+          "II Festival da Juventude de Junqueiro - Juventude em Cristo",
+        evidences: [
+          {
+            title: "Juventude em Cristo",
+            image:
+              "/festival_juventude/juventude_em_cristo/1-juventude_em_cristo _1_.webp",
+            tag1: "Agosto 2026",
+            tag2: "Religião",
+          },
+        ],
+      },
     ],
   },
 
