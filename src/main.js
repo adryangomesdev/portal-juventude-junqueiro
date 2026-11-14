@@ -3599,24 +3599,43 @@ function renderAcaoDetails(id) {
           </div>
         </div>
 
-        <div class="mt-12 relative w-full h-[380px] sm:h-[460px] lg:h-[520px] bg-slate-900 overflow-hidden border-2 border-slate-200 group">
-          <img src="${bannerCoverImg}" alt="${acao.title}" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000" onerror="this.src='/juventude_group.webp'" />
-          <div class="absolute inset-0 bg-gradient-to-r from-[#092986]/90 via-slate-950/50 to-transparent"></div>
-          <div class="absolute top-6 left-6 sm:top-10 sm:left-10 z-10 flex items-center gap-4">
-            <div class="bg-white p-4 border-2 border-slate-900 shadow-2xl clip-chamfer">
+      <div class="mt-12 relative w-full min-h-[460px] lg:min-h-[520px] bg-slate-900 border-2 border-slate-200 group flex flex-col justify-between">
+          <!-- Camada de fundo isolada: mantém o zoom da imagem sem cortar o card -->
+          <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <img src="${bannerCoverImg}" alt="${acao.title}" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000" onerror="this.src='/juventude_group.webp'" />
+            <div class="absolute inset-0 bg-gradient-to-r from-[#092986]/90 via-slate-950/50 to-transparent"></div>
+          </div>
+
+          <!-- Conteúdo em fluxo natural (cresce conforme o texto, sem cortes) -->
+          <div class="relative z-10 flex-1 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 p-6 sm:p-10">
+            <!-- Logo da Ação -->
+            <div class="self-start bg-white p-4 border-2 border-slate-900 shadow-2xl clip-chamfer">
               <img src="${acao.logo}" alt="${acao.title}" class="h-20 sm:h-28 w-auto object-contain" onerror="this.src='https://placehold.co/300x150/092986/FFFFFF/webp?text=SMJ'" />
             </div>
-          </div>
-          <div class="absolute bottom-6 right-6 left-6 sm:left-auto sm:top-1/2 sm:-translate-y-1/2 sm:right-10 z-20 sm:w-80 bg-white text-slate-900 p-6 sm:p-8 shadow-2xl border-2 border-slate-900 clip-chamfer">
-            <span class="font-mono text-[10px] font-bold uppercase tracking-widest text-[#092986] block mb-1">Ficha Técnica // Evidência</span>
-            <h4 class="font-display font-black text-xl text-slate-900 leading-tight mb-3">Transparência em cada entrega.</h4>
-            <p class="text-xs text-slate-600 leading-relaxed mb-5">Documentamos nossas ações com fotos, vídeos e relatos reais dos jovens participantes em Junqueiro/AL.</p>
-            <div class="space-y-2 border-y border-slate-100 py-3 mb-5 font-mono text-xs">
-              <div class="flex justify-between"><span class="text-slate-500">STATUS:</span><span class="font-bold text-emerald-600">CONCLUÍDO ✓</span></div>
-              <div class="flex justify-between"><span class="text-slate-500">LOCAL:</span><span class="font-bold text-slate-800">${acaoLocation}</span></div>
-              <div class="flex justify-between"><span class="text-slate-500">ALCANCE:</span><span class="font-bold text-[#092986]">${acaoStats}</span></div>
+
+            <!-- Quadro Branco: Ficha Técnica -->
+            <div class="w-full sm:w-96 shrink-0 bg-white text-slate-900 p-6 sm:p-8 shadow-2xl border-2 border-slate-900 clip-chamfer lg:ml-auto">
+              <span class="font-mono text-[10px] font-bold uppercase tracking-widest text-[#092986] block mb-1">Ficha Técnica // Evidência</span>
+              <h4 class="font-display font-black text-xl text-slate-900 leading-tight mb-3">Transparência em cada entrega.</h4>
+              <p class="text-xs text-slate-600 leading-relaxed mb-5">Documentamos nossas ações com fotos, vídeos e relatos reais dos jovens participantes em Junqueiro/AL.</p>
+              
+              <div class="space-y-2.5 border-y border-slate-100 py-3 mb-5 font-mono text-xs">
+                <div class="flex items-start justify-between gap-4">
+                  <span class="text-slate-500 shrink-0">STATUS:</span>
+                  <span class="font-bold text-emerald-600 text-right">CONCLUÍDO ✓</span>
+                </div>
+                <div class="flex items-start justify-between gap-4">
+                  <span class="text-slate-500 shrink-0">LOCAL:</span>
+                  <span class="font-bold text-slate-800 text-right">${acaoLocation}</span>
+                </div>
+                <div class="flex items-start justify-between gap-4">
+                  <span class="text-slate-500 shrink-0">ALCANCE:</span>
+                  <span class="font-bold text-[#092986] text-right">${acaoStats}</span>
+                </div>
+              </div>
+
+              ${vitrineActionBtnHtml}
             </div>
-            ${vitrineActionBtnHtml}
           </div>
         </div>
       </div>
