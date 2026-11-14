@@ -669,7 +669,7 @@ const ACOES_JUVENTUDE = [
     logo: "AULAO_ENEM.webp",
     date: "Junho de 2026",
     location: "Teatro São José",
-    stats: "Teatro Lotado",
+    stats: "+250 alunos",
     videoUrl: "https://www.instagram.com/reel/DXpLXE9ivJT/embed",
     testimonialKey: "Aulão",
     details:
@@ -1075,7 +1075,7 @@ const ACOES_JUVENTUDE = [
     logo: "ARRAIA_DA_JUVENTUDE_LOGO.webp",
     date: "Junho de 2026",
     location: "Ginásio Hidemburgo Pereira",
-    stats: "Copa & Quadrilhas",
+    stats: "+500 pessoas no ginásio",
     videoUrl: "",
     testimonialKey: "Arraiá",
     details:
