@@ -3504,10 +3504,6 @@ function renderAcaoDetails(id) {
     `;
   });
 
-  const mainVideoEmbed =
-    acao.videoUrl ||
-    (relatedTestimonials.length > 0 && relatedTestimonials[0]?.videoEmbed) ||
-    "";
   const bannerCoverImg =
     listaGalerias[0].evidences[0]?.image || "/juventude_group.webp";
   const acaoLocation = acao.location || "Junqueiro - AL";
@@ -3516,10 +3512,6 @@ function renderAcaoDetails(id) {
   const titleFirstPart = titleWords.slice(0, -1).join(" ");
   const titleLastWord = titleWords.slice(-1).join("");
   const testimonialsHeadingText = "O que dizem sobre esta ação";
-
-  const vitrineActionBtnHtml = mainVideoEmbed
-    ? `<button type="button" onclick="window.openVideoModal('${mainVideoEmbed}')" class="w-full py-3 bg-[#092986] hover:bg-blue-800 text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer"><span>▶ Assistir Vídeo da Ação</span></button>`
-    : `<a href="#evidencias-1" class="w-full py-3 bg-[#092986] hover:bg-blue-800 text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center gap-2"><span>Explorar Evidências ↓</span></a>`;
 
   let testimonialsCardsHtml = "";
   relatedTestimonials.forEach((t, i) => {
@@ -3599,14 +3591,14 @@ function renderAcaoDetails(id) {
           </div>
         </div>
 
-      <div class="mt-12 relative w-full min-h-[460px] lg:min-h-[520px] bg-slate-900 border-2 border-slate-200 group flex flex-col justify-between">
-          <!-- Camada de fundo isolada: mantém o zoom da imagem sem cortar o card -->
+        <div class="mt-12 relative w-full min-h-[460px] lg:min-h-[520px] bg-slate-900 border-2 border-slate-200 group flex flex-col justify-between">
+          <!-- Camada de fundo isolada -->
           <div class="absolute inset-0 overflow-hidden pointer-events-none">
             <img src="${bannerCoverImg}" alt="${acao.title}" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000" onerror="this.src='/juventude_group.webp'" />
             <div class="absolute inset-0 bg-gradient-to-r from-[#092986]/90 via-slate-950/50 to-transparent"></div>
           </div>
 
-          <!-- Conteúdo em fluxo natural (cresce conforme o texto, sem cortes) -->
+          <!-- Conteúdo em fluxo natural -->
           <div class="relative z-10 flex-1 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 p-6 sm:p-10">
             <!-- Logo da Ação -->
             <div class="self-start bg-white p-4 border-2 border-slate-900 shadow-2xl clip-chamfer">
@@ -3619,7 +3611,7 @@ function renderAcaoDetails(id) {
               <h4 class="font-display font-black text-xl text-slate-900 leading-tight mb-3">Transparência em cada entrega.</h4>
               <p class="text-xs text-slate-600 leading-relaxed mb-5">Documentamos nossas ações com fotos, vídeos e relatos reais dos jovens participantes em Junqueiro/AL.</p>
               
-              <div class="space-y-2.5 border-y border-slate-100 py-3 mb-5 font-mono text-xs">
+              <div class="space-y-2.5 border-t border-slate-100 pt-4 font-mono text-xs">
                 <div class="flex items-start justify-between gap-4">
                   <span class="text-slate-500 shrink-0">STATUS:</span>
                   <span class="font-bold text-emerald-600 text-right">CONCLUÍDO ✓</span>
@@ -3633,8 +3625,6 @@ function renderAcaoDetails(id) {
                   <span class="font-bold text-[#092986] text-right">${acaoStats}</span>
                 </div>
               </div>
-
-              ${vitrineActionBtnHtml}
             </div>
           </div>
         </div>
