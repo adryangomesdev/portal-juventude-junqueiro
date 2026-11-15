@@ -2266,6 +2266,101 @@ function triggerToast(message, type = "success") {
     }
   }, 4500);
 }
+
+// --- AUTHENTICATION & USER STATE ---
+let currentUser = null;
+
+function getAuthToken() {
+  return localStorage.getItem("smj_auth_token");
+}
+
+function setAuthToken(token) {
+  if (token) {
+    localStorage.setItem("smj_auth_token", token);
+  } else {
+    localStorage.removeItem("smj_auth_token");
+  }
+}
+
+window.logoutUser = function () {
+  setAuthToken(null);
+  currentUser = null;
+  renderHeaderUserState(null);
+  triggerToast("Você saiu da sua conta.");
+  window.location.hash = "#/";
+};
+
+function renderHeaderUserState(user) {
+  const desktopContainer = document.getElementById("auth-header-desktop");
+  const mobileContainer = document.getElementById("auth-header-mobile");
+
+  if (!desktopContainer || !mobileContainer) return;
+
+  if (user) {
+    const firstName = user.nome ? user.nome.split(" ")[0] : "Jovem";
+    const avatarHtml = user.fotoUrl
+      ? `<img src="${user.fotoUrl}" alt="${firstName}" class="h-8 w-8 rounded-full object-cover border border-slate-200" referrerpolicy="no-referrer" />`
+      : `<div class="h-8 w-8 rounded-full bg-[#e6af00] text-slate-900 flex items-center justify-center font-black text-xs">${firstName.charAt(0)}</div>`;
+
+    desktopContainer.innerHTML = `
+      <a href="#/perfil" class="flex items-center gap-2.5 pl-2 pr-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700">
+        ${avatarHtml}
+        <span class="text-sm font-bold text-slate-800 dark:text-white">${firstName}</span>
+      </a>
+    `;
+
+    mobileContainer.innerHTML = `
+      <a href="#/perfil" class="mobile-nav-link flex items-center justify-center gap-3 w-full py-2.5 px-4 bg-slate-100 dark:bg-slate-800 rounded-lg font-bold text-slate-900 dark:text-white">
+        ${avatarHtml}
+        <span>Meu Perfil (${firstName})</span>
+      </a>
+    `;
+  } else {
+    desktopContainer.innerHTML = `
+      <a href="#/login" class="px-4 py-2.5 border-2 border-[#092986] text-[#092986] dark:border-blue-400 dark:text-blue-400 hover:bg-[#092986] hover:text-white rounded-lg text-sm font-bold transition-all">
+        Entrar
+      </a>
+    `;
+
+    mobileContainer.innerHTML = `
+      <a href="#/login" class="mobile-nav-link w-full py-3 border-2 border-[#092986] text-[#092986] dark:border-blue-400 dark:text-blue-400 rounded-lg text-center font-bold block">
+        Entrar na Conta
+      </a>
+    `;
+  }
+}
+
+async function initAuth() {
+  const token = getAuthToken();
+  if (!token) {
+    renderHeaderUserState(null);
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/usuarios/me`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+    );
+
+    if (response.ok) {
+      currentUser = await response.json();
+      renderHeaderUserState(currentUser);
+    } else {
+      // Token expirado ou inválido
+      setAuthToken(null);
+      currentUser = null;
+      renderHeaderUserState(null);
+    }
+  } catch (error) {
+    console.error("Erro ao validar sessão:", error);
+  }
+}
+
 // Open News Details Modal Popup
 window.openNewsModal = function (id) {
   // Open Instagram Video Modal
@@ -3679,6 +3774,181 @@ function renderAcaoDetails(id) {
   `;
 }
 
+// 8. LOGIN PAGE RENDERER
+function renderLogin() {
+  updateNavigationActiveState("");
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  appContainer.innerHTML = `
+    <section class="max-w-md mx-auto px-4 py-16 sm:py-24">
+      <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6 text-center">
+        <div class="space-y-2">
+          <span class="inline-block px-3 py-1 bg-blue-50 text-[#092986] text-xs font-extrabold uppercase rounded-full tracking-wider">
+            Acesso Rápido e Seguro
+          </span>
+          <h1 class="text-2xl sm:text-3xl font-black text-slate-900">Entrar no Portal</h1>
+          <p class="text-sm text-slate-500 leading-relaxed">
+            Conecte-se com um clique usando sua conta Google ou Facebook. Não pedimos senha nem dados sensíveis.
+          </p>
+        </div>
+
+        <div class="space-y-3 pt-2">
+          <!-- Botão Google -->
+          <a href="${apiUrl}/oauth2/authorization/google" class="w-full py-3.5 px-4 bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-200 rounded-xl font-bold text-sm flex items-center justify-center gap-3 transition-all shadow-sm hover:shadow">
+            <svg class="h-5 w-5" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+              <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.14C3.26 21.3 7.31 24 12 24z"/>
+              <path fill="#FBBC05" d="M5.28 14.24c-.24-.72-.38-1.49-.38-2.24s.14-1.52.38-2.24V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.99-3.14z"/>
+              <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.99 3.14c.95-2.85 3.6-4.96 6.72-4.96z"/>
+            </svg>
+            <span>Continuar com Google</span>
+          </a>
+
+          <!-- Botão Facebook -->
+          <a href="${apiUrl}/oauth2/authorization/facebook" class="w-full py-3.5 px-4 bg-[#1877F2] hover:bg-[#166FE5] text-white rounded-xl font-bold text-sm flex items-center justify-center gap-3 transition-all shadow-sm hover:shadow">
+            <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span>Continuar com Facebook</span>
+          </a>
+        </div>
+
+        <p class="text-xs text-slate-400 pt-4 border-t border-slate-100 leading-relaxed">
+          Ao continuar, você concorda com nossos <a href="#/termos" class="text-[#092986] font-bold hover:underline">Termos de Uso</a> e <a href="#/privacidade" class="text-[#092986] font-bold hover:underline">Política de Privacidade</a>.
+        </p>
+      </div>
+    </section>
+  `;
+}
+
+// 9. OAUTH CALLBACK HANDLER
+async function handleOAuthCallback() {
+  const hashParts = window.location.hash.split("?");
+  const params = new URLSearchParams(hashParts[1] || "");
+  const token = params.get("token");
+
+  if (token) {
+    setAuthToken(token);
+    await initAuth();
+    triggerToast("Bem-vindo(a) ao Portal da Juventude!");
+    window.location.hash = "#/";
+  } else {
+    triggerToast("Falha na autenticação. Tente novamente.", "error");
+    window.location.hash = "#/login";
+  }
+}
+
+// 10. PERFIL DO JOVEM & EXCLUSÃO DE CONTA (LGPD)
+window.deleteUserAccount = async function () {
+  const confirmed = confirm(
+    "Tem certeza que deseja excluir permanentemente seu cadastro do Portal da Juventude? Esta ação não pode ser desfeita.",
+  );
+  if (!confirmed) return;
+
+  const token = getAuthToken();
+  if (!token) return;
+
+  try {
+    const response = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/usuarios/me`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+    );
+
+    if (response.ok) {
+      setAuthToken(null);
+      currentUser = null;
+      renderHeaderUserState(null);
+      triggerToast("Seu cadastro foi excluído com sucesso.");
+      window.location.hash = "#/";
+    } else {
+      triggerToast("Não foi possível excluir a conta agora.", "error");
+    }
+  } catch (error) {
+    triggerToast("Erro de conexão com o servidor.", "error");
+  }
+};
+
+function renderPerfil() {
+  updateNavigationActiveState("");
+
+  if (!currentUser) {
+    window.location.hash = "#/login";
+    return;
+  }
+
+  const avatarHtml = currentUser.fotoUrl
+    ? `<img src="${currentUser.fotoUrl}" alt="${currentUser.nome}" class="h-20 w-20 rounded-full object-cover border-4 border-blue-50 shadow-md mx-auto" referrerpolicy="no-referrer" />`
+    : `<div class="h-20 w-20 rounded-full bg-[#092986] text-white flex items-center justify-center font-black text-3xl mx-auto">${currentUser.nome.charAt(0)}</div>`;
+
+  appContainer.innerHTML = `
+    <section class="max-w-xl mx-auto px-4 py-16">
+      <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg space-y-6 text-center">
+        ${avatarHtml}
+        
+        <div>
+          <span class="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-extrabold uppercase rounded-full tracking-wider mb-2">
+            ${currentUser.role === "ROLE_ADMIN" ? "Administrador" : "Jovem Cadastrado"}
+          </span>
+          <h1 class="text-2xl font-black text-slate-900">${currentUser.nome}</h1>
+          <p class="text-sm text-slate-500 mt-1">${currentUser.email}</p>
+        </div>
+
+        <div class="p-4 bg-slate-50 rounded-2xl text-xs text-slate-500 text-left space-y-1 border border-slate-100">
+          <p class="font-bold text-slate-700">Privacidade Garantida (LGPD):</p>
+          <p>O Portal da Juventude armazena exclusivamente seu nome público, e-mail e foto de perfil para identificação nas ações do município.</p>
+        </div>
+
+        <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <button onclick="logoutUser()" class="w-full sm:w-auto px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl text-sm transition-colors cursor-pointer">
+            Sair da Conta
+          </button>
+          <button onclick="deleteUserAccount()" class="w-full sm:w-auto px-6 py-3 bg-red-50 hover:bg-red-600 text-red-600 hover:text-white font-bold rounded-xl text-sm transition-colors cursor-pointer">
+            Excluir Meu Cadastro
+          </button>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+// 11. PRIVACIDADE & TERMOS (Exigência Google Cloud e Meta)
+function renderPrivacidade() {
+  updateNavigationActiveState("");
+  appContainer.innerHTML = `
+    <section class="max-w-4xl mx-auto px-4 py-16 space-y-6">
+      <h1 class="text-3xl font-black text-slate-900">Política de Privacidade</h1>
+      <div class="bg-white p-8 rounded-2xl border border-slate-100 space-y-4 text-sm text-slate-600 leading-relaxed">
+        <p>A <strong>Secretaria Municipal de Juventude de Junqueiro/AL</strong> respeita a sua privacidade e segue rigorosamente a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).</p>
+        <h3 class="text-lg font-bold text-slate-900 pt-2">1. Dados Coletados</h3>
+        <p>Ao optar por conectar sua conta via Google ou Facebook, coletamos exclusivamente os dados públicos básicos autorizados por você: <strong>Nome, E-mail e Foto de Perfil</strong>. Não coletamos senhas, CPF, endereço ou dados bancários.</p>
+        <h3 class="text-lg font-bold text-slate-900 pt-2">2. Finalidade</h3>
+        <p>Os dados são utilizados unicamente para identificar você como usuário cadastrado no Portal da Juventude e facilitar sua participação em cursos, eventos e iniciativas municipais.</p>
+        <h3 class="text-lg font-bold text-slate-900 pt-2">3. Exclusão de Dados</h3>
+        <p>Você pode revogar o acesso e excluir permanentemente seus dados do nosso banco a qualquer momento acessando a área <strong>Meu Perfil</strong> e clicando em <em>"Excluir Meu Cadastro"</em>.</p>
+      </div>
+    </section>
+  `;
+}
+
+function renderTermos() {
+  updateNavigationActiveState("");
+  appContainer.innerHTML = `
+    <section class="max-w-4xl mx-auto px-4 py-16 space-y-6">
+      <h1 class="text-3xl font-black text-slate-900">Termos de Uso</h1>
+      <div class="bg-white p-8 rounded-2xl border border-slate-100 space-y-4 text-sm text-slate-600 leading-relaxed">
+        <p>Bem-vindo ao <strong>Portal Juventude Junqueiro</strong>, plataforma oficial da Secretaria Municipal de Juventude de Junqueiro/AL.</p>
+        <p>O acesso ao portal é gratuito e destinado à divulgação de cursos, programas governamentais, eventos esportivos, culturais e educacionais voltados aos jovens do município.</p>
+        <p>O usuário compromete-se a utilizar as ferramentas de contato e cadastro de forma ética e respeitosa.</p>
+      </div>
+    </section>
+  `;
+}
+
 // --- GLOBAL ROUTER SWITCHER ---
 
 function resolveRoute() {
@@ -3702,6 +3972,14 @@ function resolveRoute() {
   } else if (hash.startsWith("#/acao/")) {
     const acaoId = hash.split("#/acao/")[1];
     renderAcaoDetails(acaoId);
+  } else if (hash.startsWith("#/oauth-callback")) {
+    handleOAuthCallback();
+  } else if (hash.startsWith("#/perfil")) {
+    renderPerfil();
+  } else if (hash.startsWith("#/privacidade")) {
+    renderPrivacidade();
+  } else if (hash.startsWith("#/termos")) {
+    renderTermos();
   } else {
     // Fallback 404
     appContainer.innerHTML = `
@@ -3769,4 +4047,16 @@ function initHorizontalScroll() {
   window.addEventListener("resize", handleScroll);
 
   handleScroll();
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await initAuth();
+  resolveRoute();
+});
+
+if (
+  document.readyState === "complete" ||
+  document.readyState === "interactive"
+) {
+  initAuth().then(() => resolveRoute());
 }
