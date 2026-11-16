@@ -4019,13 +4019,27 @@ function renderPropostaCard(p) {
     : `<div class="h-8 w-8 rounded-full bg-[#092986] text-white flex items-center justify-center font-bold text-xs">${escapeHtml((p.autorNome || "J").charAt(0))}</div>`;
 
   const podeApoiar = p.status === "EM_VOTACAO";
+  const isAdmin = currentUser && currentUser.role === "ROLE_ADMIN";
+  const isDono =
+    currentUser &&
+    ((p.autorId && currentUser.id === p.autorId) ||
+      (!p.autorId && currentUser.nome === p.autorNome));
+  const podeExcluir =
+    currentUser && (isAdmin || (isDono && p.status === "EM_VOTACAO"));
 
   return `
     <article id="proposta-card-${p.id}" class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-5">
       <div class="space-y-3">
         <div class="flex items-center justify-between gap-2 flex-wrap">
           ${getStatusBadge(p.status)}
-          <span class="text-xs text-slate-400 font-medium">${dataFmt}</span>
+          <div class="flex items-center gap-3">
+            <span class="text-xs text-slate-400 font-medium">${dataFmt}</span>
+            ${
+              podeExcluir
+                ? `<button type="button" onclick="excluirProposta(${p.id})" class="text-xs font-bold text-red-600 hover:underline cursor-pointer">Excluir</button>`
+                : ""
+            }
+          </div>
         </div>
         <h3 class="text-lg font-black text-slate-900 leading-snug">${escapeHtml(p.titulo)}</h3>
         <p class="text-sm text-slate-600 leading-relaxed whitespace-pre-line">${escapeHtml(p.descricao)}</p>
@@ -4051,7 +4065,7 @@ function renderPropostaCard(p) {
 
           ${
             podeApoiar
-              ? `<button type="button" onclick="apoiarProposta('${p.id}')" class="shrink-0 px-4 py-2 bg-[#092986] hover:bg-blue-800 text-white text-xs font-bold rounded-xl transition-colors cursor-pointer">
+              ? `<button type="button" onclick="apoiarProposta(${p.id})" class="shrink-0 px-4 py-2 bg-[#092986] hover:bg-blue-800 text-white text-xs font-bold rounded-xl transition-colors cursor-pointer">
                   Apoiar Ideia
                 </button>`
               : `<span class="text-xs font-bold text-slate-400">Votação encerrada</span>`
@@ -4061,6 +4075,48 @@ function renderPropostaCard(p) {
     </article>
   `;
 }
+
+window.excluirProposta = async function (propostaId) {
+  const confirmed = confirm("Tem certeza que deseja excluir esta proposta?");
+  if (!confirmed) return;
+
+  const token = getAuthToken();
+  if (!token) return;
+
+  try {
+    const res = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/propostas/${propostaId}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+    );
+
+    if (res.ok) {
+      const card = document.getElementById(`proposta-card-${propostaId}`);
+      if (card) card.remove();
+
+      const lista = document.getElementById("lista-propostas");
+      if (lista && lista.children.length === 0) {
+        lista.innerHTML = `<p id="propostas-empty" class="text-sm text-slate-500 col-span-full">Nenhuma proposta cadastrada ainda. Seja o primeiro a enviar uma ideia!</p>`;
+      }
+
+      triggerToast("Proposta excluída com sucesso.");
+    } else {
+      const err = await res.json().catch(() => ({}));
+      triggerToast(
+        err.mensagem ||
+          err.message ||
+          "Não foi possível excluir esta proposta.",
+        "error",
+      );
+    }
+  } catch (error) {
+    triggerToast("Erro de conexão com o servidor.", "error");
+  }
+};
 
 window.apoiarProposta = async function (propostaId) {
   const token = getAuthToken();
