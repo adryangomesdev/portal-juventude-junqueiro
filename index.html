@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="pt-BR" class="h-full scroll-smooth">
   <head>
-    <meta name="google-site-verification" content="AbMIv-y74iK9O0H5atktHzMr1W2IaZbJ5eGZ8TAu8y0" />
+    <meta
+      name="google-site-verification"
+      content="AbMIv-y74iK9O0H5atktHzMr1W2IaZbJ5eGZ8TAu8y0"
+    />
     <link rel="preload" as="image" href="juventude_group.webp" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,87 +45,193 @@
       }
     </style>
   </head>
-  <body class="flex flex-col min-h-screen bg-slate-50 text-slate-800 antialiased overflow-x-hidden transition-colors duration-300"></body>
+
+  <body
+    class="flex flex-col min-h-screen bg-slate-50 text-slate-800 antialiased overflow-x-hidden transition-colors duration-300"
+  >
     <!-- Header Fixo -->
-<header class="sticky top-0 z-40 bg-white border-b border-slate-100 shadow-sm">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between gap-2">
-        
-        <!-- LADO ESQUERDO: Logos -->
-        <!-- O min-w-0 e shrink garantem que as logos encolham se a tela for muito pequena -->
-        <a href="#/" class="flex items-center transition-transform hover:scale-[1.01] min-w-0 shrink">
-          <div class="flex items-center gap-2 sm:gap-3">
-            <!-- Tamanho mobile reduzido para h-8 e max-w-[110px] para evitar quebra -->
+    <header
+      class="sticky top-0 z-40 bg-white border-b border-slate-100 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between gap-2 xl:gap-4"
+      >
+        <!-- LADO ESQUERDO: Logos protegidas com shrink-0 -->
+        <a
+          href="#/"
+          class="flex items-center transition-transform hover:scale-[1.01] shrink-0"
+        >
+          <div class="flex items-center gap-2 sm:gap-2.5">
             <img
               id="juventude-logo-img"
               src="juventude_logo.webp"
               alt="Secretaria Municipal de Juventude"
-              class="h-8 sm:h-12 w-auto max-w-[110px] sm:max-w-[180px] md:max-w-xs object-contain transition-all duration-300 shrink"
+              class="h-8 sm:h-10 xl:h-11 w-auto max-w-[105px] sm:max-w-[140px] xl:max-w-[165px] object-contain transition-all duration-300"
             />
-            
-            <div class="h-6 sm:h-8 w-[1px] bg-slate-300 dark:bg-slate-600 self-center transition-colors shrink-0"></div>
+
+            <div
+              class="h-6 sm:h-7 w-[1px] bg-slate-300 dark:bg-slate-600 self-center transition-colors shrink-0"
+            ></div>
 
             <img
               id="prefeitura-logo-img"
               src="prefeitura_logo.webp"
               alt="Prefeitura de Junqueiro"
-              class="h-8 sm:h-12 w-auto max-w-[110px] sm:max-w-[180px] md:max-w-xs object-contain transition-all duration-300 shrink"
+              class="h-8 sm:h-10 xl:h-11 w-auto max-w-[105px] sm:max-w-[140px] xl:max-w-[165px] object-contain transition-all duration-300"
             />
           </div>
         </a>
 
-        <!-- LADO DIREITO: Botões agrupados em uma div com shrink-0 -->
-        <div class="flex items-center gap-1 sm:gap-3 shrink-0">
-          
-          <!-- Desktop Navigation -->
-          <nav class="hidden lg:flex items-center gap-1">
-            <a href="#/" class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-[#092986] hover:bg-slate-50 transition-colors" data-route="home">Início</a>
-            <a href="#/oportunidades" class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-[#092986] hover:bg-slate-50 transition-colors" data-route="oportunidades">Oportunidades</a>
-            <a href="#/sobre" class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-[#092986] hover:bg-slate-50 transition-colors" data-route="sobre">Sobre</a>
-            <a href="#/noticias" class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-[#092986] hover:bg-slate-50 transition-colors" data-route="noticias">Notícias</a>
-            <a href="#/depoimentos" class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-[#092986] hover:bg-slate-50 transition-colors" data-route="depoimentos">Depoimentos</a>
-            <a href="#/contato" class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-[#092986] hover:bg-slate-50 transition-colors" data-route="contato">Contato</a>
-            <a href="#/propostas" data-route="propostas" class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-[#092986] hover:bg-blue-50/80 transition-colors">Banco de Ideias</a>
+        <!-- LADO DIREITO: Navegação e Botões -->
+        <div class="flex items-center gap-1.5 xl:gap-2 shrink-0">
+          <!-- Desktop Navigation (ativado em xl: para não apertar em notebooks de 1024px) -->
+          <nav class="hidden xl:flex items-center gap-0.5">
+            <a
+              href="#/"
+              class="nav-link whitespace-nowrap px-2.5 py-2 rounded-lg text-[13px] font-semibold text-slate-600 hover:text-[#092986] hover:bg-slate-50 transition-colors"
+              data-route="home"
+              >Início</a
+            >
+            <a
+              href="#/oportunidades"
+              class="nav-link whitespace-nowrap px-2.5 py-2 rounded-lg text-[13px] font-semibold text-slate-600 hover:text-[#092986] hover:bg-slate-50 transition-colors"
+              data-route="oportunidades"
+              >Oportunidades</a
+            >
+            <a
+              href="#/sobre"
+              class="nav-link whitespace-nowrap px-2.5 py-2 rounded-lg text-[13px] font-semibold text-slate-600 hover:text-[#092986] hover:bg-slate-50 transition-colors"
+              data-route="sobre"
+              >Sobre</a
+            >
+            <a
+              href="#/noticias"
+              class="nav-link whitespace-nowrap px-2.5 py-2 rounded-lg text-[13px] font-semibold text-slate-600 hover:text-[#092986] hover:bg-slate-50 transition-colors"
+              data-route="noticias"
+              >Notícias</a
+            >
+            <a
+              href="#/depoimentos"
+              class="nav-link whitespace-nowrap px-2.5 py-2 rounded-lg text-[13px] font-semibold text-slate-600 hover:text-[#092986] hover:bg-slate-50 transition-colors"
+              data-route="depoimentos"
+              >Depoimentos</a
+            >
+            <a
+              href="#/contato"
+              class="nav-link whitespace-nowrap px-2.5 py-2 rounded-lg text-[13px] font-semibold text-slate-600 hover:text-[#092986] hover:bg-slate-50 transition-colors"
+              data-route="contato"
+              >Contato</a
+            >
+            <a
+              href="#/propostas"
+              data-route="propostas"
+              class="nav-link whitespace-nowrap px-2.5 py-2 rounded-lg text-[13px] font-semibold text-slate-600 hover:text-[#092986] hover:bg-blue-50/80 transition-colors"
+              >Banco de Ideias</a
+            >
 
-            <a href="#/oportunidades" class="ml-4 px-4 py-2.5 bg-[#092986] text-white rounded-lg text-sm font-bold shadow-md hover:bg-blue-800 hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-1.5">
+            <a
+              href="#/oportunidades"
+              class="ml-2 whitespace-nowrap px-3.5 py-2 bg-[#092986] text-white rounded-lg text-[13px] font-bold shadow-md hover:bg-blue-800 hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-1.5"
+            >
               <span>Acessar Cursos</span>
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+              <svg
+                class="h-3.5 w-3.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
             </a>
-            <div id="auth-header-desktop" class="ml-2 flex items-center">
-            <a href="#/login" class="px-4 py-2.5 border-2 border-[#092986] text-[#092986] dark:border-blue-400 dark:text-blue-400 hover:bg-[#092986] hover:text-white rounded-lg text-sm font-bold transition-all">
-              Entrar
-            </a>
-          </div>
+            <div
+              id="auth-header-desktop"
+              class="ml-1.5 flex items-center shrink-0"
+            >
+              <a
+                href="#/login"
+                class="whitespace-nowrap px-3.5 py-1.5 border-2 border-[#092986] text-[#092986] dark:border-blue-400 dark:text-blue-400 hover:bg-[#092986] hover:text-white rounded-lg text-[13px] font-bold transition-all"
+              >
+                Entrar
+              </a>
+            </div>
           </nav>
 
           <!-- Botão Dark Mode -->
-          <button id="theme-toggle" type="button" class="p-2 sm:p-2.5 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800 transition-colors focus:outline-none" aria-label="Alternar modo escuro">
+          <button
+            id="theme-toggle"
+            type="button"
+            class="p-2 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-white dark:hover:bg-slate-800 transition-colors focus:outline-none"
+            aria-label="Alternar modo escuro"
+          >
             <!-- Ícone Sol -->
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            <svg
+              id="theme-toggle-light-icon"
+              class="hidden w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
             </svg>
             <!-- Ícone Lua -->
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            <svg
+              id="theme-toggle-dark-icon"
+              class="hidden w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
             </svg>
           </button>
 
-          <!-- Mobile Navigation Menu Button -->
-          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-[#092986] hover:bg-slate-50 focus:outline-none transition-colors" aria-label="Abrir menu de navegação">
-            <svg class="h-6 w-6" id="hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          <!-- Mobile/Tablet Navigation Menu Button -->
+          <button
+            id="mobile-menu-btn"
+            class="xl:hidden p-2 rounded-lg text-slate-600 hover:text-[#092986] hover:bg-slate-50 focus:outline-none transition-colors"
+            aria-label="Abrir menu de navegação"
+          >
+            <svg
+              class="h-6 w-6"
+              id="hamburger-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
-            <svg class="h-6 w-6 hidden" id="close-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <svg
+              class="h-6 w-6 hidden"
+              id="close-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
-          
         </div>
       </div>
-      
-      <!-- Mobile Navigation Menu -->
+
+      <!-- Mobile/Tablet Navigation Menu -->
       <div
         id="mobile-menu"
-        class="hidden lg:hidden border-t border-slate-100 bg-white absolute top-full left-0 w-full shadow-lg transition-all duration-300 transform origin-top py-4 px-6 flex flex-col gap-3"
+        class="hidden xl:hidden border-t border-slate-100 bg-white absolute top-full left-0 w-full shadow-lg transition-all duration-300 transform origin-top py-4 px-6 flex flex-col gap-3"
       >
         <a
           href="#/"
@@ -160,10 +269,12 @@
           data-route="contato"
           >Contato</a
         >
-        <a 
-          href="#/propostas" data-route="propostas" class="mobile-nav-link px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-[#092986]"
-          >Banco de Ideias
-        </a>
+        <a
+          href="#/propostas"
+          data-route="propostas"
+          class="mobile-nav-link px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-[#092986]"
+          >Banco de Ideias</a
+        >
         <hr class="border-slate-100 my-1" />
         <a
           href="#/oportunidades"
@@ -172,7 +283,10 @@
           Ver Oportunidades Abertas
         </a>
         <div id="auth-header-mobile" class="w-full">
-          <a href="#/login" class="mobile-nav-link w-full py-3 border-2 border-[#092986] text-[#092986] dark:border-blue-400 dark:text-blue-400 rounded-lg text-center font-bold block">
+          <a
+            href="#/login"
+            class="mobile-nav-link w-full py-3 border-2 border-[#092986] text-[#092986] dark:border-blue-400 dark:text-blue-400 rounded-lg text-center font-bold block"
+          >
             Entrar na Conta
           </a>
         </div>
@@ -419,11 +533,19 @@
             de Junqueiro - AL. Todos os direitos reservados.
           </p>
           <div class="flex items-center gap-4">
-            <a href="#/termos" class="hover:text-slate-300 transition-colors">Termos de Uso</a>
-           <span>•</span>
-            <a href="#/privacidade" class="hover:text-slate-300 transition-colors">Privacidade</a>
-             <span>•</span>
-             <span class="text-slate-600 font-semibold">Portal da Transparência</span>
+            <a href="#/termos" class="hover:text-slate-300 transition-colors"
+              >Termos de Uso</a
+            >
+            <span>•</span>
+            <a
+              href="#/privacidade"
+              class="hover:text-slate-300 transition-colors"
+              >Privacidade</a
+            >
+            <span>•</span>
+            <span class="text-slate-600 font-semibold"
+              >Portal da Transparência</span
+            >
           </div>
         </div>
       </div>
