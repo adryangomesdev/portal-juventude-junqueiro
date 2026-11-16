@@ -3985,6 +3985,246 @@ function renderTermos() {
   `;
 }
 
+// 12. BANCO DE IDEIAS / OUVIDORIA (PROPOSTAS E APOIOS)
+function escapeHtml(str) {
+  return String(str || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function getStatusBadge(status) {
+  const map = {
+    EM_VOTACAO: { label: "Em Votação", cls: "bg-blue-50 text-[#092986]" },
+    EM_ANALISE: {
+      label: "Em Análise pela Secretaria",
+      cls: "bg-amber-50 text-amber-800",
+    },
+    APROVADA: { label: "Aprovada", cls: "bg-emerald-50 text-emerald-700" },
+    REJEITADA: { label: "Arquivada", cls: "bg-slate-100 text-slate-600" },
+  };
+  const info = map[status] || map.EM_VOTACAO;
+  return `<span class="px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wide ${info.cls}">${info.label}</span>`;
+}
+
+function renderPropostaCard(p) {
+  const meta = 20;
+  const pct = Math.min(100, Math.round((p.totalApoios / meta) * 100));
+  const dataFmt = p.dataCriacao
+    ? new Date(p.dataCriacao).toLocaleDateString("pt-BR")
+    : "";
+  const avatar = p.autorFotoUrl
+    ? `<img src="${p.autorFotoUrl}" alt="${escapeHtml(p.autorNome)}" class="h-8 w-8 rounded-full object-cover border border-slate-200" referrerpolicy="no-referrer" />`
+    : `<div class="h-8 w-8 rounded-full bg-[#092986] text-white flex items-center justify-center font-bold text-xs">${escapeHtml((p.autorNome || "J").charAt(0))}</div>`;
+
+  const podeApoiar = p.status === "EM_VOTACAO";
+
+  return `
+    <article id="proposta-card-${p.id}" class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-5">
+      <div class="space-y-3">
+        <div class="flex items-center justify-between gap-2 flex-wrap">
+          ${getStatusBadge(p.status)}
+          <span class="text-xs text-slate-400 font-medium">${dataFmt}</span>
+        </div>
+        <h3 class="text-lg font-black text-slate-900 leading-snug">${escapeHtml(p.titulo)}</h3>
+        <p class="text-sm text-slate-600 leading-relaxed whitespace-pre-line">${escapeHtml(p.descricao)}</p>
+      </div>
+
+      <div class="space-y-4 pt-4 border-t border-slate-100">
+        <!-- Barra de progresso para 20 apoios -->
+        <div class="space-y-1.5">
+          <div class="flex justify-between text-xs font-bold">
+            <span class="text-slate-700">${p.totalApoios} ${p.totalApoios === 1 ? "apoio" : "apoios"}</span>
+            <span class="text-slate-400">Meta: ${meta} apoios</span>
+          </div>
+          <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+            <div class="h-full bg-[#092986] transition-all duration-300" style="width: ${pct}%"></div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2 min-w-0">
+            ${avatar}
+            <span class="text-xs font-bold text-slate-700 truncate">${escapeHtml(p.autorNome || "Jovem")}</span>
+          </div>
+
+          ${
+            podeApoiar
+              ? `<button type="button" onclick="apoiarProposta('${p.id}')" class="shrink-0 px-4 py-2 bg-[#092986] hover:bg-blue-800 text-white text-xs font-bold rounded-xl transition-colors cursor-pointer">
+                  Apoiar Ideia
+                </button>`
+              : `<span class="text-xs font-bold text-slate-400">Votação encerrada</span>`
+          }
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+window.apoiarProposta = async function (propostaId) {
+  const token = getAuthToken();
+  if (!token) {
+    triggerToast("Faça login para apoiar uma proposta.", "error");
+    window.location.hash = "#/login";
+    return;
+  }
+
+  try {
+    const res = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/propostas/${propostaId}/apoiar`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+    );
+
+    if (res.ok) {
+      const atualizada = await res.json();
+      const card = document.getElementById(`proposta-card-${propostaId}`);
+      if (card) card.outerHTML = renderPropostaCard(atualizada);
+      triggerToast(
+        atualizada.status === "EM_ANALISE"
+          ? "Meta atingida! A proposta foi enviada para análise da Secretaria."
+          : "Apoio registrado com sucesso!",
+      );
+    } else {
+      const err = await res.json().catch(() => ({}));
+      triggerToast(
+        err.mensagem ||
+          err.message ||
+          "Você já apoiou esta proposta ou não pode votar nela.",
+        "error",
+      );
+    }
+  } catch (error) {
+    triggerToast("Erro de conexão com o servidor.", "error");
+  }
+};
+
+window.submitNovaProposta = async function (event) {
+  event.preventDefault();
+  const token = getAuthToken();
+  if (!token) {
+    window.location.hash = "#/login";
+    return;
+  }
+
+  const titulo = document.getElementById("proposta-titulo").value.trim();
+  const descricao = document.getElementById("proposta-descricao").value.trim();
+  const btn = document.getElementById("btn-enviar-proposta");
+
+  btn.disabled = true;
+  btn.textContent = "Enviando...";
+
+  try {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/propostas`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ titulo, descricao }),
+    });
+
+    if (res.ok) {
+      const criada = await res.json();
+      document.getElementById("form-nova-proposta").reset();
+      const lista = document.getElementById("lista-propostas");
+      const emptyState = document.getElementById("propostas-empty");
+      if (emptyState) emptyState.remove();
+      lista.insertAdjacentHTML("afterbegin", renderPropostaCard(criada));
+      triggerToast("Proposta publicada com sucesso!");
+    } else {
+      const err = await res.json().catch(() => ({}));
+      triggerToast(
+        err.mensagem ||
+          err.message ||
+          "Verifique o tamanho do título e da descrição.",
+        "error",
+      );
+    }
+  } catch (error) {
+    triggerToast("Erro de conexão com o servidor.", "error");
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Publicar Proposta";
+  }
+};
+
+async function renderPropostas() {
+  updateNavigationActiveState("propostas");
+
+  const formArea = currentUser
+    ? `
+      <form id="form-nova-proposta" onsubmit="submitNovaProposta(event)" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-md space-y-4">
+        <h2 class="text-xl font-black text-slate-900">Envie sua Proposta para Junqueiro</h2>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Título da Ideia (5 a 150 caracteres)</label>
+          <input id="proposta-titulo" type="text" required minlength="5" maxlength="150" placeholder="Ex: Oficina gratuita de programação e robótica" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#092986]" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Descrição Detalhada (15 a 2000 caracteres)</label>
+          <textarea id="proposta-descricao" rows="3" required minlength="15" maxlength="2000" placeholder="Explique como essa iniciativa beneficia os jovens do município..." class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#092986]"></textarea>
+        </div>
+        <button id="btn-enviar-proposta" type="submit" class="px-6 py-3 bg-[#092986] hover:bg-blue-800 text-white font-bold rounded-xl text-sm transition-colors cursor-pointer">
+          Publicar Proposta
+        </button>
+      </form>
+    `
+    : `
+      <div class="bg-blue-50/80 border border-blue-100 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <h2 class="text-base font-black text-slate-900">Quer propor uma ideia ou apoiar projetos?</h2>
+          <p class="text-sm text-slate-600">Conecte-se com sua conta Google ou Facebook em 1 clique. Ideias com 20 apoios vão direto para análise da Secretaria.</p>
+        </div>
+        <a href="#/login" class="shrink-0 px-5 py-3 bg-[#092986] hover:bg-blue-800 text-white font-bold rounded-xl text-sm transition-colors">
+          Entrar para Participar
+        </a>
+      </div>
+    `;
+
+  appContainer.innerHTML = `
+    <section class="max-w-6xl mx-auto px-4 py-12 sm:py-16 space-y-10">
+      <div class="space-y-2 max-w-2xl">
+        <span class="inline-block px-3 py-1 bg-blue-50 text-[#092986] text-xs font-extrabold uppercase rounded-full tracking-wider">
+          Participação Juvenil
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-black text-slate-900">Banco de Ideias da Juventude</h1>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Sugira políticas públicas, cursos e eventos. Ao atingir <strong>20 apoios</strong>, a proposta é encaminhada automaticamente à Secretaria Municipal de Juventude.
+        </p>
+      </div>
+
+      ${formArea}
+
+      <div id="lista-propostas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <p class="text-sm text-slate-500 col-span-full">Carregando propostas...</p>
+      </div>
+    </section>
+  `;
+
+  try {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/propostas`);
+    const propostas = res.ok ? await res.json() : [];
+    const lista = document.getElementById("lista-propostas");
+    if (!lista) return;
+
+    if (!propostas.length) {
+      lista.innerHTML = `<p id="propostas-empty" class="text-sm text-slate-500 col-span-full">Nenhuma proposta cadastrada ainda. Seja o primeiro a enviar uma ideia!</p>`;
+      return;
+    }
+
+    lista.innerHTML = propostas.map(renderPropostaCard).join("");
+  } catch (error) {
+    const lista = document.getElementById("lista-propostas");
+    if (lista)
+      lista.innerHTML = `<p class="text-sm text-red-600 col-span-full">Erro ao carregar propostas.</p>`;
+  }
+}
+
 // --- GLOBAL ROUTER SWITCHER ---
 
 function resolveRoute() {
