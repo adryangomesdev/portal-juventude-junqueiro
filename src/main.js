@@ -2361,6 +2361,42 @@ async function initAuth() {
   }
 }
 
+// Acorda o back-end no Render silenciosamente assim que o portal abre
+function pingBackendSilencioso() {
+  fetch(`${import.meta.env.VITE_API_URL}/api/health`).catch(() => {});
+}
+
+// Exibe a tela do próprio portal enquanto aguarda o servidor responder e só então redireciona
+window.iniciarLoginSocial = async function (provider) {
+  const providerNome = provider === "google" ? "Google" : "Facebook";
+
+  appContainer.innerHTML = `
+    <section class="max-w-md mx-auto px-4 py-24 text-center">
+      <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl space-y-6">
+        <div class="h-14 w-14 border-4 border-[#092986] border-t-transparent rounded-full animate-spin mx-auto"></div>
+        <div class="space-y-2">
+          <span class="inline-block px-3 py-1 bg-blue-50 text-[#092986] text-xs font-extrabold uppercase rounded-full tracking-wider">
+            Conexão Segura
+          </span>
+          <h2 class="text-2xl font-black text-slate-900">Conectando com ${providerNome}...</h2>
+          <p class="text-sm text-slate-500 leading-relaxed">
+            Estamos preparando o acesso seguro ao Portal da Juventude. Isso leva apenas alguns instantes.
+          </p>
+        </div>
+      </div>
+    </section>
+  `;
+
+  try {
+    // Aguarda a resposta do /api/health para garantir que o Render está acordado antes de navegar
+    await fetch(`${import.meta.env.VITE_API_URL}/api/health`);
+  } catch (e) {
+    // Mesmo se falhar, segue com o fluxo OAuth2
+  }
+
+  window.location.href = `${import.meta.env.VITE_API_URL}/oauth2/authorization/${provider}`;
+};
+
 // Open News Details Modal Popup
 window.openNewsModal = function (id) {
   // Open Instagram Video Modal
@@ -3778,7 +3814,6 @@ function renderAcaoDetails(id) {
 // 8. LOGIN PAGE RENDERER
 function renderLogin() {
   updateNavigationActiveState("");
-  const apiUrl = import.meta.env.VITE_API_URL;
 
   appContainer.innerHTML = `
     <section class="max-w-md mx-auto px-4 py-16 sm:py-24">
@@ -3795,7 +3830,7 @@ function renderLogin() {
 
         <div class="space-y-3 pt-2">
           <!-- Botão Google -->
-          <a href="${apiUrl}/oauth2/authorization/google" class="w-full py-3.5 px-4 bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-200 rounded-xl font-bold text-sm flex items-center justify-center gap-3 transition-all shadow-sm hover:shadow">
+          <button type="button" onclick="iniciarLoginSocial('google')" class="w-full py-3.5 px-4 bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-200 rounded-xl font-bold text-sm flex items-center justify-center gap-3 transition-all shadow-sm hover:shadow cursor-pointer">
             <svg class="h-5 w-5" viewBox="0 0 24 24">
               <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
               <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.14C3.26 21.3 7.31 24 12 24z"/>
@@ -3803,15 +3838,15 @@ function renderLogin() {
               <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.99 3.14c.95-2.85 3.6-4.96 6.72-4.96z"/>
             </svg>
             <span>Continuar com Google</span>
-          </a>
+          </button>
 
           <!-- Botão Facebook -->
-          <a href="${apiUrl}/oauth2/authorization/facebook" class="w-full py-3.5 px-4 bg-[#1877F2] hover:bg-[#166FE5] text-white rounded-xl font-bold text-sm flex items-center justify-center gap-3 transition-all shadow-sm hover:shadow">
+          <button type="button" onclick="iniciarLoginSocial('facebook')" class="w-full py-3.5 px-4 bg-[#1877F2] hover:bg-[#166FE5] text-white rounded-xl font-bold text-sm flex items-center justify-center gap-3 transition-all shadow-sm hover:shadow cursor-pointer">
             <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
             </svg>
             <span>Continuar com Facebook</span>
-          </a>
+          </button>
         </div>
 
         <p class="text-xs text-slate-400 pt-4 border-t border-slate-100 leading-relaxed">
@@ -4043,6 +4078,7 @@ function initHorizontalScroll() {
 
 // Arranque único: valida primeiro a sessão JWT e só depois renderiza a rota
 async function bootstrapApp() {
+  pingBackendSilencioso();
   await initAuth();
   resolveRoute();
 }
