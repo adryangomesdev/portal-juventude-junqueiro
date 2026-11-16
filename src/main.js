@@ -3362,90 +3362,91 @@ function renderContato() {
       </div>
     </section>
   `;
-}
 
-// Attach Phone Auto Mask
-const phoneInput = document.getElementById("phone");
-if (phoneInput) {
-  phoneInput.addEventListener("input", (e) => {
-    let v = e.target.value.replace(/\D/g, "");
-    if (v.length > 11) v = v.slice(0, 11);
+  // Attach Phone Auto Mask
+  const phoneInput = document.getElementById("phone");
+  if (phoneInput) {
+    phoneInput.addEventListener("input", (e) => {
+      let v = e.target.value.replace(/\D/g, "");
+      if (v.length > 11) v = v.slice(0, 11);
 
-    if (v.length > 10) {
-      // (XX) XXXXX-XXXX
-      v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
-    } else if (v.length > 6) {
-      // (XX) XXXX-XXXX
-      v = v.replace(/^(\d{2})(\d{4})(\d{0,4})$/, "($1) $2-$3");
-    } else if (v.length > 2) {
-      // (XX) XXX
-      v = v.replace(/^(\d{2})(\d{0,5})$/, "($1) $2");
-    } else if (v.length > 0) {
-      // (XX
-      v = v.replace(/^(\d*)$/, "($1");
-    }
-    e.target.value = v;
-  });
-}
-
-const form = document.getElementById("contact-form");
-if (form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const subjectSelect = document.getElementById("subject");
-    const subjectText = subjectSelect.options[subjectSelect.selectedIndex].text;
-    const message = document.getElementById("message").value.trim();
-
-    if (!name || !email || !phone || !message) {
-      triggerToast(
-        "Por favor, preencha todos os campos obrigatórios marcados com *",
-        "error",
-      );
-      return;
-    }
-
-    // Desativa o botão temporariamente para evitar duplo clique
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = "Enviando...";
-    submitBtn.disabled = true;
-
-    try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/contato`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            nome: name,
-            email: email,
-            telefone: phone,
-            assunto: subjectText,
-            mensagem: message,
-          }),
-        },
-      );
-
-      if (response.ok) {
-        triggerToast("Mensagem enviada com sucesso para a Secretaria!");
-        form.reset();
-      } else {
-        triggerToast("Erro ao processar o envio. Tente novamente.", "error");
+      if (v.length > 10) {
+        // (XX) XXXXX-XXXX
+        v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
+      } else if (v.length > 6) {
+        // (XX) XXXX-XXXX
+        v = v.replace(/^(\d{2})(\d{4})(\d{0,4})$/, "($1) $2-$3");
+      } else if (v.length > 2) {
+        // (XX) XXX
+        v = v.replace(/^(\d{2})(\d{0,5})$/, "($1) $2");
+      } else if (v.length > 0) {
+        // (XX
+        v = v.replace(/^(\d*)$/, "($1");
       }
-    } catch (error) {
-      triggerToast("Falha na comunicação com o servidor.", "error");
-    } finally {
-      // Restaura o botão
-      submitBtn.innerHTML = originalText;
-      submitBtn.disabled = false;
-    }
-  });
+      e.target.value = v;
+    });
+  }
+
+  const form = document.getElementById("contact-form");
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const subjectSelect = document.getElementById("subject");
+      const subjectText =
+        subjectSelect.options[subjectSelect.selectedIndex].text;
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !phone || !message) {
+        triggerToast(
+          "Por favor, preencha todos os campos obrigatórios marcados com *",
+          "error",
+        );
+        return;
+      }
+
+      // Desativa o botão temporariamente para evitar duplo clique
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = "Enviando...";
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/contato`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              nome: name,
+              email: email,
+              telefone: phone,
+              assunto: subjectText,
+              mensagem: message,
+            }),
+          },
+        );
+
+        if (response.ok) {
+          triggerToast("Mensagem enviada com sucesso para a Secretaria!");
+          form.reset();
+        } else {
+          triggerToast("Erro ao processar o envio. Tente novamente.", "error");
+        }
+      } catch (error) {
+        triggerToast("Falha na comunicação com o servidor.", "error");
+      } finally {
+        // Restaura o botão
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  }
 }
 
 // Modal Lightbox para ampliar fotos de evidência
@@ -3972,10 +3973,16 @@ function resolveRoute() {
   } else if (hash.startsWith("#/acao/")) {
     const acaoId = hash.split("#/acao/")[1];
     renderAcaoDetails(acaoId);
+  } else if (hash.startsWith("#/login")) {
+    renderLogin();
   } else if (hash.startsWith("#/oauth-callback")) {
     handleOAuthCallback();
   } else if (hash.startsWith("#/perfil")) {
     renderPerfil();
+  } else if (hash.startsWith("#/propostas")) {
+    if (typeof renderPropostas === "function") {
+      renderPropostas();
+    }
   } else if (hash.startsWith("#/privacidade")) {
     renderPrivacidade();
   } else if (hash.startsWith("#/termos")) {
@@ -4002,19 +4009,6 @@ function resolveRoute() {
 // Listen for hash modifications
 window.addEventListener("hashchange", resolveRoute);
 
-// Kickstart first execution
-document.addEventListener("DOMContentLoaded", () => {
-  resolveRoute();
-});
-
-// If DOM is already loaded
-if (
-  document.readyState === "complete" ||
-  document.readyState === "interactive"
-) {
-  resolveRoute();
-}
-
 // Função para lidar com o scroll horizontal da seção Ações da Juventude
 function initHorizontalScroll() {
   const wrapper = document.getElementById("acoes-wrapper");
@@ -4023,7 +4017,6 @@ function initHorizontalScroll() {
   if (!wrapper || !track) return;
 
   const handleScroll = () => {
-    // Interrompe o scrolljacking em dispositivos móveis
     if (window.innerWidth < 768) {
       track.style.transform = "none";
       return;
@@ -4042,21 +4035,20 @@ function initHorizontalScroll() {
   window.removeEventListener("scroll", handleScroll);
   window.addEventListener("scroll", handleScroll);
 
-  // Trata redimensionamento de janela entre celular e desktop
   window.removeEventListener("resize", handleScroll);
   window.addEventListener("resize", handleScroll);
 
   handleScroll();
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
+// Arranque único: valida primeiro a sessão JWT e só depois renderiza a rota
+async function bootstrapApp() {
   await initAuth();
   resolveRoute();
-});
+}
 
-if (
-  document.readyState === "complete" ||
-  document.readyState === "interactive"
-) {
-  initAuth().then(() => resolveRoute());
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", bootstrapApp);
+} else {
+  bootstrapApp();
 }
